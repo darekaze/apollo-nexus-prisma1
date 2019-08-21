@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "es7", "es2017", "es2018", "dom"],
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "."
+  },
+  "include": ["typings/*", "src/**/*"],
+  "exclude": ["node_modules", "dist", "docs", "coverage"]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "minato",
+  "version": "0.1.0",
+  "description": "Demo gql using Apollo micro",
+  "main": "src/index.ts",
+  "repository": "darekaze/minato",
+  "author": "@DaRekaze",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "start": "cross-env NODE_ENV=production micro dist/index.js",
+    "dev": "micro-dev tsnode.js --silent",
+    "format": "npm-run-all format:*",
+    "format:ts": "prettier --write {.,**}/*.ts",
+    "format:json": "prettier --write {.,**}/*.json",
+    "format:md": "prettier --write {.,**}/*.md"
+  },
+  "dependencies": {
+    "apollo-server-micro": "^2.8.1",
+    "graphql": "^14.4.2",
+    "micro": "^9.3.4",
+    "micro-cors": "^0.1.1",
+    "nexus": "^0.11.7",
+    "nexus-prisma": "^0.3.7",
+    "prisma-client-lib": "^1.34.5"
+  },
+  "devDependencies": {
+    "@now/node": "^0.12.6",
+    "@types/jest": "^24.0.17",
+    "@types/micro": "^7.3.3",
+    "@types/node": "^12.7.2",
+    "cross-env": "^5.2.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.3",
+    "micro-dev": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "es5",
+    "endOfLine": "lf"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
