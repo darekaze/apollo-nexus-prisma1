@@ -10,8 +10,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "start": "cross-env NODE_ENV=production micro dist/index.js",
-    "dev": "micro-dev tsnode.js --silent",
+    "start": "micro dist/index.js -l tcp://0.0.0.0:4000",
+    "dev": "micro-dev tsnode.js -p 4000 --silent",
     "format": "npm-run-all format:*",
     "format:ts": "prettier --write {.,**}/*.ts",
     "format:json": "prettier --write {.,**}/*.json",
@@ -31,7 +31,6 @@
     "@types/jest": "^24.0.17",
     "@types/micro": "^7.3.3",
     "@types/node": "^12.7.2",
-    "cross-env": "^5.2.0",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "lint-staged": "^9.2.3",

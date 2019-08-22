@@ -8,11 +8,24 @@ services:
     environment:
       PRISMA_CONFIG: |
         port: 4466
-        # uncomment the next line to activate cluster security
-        # managementApiSecret: ${PRISMA_MANAGEMENT_API_SECRET}
+        managementApiSecret: ${PRISMA_MANAGEMENT_API_SECRET}
         databases:
           default:
             connector: mongo
-            schema: ${DB_NAME}
             uri: >-
               ${DB_URI}
+  pcengine:
+    container_name: ag_pcengine
+    restart: always
+    ports:
+    - "4000:4000"
+    build:
+      dockerfile: environments/${ENV-production}/Dockerfile
+      context: .
+    volumes:
+      - .:/opt/pcengine
+      - /opt/pcengine/node_modules
+    environment:
+      - NODE_ENV=${ENV-production}
+    depends_on:
+      - prisma
