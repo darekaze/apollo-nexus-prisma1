@@ -16,8 +16,11 @@ export type AtLeastOne<T, U = { [K in keyof T]: Pick<T, K> }> = Partial<T> &
 export type Maybe<T> = T | undefined | null
 
 export interface Exists {
-  property_rent_atom: (where?: property_rent_atomWhereInput) => Promise<boolean>
-  property_sale_atom: (where?: property_sale_atomWhereInput) => Promise<boolean>
+  propertyDBLoadHistory: (
+    where?: PropertyDBLoadHistoryWhereInput
+  ) => Promise<boolean>
+  propertyRentAtom: (where?: PropertyRentAtomWhereInput) => Promise<boolean>
+  propertySaleAtom: (where?: PropertySaleAtomWhereInput) => Promise<boolean>
 }
 
 export interface Node {}
@@ -39,97 +42,140 @@ export interface Prisma {
    * Queries
    */
 
+  propertyDBLoadHistory: (
+    where: PropertyDBLoadHistoryWhereUniqueInput
+  ) => PropertyDBLoadHistoryNullablePromise
+  propertyDBLoadHistories: (args?: {
+    where?: PropertyDBLoadHistoryWhereInput
+    orderBy?: PropertyDBLoadHistoryOrderByInput
+    skip?: Int
+    after?: String
+    before?: String
+    first?: Int
+    last?: Int
+  }) => FragmentableArray<PropertyDBLoadHistory>
+  propertyDBLoadHistoriesConnection: (args?: {
+    where?: PropertyDBLoadHistoryWhereInput
+    orderBy?: PropertyDBLoadHistoryOrderByInput
+    skip?: Int
+    after?: String
+    before?: String
+    first?: Int
+    last?: Int
+  }) => PropertyDBLoadHistoryConnectionPromise
   propertyRentAtom: (
-    where: property_rent_atomWhereUniqueInput
-  ) => property_rent_atomNullablePromise
+    where: PropertyRentAtomWhereUniqueInput
+  ) => PropertyRentAtomNullablePromise
   propertyRentAtoms: (args?: {
-    where?: property_rent_atomWhereInput
-    orderBy?: property_rent_atomOrderByInput
+    where?: PropertyRentAtomWhereInput
+    orderBy?: PropertyRentAtomOrderByInput
     skip?: Int
     after?: String
     before?: String
     first?: Int
     last?: Int
-  }) => FragmentableArray<property_rent_atom>
+  }) => FragmentableArray<PropertyRentAtom>
   propertyRentAtomsConnection: (args?: {
-    where?: property_rent_atomWhereInput
-    orderBy?: property_rent_atomOrderByInput
+    where?: PropertyRentAtomWhereInput
+    orderBy?: PropertyRentAtomOrderByInput
     skip?: Int
     after?: String
     before?: String
     first?: Int
     last?: Int
-  }) => property_rent_atomConnectionPromise
+  }) => PropertyRentAtomConnectionPromise
   propertySaleAtom: (
-    where: property_sale_atomWhereUniqueInput
-  ) => property_sale_atomNullablePromise
+    where: PropertySaleAtomWhereUniqueInput
+  ) => PropertySaleAtomNullablePromise
   propertySaleAtoms: (args?: {
-    where?: property_sale_atomWhereInput
-    orderBy?: property_sale_atomOrderByInput
+    where?: PropertySaleAtomWhereInput
+    orderBy?: PropertySaleAtomOrderByInput
     skip?: Int
     after?: String
     before?: String
     first?: Int
     last?: Int
-  }) => FragmentableArray<property_sale_atom>
+  }) => FragmentableArray<PropertySaleAtom>
   propertySaleAtomsConnection: (args?: {
-    where?: property_sale_atomWhereInput
-    orderBy?: property_sale_atomOrderByInput
+    where?: PropertySaleAtomWhereInput
+    orderBy?: PropertySaleAtomOrderByInput
     skip?: Int
     after?: String
     before?: String
     first?: Int
     last?: Int
-  }) => property_sale_atomConnectionPromise
+  }) => PropertySaleAtomConnectionPromise
   node: (args: { id: ID_Output }) => Node
 
   /**
    * Mutations
    */
 
-  createproperty_rent_atom: (
-    data: property_rent_atomCreateInput
-  ) => property_rent_atomPromise
-  updateproperty_rent_atom: (args: {
-    data: property_rent_atomUpdateInput
-    where: property_rent_atomWhereUniqueInput
-  }) => property_rent_atomPromise
-  updateManyproperty_rent_atoms: (args: {
-    data: property_rent_atomUpdateManyMutationInput
-    where?: property_rent_atomWhereInput
+  createPropertyDBLoadHistory: (
+    data: PropertyDBLoadHistoryCreateInput
+  ) => PropertyDBLoadHistoryPromise
+  updatePropertyDBLoadHistory: (args: {
+    data: PropertyDBLoadHistoryUpdateInput
+    where: PropertyDBLoadHistoryWhereUniqueInput
+  }) => PropertyDBLoadHistoryPromise
+  updateManyPropertyDBLoadHistories: (args: {
+    data: PropertyDBLoadHistoryUpdateManyMutationInput
+    where?: PropertyDBLoadHistoryWhereInput
   }) => BatchPayloadPromise
-  upsertproperty_rent_atom: (args: {
-    where: property_rent_atomWhereUniqueInput
-    create: property_rent_atomCreateInput
-    update: property_rent_atomUpdateInput
-  }) => property_rent_atomPromise
-  deleteproperty_rent_atom: (
-    where: property_rent_atomWhereUniqueInput
-  ) => property_rent_atomPromise
-  deleteManyproperty_rent_atoms: (
-    where?: property_rent_atomWhereInput
+  upsertPropertyDBLoadHistory: (args: {
+    where: PropertyDBLoadHistoryWhereUniqueInput
+    create: PropertyDBLoadHistoryCreateInput
+    update: PropertyDBLoadHistoryUpdateInput
+  }) => PropertyDBLoadHistoryPromise
+  deletePropertyDBLoadHistory: (
+    where: PropertyDBLoadHistoryWhereUniqueInput
+  ) => PropertyDBLoadHistoryPromise
+  deleteManyPropertyDBLoadHistories: (
+    where?: PropertyDBLoadHistoryWhereInput
   ) => BatchPayloadPromise
-  createproperty_sale_atom: (
-    data: property_sale_atomCreateInput
-  ) => property_sale_atomPromise
-  updateproperty_sale_atom: (args: {
-    data: property_sale_atomUpdateInput
-    where: property_sale_atomWhereUniqueInput
-  }) => property_sale_atomPromise
-  updateManyproperty_sale_atoms: (args: {
-    data: property_sale_atomUpdateManyMutationInput
-    where?: property_sale_atomWhereInput
+  createPropertyRentAtom: (
+    data: PropertyRentAtomCreateInput
+  ) => PropertyRentAtomPromise
+  updatePropertyRentAtom: (args: {
+    data: PropertyRentAtomUpdateInput
+    where: PropertyRentAtomWhereUniqueInput
+  }) => PropertyRentAtomPromise
+  updateManyPropertyRentAtoms: (args: {
+    data: PropertyRentAtomUpdateManyMutationInput
+    where?: PropertyRentAtomWhereInput
   }) => BatchPayloadPromise
-  upsertproperty_sale_atom: (args: {
-    where: property_sale_atomWhereUniqueInput
-    create: property_sale_atomCreateInput
-    update: property_sale_atomUpdateInput
-  }) => property_sale_atomPromise
-  deleteproperty_sale_atom: (
-    where: property_sale_atomWhereUniqueInput
-  ) => property_sale_atomPromise
-  deleteManyproperty_sale_atoms: (
-    where?: property_sale_atomWhereInput
+  upsertPropertyRentAtom: (args: {
+    where: PropertyRentAtomWhereUniqueInput
+    create: PropertyRentAtomCreateInput
+    update: PropertyRentAtomUpdateInput
+  }) => PropertyRentAtomPromise
+  deletePropertyRentAtom: (
+    where: PropertyRentAtomWhereUniqueInput
+  ) => PropertyRentAtomPromise
+  deleteManyPropertyRentAtoms: (
+    where?: PropertyRentAtomWhereInput
+  ) => BatchPayloadPromise
+  createPropertySaleAtom: (
+    data: PropertySaleAtomCreateInput
+  ) => PropertySaleAtomPromise
+  updatePropertySaleAtom: (args: {
+    data: PropertySaleAtomUpdateInput
+    where: PropertySaleAtomWhereUniqueInput
+  }) => PropertySaleAtomPromise
+  updateManyPropertySaleAtoms: (args: {
+    data: PropertySaleAtomUpdateManyMutationInput
+    where?: PropertySaleAtomWhereInput
+  }) => BatchPayloadPromise
+  upsertPropertySaleAtom: (args: {
+    where: PropertySaleAtomWhereUniqueInput
+    create: PropertySaleAtomCreateInput
+    update: PropertySaleAtomUpdateInput
+  }) => PropertySaleAtomPromise
+  deletePropertySaleAtom: (
+    where: PropertySaleAtomWhereUniqueInput
+  ) => PropertySaleAtomPromise
+  deleteManyPropertySaleAtoms: (
+    where?: PropertySaleAtomWhereInput
   ) => BatchPayloadPromise
 
   /**
@@ -140,12 +186,15 @@ export interface Prisma {
 }
 
 export interface Subscription {
+  propertyDBLoadHistory: (
+    where?: PropertyDBLoadHistorySubscriptionWhereInput
+  ) => PropertyDBLoadHistorySubscriptionPayloadSubscription
   propertyRentAtom: (
-    where?: property_rent_atomSubscriptionWhereInput
-  ) => property_rent_atomSubscriptionPayloadSubscription
+    where?: PropertyRentAtomSubscriptionWhereInput
+  ) => PropertyRentAtomSubscriptionPayloadSubscription
   propertySaleAtom: (
-    where?: property_sale_atomSubscriptionWhereInput
-  ) => property_sale_atomSubscriptionPayloadSubscription
+    where?: PropertySaleAtomSubscriptionWhereInput
+  ) => PropertySaleAtomSubscriptionPayloadSubscription
 }
 
 export interface ClientConstructor<T> {
@@ -156,112 +205,125 @@ export interface ClientConstructor<T> {
  * Types
  */
 
+export type PropertyDBLoadHistoryOrderByInput =
+  | '_id_ASC'
+  | '_id_DESC'
+  | 'filename_ASC'
+  | 'filename_DESC'
+  | 'inDate_ASC'
+  | 'inDate_DESC'
+
 export type PropertyClass = 'PropertyRentAtom' | 'PropertySaleAtom'
 
-export type property_rent_atomOrderByInput =
+export type PropertyRentAtomOrderByInput =
   | '_id_ASC'
   | '_id_DESC'
   | '_cls_ASC'
   | '_cls_DESC'
-  | 'hash_key_ASC'
-  | 'hash_key_DESC'
-  | 'canonical_station_ASC'
-  | 'canonical_station_DESC'
-  | 'building_name_ASC'
-  | 'building_name_DESC'
+  | 'hashKey_ASC'
+  | 'hashKey_DESC'
+  | 'canonicalStation_ASC'
+  | 'canonicalStation_DESC'
+  | 'buildingName_ASC'
+  | 'buildingName_DESC'
   | 'address_ASC'
   | 'address_DESC'
   | 'area_ASC'
   | 'area_DESC'
-  | 'basic_rent_ASC'
-  | 'basic_rent_DESC'
-  | 'rent_plus_alpha_ASC'
-  | 'rent_plus_alpha_DESC'
-  | 'maintenance_fee_ASC'
-  | 'maintenance_fee_DESC'
-  | 'total_rent_ASC'
-  | 'total_rent_DESC'
-  | 'guarantee_money_multiple_ASC'
-  | 'guarantee_money_multiple_DESC'
-  | 'key_money_multiple_ASC'
-  | 'key_money_multiple_DESC'
-  | 'unit_rent_ASC'
-  | 'unit_rent_DESC'
-  | 'year_built_ASC'
-  | 'year_built_DESC'
-  | 'floor_plan_ASC'
-  | 'floor_plan_DESC'
-  | 'floor_number_ASC'
-  | 'floor_number_DESC'
-  | 'total_floor_ASC'
-  | 'total_floor_DESC'
-  | 'in_date_ASC'
-  | 'in_date_DESC'
-  | 'out_date_ASC'
-  | 'out_date_DESC'
-  | 'nearest_stations_ASC'
-  | 'nearest_stations_DESC'
-  | 'agent_comment_ASC'
-  | 'agent_comment_DESC'
-  | 'more_detail_ASC'
-  | 'more_detail_DESC'
+  | 'basicRent_ASC'
+  | 'basicRent_DESC'
+  | 'rentPlusAlpha_ASC'
+  | 'rentPlusAlpha_DESC'
+  | 'maintenanceFee_ASC'
+  | 'maintenanceFee_DESC'
+  | 'totalRent_ASC'
+  | 'totalRent_DESC'
+  | 'guaranteeMoneyMultiple_ASC'
+  | 'guaranteeMoneyMultiple_DESC'
+  | 'keyMoneyMultiple_ASC'
+  | 'keyMoneyMultiple_DESC'
+  | 'unitRent_ASC'
+  | 'unitRent_DESC'
+  | 'city_ASC'
+  | 'city_DESC'
+  | 'country_ASC'
+  | 'country_DESC'
+  | 'currency_ASC'
+  | 'currency_DESC'
+  | 'yearBuilt_ASC'
+  | 'yearBuilt_DESC'
+  | 'floorPlan_ASC'
+  | 'floorPlan_DESC'
+  | 'floorNumber_ASC'
+  | 'floorNumber_DESC'
+  | 'totalFloor_ASC'
+  | 'totalFloor_DESC'
+  | 'inDate_ASC'
+  | 'inDate_DESC'
+  | 'outDate_ASC'
+  | 'outDate_DESC'
+  | 'nearestStations_ASC'
+  | 'nearestStations_DESC'
+  | 'agentComment_ASC'
+  | 'agentComment_DESC'
+  | 'moreDetail_ASC'
+  | 'moreDetail_DESC'
 
 export type PropertyType = 'HOUSE' | 'MANSION' | 'APT'
 
-export type property_sale_atomOrderByInput =
+export type PropertySaleAtomOrderByInput =
   | '_id_ASC'
   | '_id_DESC'
   | '_cls_ASC'
   | '_cls_DESC'
-  | 'hash_key_ASC'
-  | 'hash_key_DESC'
-  | 'property_type_ASC'
-  | 'property_type_DESC'
-  | 'canonical_station_ASC'
-  | 'canonical_station_DESC'
-  | 'building_name_ASC'
-  | 'building_name_DESC'
+  | 'hashKey_ASC'
+  | 'hashKey_DESC'
+  | 'canonicalStation_ASC'
+  | 'canonicalStation_DESC'
+  | 'propertyType_ASC'
+  | 'propertyType_DESC'
+  | 'buildingName_ASC'
+  | 'buildingName_DESC'
   | 'address_ASC'
   | 'address_DESC'
   | 'area_ASC'
   | 'area_DESC'
-  | 'currency_ASC'
-  | 'currency_DESC'
   | 'price_ASC'
   | 'price_DESC'
   | 'city_ASC'
   | 'city_DESC'
   | 'country_ASC'
   | 'country_DESC'
-  | 'year_built_ASC'
-  | 'year_built_DESC'
-  | 'floor_plan_ASC'
-  | 'floor_plan_DESC'
-  | 'in_date_ASC'
-  | 'in_date_DESC'
-  | 'out_date_ASC'
-  | 'out_date_DESC'
-  | 'nearest_stations_ASC'
-  | 'nearest_stations_DESC'
-  | 'land_area_ASC'
-  | 'land_area_DESC'
-  | 'floor_number_ASC'
-  | 'floor_number_DESC'
-  | 'total_floor_ASC'
-  | 'total_floor_DESC'
-  | 'agent_comment_ASC'
-  | 'agent_comment_DESC'
-  | 'more_detail_ASC'
-  | 'more_detail_DESC'
+  | 'currency_ASC'
+  | 'currency_DESC'
+  | 'yearBuilt_ASC'
+  | 'yearBuilt_DESC'
+  | 'floorPlan_ASC'
+  | 'floorPlan_DESC'
+  | 'floorNumber_ASC'
+  | 'floorNumber_DESC'
+  | 'totalFloor_ASC'
+  | 'totalFloor_DESC'
+  | 'landArea_ASC'
+  | 'landArea_DESC'
+  | 'inDate_ASC'
+  | 'inDate_DESC'
+  | 'outDate_ASC'
+  | 'outDate_DESC'
+  | 'nearestStations_ASC'
+  | 'nearestStations_DESC'
+  | 'agentComment_ASC'
+  | 'agentComment_DESC'
+  | 'moreDetail_ASC'
+  | 'moreDetail_DESC'
 
 export type MutationType = 'CREATED' | 'UPDATED' | 'DELETED'
 
-export type property_rent_atomWhereUniqueInput = AtLeastOne<{
+export type PropertyDBLoadHistoryWhereUniqueInput = AtLeastOne<{
   _id: Maybe<ID_Input>
-  hash_key?: Maybe<String>
 }>
 
-export interface property_rent_atomWhereInput {
+export interface PropertyDBLoadHistoryWhereInput {
   _id?: Maybe<ID_Input>
   _id_not?: Maybe<ID_Input>
   _id_in?: Maybe<ID_Input[] | ID_Input>
@@ -276,221 +338,38 @@ export interface property_rent_atomWhereInput {
   _id_not_starts_with?: Maybe<ID_Input>
   _id_ends_with?: Maybe<ID_Input>
   _id_not_ends_with?: Maybe<ID_Input>
-  _cls?: Maybe<PropertyClass>
-  _cls_not?: Maybe<PropertyClass>
-  _cls_in?: Maybe<PropertyClass[] | PropertyClass>
-  _cls_not_in?: Maybe<PropertyClass[] | PropertyClass>
-  hash_key?: Maybe<String>
-  hash_key_not?: Maybe<String>
-  hash_key_in?: Maybe<String[] | String>
-  hash_key_not_in?: Maybe<String[] | String>
-  hash_key_lt?: Maybe<String>
-  hash_key_lte?: Maybe<String>
-  hash_key_gt?: Maybe<String>
-  hash_key_gte?: Maybe<String>
-  hash_key_contains?: Maybe<String>
-  hash_key_not_contains?: Maybe<String>
-  hash_key_starts_with?: Maybe<String>
-  hash_key_not_starts_with?: Maybe<String>
-  hash_key_ends_with?: Maybe<String>
-  hash_key_not_ends_with?: Maybe<String>
-  canonical_station?: Maybe<String>
-  canonical_station_not?: Maybe<String>
-  canonical_station_in?: Maybe<String[] | String>
-  canonical_station_not_in?: Maybe<String[] | String>
-  canonical_station_lt?: Maybe<String>
-  canonical_station_lte?: Maybe<String>
-  canonical_station_gt?: Maybe<String>
-  canonical_station_gte?: Maybe<String>
-  canonical_station_contains?: Maybe<String>
-  canonical_station_not_contains?: Maybe<String>
-  canonical_station_starts_with?: Maybe<String>
-  canonical_station_not_starts_with?: Maybe<String>
-  canonical_station_ends_with?: Maybe<String>
-  canonical_station_not_ends_with?: Maybe<String>
-  building_name?: Maybe<String>
-  building_name_not?: Maybe<String>
-  building_name_in?: Maybe<String[] | String>
-  building_name_not_in?: Maybe<String[] | String>
-  building_name_lt?: Maybe<String>
-  building_name_lte?: Maybe<String>
-  building_name_gt?: Maybe<String>
-  building_name_gte?: Maybe<String>
-  building_name_contains?: Maybe<String>
-  building_name_not_contains?: Maybe<String>
-  building_name_starts_with?: Maybe<String>
-  building_name_not_starts_with?: Maybe<String>
-  building_name_ends_with?: Maybe<String>
-  building_name_not_ends_with?: Maybe<String>
-  address?: Maybe<String>
-  address_not?: Maybe<String>
-  address_in?: Maybe<String[] | String>
-  address_not_in?: Maybe<String[] | String>
-  address_lt?: Maybe<String>
-  address_lte?: Maybe<String>
-  address_gt?: Maybe<String>
-  address_gte?: Maybe<String>
-  address_contains?: Maybe<String>
-  address_not_contains?: Maybe<String>
-  address_starts_with?: Maybe<String>
-  address_not_starts_with?: Maybe<String>
-  address_ends_with?: Maybe<String>
-  address_not_ends_with?: Maybe<String>
-  area?: Maybe<Float>
-  area_not?: Maybe<Float>
-  area_in?: Maybe<Float[] | Float>
-  area_not_in?: Maybe<Float[] | Float>
-  area_lt?: Maybe<Float>
-  area_lte?: Maybe<Float>
-  area_gt?: Maybe<Float>
-  area_gte?: Maybe<Float>
-  basic_rent?: Maybe<Float>
-  basic_rent_not?: Maybe<Float>
-  basic_rent_in?: Maybe<Float[] | Float>
-  basic_rent_not_in?: Maybe<Float[] | Float>
-  basic_rent_lt?: Maybe<Float>
-  basic_rent_lte?: Maybe<Float>
-  basic_rent_gt?: Maybe<Float>
-  basic_rent_gte?: Maybe<Float>
-  rent_plus_alpha?: Maybe<Float>
-  rent_plus_alpha_not?: Maybe<Float>
-  rent_plus_alpha_in?: Maybe<Float[] | Float>
-  rent_plus_alpha_not_in?: Maybe<Float[] | Float>
-  rent_plus_alpha_lt?: Maybe<Float>
-  rent_plus_alpha_lte?: Maybe<Float>
-  rent_plus_alpha_gt?: Maybe<Float>
-  rent_plus_alpha_gte?: Maybe<Float>
-  maintenance_fee?: Maybe<Float>
-  maintenance_fee_not?: Maybe<Float>
-  maintenance_fee_in?: Maybe<Float[] | Float>
-  maintenance_fee_not_in?: Maybe<Float[] | Float>
-  maintenance_fee_lt?: Maybe<Float>
-  maintenance_fee_lte?: Maybe<Float>
-  maintenance_fee_gt?: Maybe<Float>
-  maintenance_fee_gte?: Maybe<Float>
-  total_rent?: Maybe<Float>
-  total_rent_not?: Maybe<Float>
-  total_rent_in?: Maybe<Float[] | Float>
-  total_rent_not_in?: Maybe<Float[] | Float>
-  total_rent_lt?: Maybe<Float>
-  total_rent_lte?: Maybe<Float>
-  total_rent_gt?: Maybe<Float>
-  total_rent_gte?: Maybe<Float>
-  guarantee_money_multiple?: Maybe<Float>
-  guarantee_money_multiple_not?: Maybe<Float>
-  guarantee_money_multiple_in?: Maybe<Float[] | Float>
-  guarantee_money_multiple_not_in?: Maybe<Float[] | Float>
-  guarantee_money_multiple_lt?: Maybe<Float>
-  guarantee_money_multiple_lte?: Maybe<Float>
-  guarantee_money_multiple_gt?: Maybe<Float>
-  guarantee_money_multiple_gte?: Maybe<Float>
-  key_money_multiple?: Maybe<Float>
-  key_money_multiple_not?: Maybe<Float>
-  key_money_multiple_in?: Maybe<Float[] | Float>
-  key_money_multiple_not_in?: Maybe<Float[] | Float>
-  key_money_multiple_lt?: Maybe<Float>
-  key_money_multiple_lte?: Maybe<Float>
-  key_money_multiple_gt?: Maybe<Float>
-  key_money_multiple_gte?: Maybe<Float>
-  unit_rent?: Maybe<Float>
-  unit_rent_not?: Maybe<Float>
-  unit_rent_in?: Maybe<Float[] | Float>
-  unit_rent_not_in?: Maybe<Float[] | Float>
-  unit_rent_lt?: Maybe<Float>
-  unit_rent_lte?: Maybe<Float>
-  unit_rent_gt?: Maybe<Float>
-  unit_rent_gte?: Maybe<Float>
-  year_built?: Maybe<Int>
-  year_built_not?: Maybe<Int>
-  year_built_in?: Maybe<Int[] | Int>
-  year_built_not_in?: Maybe<Int[] | Int>
-  year_built_lt?: Maybe<Int>
-  year_built_lte?: Maybe<Int>
-  year_built_gt?: Maybe<Int>
-  year_built_gte?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  floor_plan_not?: Maybe<String>
-  floor_plan_in?: Maybe<String[] | String>
-  floor_plan_not_in?: Maybe<String[] | String>
-  floor_plan_lt?: Maybe<String>
-  floor_plan_lte?: Maybe<String>
-  floor_plan_gt?: Maybe<String>
-  floor_plan_gte?: Maybe<String>
-  floor_plan_contains?: Maybe<String>
-  floor_plan_not_contains?: Maybe<String>
-  floor_plan_starts_with?: Maybe<String>
-  floor_plan_not_starts_with?: Maybe<String>
-  floor_plan_ends_with?: Maybe<String>
-  floor_plan_not_ends_with?: Maybe<String>
-  floor_number?: Maybe<Int>
-  floor_number_not?: Maybe<Int>
-  floor_number_in?: Maybe<Int[] | Int>
-  floor_number_not_in?: Maybe<Int[] | Int>
-  floor_number_lt?: Maybe<Int>
-  floor_number_lte?: Maybe<Int>
-  floor_number_gt?: Maybe<Int>
-  floor_number_gte?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  total_floor_not?: Maybe<Int>
-  total_floor_in?: Maybe<Int[] | Int>
-  total_floor_not_in?: Maybe<Int[] | Int>
-  total_floor_lt?: Maybe<Int>
-  total_floor_lte?: Maybe<Int>
-  total_floor_gt?: Maybe<Int>
-  total_floor_gte?: Maybe<Int>
-  in_date?: Maybe<DateTimeInput>
-  in_date_not?: Maybe<DateTimeInput>
-  in_date_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  in_date_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  in_date_lt?: Maybe<DateTimeInput>
-  in_date_lte?: Maybe<DateTimeInput>
-  in_date_gt?: Maybe<DateTimeInput>
-  in_date_gte?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  out_date_not?: Maybe<DateTimeInput>
-  out_date_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  out_date_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  out_date_lt?: Maybe<DateTimeInput>
-  out_date_lte?: Maybe<DateTimeInput>
-  out_date_gt?: Maybe<DateTimeInput>
-  out_date_gte?: Maybe<DateTimeInput>
-  agent_comment?: Maybe<String>
-  agent_comment_not?: Maybe<String>
-  agent_comment_in?: Maybe<String[] | String>
-  agent_comment_not_in?: Maybe<String[] | String>
-  agent_comment_lt?: Maybe<String>
-  agent_comment_lte?: Maybe<String>
-  agent_comment_gt?: Maybe<String>
-  agent_comment_gte?: Maybe<String>
-  agent_comment_contains?: Maybe<String>
-  agent_comment_not_contains?: Maybe<String>
-  agent_comment_starts_with?: Maybe<String>
-  agent_comment_not_starts_with?: Maybe<String>
-  agent_comment_ends_with?: Maybe<String>
-  agent_comment_not_ends_with?: Maybe<String>
-  more_detail?: Maybe<String>
-  more_detail_not?: Maybe<String>
-  more_detail_in?: Maybe<String[] | String>
-  more_detail_not_in?: Maybe<String[] | String>
-  more_detail_lt?: Maybe<String>
-  more_detail_lte?: Maybe<String>
-  more_detail_gt?: Maybe<String>
-  more_detail_gte?: Maybe<String>
-  more_detail_contains?: Maybe<String>
-  more_detail_not_contains?: Maybe<String>
-  more_detail_starts_with?: Maybe<String>
-  more_detail_not_starts_with?: Maybe<String>
-  more_detail_ends_with?: Maybe<String>
-  more_detail_not_ends_with?: Maybe<String>
-  AND?: Maybe<property_rent_atomWhereInput[] | property_rent_atomWhereInput>
+  filename?: Maybe<String>
+  filename_not?: Maybe<String>
+  filename_in?: Maybe<String[] | String>
+  filename_not_in?: Maybe<String[] | String>
+  filename_lt?: Maybe<String>
+  filename_lte?: Maybe<String>
+  filename_gt?: Maybe<String>
+  filename_gte?: Maybe<String>
+  filename_contains?: Maybe<String>
+  filename_not_contains?: Maybe<String>
+  filename_starts_with?: Maybe<String>
+  filename_not_starts_with?: Maybe<String>
+  filename_ends_with?: Maybe<String>
+  filename_not_ends_with?: Maybe<String>
+  inDate?: Maybe<DateTimeInput>
+  inDate_not?: Maybe<DateTimeInput>
+  inDate_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  inDate_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  inDate_lt?: Maybe<DateTimeInput>
+  inDate_lte?: Maybe<DateTimeInput>
+  inDate_gt?: Maybe<DateTimeInput>
+  inDate_gte?: Maybe<DateTimeInput>
+  AND?: Maybe<
+    PropertyDBLoadHistoryWhereInput[] | PropertyDBLoadHistoryWhereInput
+  >
 }
 
-export type property_sale_atomWhereUniqueInput = AtLeastOne<{
+export type PropertyRentAtomWhereUniqueInput = AtLeastOne<{
   _id: Maybe<ID_Input>
-  hash_key?: Maybe<String>
 }>
 
-export interface property_sale_atomWhereInput {
+export interface PropertyRentAtomWhereInput {
   _id?: Maybe<ID_Input>
   _id_not?: Maybe<ID_Input>
   _id_in?: Maybe<ID_Input[] | ID_Input>
@@ -509,52 +388,48 @@ export interface property_sale_atomWhereInput {
   _cls_not?: Maybe<PropertyClass>
   _cls_in?: Maybe<PropertyClass[] | PropertyClass>
   _cls_not_in?: Maybe<PropertyClass[] | PropertyClass>
-  hash_key?: Maybe<String>
-  hash_key_not?: Maybe<String>
-  hash_key_in?: Maybe<String[] | String>
-  hash_key_not_in?: Maybe<String[] | String>
-  hash_key_lt?: Maybe<String>
-  hash_key_lte?: Maybe<String>
-  hash_key_gt?: Maybe<String>
-  hash_key_gte?: Maybe<String>
-  hash_key_contains?: Maybe<String>
-  hash_key_not_contains?: Maybe<String>
-  hash_key_starts_with?: Maybe<String>
-  hash_key_not_starts_with?: Maybe<String>
-  hash_key_ends_with?: Maybe<String>
-  hash_key_not_ends_with?: Maybe<String>
-  property_type?: Maybe<PropertyType>
-  property_type_not?: Maybe<PropertyType>
-  property_type_in?: Maybe<PropertyType[] | PropertyType>
-  property_type_not_in?: Maybe<PropertyType[] | PropertyType>
-  canonical_station?: Maybe<String>
-  canonical_station_not?: Maybe<String>
-  canonical_station_in?: Maybe<String[] | String>
-  canonical_station_not_in?: Maybe<String[] | String>
-  canonical_station_lt?: Maybe<String>
-  canonical_station_lte?: Maybe<String>
-  canonical_station_gt?: Maybe<String>
-  canonical_station_gte?: Maybe<String>
-  canonical_station_contains?: Maybe<String>
-  canonical_station_not_contains?: Maybe<String>
-  canonical_station_starts_with?: Maybe<String>
-  canonical_station_not_starts_with?: Maybe<String>
-  canonical_station_ends_with?: Maybe<String>
-  canonical_station_not_ends_with?: Maybe<String>
-  building_name?: Maybe<String>
-  building_name_not?: Maybe<String>
-  building_name_in?: Maybe<String[] | String>
-  building_name_not_in?: Maybe<String[] | String>
-  building_name_lt?: Maybe<String>
-  building_name_lte?: Maybe<String>
-  building_name_gt?: Maybe<String>
-  building_name_gte?: Maybe<String>
-  building_name_contains?: Maybe<String>
-  building_name_not_contains?: Maybe<String>
-  building_name_starts_with?: Maybe<String>
-  building_name_not_starts_with?: Maybe<String>
-  building_name_ends_with?: Maybe<String>
-  building_name_not_ends_with?: Maybe<String>
+  hashKey?: Maybe<String>
+  hashKey_not?: Maybe<String>
+  hashKey_in?: Maybe<String[] | String>
+  hashKey_not_in?: Maybe<String[] | String>
+  hashKey_lt?: Maybe<String>
+  hashKey_lte?: Maybe<String>
+  hashKey_gt?: Maybe<String>
+  hashKey_gte?: Maybe<String>
+  hashKey_contains?: Maybe<String>
+  hashKey_not_contains?: Maybe<String>
+  hashKey_starts_with?: Maybe<String>
+  hashKey_not_starts_with?: Maybe<String>
+  hashKey_ends_with?: Maybe<String>
+  hashKey_not_ends_with?: Maybe<String>
+  canonicalStation?: Maybe<String>
+  canonicalStation_not?: Maybe<String>
+  canonicalStation_in?: Maybe<String[] | String>
+  canonicalStation_not_in?: Maybe<String[] | String>
+  canonicalStation_lt?: Maybe<String>
+  canonicalStation_lte?: Maybe<String>
+  canonicalStation_gt?: Maybe<String>
+  canonicalStation_gte?: Maybe<String>
+  canonicalStation_contains?: Maybe<String>
+  canonicalStation_not_contains?: Maybe<String>
+  canonicalStation_starts_with?: Maybe<String>
+  canonicalStation_not_starts_with?: Maybe<String>
+  canonicalStation_ends_with?: Maybe<String>
+  canonicalStation_not_ends_with?: Maybe<String>
+  buildingName?: Maybe<String>
+  buildingName_not?: Maybe<String>
+  buildingName_in?: Maybe<String[] | String>
+  buildingName_not_in?: Maybe<String[] | String>
+  buildingName_lt?: Maybe<String>
+  buildingName_lte?: Maybe<String>
+  buildingName_gt?: Maybe<String>
+  buildingName_gte?: Maybe<String>
+  buildingName_contains?: Maybe<String>
+  buildingName_not_contains?: Maybe<String>
+  buildingName_starts_with?: Maybe<String>
+  buildingName_not_starts_with?: Maybe<String>
+  buildingName_ends_with?: Maybe<String>
+  buildingName_not_ends_with?: Maybe<String>
   address?: Maybe<String>
   address_not?: Maybe<String>
   address_in?: Maybe<String[] | String>
@@ -577,28 +452,62 @@ export interface property_sale_atomWhereInput {
   area_lte?: Maybe<Float>
   area_gt?: Maybe<Float>
   area_gte?: Maybe<Float>
-  currency?: Maybe<String>
-  currency_not?: Maybe<String>
-  currency_in?: Maybe<String[] | String>
-  currency_not_in?: Maybe<String[] | String>
-  currency_lt?: Maybe<String>
-  currency_lte?: Maybe<String>
-  currency_gt?: Maybe<String>
-  currency_gte?: Maybe<String>
-  currency_contains?: Maybe<String>
-  currency_not_contains?: Maybe<String>
-  currency_starts_with?: Maybe<String>
-  currency_not_starts_with?: Maybe<String>
-  currency_ends_with?: Maybe<String>
-  currency_not_ends_with?: Maybe<String>
-  price?: Maybe<Float>
-  price_not?: Maybe<Float>
-  price_in?: Maybe<Float[] | Float>
-  price_not_in?: Maybe<Float[] | Float>
-  price_lt?: Maybe<Float>
-  price_lte?: Maybe<Float>
-  price_gt?: Maybe<Float>
-  price_gte?: Maybe<Float>
+  basicRent?: Maybe<Float>
+  basicRent_not?: Maybe<Float>
+  basicRent_in?: Maybe<Float[] | Float>
+  basicRent_not_in?: Maybe<Float[] | Float>
+  basicRent_lt?: Maybe<Float>
+  basicRent_lte?: Maybe<Float>
+  basicRent_gt?: Maybe<Float>
+  basicRent_gte?: Maybe<Float>
+  rentPlusAlpha?: Maybe<Float>
+  rentPlusAlpha_not?: Maybe<Float>
+  rentPlusAlpha_in?: Maybe<Float[] | Float>
+  rentPlusAlpha_not_in?: Maybe<Float[] | Float>
+  rentPlusAlpha_lt?: Maybe<Float>
+  rentPlusAlpha_lte?: Maybe<Float>
+  rentPlusAlpha_gt?: Maybe<Float>
+  rentPlusAlpha_gte?: Maybe<Float>
+  maintenanceFee?: Maybe<Float>
+  maintenanceFee_not?: Maybe<Float>
+  maintenanceFee_in?: Maybe<Float[] | Float>
+  maintenanceFee_not_in?: Maybe<Float[] | Float>
+  maintenanceFee_lt?: Maybe<Float>
+  maintenanceFee_lte?: Maybe<Float>
+  maintenanceFee_gt?: Maybe<Float>
+  maintenanceFee_gte?: Maybe<Float>
+  totalRent?: Maybe<Float>
+  totalRent_not?: Maybe<Float>
+  totalRent_in?: Maybe<Float[] | Float>
+  totalRent_not_in?: Maybe<Float[] | Float>
+  totalRent_lt?: Maybe<Float>
+  totalRent_lte?: Maybe<Float>
+  totalRent_gt?: Maybe<Float>
+  totalRent_gte?: Maybe<Float>
+  guaranteeMoneyMultiple?: Maybe<Float>
+  guaranteeMoneyMultiple_not?: Maybe<Float>
+  guaranteeMoneyMultiple_in?: Maybe<Float[] | Float>
+  guaranteeMoneyMultiple_not_in?: Maybe<Float[] | Float>
+  guaranteeMoneyMultiple_lt?: Maybe<Float>
+  guaranteeMoneyMultiple_lte?: Maybe<Float>
+  guaranteeMoneyMultiple_gt?: Maybe<Float>
+  guaranteeMoneyMultiple_gte?: Maybe<Float>
+  keyMoneyMultiple?: Maybe<Float>
+  keyMoneyMultiple_not?: Maybe<Float>
+  keyMoneyMultiple_in?: Maybe<Float[] | Float>
+  keyMoneyMultiple_not_in?: Maybe<Float[] | Float>
+  keyMoneyMultiple_lt?: Maybe<Float>
+  keyMoneyMultiple_lte?: Maybe<Float>
+  keyMoneyMultiple_gt?: Maybe<Float>
+  keyMoneyMultiple_gte?: Maybe<Float>
+  unitRent?: Maybe<Float>
+  unitRent_not?: Maybe<Float>
+  unitRent_in?: Maybe<Float[] | Float>
+  unitRent_not_in?: Maybe<Float[] | Float>
+  unitRent_lt?: Maybe<Float>
+  unitRent_lte?: Maybe<Float>
+  unitRent_gt?: Maybe<Float>
+  unitRent_gte?: Maybe<Float>
   city?: Maybe<String>
   city_not?: Maybe<String>
   city_in?: Maybe<String[] | String>
@@ -627,269 +536,546 @@ export interface property_sale_atomWhereInput {
   country_not_starts_with?: Maybe<String>
   country_ends_with?: Maybe<String>
   country_not_ends_with?: Maybe<String>
-  year_built?: Maybe<Int>
-  year_built_not?: Maybe<Int>
-  year_built_in?: Maybe<Int[] | Int>
-  year_built_not_in?: Maybe<Int[] | Int>
-  year_built_lt?: Maybe<Int>
-  year_built_lte?: Maybe<Int>
-  year_built_gt?: Maybe<Int>
-  year_built_gte?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  floor_plan_not?: Maybe<String>
-  floor_plan_in?: Maybe<String[] | String>
-  floor_plan_not_in?: Maybe<String[] | String>
-  floor_plan_lt?: Maybe<String>
-  floor_plan_lte?: Maybe<String>
-  floor_plan_gt?: Maybe<String>
-  floor_plan_gte?: Maybe<String>
-  floor_plan_contains?: Maybe<String>
-  floor_plan_not_contains?: Maybe<String>
-  floor_plan_starts_with?: Maybe<String>
-  floor_plan_not_starts_with?: Maybe<String>
-  floor_plan_ends_with?: Maybe<String>
-  floor_plan_not_ends_with?: Maybe<String>
-  in_date?: Maybe<DateTimeInput>
-  in_date_not?: Maybe<DateTimeInput>
-  in_date_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  in_date_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  in_date_lt?: Maybe<DateTimeInput>
-  in_date_lte?: Maybe<DateTimeInput>
-  in_date_gt?: Maybe<DateTimeInput>
-  in_date_gte?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  out_date_not?: Maybe<DateTimeInput>
-  out_date_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  out_date_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
-  out_date_lt?: Maybe<DateTimeInput>
-  out_date_lte?: Maybe<DateTimeInput>
-  out_date_gt?: Maybe<DateTimeInput>
-  out_date_gte?: Maybe<DateTimeInput>
-  land_area?: Maybe<Float>
-  land_area_not?: Maybe<Float>
-  land_area_in?: Maybe<Float[] | Float>
-  land_area_not_in?: Maybe<Float[] | Float>
-  land_area_lt?: Maybe<Float>
-  land_area_lte?: Maybe<Float>
-  land_area_gt?: Maybe<Float>
-  land_area_gte?: Maybe<Float>
-  floor_number?: Maybe<Int>
-  floor_number_not?: Maybe<Int>
-  floor_number_in?: Maybe<Int[] | Int>
-  floor_number_not_in?: Maybe<Int[] | Int>
-  floor_number_lt?: Maybe<Int>
-  floor_number_lte?: Maybe<Int>
-  floor_number_gt?: Maybe<Int>
-  floor_number_gte?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  total_floor_not?: Maybe<Int>
-  total_floor_in?: Maybe<Int[] | Int>
-  total_floor_not_in?: Maybe<Int[] | Int>
-  total_floor_lt?: Maybe<Int>
-  total_floor_lte?: Maybe<Int>
-  total_floor_gt?: Maybe<Int>
-  total_floor_gte?: Maybe<Int>
-  agent_comment?: Maybe<String>
-  agent_comment_not?: Maybe<String>
-  agent_comment_in?: Maybe<String[] | String>
-  agent_comment_not_in?: Maybe<String[] | String>
-  agent_comment_lt?: Maybe<String>
-  agent_comment_lte?: Maybe<String>
-  agent_comment_gt?: Maybe<String>
-  agent_comment_gte?: Maybe<String>
-  agent_comment_contains?: Maybe<String>
-  agent_comment_not_contains?: Maybe<String>
-  agent_comment_starts_with?: Maybe<String>
-  agent_comment_not_starts_with?: Maybe<String>
-  agent_comment_ends_with?: Maybe<String>
-  agent_comment_not_ends_with?: Maybe<String>
-  more_detail?: Maybe<String>
-  more_detail_not?: Maybe<String>
-  more_detail_in?: Maybe<String[] | String>
-  more_detail_not_in?: Maybe<String[] | String>
-  more_detail_lt?: Maybe<String>
-  more_detail_lte?: Maybe<String>
-  more_detail_gt?: Maybe<String>
-  more_detail_gte?: Maybe<String>
-  more_detail_contains?: Maybe<String>
-  more_detail_not_contains?: Maybe<String>
-  more_detail_starts_with?: Maybe<String>
-  more_detail_not_starts_with?: Maybe<String>
-  more_detail_ends_with?: Maybe<String>
-  more_detail_not_ends_with?: Maybe<String>
-  AND?: Maybe<property_sale_atomWhereInput[] | property_sale_atomWhereInput>
+  currency?: Maybe<String>
+  currency_not?: Maybe<String>
+  currency_in?: Maybe<String[] | String>
+  currency_not_in?: Maybe<String[] | String>
+  currency_lt?: Maybe<String>
+  currency_lte?: Maybe<String>
+  currency_gt?: Maybe<String>
+  currency_gte?: Maybe<String>
+  currency_contains?: Maybe<String>
+  currency_not_contains?: Maybe<String>
+  currency_starts_with?: Maybe<String>
+  currency_not_starts_with?: Maybe<String>
+  currency_ends_with?: Maybe<String>
+  currency_not_ends_with?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  yearBuilt_not?: Maybe<Int>
+  yearBuilt_in?: Maybe<Int[] | Int>
+  yearBuilt_not_in?: Maybe<Int[] | Int>
+  yearBuilt_lt?: Maybe<Int>
+  yearBuilt_lte?: Maybe<Int>
+  yearBuilt_gt?: Maybe<Int>
+  yearBuilt_gte?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorPlan_not?: Maybe<String>
+  floorPlan_in?: Maybe<String[] | String>
+  floorPlan_not_in?: Maybe<String[] | String>
+  floorPlan_lt?: Maybe<String>
+  floorPlan_lte?: Maybe<String>
+  floorPlan_gt?: Maybe<String>
+  floorPlan_gte?: Maybe<String>
+  floorPlan_contains?: Maybe<String>
+  floorPlan_not_contains?: Maybe<String>
+  floorPlan_starts_with?: Maybe<String>
+  floorPlan_not_starts_with?: Maybe<String>
+  floorPlan_ends_with?: Maybe<String>
+  floorPlan_not_ends_with?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  floorNumber_not?: Maybe<Int>
+  floorNumber_in?: Maybe<Int[] | Int>
+  floorNumber_not_in?: Maybe<Int[] | Int>
+  floorNumber_lt?: Maybe<Int>
+  floorNumber_lte?: Maybe<Int>
+  floorNumber_gt?: Maybe<Int>
+  floorNumber_gte?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  totalFloor_not?: Maybe<Int>
+  totalFloor_in?: Maybe<Int[] | Int>
+  totalFloor_not_in?: Maybe<Int[] | Int>
+  totalFloor_lt?: Maybe<Int>
+  totalFloor_lte?: Maybe<Int>
+  totalFloor_gt?: Maybe<Int>
+  totalFloor_gte?: Maybe<Int>
+  inDate?: Maybe<DateTimeInput>
+  inDate_not?: Maybe<DateTimeInput>
+  inDate_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  inDate_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  inDate_lt?: Maybe<DateTimeInput>
+  inDate_lte?: Maybe<DateTimeInput>
+  inDate_gt?: Maybe<DateTimeInput>
+  inDate_gte?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  outDate_not?: Maybe<DateTimeInput>
+  outDate_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  outDate_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  outDate_lt?: Maybe<DateTimeInput>
+  outDate_lte?: Maybe<DateTimeInput>
+  outDate_gt?: Maybe<DateTimeInput>
+  outDate_gte?: Maybe<DateTimeInput>
+  agentComment?: Maybe<String>
+  agentComment_not?: Maybe<String>
+  agentComment_in?: Maybe<String[] | String>
+  agentComment_not_in?: Maybe<String[] | String>
+  agentComment_lt?: Maybe<String>
+  agentComment_lte?: Maybe<String>
+  agentComment_gt?: Maybe<String>
+  agentComment_gte?: Maybe<String>
+  agentComment_contains?: Maybe<String>
+  agentComment_not_contains?: Maybe<String>
+  agentComment_starts_with?: Maybe<String>
+  agentComment_not_starts_with?: Maybe<String>
+  agentComment_ends_with?: Maybe<String>
+  agentComment_not_ends_with?: Maybe<String>
+  moreDetail?: Maybe<String>
+  moreDetail_not?: Maybe<String>
+  moreDetail_in?: Maybe<String[] | String>
+  moreDetail_not_in?: Maybe<String[] | String>
+  moreDetail_lt?: Maybe<String>
+  moreDetail_lte?: Maybe<String>
+  moreDetail_gt?: Maybe<String>
+  moreDetail_gte?: Maybe<String>
+  moreDetail_contains?: Maybe<String>
+  moreDetail_not_contains?: Maybe<String>
+  moreDetail_starts_with?: Maybe<String>
+  moreDetail_not_starts_with?: Maybe<String>
+  moreDetail_ends_with?: Maybe<String>
+  moreDetail_not_ends_with?: Maybe<String>
+  AND?: Maybe<PropertyRentAtomWhereInput[] | PropertyRentAtomWhereInput>
 }
 
-export interface property_rent_atomCreateInput {
+export type PropertySaleAtomWhereUniqueInput = AtLeastOne<{
+  _id: Maybe<ID_Input>
+}>
+
+export interface PropertySaleAtomWhereInput {
+  _id?: Maybe<ID_Input>
+  _id_not?: Maybe<ID_Input>
+  _id_in?: Maybe<ID_Input[] | ID_Input>
+  _id_not_in?: Maybe<ID_Input[] | ID_Input>
+  _id_lt?: Maybe<ID_Input>
+  _id_lte?: Maybe<ID_Input>
+  _id_gt?: Maybe<ID_Input>
+  _id_gte?: Maybe<ID_Input>
+  _id_contains?: Maybe<ID_Input>
+  _id_not_contains?: Maybe<ID_Input>
+  _id_starts_with?: Maybe<ID_Input>
+  _id_not_starts_with?: Maybe<ID_Input>
+  _id_ends_with?: Maybe<ID_Input>
+  _id_not_ends_with?: Maybe<ID_Input>
+  _cls?: Maybe<PropertyClass>
+  _cls_not?: Maybe<PropertyClass>
+  _cls_in?: Maybe<PropertyClass[] | PropertyClass>
+  _cls_not_in?: Maybe<PropertyClass[] | PropertyClass>
+  hashKey?: Maybe<String>
+  hashKey_not?: Maybe<String>
+  hashKey_in?: Maybe<String[] | String>
+  hashKey_not_in?: Maybe<String[] | String>
+  hashKey_lt?: Maybe<String>
+  hashKey_lte?: Maybe<String>
+  hashKey_gt?: Maybe<String>
+  hashKey_gte?: Maybe<String>
+  hashKey_contains?: Maybe<String>
+  hashKey_not_contains?: Maybe<String>
+  hashKey_starts_with?: Maybe<String>
+  hashKey_not_starts_with?: Maybe<String>
+  hashKey_ends_with?: Maybe<String>
+  hashKey_not_ends_with?: Maybe<String>
+  canonicalStation?: Maybe<String>
+  canonicalStation_not?: Maybe<String>
+  canonicalStation_in?: Maybe<String[] | String>
+  canonicalStation_not_in?: Maybe<String[] | String>
+  canonicalStation_lt?: Maybe<String>
+  canonicalStation_lte?: Maybe<String>
+  canonicalStation_gt?: Maybe<String>
+  canonicalStation_gte?: Maybe<String>
+  canonicalStation_contains?: Maybe<String>
+  canonicalStation_not_contains?: Maybe<String>
+  canonicalStation_starts_with?: Maybe<String>
+  canonicalStation_not_starts_with?: Maybe<String>
+  canonicalStation_ends_with?: Maybe<String>
+  canonicalStation_not_ends_with?: Maybe<String>
+  propertyType?: Maybe<PropertyType>
+  propertyType_not?: Maybe<PropertyType>
+  propertyType_in?: Maybe<PropertyType[] | PropertyType>
+  propertyType_not_in?: Maybe<PropertyType[] | PropertyType>
+  buildingName?: Maybe<String>
+  buildingName_not?: Maybe<String>
+  buildingName_in?: Maybe<String[] | String>
+  buildingName_not_in?: Maybe<String[] | String>
+  buildingName_lt?: Maybe<String>
+  buildingName_lte?: Maybe<String>
+  buildingName_gt?: Maybe<String>
+  buildingName_gte?: Maybe<String>
+  buildingName_contains?: Maybe<String>
+  buildingName_not_contains?: Maybe<String>
+  buildingName_starts_with?: Maybe<String>
+  buildingName_not_starts_with?: Maybe<String>
+  buildingName_ends_with?: Maybe<String>
+  buildingName_not_ends_with?: Maybe<String>
+  address?: Maybe<String>
+  address_not?: Maybe<String>
+  address_in?: Maybe<String[] | String>
+  address_not_in?: Maybe<String[] | String>
+  address_lt?: Maybe<String>
+  address_lte?: Maybe<String>
+  address_gt?: Maybe<String>
+  address_gte?: Maybe<String>
+  address_contains?: Maybe<String>
+  address_not_contains?: Maybe<String>
+  address_starts_with?: Maybe<String>
+  address_not_starts_with?: Maybe<String>
+  address_ends_with?: Maybe<String>
+  address_not_ends_with?: Maybe<String>
+  area?: Maybe<Float>
+  area_not?: Maybe<Float>
+  area_in?: Maybe<Float[] | Float>
+  area_not_in?: Maybe<Float[] | Float>
+  area_lt?: Maybe<Float>
+  area_lte?: Maybe<Float>
+  area_gt?: Maybe<Float>
+  area_gte?: Maybe<Float>
+  price?: Maybe<Int>
+  price_not?: Maybe<Int>
+  price_in?: Maybe<Int[] | Int>
+  price_not_in?: Maybe<Int[] | Int>
+  price_lt?: Maybe<Int>
+  price_lte?: Maybe<Int>
+  price_gt?: Maybe<Int>
+  price_gte?: Maybe<Int>
+  city?: Maybe<String>
+  city_not?: Maybe<String>
+  city_in?: Maybe<String[] | String>
+  city_not_in?: Maybe<String[] | String>
+  city_lt?: Maybe<String>
+  city_lte?: Maybe<String>
+  city_gt?: Maybe<String>
+  city_gte?: Maybe<String>
+  city_contains?: Maybe<String>
+  city_not_contains?: Maybe<String>
+  city_starts_with?: Maybe<String>
+  city_not_starts_with?: Maybe<String>
+  city_ends_with?: Maybe<String>
+  city_not_ends_with?: Maybe<String>
+  country?: Maybe<String>
+  country_not?: Maybe<String>
+  country_in?: Maybe<String[] | String>
+  country_not_in?: Maybe<String[] | String>
+  country_lt?: Maybe<String>
+  country_lte?: Maybe<String>
+  country_gt?: Maybe<String>
+  country_gte?: Maybe<String>
+  country_contains?: Maybe<String>
+  country_not_contains?: Maybe<String>
+  country_starts_with?: Maybe<String>
+  country_not_starts_with?: Maybe<String>
+  country_ends_with?: Maybe<String>
+  country_not_ends_with?: Maybe<String>
+  currency?: Maybe<String>
+  currency_not?: Maybe<String>
+  currency_in?: Maybe<String[] | String>
+  currency_not_in?: Maybe<String[] | String>
+  currency_lt?: Maybe<String>
+  currency_lte?: Maybe<String>
+  currency_gt?: Maybe<String>
+  currency_gte?: Maybe<String>
+  currency_contains?: Maybe<String>
+  currency_not_contains?: Maybe<String>
+  currency_starts_with?: Maybe<String>
+  currency_not_starts_with?: Maybe<String>
+  currency_ends_with?: Maybe<String>
+  currency_not_ends_with?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  yearBuilt_not?: Maybe<Int>
+  yearBuilt_in?: Maybe<Int[] | Int>
+  yearBuilt_not_in?: Maybe<Int[] | Int>
+  yearBuilt_lt?: Maybe<Int>
+  yearBuilt_lte?: Maybe<Int>
+  yearBuilt_gt?: Maybe<Int>
+  yearBuilt_gte?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorPlan_not?: Maybe<String>
+  floorPlan_in?: Maybe<String[] | String>
+  floorPlan_not_in?: Maybe<String[] | String>
+  floorPlan_lt?: Maybe<String>
+  floorPlan_lte?: Maybe<String>
+  floorPlan_gt?: Maybe<String>
+  floorPlan_gte?: Maybe<String>
+  floorPlan_contains?: Maybe<String>
+  floorPlan_not_contains?: Maybe<String>
+  floorPlan_starts_with?: Maybe<String>
+  floorPlan_not_starts_with?: Maybe<String>
+  floorPlan_ends_with?: Maybe<String>
+  floorPlan_not_ends_with?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  floorNumber_not?: Maybe<Int>
+  floorNumber_in?: Maybe<Int[] | Int>
+  floorNumber_not_in?: Maybe<Int[] | Int>
+  floorNumber_lt?: Maybe<Int>
+  floorNumber_lte?: Maybe<Int>
+  floorNumber_gt?: Maybe<Int>
+  floorNumber_gte?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  totalFloor_not?: Maybe<Int>
+  totalFloor_in?: Maybe<Int[] | Int>
+  totalFloor_not_in?: Maybe<Int[] | Int>
+  totalFloor_lt?: Maybe<Int>
+  totalFloor_lte?: Maybe<Int>
+  totalFloor_gt?: Maybe<Int>
+  totalFloor_gte?: Maybe<Int>
+  landArea?: Maybe<Float>
+  landArea_not?: Maybe<Float>
+  landArea_in?: Maybe<Float[] | Float>
+  landArea_not_in?: Maybe<Float[] | Float>
+  landArea_lt?: Maybe<Float>
+  landArea_lte?: Maybe<Float>
+  landArea_gt?: Maybe<Float>
+  landArea_gte?: Maybe<Float>
+  inDate?: Maybe<DateTimeInput>
+  inDate_not?: Maybe<DateTimeInput>
+  inDate_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  inDate_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  inDate_lt?: Maybe<DateTimeInput>
+  inDate_lte?: Maybe<DateTimeInput>
+  inDate_gt?: Maybe<DateTimeInput>
+  inDate_gte?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  outDate_not?: Maybe<DateTimeInput>
+  outDate_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  outDate_not_in?: Maybe<DateTimeInput[] | DateTimeInput>
+  outDate_lt?: Maybe<DateTimeInput>
+  outDate_lte?: Maybe<DateTimeInput>
+  outDate_gt?: Maybe<DateTimeInput>
+  outDate_gte?: Maybe<DateTimeInput>
+  agentComment?: Maybe<String>
+  agentComment_not?: Maybe<String>
+  agentComment_in?: Maybe<String[] | String>
+  agentComment_not_in?: Maybe<String[] | String>
+  agentComment_lt?: Maybe<String>
+  agentComment_lte?: Maybe<String>
+  agentComment_gt?: Maybe<String>
+  agentComment_gte?: Maybe<String>
+  agentComment_contains?: Maybe<String>
+  agentComment_not_contains?: Maybe<String>
+  agentComment_starts_with?: Maybe<String>
+  agentComment_not_starts_with?: Maybe<String>
+  agentComment_ends_with?: Maybe<String>
+  agentComment_not_ends_with?: Maybe<String>
+  moreDetail?: Maybe<String>
+  moreDetail_not?: Maybe<String>
+  moreDetail_in?: Maybe<String[] | String>
+  moreDetail_not_in?: Maybe<String[] | String>
+  moreDetail_lt?: Maybe<String>
+  moreDetail_lte?: Maybe<String>
+  moreDetail_gt?: Maybe<String>
+  moreDetail_gte?: Maybe<String>
+  moreDetail_contains?: Maybe<String>
+  moreDetail_not_contains?: Maybe<String>
+  moreDetail_starts_with?: Maybe<String>
+  moreDetail_not_starts_with?: Maybe<String>
+  moreDetail_ends_with?: Maybe<String>
+  moreDetail_not_ends_with?: Maybe<String>
+  AND?: Maybe<PropertySaleAtomWhereInput[] | PropertySaleAtomWhereInput>
+}
+
+export interface PropertyDBLoadHistoryCreateInput {
+  _id?: Maybe<ID_Input>
+  filename?: Maybe<String>
+  inDate?: Maybe<DateTimeInput>
+}
+
+export interface PropertyDBLoadHistoryUpdateInput {
+  filename?: Maybe<String>
+  inDate?: Maybe<DateTimeInput>
+}
+
+export interface PropertyDBLoadHistoryUpdateManyMutationInput {
+  filename?: Maybe<String>
+  inDate?: Maybe<DateTimeInput>
+}
+
+export interface PropertyRentAtomCreateInput {
   _id?: Maybe<ID_Input>
   _cls?: Maybe<PropertyClass>
-  hash_key: String
-  canonical_station?: Maybe<String>
-  building_name?: Maybe<String>
+  hashKey: String
+  canonicalStation?: Maybe<String>
+  buildingName?: Maybe<String>
   address?: Maybe<String>
   area?: Maybe<Float>
-  basic_rent?: Maybe<Float>
-  rent_plus_alpha?: Maybe<Float>
-  maintenance_fee?: Maybe<Float>
-  total_rent?: Maybe<Float>
-  guarantee_money_multiple?: Maybe<Float>
-  key_money_multiple?: Maybe<Float>
-  unit_rent?: Maybe<Float>
-  year_built?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  floor_number?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  in_date?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  nearest_stations?: Maybe<Json>
-  agent_comment?: Maybe<String>
-  more_detail?: Maybe<String>
+  basicRent?: Maybe<Float>
+  rentPlusAlpha?: Maybe<Float>
+  maintenanceFee?: Maybe<Float>
+  totalRent?: Maybe<Float>
+  guaranteeMoneyMultiple?: Maybe<Float>
+  keyMoneyMultiple?: Maybe<Float>
+  unitRent?: Maybe<Float>
+  city?: Maybe<String>
+  country?: Maybe<String>
+  currency?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  inDate?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  nearestStations?: Maybe<Json>
+  agentComment?: Maybe<String>
+  moreDetail?: Maybe<String>
 }
 
-export interface property_rent_atomUpdateInput {
+export interface PropertyRentAtomUpdateInput {
   _cls?: Maybe<PropertyClass>
-  hash_key?: Maybe<String>
-  canonical_station?: Maybe<String>
-  building_name?: Maybe<String>
+  hashKey?: Maybe<String>
+  canonicalStation?: Maybe<String>
+  buildingName?: Maybe<String>
   address?: Maybe<String>
   area?: Maybe<Float>
-  basic_rent?: Maybe<Float>
-  rent_plus_alpha?: Maybe<Float>
-  maintenance_fee?: Maybe<Float>
-  total_rent?: Maybe<Float>
-  guarantee_money_multiple?: Maybe<Float>
-  key_money_multiple?: Maybe<Float>
-  unit_rent?: Maybe<Float>
-  year_built?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  floor_number?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  in_date?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  nearest_stations?: Maybe<Json>
-  agent_comment?: Maybe<String>
-  more_detail?: Maybe<String>
+  basicRent?: Maybe<Float>
+  rentPlusAlpha?: Maybe<Float>
+  maintenanceFee?: Maybe<Float>
+  totalRent?: Maybe<Float>
+  guaranteeMoneyMultiple?: Maybe<Float>
+  keyMoneyMultiple?: Maybe<Float>
+  unitRent?: Maybe<Float>
+  city?: Maybe<String>
+  country?: Maybe<String>
+  currency?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  inDate?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  nearestStations?: Maybe<Json>
+  agentComment?: Maybe<String>
+  moreDetail?: Maybe<String>
 }
 
-export interface property_rent_atomUpdateManyMutationInput {
+export interface PropertyRentAtomUpdateManyMutationInput {
   _cls?: Maybe<PropertyClass>
-  hash_key?: Maybe<String>
-  canonical_station?: Maybe<String>
-  building_name?: Maybe<String>
+  hashKey?: Maybe<String>
+  canonicalStation?: Maybe<String>
+  buildingName?: Maybe<String>
   address?: Maybe<String>
   area?: Maybe<Float>
-  basic_rent?: Maybe<Float>
-  rent_plus_alpha?: Maybe<Float>
-  maintenance_fee?: Maybe<Float>
-  total_rent?: Maybe<Float>
-  guarantee_money_multiple?: Maybe<Float>
-  key_money_multiple?: Maybe<Float>
-  unit_rent?: Maybe<Float>
-  year_built?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  floor_number?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  in_date?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  nearest_stations?: Maybe<Json>
-  agent_comment?: Maybe<String>
-  more_detail?: Maybe<String>
+  basicRent?: Maybe<Float>
+  rentPlusAlpha?: Maybe<Float>
+  maintenanceFee?: Maybe<Float>
+  totalRent?: Maybe<Float>
+  guaranteeMoneyMultiple?: Maybe<Float>
+  keyMoneyMultiple?: Maybe<Float>
+  unitRent?: Maybe<Float>
+  city?: Maybe<String>
+  country?: Maybe<String>
+  currency?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  inDate?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  nearestStations?: Maybe<Json>
+  agentComment?: Maybe<String>
+  moreDetail?: Maybe<String>
 }
 
-export interface property_sale_atomCreateInput {
+export interface PropertySaleAtomCreateInput {
   _id?: Maybe<ID_Input>
   _cls?: Maybe<PropertyClass>
-  hash_key: String
-  property_type: PropertyType
-  canonical_station?: Maybe<String>
-  building_name?: Maybe<String>
+  hashKey: String
+  canonicalStation?: Maybe<String>
+  propertyType: PropertyType
+  buildingName?: Maybe<String>
   address?: Maybe<String>
   area?: Maybe<Float>
-  currency?: Maybe<String>
-  price?: Maybe<Float>
+  price?: Maybe<Int>
   city?: Maybe<String>
   country?: Maybe<String>
-  year_built?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  in_date?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  nearest_stations?: Maybe<Json>
-  land_area?: Maybe<Float>
-  floor_number?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  agent_comment?: Maybe<String>
-  more_detail?: Maybe<String>
+  currency?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  landArea?: Maybe<Float>
+  inDate?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  nearestStations?: Maybe<Json>
+  agentComment?: Maybe<String>
+  moreDetail?: Maybe<String>
 }
 
-export interface property_sale_atomUpdateInput {
+export interface PropertySaleAtomUpdateInput {
   _cls?: Maybe<PropertyClass>
-  hash_key?: Maybe<String>
-  property_type?: Maybe<PropertyType>
-  canonical_station?: Maybe<String>
-  building_name?: Maybe<String>
+  hashKey?: Maybe<String>
+  canonicalStation?: Maybe<String>
+  propertyType?: Maybe<PropertyType>
+  buildingName?: Maybe<String>
   address?: Maybe<String>
   area?: Maybe<Float>
-  currency?: Maybe<String>
-  price?: Maybe<Float>
+  price?: Maybe<Int>
   city?: Maybe<String>
   country?: Maybe<String>
-  year_built?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  in_date?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  nearest_stations?: Maybe<Json>
-  land_area?: Maybe<Float>
-  floor_number?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  agent_comment?: Maybe<String>
-  more_detail?: Maybe<String>
+  currency?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  landArea?: Maybe<Float>
+  inDate?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  nearestStations?: Maybe<Json>
+  agentComment?: Maybe<String>
+  moreDetail?: Maybe<String>
 }
 
-export interface property_sale_atomUpdateManyMutationInput {
+export interface PropertySaleAtomUpdateManyMutationInput {
   _cls?: Maybe<PropertyClass>
-  hash_key?: Maybe<String>
-  property_type?: Maybe<PropertyType>
-  canonical_station?: Maybe<String>
-  building_name?: Maybe<String>
+  hashKey?: Maybe<String>
+  canonicalStation?: Maybe<String>
+  propertyType?: Maybe<PropertyType>
+  buildingName?: Maybe<String>
   address?: Maybe<String>
   area?: Maybe<Float>
-  currency?: Maybe<String>
-  price?: Maybe<Float>
+  price?: Maybe<Int>
   city?: Maybe<String>
   country?: Maybe<String>
-  year_built?: Maybe<Int>
-  floor_plan?: Maybe<String>
-  in_date?: Maybe<DateTimeInput>
-  out_date?: Maybe<DateTimeInput>
-  nearest_stations?: Maybe<Json>
-  land_area?: Maybe<Float>
-  floor_number?: Maybe<Int>
-  total_floor?: Maybe<Int>
-  agent_comment?: Maybe<String>
-  more_detail?: Maybe<String>
+  currency?: Maybe<String>
+  yearBuilt?: Maybe<Int>
+  floorPlan?: Maybe<String>
+  floorNumber?: Maybe<Int>
+  totalFloor?: Maybe<Int>
+  landArea?: Maybe<Float>
+  inDate?: Maybe<DateTimeInput>
+  outDate?: Maybe<DateTimeInput>
+  nearestStations?: Maybe<Json>
+  agentComment?: Maybe<String>
+  moreDetail?: Maybe<String>
 }
 
-export interface property_rent_atomSubscriptionWhereInput {
+export interface PropertyDBLoadHistorySubscriptionWhereInput {
   mutation_in?: Maybe<MutationType[] | MutationType>
   updatedFields_contains?: Maybe<String>
   updatedFields_contains_every?: Maybe<String[] | String>
   updatedFields_contains_some?: Maybe<String[] | String>
-  node?: Maybe<property_rent_atomWhereInput>
+  node?: Maybe<PropertyDBLoadHistoryWhereInput>
   AND?: Maybe<
-    | property_rent_atomSubscriptionWhereInput[]
-    | property_rent_atomSubscriptionWhereInput
+    | PropertyDBLoadHistorySubscriptionWhereInput[]
+    | PropertyDBLoadHistorySubscriptionWhereInput
   >
 }
 
-export interface property_sale_atomSubscriptionWhereInput {
+export interface PropertyRentAtomSubscriptionWhereInput {
   mutation_in?: Maybe<MutationType[] | MutationType>
   updatedFields_contains?: Maybe<String>
   updatedFields_contains_every?: Maybe<String[] | String>
   updatedFields_contains_some?: Maybe<String[] | String>
-  node?: Maybe<property_sale_atomWhereInput>
+  node?: Maybe<PropertyRentAtomWhereInput>
   AND?: Maybe<
-    | property_sale_atomSubscriptionWhereInput[]
-    | property_sale_atomSubscriptionWhereInput
+    | PropertyRentAtomSubscriptionWhereInput[]
+    | PropertyRentAtomSubscriptionWhereInput
+  >
+}
+
+export interface PropertySaleAtomSubscriptionWhereInput {
+  mutation_in?: Maybe<MutationType[] | MutationType>
+  updatedFields_contains?: Maybe<String>
+  updatedFields_contains_every?: Maybe<String[] | String>
+  updatedFields_contains_some?: Maybe<String[] | String>
+  node?: Maybe<PropertySaleAtomWhereInput>
+  AND?: Maybe<
+    | PropertySaleAtomSubscriptionWhereInput[]
+    | PropertySaleAtomSubscriptionWhereInput
   >
 }
 
@@ -897,135 +1083,57 @@ export interface NodeNode {
   id: ID_Output
 }
 
-export interface property_rent_atom {
+export interface PropertyDBLoadHistory {
   _id: ID_Output
-  _cls: PropertyClass
-  hash_key: String
-  canonical_station?: String
-  building_name?: String
-  address?: String
-  area?: Float
-  basic_rent?: Float
-  rent_plus_alpha?: Float
-  maintenance_fee?: Float
-  total_rent?: Float
-  guarantee_money_multiple?: Float
-  key_money_multiple?: Float
-  unit_rent?: Float
-  year_built?: Int
-  floor_plan?: String
-  floor_number?: Int
-  total_floor?: Int
-  in_date?: DateTimeOutput
-  out_date?: DateTimeOutput
-  nearest_stations?: Json
-  agent_comment?: String
-  more_detail?: String
+  filename?: String
+  inDate?: DateTimeOutput
 }
 
-export interface property_rent_atomPromise
-  extends Promise<property_rent_atom>,
+export interface PropertyDBLoadHistoryPromise
+  extends Promise<PropertyDBLoadHistory>,
     Fragmentable {
   _id: () => Promise<ID_Output>
-  _cls: () => Promise<PropertyClass>
-  hash_key: () => Promise<String>
-  canonical_station: () => Promise<String>
-  building_name: () => Promise<String>
-  address: () => Promise<String>
-  area: () => Promise<Float>
-  basic_rent: () => Promise<Float>
-  rent_plus_alpha: () => Promise<Float>
-  maintenance_fee: () => Promise<Float>
-  total_rent: () => Promise<Float>
-  guarantee_money_multiple: () => Promise<Float>
-  key_money_multiple: () => Promise<Float>
-  unit_rent: () => Promise<Float>
-  year_built: () => Promise<Int>
-  floor_plan: () => Promise<String>
-  floor_number: () => Promise<Int>
-  total_floor: () => Promise<Int>
-  in_date: () => Promise<DateTimeOutput>
-  out_date: () => Promise<DateTimeOutput>
-  nearest_stations: () => Promise<Json>
-  agent_comment: () => Promise<String>
-  more_detail: () => Promise<String>
+  filename: () => Promise<String>
+  inDate: () => Promise<DateTimeOutput>
 }
 
-export interface property_rent_atomSubscription
-  extends Promise<AsyncIterator<property_rent_atom>>,
+export interface PropertyDBLoadHistorySubscription
+  extends Promise<AsyncIterator<PropertyDBLoadHistory>>,
     Fragmentable {
   _id: () => Promise<AsyncIterator<ID_Output>>
-  _cls: () => Promise<AsyncIterator<PropertyClass>>
-  hash_key: () => Promise<AsyncIterator<String>>
-  canonical_station: () => Promise<AsyncIterator<String>>
-  building_name: () => Promise<AsyncIterator<String>>
-  address: () => Promise<AsyncIterator<String>>
-  area: () => Promise<AsyncIterator<Float>>
-  basic_rent: () => Promise<AsyncIterator<Float>>
-  rent_plus_alpha: () => Promise<AsyncIterator<Float>>
-  maintenance_fee: () => Promise<AsyncIterator<Float>>
-  total_rent: () => Promise<AsyncIterator<Float>>
-  guarantee_money_multiple: () => Promise<AsyncIterator<Float>>
-  key_money_multiple: () => Promise<AsyncIterator<Float>>
-  unit_rent: () => Promise<AsyncIterator<Float>>
-  year_built: () => Promise<AsyncIterator<Int>>
-  floor_plan: () => Promise<AsyncIterator<String>>
-  floor_number: () => Promise<AsyncIterator<Int>>
-  total_floor: () => Promise<AsyncIterator<Int>>
-  in_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  out_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  nearest_stations: () => Promise<AsyncIterator<Json>>
-  agent_comment: () => Promise<AsyncIterator<String>>
-  more_detail: () => Promise<AsyncIterator<String>>
+  filename: () => Promise<AsyncIterator<String>>
+  inDate: () => Promise<AsyncIterator<DateTimeOutput>>
 }
 
-export interface property_rent_atomNullablePromise
-  extends Promise<property_rent_atom | null>,
+export interface PropertyDBLoadHistoryNullablePromise
+  extends Promise<PropertyDBLoadHistory | null>,
     Fragmentable {
   _id: () => Promise<ID_Output>
-  _cls: () => Promise<PropertyClass>
-  hash_key: () => Promise<String>
-  canonical_station: () => Promise<String>
-  building_name: () => Promise<String>
-  address: () => Promise<String>
-  area: () => Promise<Float>
-  basic_rent: () => Promise<Float>
-  rent_plus_alpha: () => Promise<Float>
-  maintenance_fee: () => Promise<Float>
-  total_rent: () => Promise<Float>
-  guarantee_money_multiple: () => Promise<Float>
-  key_money_multiple: () => Promise<Float>
-  unit_rent: () => Promise<Float>
-  year_built: () => Promise<Int>
-  floor_plan: () => Promise<String>
-  floor_number: () => Promise<Int>
-  total_floor: () => Promise<Int>
-  in_date: () => Promise<DateTimeOutput>
-  out_date: () => Promise<DateTimeOutput>
-  nearest_stations: () => Promise<Json>
-  agent_comment: () => Promise<String>
-  more_detail: () => Promise<String>
+  filename: () => Promise<String>
+  inDate: () => Promise<DateTimeOutput>
 }
 
-export interface property_rent_atomConnection {
+export interface PropertyDBLoadHistoryConnection {
   pageInfo: PageInfo
-  edges: property_rent_atomEdge[]
+  edges: PropertyDBLoadHistoryEdge[]
 }
 
-export interface property_rent_atomConnectionPromise
-  extends Promise<property_rent_atomConnection>,
+export interface PropertyDBLoadHistoryConnectionPromise
+  extends Promise<PropertyDBLoadHistoryConnection>,
     Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T
-  edges: <T = FragmentableArray<property_rent_atomEdge>>() => T
-  aggregate: <T = Aggregateproperty_rent_atomPromise>() => T
+  edges: <T = FragmentableArray<PropertyDBLoadHistoryEdge>>() => T
+  aggregate: <T = AggregatePropertyDBLoadHistoryPromise>() => T
 }
 
-export interface property_rent_atomConnectionSubscription
-  extends Promise<AsyncIterator<property_rent_atomConnection>>,
+export interface PropertyDBLoadHistoryConnectionSubscription
+  extends Promise<AsyncIterator<PropertyDBLoadHistoryConnection>>,
     Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T
-  edges: <T = Promise<AsyncIterator<property_rent_atomEdgeSubscription>>>() => T
-  aggregate: <T = Aggregateproperty_rent_atomSubscription>() => T
+  edges: <
+    T = Promise<AsyncIterator<PropertyDBLoadHistoryEdgeSubscription>>
+  >() => T
+  aggregate: <T = AggregatePropertyDBLoadHistorySubscription>() => T
 }
 
 export interface PageInfo {
@@ -1051,199 +1159,377 @@ export interface PageInfoSubscription
   endCursor: () => Promise<AsyncIterator<String>>
 }
 
-export interface property_rent_atomEdge {
-  node: property_rent_atom
+export interface PropertyDBLoadHistoryEdge {
+  node: PropertyDBLoadHistory
   cursor: String
 }
 
-export interface property_rent_atomEdgePromise
-  extends Promise<property_rent_atomEdge>,
+export interface PropertyDBLoadHistoryEdgePromise
+  extends Promise<PropertyDBLoadHistoryEdge>,
     Fragmentable {
-  node: <T = property_rent_atomPromise>() => T
+  node: <T = PropertyDBLoadHistoryPromise>() => T
   cursor: () => Promise<String>
 }
 
-export interface property_rent_atomEdgeSubscription
-  extends Promise<AsyncIterator<property_rent_atomEdge>>,
+export interface PropertyDBLoadHistoryEdgeSubscription
+  extends Promise<AsyncIterator<PropertyDBLoadHistoryEdge>>,
     Fragmentable {
-  node: <T = property_rent_atomSubscription>() => T
+  node: <T = PropertyDBLoadHistorySubscription>() => T
   cursor: () => Promise<AsyncIterator<String>>
 }
 
-export interface Aggregateproperty_rent_atom {
+export interface AggregatePropertyDBLoadHistory {
   count: Int
 }
 
-export interface Aggregateproperty_rent_atomPromise
-  extends Promise<Aggregateproperty_rent_atom>,
+export interface AggregatePropertyDBLoadHistoryPromise
+  extends Promise<AggregatePropertyDBLoadHistory>,
     Fragmentable {
   count: () => Promise<Int>
 }
 
-export interface Aggregateproperty_rent_atomSubscription
-  extends Promise<AsyncIterator<Aggregateproperty_rent_atom>>,
+export interface AggregatePropertyDBLoadHistorySubscription
+  extends Promise<AsyncIterator<AggregatePropertyDBLoadHistory>>,
     Fragmentable {
   count: () => Promise<AsyncIterator<Int>>
 }
 
-export interface property_sale_atom {
+export interface PropertyRentAtom {
   _id: ID_Output
   _cls: PropertyClass
-  hash_key: String
-  property_type: PropertyType
-  canonical_station?: String
-  building_name?: String
+  hashKey: String
+  canonicalStation?: String
+  buildingName?: String
   address?: String
   area?: Float
-  currency?: String
-  price?: Float
+  basicRent?: Float
+  rentPlusAlpha?: Float
+  maintenanceFee?: Float
+  totalRent?: Float
+  guaranteeMoneyMultiple?: Float
+  keyMoneyMultiple?: Float
+  unitRent?: Float
   city?: String
   country?: String
-  year_built?: Int
-  floor_plan?: String
-  in_date?: DateTimeOutput
-  out_date?: DateTimeOutput
-  nearest_stations?: Json
-  land_area?: Float
-  floor_number?: Int
-  total_floor?: Int
-  agent_comment?: String
-  more_detail?: String
+  currency?: String
+  yearBuilt?: Int
+  floorPlan?: String
+  floorNumber?: Int
+  totalFloor?: Int
+  inDate?: DateTimeOutput
+  outDate?: DateTimeOutput
+  nearestStations?: Json
+  agentComment?: String
+  moreDetail?: String
 }
 
-export interface property_sale_atomPromise
-  extends Promise<property_sale_atom>,
+export interface PropertyRentAtomPromise
+  extends Promise<PropertyRentAtom>,
     Fragmentable {
   _id: () => Promise<ID_Output>
   _cls: () => Promise<PropertyClass>
-  hash_key: () => Promise<String>
-  property_type: () => Promise<PropertyType>
-  canonical_station: () => Promise<String>
-  building_name: () => Promise<String>
+  hashKey: () => Promise<String>
+  canonicalStation: () => Promise<String>
+  buildingName: () => Promise<String>
   address: () => Promise<String>
   area: () => Promise<Float>
-  currency: () => Promise<String>
-  price: () => Promise<Float>
+  basicRent: () => Promise<Float>
+  rentPlusAlpha: () => Promise<Float>
+  maintenanceFee: () => Promise<Float>
+  totalRent: () => Promise<Float>
+  guaranteeMoneyMultiple: () => Promise<Float>
+  keyMoneyMultiple: () => Promise<Float>
+  unitRent: () => Promise<Float>
   city: () => Promise<String>
   country: () => Promise<String>
-  year_built: () => Promise<Int>
-  floor_plan: () => Promise<String>
-  in_date: () => Promise<DateTimeOutput>
-  out_date: () => Promise<DateTimeOutput>
-  nearest_stations: () => Promise<Json>
-  land_area: () => Promise<Float>
-  floor_number: () => Promise<Int>
-  total_floor: () => Promise<Int>
-  agent_comment: () => Promise<String>
-  more_detail: () => Promise<String>
+  currency: () => Promise<String>
+  yearBuilt: () => Promise<Int>
+  floorPlan: () => Promise<String>
+  floorNumber: () => Promise<Int>
+  totalFloor: () => Promise<Int>
+  inDate: () => Promise<DateTimeOutput>
+  outDate: () => Promise<DateTimeOutput>
+  nearestStations: () => Promise<Json>
+  agentComment: () => Promise<String>
+  moreDetail: () => Promise<String>
 }
 
-export interface property_sale_atomSubscription
-  extends Promise<AsyncIterator<property_sale_atom>>,
+export interface PropertyRentAtomSubscription
+  extends Promise<AsyncIterator<PropertyRentAtom>>,
     Fragmentable {
   _id: () => Promise<AsyncIterator<ID_Output>>
   _cls: () => Promise<AsyncIterator<PropertyClass>>
-  hash_key: () => Promise<AsyncIterator<String>>
-  property_type: () => Promise<AsyncIterator<PropertyType>>
-  canonical_station: () => Promise<AsyncIterator<String>>
-  building_name: () => Promise<AsyncIterator<String>>
+  hashKey: () => Promise<AsyncIterator<String>>
+  canonicalStation: () => Promise<AsyncIterator<String>>
+  buildingName: () => Promise<AsyncIterator<String>>
   address: () => Promise<AsyncIterator<String>>
   area: () => Promise<AsyncIterator<Float>>
-  currency: () => Promise<AsyncIterator<String>>
-  price: () => Promise<AsyncIterator<Float>>
+  basicRent: () => Promise<AsyncIterator<Float>>
+  rentPlusAlpha: () => Promise<AsyncIterator<Float>>
+  maintenanceFee: () => Promise<AsyncIterator<Float>>
+  totalRent: () => Promise<AsyncIterator<Float>>
+  guaranteeMoneyMultiple: () => Promise<AsyncIterator<Float>>
+  keyMoneyMultiple: () => Promise<AsyncIterator<Float>>
+  unitRent: () => Promise<AsyncIterator<Float>>
   city: () => Promise<AsyncIterator<String>>
   country: () => Promise<AsyncIterator<String>>
-  year_built: () => Promise<AsyncIterator<Int>>
-  floor_plan: () => Promise<AsyncIterator<String>>
-  in_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  out_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  nearest_stations: () => Promise<AsyncIterator<Json>>
-  land_area: () => Promise<AsyncIterator<Float>>
-  floor_number: () => Promise<AsyncIterator<Int>>
-  total_floor: () => Promise<AsyncIterator<Int>>
-  agent_comment: () => Promise<AsyncIterator<String>>
-  more_detail: () => Promise<AsyncIterator<String>>
+  currency: () => Promise<AsyncIterator<String>>
+  yearBuilt: () => Promise<AsyncIterator<Int>>
+  floorPlan: () => Promise<AsyncIterator<String>>
+  floorNumber: () => Promise<AsyncIterator<Int>>
+  totalFloor: () => Promise<AsyncIterator<Int>>
+  inDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  outDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  nearestStations: () => Promise<AsyncIterator<Json>>
+  agentComment: () => Promise<AsyncIterator<String>>
+  moreDetail: () => Promise<AsyncIterator<String>>
 }
 
-export interface property_sale_atomNullablePromise
-  extends Promise<property_sale_atom | null>,
+export interface PropertyRentAtomNullablePromise
+  extends Promise<PropertyRentAtom | null>,
     Fragmentable {
   _id: () => Promise<ID_Output>
   _cls: () => Promise<PropertyClass>
-  hash_key: () => Promise<String>
-  property_type: () => Promise<PropertyType>
-  canonical_station: () => Promise<String>
-  building_name: () => Promise<String>
+  hashKey: () => Promise<String>
+  canonicalStation: () => Promise<String>
+  buildingName: () => Promise<String>
   address: () => Promise<String>
   area: () => Promise<Float>
-  currency: () => Promise<String>
-  price: () => Promise<Float>
+  basicRent: () => Promise<Float>
+  rentPlusAlpha: () => Promise<Float>
+  maintenanceFee: () => Promise<Float>
+  totalRent: () => Promise<Float>
+  guaranteeMoneyMultiple: () => Promise<Float>
+  keyMoneyMultiple: () => Promise<Float>
+  unitRent: () => Promise<Float>
   city: () => Promise<String>
   country: () => Promise<String>
-  year_built: () => Promise<Int>
-  floor_plan: () => Promise<String>
-  in_date: () => Promise<DateTimeOutput>
-  out_date: () => Promise<DateTimeOutput>
-  nearest_stations: () => Promise<Json>
-  land_area: () => Promise<Float>
-  floor_number: () => Promise<Int>
-  total_floor: () => Promise<Int>
-  agent_comment: () => Promise<String>
-  more_detail: () => Promise<String>
+  currency: () => Promise<String>
+  yearBuilt: () => Promise<Int>
+  floorPlan: () => Promise<String>
+  floorNumber: () => Promise<Int>
+  totalFloor: () => Promise<Int>
+  inDate: () => Promise<DateTimeOutput>
+  outDate: () => Promise<DateTimeOutput>
+  nearestStations: () => Promise<Json>
+  agentComment: () => Promise<String>
+  moreDetail: () => Promise<String>
 }
 
-export interface property_sale_atomConnection {
+export interface PropertyRentAtomConnection {
   pageInfo: PageInfo
-  edges: property_sale_atomEdge[]
+  edges: PropertyRentAtomEdge[]
 }
 
-export interface property_sale_atomConnectionPromise
-  extends Promise<property_sale_atomConnection>,
+export interface PropertyRentAtomConnectionPromise
+  extends Promise<PropertyRentAtomConnection>,
     Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T
-  edges: <T = FragmentableArray<property_sale_atomEdge>>() => T
-  aggregate: <T = Aggregateproperty_sale_atomPromise>() => T
+  edges: <T = FragmentableArray<PropertyRentAtomEdge>>() => T
+  aggregate: <T = AggregatePropertyRentAtomPromise>() => T
 }
 
-export interface property_sale_atomConnectionSubscription
-  extends Promise<AsyncIterator<property_sale_atomConnection>>,
+export interface PropertyRentAtomConnectionSubscription
+  extends Promise<AsyncIterator<PropertyRentAtomConnection>>,
     Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T
-  edges: <T = Promise<AsyncIterator<property_sale_atomEdgeSubscription>>>() => T
-  aggregate: <T = Aggregateproperty_sale_atomSubscription>() => T
+  edges: <T = Promise<AsyncIterator<PropertyRentAtomEdgeSubscription>>>() => T
+  aggregate: <T = AggregatePropertyRentAtomSubscription>() => T
 }
 
-export interface property_sale_atomEdge {
-  node: property_sale_atom
+export interface PropertyRentAtomEdge {
+  node: PropertyRentAtom
   cursor: String
 }
 
-export interface property_sale_atomEdgePromise
-  extends Promise<property_sale_atomEdge>,
+export interface PropertyRentAtomEdgePromise
+  extends Promise<PropertyRentAtomEdge>,
     Fragmentable {
-  node: <T = property_sale_atomPromise>() => T
+  node: <T = PropertyRentAtomPromise>() => T
   cursor: () => Promise<String>
 }
 
-export interface property_sale_atomEdgeSubscription
-  extends Promise<AsyncIterator<property_sale_atomEdge>>,
+export interface PropertyRentAtomEdgeSubscription
+  extends Promise<AsyncIterator<PropertyRentAtomEdge>>,
     Fragmentable {
-  node: <T = property_sale_atomSubscription>() => T
+  node: <T = PropertyRentAtomSubscription>() => T
   cursor: () => Promise<AsyncIterator<String>>
 }
 
-export interface Aggregateproperty_sale_atom {
+export interface AggregatePropertyRentAtom {
   count: Int
 }
 
-export interface Aggregateproperty_sale_atomPromise
-  extends Promise<Aggregateproperty_sale_atom>,
+export interface AggregatePropertyRentAtomPromise
+  extends Promise<AggregatePropertyRentAtom>,
     Fragmentable {
   count: () => Promise<Int>
 }
 
-export interface Aggregateproperty_sale_atomSubscription
-  extends Promise<AsyncIterator<Aggregateproperty_sale_atom>>,
+export interface AggregatePropertyRentAtomSubscription
+  extends Promise<AsyncIterator<AggregatePropertyRentAtom>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>
+}
+
+export interface PropertySaleAtom {
+  _id: ID_Output
+  _cls: PropertyClass
+  hashKey: String
+  canonicalStation?: String
+  propertyType: PropertyType
+  buildingName?: String
+  address?: String
+  area?: Float
+  price?: Int
+  city?: String
+  country?: String
+  currency?: String
+  yearBuilt?: Int
+  floorPlan?: String
+  floorNumber?: Int
+  totalFloor?: Int
+  landArea?: Float
+  inDate?: DateTimeOutput
+  outDate?: DateTimeOutput
+  nearestStations?: Json
+  agentComment?: String
+  moreDetail?: String
+}
+
+export interface PropertySaleAtomPromise
+  extends Promise<PropertySaleAtom>,
+    Fragmentable {
+  _id: () => Promise<ID_Output>
+  _cls: () => Promise<PropertyClass>
+  hashKey: () => Promise<String>
+  canonicalStation: () => Promise<String>
+  propertyType: () => Promise<PropertyType>
+  buildingName: () => Promise<String>
+  address: () => Promise<String>
+  area: () => Promise<Float>
+  price: () => Promise<Int>
+  city: () => Promise<String>
+  country: () => Promise<String>
+  currency: () => Promise<String>
+  yearBuilt: () => Promise<Int>
+  floorPlan: () => Promise<String>
+  floorNumber: () => Promise<Int>
+  totalFloor: () => Promise<Int>
+  landArea: () => Promise<Float>
+  inDate: () => Promise<DateTimeOutput>
+  outDate: () => Promise<DateTimeOutput>
+  nearestStations: () => Promise<Json>
+  agentComment: () => Promise<String>
+  moreDetail: () => Promise<String>
+}
+
+export interface PropertySaleAtomSubscription
+  extends Promise<AsyncIterator<PropertySaleAtom>>,
+    Fragmentable {
+  _id: () => Promise<AsyncIterator<ID_Output>>
+  _cls: () => Promise<AsyncIterator<PropertyClass>>
+  hashKey: () => Promise<AsyncIterator<String>>
+  canonicalStation: () => Promise<AsyncIterator<String>>
+  propertyType: () => Promise<AsyncIterator<PropertyType>>
+  buildingName: () => Promise<AsyncIterator<String>>
+  address: () => Promise<AsyncIterator<String>>
+  area: () => Promise<AsyncIterator<Float>>
+  price: () => Promise<AsyncIterator<Int>>
+  city: () => Promise<AsyncIterator<String>>
+  country: () => Promise<AsyncIterator<String>>
+  currency: () => Promise<AsyncIterator<String>>
+  yearBuilt: () => Promise<AsyncIterator<Int>>
+  floorPlan: () => Promise<AsyncIterator<String>>
+  floorNumber: () => Promise<AsyncIterator<Int>>
+  totalFloor: () => Promise<AsyncIterator<Int>>
+  landArea: () => Promise<AsyncIterator<Float>>
+  inDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  outDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  nearestStations: () => Promise<AsyncIterator<Json>>
+  agentComment: () => Promise<AsyncIterator<String>>
+  moreDetail: () => Promise<AsyncIterator<String>>
+}
+
+export interface PropertySaleAtomNullablePromise
+  extends Promise<PropertySaleAtom | null>,
+    Fragmentable {
+  _id: () => Promise<ID_Output>
+  _cls: () => Promise<PropertyClass>
+  hashKey: () => Promise<String>
+  canonicalStation: () => Promise<String>
+  propertyType: () => Promise<PropertyType>
+  buildingName: () => Promise<String>
+  address: () => Promise<String>
+  area: () => Promise<Float>
+  price: () => Promise<Int>
+  city: () => Promise<String>
+  country: () => Promise<String>
+  currency: () => Promise<String>
+  yearBuilt: () => Promise<Int>
+  floorPlan: () => Promise<String>
+  floorNumber: () => Promise<Int>
+  totalFloor: () => Promise<Int>
+  landArea: () => Promise<Float>
+  inDate: () => Promise<DateTimeOutput>
+  outDate: () => Promise<DateTimeOutput>
+  nearestStations: () => Promise<Json>
+  agentComment: () => Promise<String>
+  moreDetail: () => Promise<String>
+}
+
+export interface PropertySaleAtomConnection {
+  pageInfo: PageInfo
+  edges: PropertySaleAtomEdge[]
+}
+
+export interface PropertySaleAtomConnectionPromise
+  extends Promise<PropertySaleAtomConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T
+  edges: <T = FragmentableArray<PropertySaleAtomEdge>>() => T
+  aggregate: <T = AggregatePropertySaleAtomPromise>() => T
+}
+
+export interface PropertySaleAtomConnectionSubscription
+  extends Promise<AsyncIterator<PropertySaleAtomConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T
+  edges: <T = Promise<AsyncIterator<PropertySaleAtomEdgeSubscription>>>() => T
+  aggregate: <T = AggregatePropertySaleAtomSubscription>() => T
+}
+
+export interface PropertySaleAtomEdge {
+  node: PropertySaleAtom
+  cursor: String
+}
+
+export interface PropertySaleAtomEdgePromise
+  extends Promise<PropertySaleAtomEdge>,
+    Fragmentable {
+  node: <T = PropertySaleAtomPromise>() => T
+  cursor: () => Promise<String>
+}
+
+export interface PropertySaleAtomEdgeSubscription
+  extends Promise<AsyncIterator<PropertySaleAtomEdge>>,
+    Fragmentable {
+  node: <T = PropertySaleAtomSubscription>() => T
+  cursor: () => Promise<AsyncIterator<String>>
+}
+
+export interface AggregatePropertySaleAtom {
+  count: Int
+}
+
+export interface AggregatePropertySaleAtomPromise
+  extends Promise<AggregatePropertySaleAtom>,
+    Fragmentable {
+  count: () => Promise<Int>
+}
+
+export interface AggregatePropertySaleAtomSubscription
+  extends Promise<AsyncIterator<AggregatePropertySaleAtom>>,
     Fragmentable {
   count: () => Promise<AsyncIterator<Int>>
 }
@@ -1264,215 +1550,271 @@ export interface BatchPayloadSubscription
   count: () => Promise<AsyncIterator<Long>>
 }
 
-export interface property_rent_atomSubscriptionPayload {
+export interface PropertyDBLoadHistorySubscriptionPayload {
   mutation: MutationType
-  node: property_rent_atom
+  node: PropertyDBLoadHistory
   updatedFields: String[]
-  previousValues: property_rent_atomPreviousValues
+  previousValues: PropertyDBLoadHistoryPreviousValues
 }
 
-export interface property_rent_atomSubscriptionPayloadPromise
-  extends Promise<property_rent_atomSubscriptionPayload>,
+export interface PropertyDBLoadHistorySubscriptionPayloadPromise
+  extends Promise<PropertyDBLoadHistorySubscriptionPayload>,
     Fragmentable {
   mutation: () => Promise<MutationType>
-  node: <T = property_rent_atomPromise>() => T
+  node: <T = PropertyDBLoadHistoryPromise>() => T
   updatedFields: () => Promise<String[]>
-  previousValues: <T = property_rent_atomPreviousValuesPromise>() => T
+  previousValues: <T = PropertyDBLoadHistoryPreviousValuesPromise>() => T
 }
 
-export interface property_rent_atomSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<property_rent_atomSubscriptionPayload>>,
+export interface PropertyDBLoadHistorySubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<PropertyDBLoadHistorySubscriptionPayload>>,
     Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>
-  node: <T = property_rent_atomSubscription>() => T
+  node: <T = PropertyDBLoadHistorySubscription>() => T
   updatedFields: () => Promise<AsyncIterator<String[]>>
-  previousValues: <T = property_rent_atomPreviousValuesSubscription>() => T
+  previousValues: <T = PropertyDBLoadHistoryPreviousValuesSubscription>() => T
 }
 
-export interface property_rent_atomPreviousValues {
+export interface PropertyDBLoadHistoryPreviousValues {
   _id: ID_Output
-  _cls: PropertyClass
-  hash_key: String
-  canonical_station?: String
-  building_name?: String
-  address?: String
-  area?: Float
-  basic_rent?: Float
-  rent_plus_alpha?: Float
-  maintenance_fee?: Float
-  total_rent?: Float
-  guarantee_money_multiple?: Float
-  key_money_multiple?: Float
-  unit_rent?: Float
-  year_built?: Int
-  floor_plan?: String
-  floor_number?: Int
-  total_floor?: Int
-  in_date?: DateTimeOutput
-  out_date?: DateTimeOutput
-  nearest_stations?: Json
-  agent_comment?: String
-  more_detail?: String
+  filename?: String
+  inDate?: DateTimeOutput
 }
 
-export interface property_rent_atomPreviousValuesPromise
-  extends Promise<property_rent_atomPreviousValues>,
+export interface PropertyDBLoadHistoryPreviousValuesPromise
+  extends Promise<PropertyDBLoadHistoryPreviousValues>,
     Fragmentable {
   _id: () => Promise<ID_Output>
-  _cls: () => Promise<PropertyClass>
-  hash_key: () => Promise<String>
-  canonical_station: () => Promise<String>
-  building_name: () => Promise<String>
-  address: () => Promise<String>
-  area: () => Promise<Float>
-  basic_rent: () => Promise<Float>
-  rent_plus_alpha: () => Promise<Float>
-  maintenance_fee: () => Promise<Float>
-  total_rent: () => Promise<Float>
-  guarantee_money_multiple: () => Promise<Float>
-  key_money_multiple: () => Promise<Float>
-  unit_rent: () => Promise<Float>
-  year_built: () => Promise<Int>
-  floor_plan: () => Promise<String>
-  floor_number: () => Promise<Int>
-  total_floor: () => Promise<Int>
-  in_date: () => Promise<DateTimeOutput>
-  out_date: () => Promise<DateTimeOutput>
-  nearest_stations: () => Promise<Json>
-  agent_comment: () => Promise<String>
-  more_detail: () => Promise<String>
+  filename: () => Promise<String>
+  inDate: () => Promise<DateTimeOutput>
 }
 
-export interface property_rent_atomPreviousValuesSubscription
-  extends Promise<AsyncIterator<property_rent_atomPreviousValues>>,
+export interface PropertyDBLoadHistoryPreviousValuesSubscription
+  extends Promise<AsyncIterator<PropertyDBLoadHistoryPreviousValues>>,
     Fragmentable {
   _id: () => Promise<AsyncIterator<ID_Output>>
-  _cls: () => Promise<AsyncIterator<PropertyClass>>
-  hash_key: () => Promise<AsyncIterator<String>>
-  canonical_station: () => Promise<AsyncIterator<String>>
-  building_name: () => Promise<AsyncIterator<String>>
-  address: () => Promise<AsyncIterator<String>>
-  area: () => Promise<AsyncIterator<Float>>
-  basic_rent: () => Promise<AsyncIterator<Float>>
-  rent_plus_alpha: () => Promise<AsyncIterator<Float>>
-  maintenance_fee: () => Promise<AsyncIterator<Float>>
-  total_rent: () => Promise<AsyncIterator<Float>>
-  guarantee_money_multiple: () => Promise<AsyncIterator<Float>>
-  key_money_multiple: () => Promise<AsyncIterator<Float>>
-  unit_rent: () => Promise<AsyncIterator<Float>>
-  year_built: () => Promise<AsyncIterator<Int>>
-  floor_plan: () => Promise<AsyncIterator<String>>
-  floor_number: () => Promise<AsyncIterator<Int>>
-  total_floor: () => Promise<AsyncIterator<Int>>
-  in_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  out_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  nearest_stations: () => Promise<AsyncIterator<Json>>
-  agent_comment: () => Promise<AsyncIterator<String>>
-  more_detail: () => Promise<AsyncIterator<String>>
+  filename: () => Promise<AsyncIterator<String>>
+  inDate: () => Promise<AsyncIterator<DateTimeOutput>>
 }
 
-export interface property_sale_atomSubscriptionPayload {
+export interface PropertyRentAtomSubscriptionPayload {
   mutation: MutationType
-  node: property_sale_atom
+  node: PropertyRentAtom
   updatedFields: String[]
-  previousValues: property_sale_atomPreviousValues
+  previousValues: PropertyRentAtomPreviousValues
 }
 
-export interface property_sale_atomSubscriptionPayloadPromise
-  extends Promise<property_sale_atomSubscriptionPayload>,
+export interface PropertyRentAtomSubscriptionPayloadPromise
+  extends Promise<PropertyRentAtomSubscriptionPayload>,
     Fragmentable {
   mutation: () => Promise<MutationType>
-  node: <T = property_sale_atomPromise>() => T
+  node: <T = PropertyRentAtomPromise>() => T
   updatedFields: () => Promise<String[]>
-  previousValues: <T = property_sale_atomPreviousValuesPromise>() => T
+  previousValues: <T = PropertyRentAtomPreviousValuesPromise>() => T
 }
 
-export interface property_sale_atomSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<property_sale_atomSubscriptionPayload>>,
+export interface PropertyRentAtomSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<PropertyRentAtomSubscriptionPayload>>,
     Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>
-  node: <T = property_sale_atomSubscription>() => T
+  node: <T = PropertyRentAtomSubscription>() => T
   updatedFields: () => Promise<AsyncIterator<String[]>>
-  previousValues: <T = property_sale_atomPreviousValuesSubscription>() => T
+  previousValues: <T = PropertyRentAtomPreviousValuesSubscription>() => T
 }
 
-export interface property_sale_atomPreviousValues {
+export interface PropertyRentAtomPreviousValues {
   _id: ID_Output
   _cls: PropertyClass
-  hash_key: String
-  property_type: PropertyType
-  canonical_station?: String
-  building_name?: String
+  hashKey: String
+  canonicalStation?: String
+  buildingName?: String
   address?: String
   area?: Float
-  currency?: String
-  price?: Float
+  basicRent?: Float
+  rentPlusAlpha?: Float
+  maintenanceFee?: Float
+  totalRent?: Float
+  guaranteeMoneyMultiple?: Float
+  keyMoneyMultiple?: Float
+  unitRent?: Float
   city?: String
   country?: String
-  year_built?: Int
-  floor_plan?: String
-  in_date?: DateTimeOutput
-  out_date?: DateTimeOutput
-  nearest_stations?: Json
-  land_area?: Float
-  floor_number?: Int
-  total_floor?: Int
-  agent_comment?: String
-  more_detail?: String
+  currency?: String
+  yearBuilt?: Int
+  floorPlan?: String
+  floorNumber?: Int
+  totalFloor?: Int
+  inDate?: DateTimeOutput
+  outDate?: DateTimeOutput
+  nearestStations?: Json
+  agentComment?: String
+  moreDetail?: String
 }
 
-export interface property_sale_atomPreviousValuesPromise
-  extends Promise<property_sale_atomPreviousValues>,
+export interface PropertyRentAtomPreviousValuesPromise
+  extends Promise<PropertyRentAtomPreviousValues>,
     Fragmentable {
   _id: () => Promise<ID_Output>
   _cls: () => Promise<PropertyClass>
-  hash_key: () => Promise<String>
-  property_type: () => Promise<PropertyType>
-  canonical_station: () => Promise<String>
-  building_name: () => Promise<String>
+  hashKey: () => Promise<String>
+  canonicalStation: () => Promise<String>
+  buildingName: () => Promise<String>
   address: () => Promise<String>
   area: () => Promise<Float>
-  currency: () => Promise<String>
-  price: () => Promise<Float>
+  basicRent: () => Promise<Float>
+  rentPlusAlpha: () => Promise<Float>
+  maintenanceFee: () => Promise<Float>
+  totalRent: () => Promise<Float>
+  guaranteeMoneyMultiple: () => Promise<Float>
+  keyMoneyMultiple: () => Promise<Float>
+  unitRent: () => Promise<Float>
   city: () => Promise<String>
   country: () => Promise<String>
-  year_built: () => Promise<Int>
-  floor_plan: () => Promise<String>
-  in_date: () => Promise<DateTimeOutput>
-  out_date: () => Promise<DateTimeOutput>
-  nearest_stations: () => Promise<Json>
-  land_area: () => Promise<Float>
-  floor_number: () => Promise<Int>
-  total_floor: () => Promise<Int>
-  agent_comment: () => Promise<String>
-  more_detail: () => Promise<String>
+  currency: () => Promise<String>
+  yearBuilt: () => Promise<Int>
+  floorPlan: () => Promise<String>
+  floorNumber: () => Promise<Int>
+  totalFloor: () => Promise<Int>
+  inDate: () => Promise<DateTimeOutput>
+  outDate: () => Promise<DateTimeOutput>
+  nearestStations: () => Promise<Json>
+  agentComment: () => Promise<String>
+  moreDetail: () => Promise<String>
 }
 
-export interface property_sale_atomPreviousValuesSubscription
-  extends Promise<AsyncIterator<property_sale_atomPreviousValues>>,
+export interface PropertyRentAtomPreviousValuesSubscription
+  extends Promise<AsyncIterator<PropertyRentAtomPreviousValues>>,
     Fragmentable {
   _id: () => Promise<AsyncIterator<ID_Output>>
   _cls: () => Promise<AsyncIterator<PropertyClass>>
-  hash_key: () => Promise<AsyncIterator<String>>
-  property_type: () => Promise<AsyncIterator<PropertyType>>
-  canonical_station: () => Promise<AsyncIterator<String>>
-  building_name: () => Promise<AsyncIterator<String>>
+  hashKey: () => Promise<AsyncIterator<String>>
+  canonicalStation: () => Promise<AsyncIterator<String>>
+  buildingName: () => Promise<AsyncIterator<String>>
   address: () => Promise<AsyncIterator<String>>
   area: () => Promise<AsyncIterator<Float>>
-  currency: () => Promise<AsyncIterator<String>>
-  price: () => Promise<AsyncIterator<Float>>
+  basicRent: () => Promise<AsyncIterator<Float>>
+  rentPlusAlpha: () => Promise<AsyncIterator<Float>>
+  maintenanceFee: () => Promise<AsyncIterator<Float>>
+  totalRent: () => Promise<AsyncIterator<Float>>
+  guaranteeMoneyMultiple: () => Promise<AsyncIterator<Float>>
+  keyMoneyMultiple: () => Promise<AsyncIterator<Float>>
+  unitRent: () => Promise<AsyncIterator<Float>>
   city: () => Promise<AsyncIterator<String>>
   country: () => Promise<AsyncIterator<String>>
-  year_built: () => Promise<AsyncIterator<Int>>
-  floor_plan: () => Promise<AsyncIterator<String>>
-  in_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  out_date: () => Promise<AsyncIterator<DateTimeOutput>>
-  nearest_stations: () => Promise<AsyncIterator<Json>>
-  land_area: () => Promise<AsyncIterator<Float>>
-  floor_number: () => Promise<AsyncIterator<Int>>
-  total_floor: () => Promise<AsyncIterator<Int>>
-  agent_comment: () => Promise<AsyncIterator<String>>
-  more_detail: () => Promise<AsyncIterator<String>>
+  currency: () => Promise<AsyncIterator<String>>
+  yearBuilt: () => Promise<AsyncIterator<Int>>
+  floorPlan: () => Promise<AsyncIterator<String>>
+  floorNumber: () => Promise<AsyncIterator<Int>>
+  totalFloor: () => Promise<AsyncIterator<Int>>
+  inDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  outDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  nearestStations: () => Promise<AsyncIterator<Json>>
+  agentComment: () => Promise<AsyncIterator<String>>
+  moreDetail: () => Promise<AsyncIterator<String>>
+}
+
+export interface PropertySaleAtomSubscriptionPayload {
+  mutation: MutationType
+  node: PropertySaleAtom
+  updatedFields: String[]
+  previousValues: PropertySaleAtomPreviousValues
+}
+
+export interface PropertySaleAtomSubscriptionPayloadPromise
+  extends Promise<PropertySaleAtomSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>
+  node: <T = PropertySaleAtomPromise>() => T
+  updatedFields: () => Promise<String[]>
+  previousValues: <T = PropertySaleAtomPreviousValuesPromise>() => T
+}
+
+export interface PropertySaleAtomSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<PropertySaleAtomSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>
+  node: <T = PropertySaleAtomSubscription>() => T
+  updatedFields: () => Promise<AsyncIterator<String[]>>
+  previousValues: <T = PropertySaleAtomPreviousValuesSubscription>() => T
+}
+
+export interface PropertySaleAtomPreviousValues {
+  _id: ID_Output
+  _cls: PropertyClass
+  hashKey: String
+  canonicalStation?: String
+  propertyType: PropertyType
+  buildingName?: String
+  address?: String
+  area?: Float
+  price?: Int
+  city?: String
+  country?: String
+  currency?: String
+  yearBuilt?: Int
+  floorPlan?: String
+  floorNumber?: Int
+  totalFloor?: Int
+  landArea?: Float
+  inDate?: DateTimeOutput
+  outDate?: DateTimeOutput
+  nearestStations?: Json
+  agentComment?: String
+  moreDetail?: String
+}
+
+export interface PropertySaleAtomPreviousValuesPromise
+  extends Promise<PropertySaleAtomPreviousValues>,
+    Fragmentable {
+  _id: () => Promise<ID_Output>
+  _cls: () => Promise<PropertyClass>
+  hashKey: () => Promise<String>
+  canonicalStation: () => Promise<String>
+  propertyType: () => Promise<PropertyType>
+  buildingName: () => Promise<String>
+  address: () => Promise<String>
+  area: () => Promise<Float>
+  price: () => Promise<Int>
+  city: () => Promise<String>
+  country: () => Promise<String>
+  currency: () => Promise<String>
+  yearBuilt: () => Promise<Int>
+  floorPlan: () => Promise<String>
+  floorNumber: () => Promise<Int>
+  totalFloor: () => Promise<Int>
+  landArea: () => Promise<Float>
+  inDate: () => Promise<DateTimeOutput>
+  outDate: () => Promise<DateTimeOutput>
+  nearestStations: () => Promise<Json>
+  agentComment: () => Promise<String>
+  moreDetail: () => Promise<String>
+}
+
+export interface PropertySaleAtomPreviousValuesSubscription
+  extends Promise<AsyncIterator<PropertySaleAtomPreviousValues>>,
+    Fragmentable {
+  _id: () => Promise<AsyncIterator<ID_Output>>
+  _cls: () => Promise<AsyncIterator<PropertyClass>>
+  hashKey: () => Promise<AsyncIterator<String>>
+  canonicalStation: () => Promise<AsyncIterator<String>>
+  propertyType: () => Promise<AsyncIterator<PropertyType>>
+  buildingName: () => Promise<AsyncIterator<String>>
+  address: () => Promise<AsyncIterator<String>>
+  area: () => Promise<AsyncIterator<Float>>
+  price: () => Promise<AsyncIterator<Int>>
+  city: () => Promise<AsyncIterator<String>>
+  country: () => Promise<AsyncIterator<String>>
+  currency: () => Promise<AsyncIterator<String>>
+  yearBuilt: () => Promise<AsyncIterator<Int>>
+  floorPlan: () => Promise<AsyncIterator<String>>
+  floorNumber: () => Promise<AsyncIterator<Int>>
+  totalFloor: () => Promise<AsyncIterator<Int>>
+  landArea: () => Promise<AsyncIterator<Float>>
+  inDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  outDate: () => Promise<AsyncIterator<DateTimeOutput>>
+  nearestStations: () => Promise<AsyncIterator<Json>>
+  agentComment: () => Promise<AsyncIterator<String>>
+  moreDetail: () => Promise<AsyncIterator<String>>
 }
 
 /*
@@ -1487,16 +1829,6 @@ The `String` scalar type represents textual data, represented as UTF-8 character
 export type String = string
 
 /*
-The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
-*/
-export type Float = number
-
-/*
-The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
-*/
-export type Int = number
-
-/*
 DateTime scalar input type, allowing Date
 */
 export type DateTimeInput = Date | string
@@ -1506,12 +1838,22 @@ DateTime scalar output type, which is always a string
 */
 export type DateTimeOutput = string
 
-export type Json = any
+/*
+The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
+*/
+export type Int = number
 
 /*
 The `Boolean` scalar type represents `true` or `false`.
 */
 export type Boolean = boolean
+
+/*
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
+*/
+export type Float = number
+
+export type Json = any
 
 export type Long = string
 
@@ -1529,12 +1871,20 @@ export const models: Model[] = [
     embedded: false,
   },
   {
-    name: 'property_rent_atom',
+    name: 'PropertyRentAtom',
     embedded: false,
   },
   {
-    name: 'property_sale_atom',
+    name: 'PropertySaleAtom',
     embedded: false,
+  },
+  {
+    name: 'PropertyDBLoadHistory',
+    embedded: false,
+  },
+  {
+    name: 'StationWalkingDuration',
+    embedded: true,
   },
 ]
 

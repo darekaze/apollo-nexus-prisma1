@@ -9,60 +9,72 @@ enum PropertyType {
   APT
 }
 
-type property_rent_atom {
+type PropertyRentAtom @db(name: "property_rent_atom") {
   _id: ID! @id
   _cls: PropertyClass! @default(value: PropertyRentAtom)
-  hash_key: String! @unique
-  canonical_station: String
-  building_name: String
+  hashKey: String! @db(name: "hash_key")
+  canonicalStation: String @db(name: "canonical_station")
+  buildingName: String @db(name: "building_name")
   address: String
   area: Float
 
-  basic_rent: Float
-  rent_plus_alpha: Float
-  maintenance_fee: Float
-  total_rent: Float
-  guarantee_money_multiple: Float @default(value: 0)
-  key_money_multiple: Float @default(value: 0)
-  unit_rent: Float
-
-  year_built: Int
-  floor_plan: String
-  floor_number: Int
-  total_floor: Int
-  in_date: DateTime
-  out_date: DateTime
-  nearest_stations: Json
-
-  agent_comment: String
-  more_detail: String
-}
-
-type property_sale_atom {
-  _id: ID! @id
-  _cls: PropertyClass! @default(value: PropertySaleAtom)
-  hash_key: String! @unique
-  property_type: PropertyType!
-  canonical_station: String
-  building_name: String
-  address: String
-  area: Float
-
-  currency: String @default(value: "JPY")
-  price: Float
+  basicRent: Float @db(name: "basic_rent")
+  rentPlusAlpha: Float @db(name: "rent_plus_alpha")
+  maintenanceFee: Float @db(name: "maintenance_fee")
+  totalRent: Float @db(name: "total_rent")
+  guaranteeMoneyMultiple: Float @db(name: "guarantee_money_multiple") @default(value: 0)
+  keyMoneyMultiple: Float @db(name: "key_money_multiple") @default(value: 0)
+  unitRent: Float @db(name: "unit_rent")
 
   city: String
   country: String
-  year_built: Int
-  floor_plan: String
-  in_date: DateTime
-  out_date: DateTime
-  nearest_stations: Json
+  currency: String @default(value: "JPY")
+  yearBuilt: Int @db(name: "year_built")
+  floorPlan: String @db(name: "floor_plan")
+  floorNumber: Int @db(name: "floor_number")
+  totalFloor: Int @db(name: "total_floor")
+  inDate: DateTime @db(name: "in_date")
+  outDate: DateTime @db(name: "out_date")
+  nearestStations: Json @db(name: "nearest_stations")
 
-  land_area: Float
-  floor_number: Int
-  total_floor: Int
+  agentComment: String @db(name: "agent_comment")
+  moreDetail: String @db(name: "more_detail")
+}
 
-  agent_comment: String
-  more_detail: String
+type PropertySaleAtom @db(name: "property_sale_atom") {
+  _id: ID! @id
+  _cls: PropertyClass! @default(value: PropertySaleAtom)
+  hashKey: String! @db(name: "hash_key")
+  canonicalStation: String @db(name: "canonical_station")
+  propertyType: PropertyType! @db(name: "property_type")
+  buildingName: String @db(name: "building_name")
+  address: String
+  area: Float
+  price: Int
+
+  city: String
+  country: String
+  currency: String @default(value: "JPY")
+  yearBuilt: Int @db(name: "year_built")
+  floorPlan: String @db(name: "floor_plan")
+  floorNumber: Int @db(name: "floor_number")
+  totalFloor: Int @db(name: "total_floor")
+  landArea: Float @db(name: "land_area")
+  inDate: DateTime @db(name: "in_date")
+  outDate: DateTime @db(name: "out_date")
+  nearestStations: Json @db(name: "nearest_stations")
+
+  agentComment: String @db(name: "agent_comment")
+  moreDetail: String @db(name: "more_detail")
+}
+
+type PropertyDBLoadHistory @db(name: "property_d_b_load_history") {
+  _id: ID! @id
+  filename: String
+  inDate: DateTime @db(name: "in_date")
+}
+
+type StationWalkingDuration @embedded {
+  name: String!
+  duration: Int!
 }

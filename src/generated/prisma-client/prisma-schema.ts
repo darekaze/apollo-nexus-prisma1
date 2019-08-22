@@ -3,11 +3,15 @@
 // For more information, please read the docs: https://www.prisma.io/docs/prisma-client/
 
 export const typeDefs = /* GraphQL */ `
-  type Aggregateproperty_rent_atom {
+  type AggregatePropertyDBLoadHistory {
     count: Int!
   }
 
-  type Aggregateproperty_sale_atom {
+  type AggregatePropertyRentAtom {
+    count: Int!
+  }
+
+  type AggregatePropertySaleAtom {
     count: Int!
   }
 
@@ -22,49 +26,71 @@ export const typeDefs = /* GraphQL */ `
   scalar Long
 
   type Mutation {
-    createproperty_rent_atom(
-      data: property_rent_atomCreateInput!
-    ): property_rent_atom!
-    updateproperty_rent_atom(
-      data: property_rent_atomUpdateInput!
-      where: property_rent_atomWhereUniqueInput!
-    ): property_rent_atom
-    updateManyproperty_rent_atoms(
-      data: property_rent_atomUpdateManyMutationInput!
-      where: property_rent_atomWhereInput
+    createPropertyDBLoadHistory(
+      data: PropertyDBLoadHistoryCreateInput!
+    ): PropertyDBLoadHistory!
+    updatePropertyDBLoadHistory(
+      data: PropertyDBLoadHistoryUpdateInput!
+      where: PropertyDBLoadHistoryWhereUniqueInput!
+    ): PropertyDBLoadHistory
+    updateManyPropertyDBLoadHistories(
+      data: PropertyDBLoadHistoryUpdateManyMutationInput!
+      where: PropertyDBLoadHistoryWhereInput
     ): BatchPayload!
-    upsertproperty_rent_atom(
-      where: property_rent_atomWhereUniqueInput!
-      create: property_rent_atomCreateInput!
-      update: property_rent_atomUpdateInput!
-    ): property_rent_atom!
-    deleteproperty_rent_atom(
-      where: property_rent_atomWhereUniqueInput!
-    ): property_rent_atom
-    deleteManyproperty_rent_atoms(
-      where: property_rent_atomWhereInput
+    upsertPropertyDBLoadHistory(
+      where: PropertyDBLoadHistoryWhereUniqueInput!
+      create: PropertyDBLoadHistoryCreateInput!
+      update: PropertyDBLoadHistoryUpdateInput!
+    ): PropertyDBLoadHistory!
+    deletePropertyDBLoadHistory(
+      where: PropertyDBLoadHistoryWhereUniqueInput!
+    ): PropertyDBLoadHistory
+    deleteManyPropertyDBLoadHistories(
+      where: PropertyDBLoadHistoryWhereInput
     ): BatchPayload!
-    createproperty_sale_atom(
-      data: property_sale_atomCreateInput!
-    ): property_sale_atom!
-    updateproperty_sale_atom(
-      data: property_sale_atomUpdateInput!
-      where: property_sale_atomWhereUniqueInput!
-    ): property_sale_atom
-    updateManyproperty_sale_atoms(
-      data: property_sale_atomUpdateManyMutationInput!
-      where: property_sale_atomWhereInput
+    createPropertyRentAtom(
+      data: PropertyRentAtomCreateInput!
+    ): PropertyRentAtom!
+    updatePropertyRentAtom(
+      data: PropertyRentAtomUpdateInput!
+      where: PropertyRentAtomWhereUniqueInput!
+    ): PropertyRentAtom
+    updateManyPropertyRentAtoms(
+      data: PropertyRentAtomUpdateManyMutationInput!
+      where: PropertyRentAtomWhereInput
     ): BatchPayload!
-    upsertproperty_sale_atom(
-      where: property_sale_atomWhereUniqueInput!
-      create: property_sale_atomCreateInput!
-      update: property_sale_atomUpdateInput!
-    ): property_sale_atom!
-    deleteproperty_sale_atom(
-      where: property_sale_atomWhereUniqueInput!
-    ): property_sale_atom
-    deleteManyproperty_sale_atoms(
-      where: property_sale_atomWhereInput
+    upsertPropertyRentAtom(
+      where: PropertyRentAtomWhereUniqueInput!
+      create: PropertyRentAtomCreateInput!
+      update: PropertyRentAtomUpdateInput!
+    ): PropertyRentAtom!
+    deletePropertyRentAtom(
+      where: PropertyRentAtomWhereUniqueInput!
+    ): PropertyRentAtom
+    deleteManyPropertyRentAtoms(
+      where: PropertyRentAtomWhereInput
+    ): BatchPayload!
+    createPropertySaleAtom(
+      data: PropertySaleAtomCreateInput!
+    ): PropertySaleAtom!
+    updatePropertySaleAtom(
+      data: PropertySaleAtomUpdateInput!
+      where: PropertySaleAtomWhereUniqueInput!
+    ): PropertySaleAtom
+    updateManyPropertySaleAtoms(
+      data: PropertySaleAtomUpdateManyMutationInput!
+      where: PropertySaleAtomWhereInput
+    ): BatchPayload!
+    upsertPropertySaleAtom(
+      where: PropertySaleAtomWhereUniqueInput!
+      create: PropertySaleAtomCreateInput!
+      update: PropertySaleAtomUpdateInput!
+    ): PropertySaleAtom!
+    deletePropertySaleAtom(
+      where: PropertySaleAtomWhereUniqueInput!
+    ): PropertySaleAtom
+    deleteManyPropertySaleAtoms(
+      where: PropertySaleAtomWhereInput
     ): BatchPayload!
   }
 
@@ -85,211 +111,76 @@ export const typeDefs = /* GraphQL */ `
     endCursor: String
   }
 
-  type property_rent_atom {
+  enum PropertyClass {
+    PropertyRentAtom
+    PropertySaleAtom
+  }
+
+  type PropertyDBLoadHistory {
     _id: ID!
-    _cls: PropertyClass!
-    hash_key: String!
-    canonical_station: String
-    building_name: String
-    address: String
-    area: Float
-    basic_rent: Float
-    rent_plus_alpha: Float
-    maintenance_fee: Float
-    total_rent: Float
-    guarantee_money_multiple: Float
-    key_money_multiple: Float
-    unit_rent: Float
-    year_built: Int
-    floor_plan: String
-    floor_number: Int
-    total_floor: Int
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    agent_comment: String
-    more_detail: String
+    filename: String
+    inDate: DateTime
   }
 
-  type property_rent_atomConnection {
+  type PropertyDBLoadHistoryConnection {
     pageInfo: PageInfo!
-    edges: [property_rent_atomEdge]!
-    aggregate: Aggregateproperty_rent_atom!
+    edges: [PropertyDBLoadHistoryEdge]!
+    aggregate: AggregatePropertyDBLoadHistory!
   }
 
-  input property_rent_atomCreateInput {
+  input PropertyDBLoadHistoryCreateInput {
     _id: ID
-    _cls: PropertyClass
-    hash_key: String!
-    canonical_station: String
-    building_name: String
-    address: String
-    area: Float
-    basic_rent: Float
-    rent_plus_alpha: Float
-    maintenance_fee: Float
-    total_rent: Float
-    guarantee_money_multiple: Float
-    key_money_multiple: Float
-    unit_rent: Float
-    year_built: Int
-    floor_plan: String
-    floor_number: Int
-    total_floor: Int
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    agent_comment: String
-    more_detail: String
+    filename: String
+    inDate: DateTime
   }
 
-  type property_rent_atomEdge {
-    node: property_rent_atom!
+  type PropertyDBLoadHistoryEdge {
+    node: PropertyDBLoadHistory!
     cursor: String!
   }
 
-  enum property_rent_atomOrderByInput {
+  enum PropertyDBLoadHistoryOrderByInput {
     _id_ASC
     _id_DESC
-    _cls_ASC
-    _cls_DESC
-    hash_key_ASC
-    hash_key_DESC
-    canonical_station_ASC
-    canonical_station_DESC
-    building_name_ASC
-    building_name_DESC
-    address_ASC
-    address_DESC
-    area_ASC
-    area_DESC
-    basic_rent_ASC
-    basic_rent_DESC
-    rent_plus_alpha_ASC
-    rent_plus_alpha_DESC
-    maintenance_fee_ASC
-    maintenance_fee_DESC
-    total_rent_ASC
-    total_rent_DESC
-    guarantee_money_multiple_ASC
-    guarantee_money_multiple_DESC
-    key_money_multiple_ASC
-    key_money_multiple_DESC
-    unit_rent_ASC
-    unit_rent_DESC
-    year_built_ASC
-    year_built_DESC
-    floor_plan_ASC
-    floor_plan_DESC
-    floor_number_ASC
-    floor_number_DESC
-    total_floor_ASC
-    total_floor_DESC
-    in_date_ASC
-    in_date_DESC
-    out_date_ASC
-    out_date_DESC
-    nearest_stations_ASC
-    nearest_stations_DESC
-    agent_comment_ASC
-    agent_comment_DESC
-    more_detail_ASC
-    more_detail_DESC
+    filename_ASC
+    filename_DESC
+    inDate_ASC
+    inDate_DESC
   }
 
-  type property_rent_atomPreviousValues {
+  type PropertyDBLoadHistoryPreviousValues {
     _id: ID!
-    _cls: PropertyClass!
-    hash_key: String!
-    canonical_station: String
-    building_name: String
-    address: String
-    area: Float
-    basic_rent: Float
-    rent_plus_alpha: Float
-    maintenance_fee: Float
-    total_rent: Float
-    guarantee_money_multiple: Float
-    key_money_multiple: Float
-    unit_rent: Float
-    year_built: Int
-    floor_plan: String
-    floor_number: Int
-    total_floor: Int
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    agent_comment: String
-    more_detail: String
+    filename: String
+    inDate: DateTime
   }
 
-  type property_rent_atomSubscriptionPayload {
+  type PropertyDBLoadHistorySubscriptionPayload {
     mutation: MutationType!
-    node: property_rent_atom
+    node: PropertyDBLoadHistory
     updatedFields: [String!]
-    previousValues: property_rent_atomPreviousValues
+    previousValues: PropertyDBLoadHistoryPreviousValues
   }
 
-  input property_rent_atomSubscriptionWhereInput {
+  input PropertyDBLoadHistorySubscriptionWhereInput {
     mutation_in: [MutationType!]
     updatedFields_contains: String
     updatedFields_contains_every: [String!]
     updatedFields_contains_some: [String!]
-    node: property_rent_atomWhereInput
-    AND: [property_rent_atomSubscriptionWhereInput!]
+    node: PropertyDBLoadHistoryWhereInput
+    AND: [PropertyDBLoadHistorySubscriptionWhereInput!]
   }
 
-  input property_rent_atomUpdateInput {
-    _cls: PropertyClass
-    hash_key: String
-    canonical_station: String
-    building_name: String
-    address: String
-    area: Float
-    basic_rent: Float
-    rent_plus_alpha: Float
-    maintenance_fee: Float
-    total_rent: Float
-    guarantee_money_multiple: Float
-    key_money_multiple: Float
-    unit_rent: Float
-    year_built: Int
-    floor_plan: String
-    floor_number: Int
-    total_floor: Int
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    agent_comment: String
-    more_detail: String
+  input PropertyDBLoadHistoryUpdateInput {
+    filename: String
+    inDate: DateTime
   }
 
-  input property_rent_atomUpdateManyMutationInput {
-    _cls: PropertyClass
-    hash_key: String
-    canonical_station: String
-    building_name: String
-    address: String
-    area: Float
-    basic_rent: Float
-    rent_plus_alpha: Float
-    maintenance_fee: Float
-    total_rent: Float
-    guarantee_money_multiple: Float
-    key_money_multiple: Float
-    unit_rent: Float
-    year_built: Int
-    floor_plan: String
-    floor_number: Int
-    total_floor: Int
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    agent_comment: String
-    more_detail: String
+  input PropertyDBLoadHistoryUpdateManyMutationInput {
+    filename: String
+    inDate: DateTime
   }
 
-  input property_rent_atomWhereInput {
+  input PropertyDBLoadHistoryWhereInput {
     _id: ID
     _id_not: ID
     _id_in: [ID!]
@@ -304,418 +195,261 @@ export const typeDefs = /* GraphQL */ `
     _id_not_starts_with: ID
     _id_ends_with: ID
     _id_not_ends_with: ID
-    _cls: PropertyClass
-    _cls_not: PropertyClass
-    _cls_in: [PropertyClass!]
-    _cls_not_in: [PropertyClass!]
-    hash_key: String
-    hash_key_not: String
-    hash_key_in: [String!]
-    hash_key_not_in: [String!]
-    hash_key_lt: String
-    hash_key_lte: String
-    hash_key_gt: String
-    hash_key_gte: String
-    hash_key_contains: String
-    hash_key_not_contains: String
-    hash_key_starts_with: String
-    hash_key_not_starts_with: String
-    hash_key_ends_with: String
-    hash_key_not_ends_with: String
-    canonical_station: String
-    canonical_station_not: String
-    canonical_station_in: [String!]
-    canonical_station_not_in: [String!]
-    canonical_station_lt: String
-    canonical_station_lte: String
-    canonical_station_gt: String
-    canonical_station_gte: String
-    canonical_station_contains: String
-    canonical_station_not_contains: String
-    canonical_station_starts_with: String
-    canonical_station_not_starts_with: String
-    canonical_station_ends_with: String
-    canonical_station_not_ends_with: String
-    building_name: String
-    building_name_not: String
-    building_name_in: [String!]
-    building_name_not_in: [String!]
-    building_name_lt: String
-    building_name_lte: String
-    building_name_gt: String
-    building_name_gte: String
-    building_name_contains: String
-    building_name_not_contains: String
-    building_name_starts_with: String
-    building_name_not_starts_with: String
-    building_name_ends_with: String
-    building_name_not_ends_with: String
-    address: String
-    address_not: String
-    address_in: [String!]
-    address_not_in: [String!]
-    address_lt: String
-    address_lte: String
-    address_gt: String
-    address_gte: String
-    address_contains: String
-    address_not_contains: String
-    address_starts_with: String
-    address_not_starts_with: String
-    address_ends_with: String
-    address_not_ends_with: String
-    area: Float
-    area_not: Float
-    area_in: [Float!]
-    area_not_in: [Float!]
-    area_lt: Float
-    area_lte: Float
-    area_gt: Float
-    area_gte: Float
-    basic_rent: Float
-    basic_rent_not: Float
-    basic_rent_in: [Float!]
-    basic_rent_not_in: [Float!]
-    basic_rent_lt: Float
-    basic_rent_lte: Float
-    basic_rent_gt: Float
-    basic_rent_gte: Float
-    rent_plus_alpha: Float
-    rent_plus_alpha_not: Float
-    rent_plus_alpha_in: [Float!]
-    rent_plus_alpha_not_in: [Float!]
-    rent_plus_alpha_lt: Float
-    rent_plus_alpha_lte: Float
-    rent_plus_alpha_gt: Float
-    rent_plus_alpha_gte: Float
-    maintenance_fee: Float
-    maintenance_fee_not: Float
-    maintenance_fee_in: [Float!]
-    maintenance_fee_not_in: [Float!]
-    maintenance_fee_lt: Float
-    maintenance_fee_lte: Float
-    maintenance_fee_gt: Float
-    maintenance_fee_gte: Float
-    total_rent: Float
-    total_rent_not: Float
-    total_rent_in: [Float!]
-    total_rent_not_in: [Float!]
-    total_rent_lt: Float
-    total_rent_lte: Float
-    total_rent_gt: Float
-    total_rent_gte: Float
-    guarantee_money_multiple: Float
-    guarantee_money_multiple_not: Float
-    guarantee_money_multiple_in: [Float!]
-    guarantee_money_multiple_not_in: [Float!]
-    guarantee_money_multiple_lt: Float
-    guarantee_money_multiple_lte: Float
-    guarantee_money_multiple_gt: Float
-    guarantee_money_multiple_gte: Float
-    key_money_multiple: Float
-    key_money_multiple_not: Float
-    key_money_multiple_in: [Float!]
-    key_money_multiple_not_in: [Float!]
-    key_money_multiple_lt: Float
-    key_money_multiple_lte: Float
-    key_money_multiple_gt: Float
-    key_money_multiple_gte: Float
-    unit_rent: Float
-    unit_rent_not: Float
-    unit_rent_in: [Float!]
-    unit_rent_not_in: [Float!]
-    unit_rent_lt: Float
-    unit_rent_lte: Float
-    unit_rent_gt: Float
-    unit_rent_gte: Float
-    year_built: Int
-    year_built_not: Int
-    year_built_in: [Int!]
-    year_built_not_in: [Int!]
-    year_built_lt: Int
-    year_built_lte: Int
-    year_built_gt: Int
-    year_built_gte: Int
-    floor_plan: String
-    floor_plan_not: String
-    floor_plan_in: [String!]
-    floor_plan_not_in: [String!]
-    floor_plan_lt: String
-    floor_plan_lte: String
-    floor_plan_gt: String
-    floor_plan_gte: String
-    floor_plan_contains: String
-    floor_plan_not_contains: String
-    floor_plan_starts_with: String
-    floor_plan_not_starts_with: String
-    floor_plan_ends_with: String
-    floor_plan_not_ends_with: String
-    floor_number: Int
-    floor_number_not: Int
-    floor_number_in: [Int!]
-    floor_number_not_in: [Int!]
-    floor_number_lt: Int
-    floor_number_lte: Int
-    floor_number_gt: Int
-    floor_number_gte: Int
-    total_floor: Int
-    total_floor_not: Int
-    total_floor_in: [Int!]
-    total_floor_not_in: [Int!]
-    total_floor_lt: Int
-    total_floor_lte: Int
-    total_floor_gt: Int
-    total_floor_gte: Int
-    in_date: DateTime
-    in_date_not: DateTime
-    in_date_in: [DateTime!]
-    in_date_not_in: [DateTime!]
-    in_date_lt: DateTime
-    in_date_lte: DateTime
-    in_date_gt: DateTime
-    in_date_gte: DateTime
-    out_date: DateTime
-    out_date_not: DateTime
-    out_date_in: [DateTime!]
-    out_date_not_in: [DateTime!]
-    out_date_lt: DateTime
-    out_date_lte: DateTime
-    out_date_gt: DateTime
-    out_date_gte: DateTime
-    agent_comment: String
-    agent_comment_not: String
-    agent_comment_in: [String!]
-    agent_comment_not_in: [String!]
-    agent_comment_lt: String
-    agent_comment_lte: String
-    agent_comment_gt: String
-    agent_comment_gte: String
-    agent_comment_contains: String
-    agent_comment_not_contains: String
-    agent_comment_starts_with: String
-    agent_comment_not_starts_with: String
-    agent_comment_ends_with: String
-    agent_comment_not_ends_with: String
-    more_detail: String
-    more_detail_not: String
-    more_detail_in: [String!]
-    more_detail_not_in: [String!]
-    more_detail_lt: String
-    more_detail_lte: String
-    more_detail_gt: String
-    more_detail_gte: String
-    more_detail_contains: String
-    more_detail_not_contains: String
-    more_detail_starts_with: String
-    more_detail_not_starts_with: String
-    more_detail_ends_with: String
-    more_detail_not_ends_with: String
-    AND: [property_rent_atomWhereInput!]
+    filename: String
+    filename_not: String
+    filename_in: [String!]
+    filename_not_in: [String!]
+    filename_lt: String
+    filename_lte: String
+    filename_gt: String
+    filename_gte: String
+    filename_contains: String
+    filename_not_contains: String
+    filename_starts_with: String
+    filename_not_starts_with: String
+    filename_ends_with: String
+    filename_not_ends_with: String
+    inDate: DateTime
+    inDate_not: DateTime
+    inDate_in: [DateTime!]
+    inDate_not_in: [DateTime!]
+    inDate_lt: DateTime
+    inDate_lte: DateTime
+    inDate_gt: DateTime
+    inDate_gte: DateTime
+    AND: [PropertyDBLoadHistoryWhereInput!]
   }
 
-  input property_rent_atomWhereUniqueInput {
+  input PropertyDBLoadHistoryWhereUniqueInput {
     _id: ID
-    hash_key: String
   }
 
-  type property_sale_atom {
+  type PropertyRentAtom {
     _id: ID!
     _cls: PropertyClass!
-    hash_key: String!
-    property_type: PropertyType!
-    canonical_station: String
-    building_name: String
+    hashKey: String!
+    canonicalStation: String
+    buildingName: String
     address: String
     area: Float
-    currency: String
-    price: Float
+    basicRent: Float
+    rentPlusAlpha: Float
+    maintenanceFee: Float
+    totalRent: Float
+    guaranteeMoneyMultiple: Float
+    keyMoneyMultiple: Float
+    unitRent: Float
     city: String
     country: String
-    year_built: Int
-    floor_plan: String
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    land_area: Float
-    floor_number: Int
-    total_floor: Int
-    agent_comment: String
-    more_detail: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
   }
 
-  type property_sale_atomConnection {
+  type PropertyRentAtomConnection {
     pageInfo: PageInfo!
-    edges: [property_sale_atomEdge]!
-    aggregate: Aggregateproperty_sale_atom!
+    edges: [PropertyRentAtomEdge]!
+    aggregate: AggregatePropertyRentAtom!
   }
 
-  input property_sale_atomCreateInput {
+  input PropertyRentAtomCreateInput {
     _id: ID
     _cls: PropertyClass
-    hash_key: String!
-    property_type: PropertyType!
-    canonical_station: String
-    building_name: String
+    hashKey: String!
+    canonicalStation: String
+    buildingName: String
     address: String
     area: Float
-    currency: String
-    price: Float
+    basicRent: Float
+    rentPlusAlpha: Float
+    maintenanceFee: Float
+    totalRent: Float
+    guaranteeMoneyMultiple: Float
+    keyMoneyMultiple: Float
+    unitRent: Float
     city: String
     country: String
-    year_built: Int
-    floor_plan: String
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    land_area: Float
-    floor_number: Int
-    total_floor: Int
-    agent_comment: String
-    more_detail: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
   }
 
-  type property_sale_atomEdge {
-    node: property_sale_atom!
+  type PropertyRentAtomEdge {
+    node: PropertyRentAtom!
     cursor: String!
   }
 
-  enum property_sale_atomOrderByInput {
+  enum PropertyRentAtomOrderByInput {
     _id_ASC
     _id_DESC
     _cls_ASC
     _cls_DESC
-    hash_key_ASC
-    hash_key_DESC
-    property_type_ASC
-    property_type_DESC
-    canonical_station_ASC
-    canonical_station_DESC
-    building_name_ASC
-    building_name_DESC
+    hashKey_ASC
+    hashKey_DESC
+    canonicalStation_ASC
+    canonicalStation_DESC
+    buildingName_ASC
+    buildingName_DESC
     address_ASC
     address_DESC
     area_ASC
     area_DESC
-    currency_ASC
-    currency_DESC
-    price_ASC
-    price_DESC
+    basicRent_ASC
+    basicRent_DESC
+    rentPlusAlpha_ASC
+    rentPlusAlpha_DESC
+    maintenanceFee_ASC
+    maintenanceFee_DESC
+    totalRent_ASC
+    totalRent_DESC
+    guaranteeMoneyMultiple_ASC
+    guaranteeMoneyMultiple_DESC
+    keyMoneyMultiple_ASC
+    keyMoneyMultiple_DESC
+    unitRent_ASC
+    unitRent_DESC
     city_ASC
     city_DESC
     country_ASC
     country_DESC
-    year_built_ASC
-    year_built_DESC
-    floor_plan_ASC
-    floor_plan_DESC
-    in_date_ASC
-    in_date_DESC
-    out_date_ASC
-    out_date_DESC
-    nearest_stations_ASC
-    nearest_stations_DESC
-    land_area_ASC
-    land_area_DESC
-    floor_number_ASC
-    floor_number_DESC
-    total_floor_ASC
-    total_floor_DESC
-    agent_comment_ASC
-    agent_comment_DESC
-    more_detail_ASC
-    more_detail_DESC
+    currency_ASC
+    currency_DESC
+    yearBuilt_ASC
+    yearBuilt_DESC
+    floorPlan_ASC
+    floorPlan_DESC
+    floorNumber_ASC
+    floorNumber_DESC
+    totalFloor_ASC
+    totalFloor_DESC
+    inDate_ASC
+    inDate_DESC
+    outDate_ASC
+    outDate_DESC
+    nearestStations_ASC
+    nearestStations_DESC
+    agentComment_ASC
+    agentComment_DESC
+    moreDetail_ASC
+    moreDetail_DESC
   }
 
-  type property_sale_atomPreviousValues {
+  type PropertyRentAtomPreviousValues {
     _id: ID!
     _cls: PropertyClass!
-    hash_key: String!
-    property_type: PropertyType!
-    canonical_station: String
-    building_name: String
+    hashKey: String!
+    canonicalStation: String
+    buildingName: String
     address: String
     area: Float
-    currency: String
-    price: Float
+    basicRent: Float
+    rentPlusAlpha: Float
+    maintenanceFee: Float
+    totalRent: Float
+    guaranteeMoneyMultiple: Float
+    keyMoneyMultiple: Float
+    unitRent: Float
     city: String
     country: String
-    year_built: Int
-    floor_plan: String
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    land_area: Float
-    floor_number: Int
-    total_floor: Int
-    agent_comment: String
-    more_detail: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
   }
 
-  type property_sale_atomSubscriptionPayload {
+  type PropertyRentAtomSubscriptionPayload {
     mutation: MutationType!
-    node: property_sale_atom
+    node: PropertyRentAtom
     updatedFields: [String!]
-    previousValues: property_sale_atomPreviousValues
+    previousValues: PropertyRentAtomPreviousValues
   }
 
-  input property_sale_atomSubscriptionWhereInput {
+  input PropertyRentAtomSubscriptionWhereInput {
     mutation_in: [MutationType!]
     updatedFields_contains: String
     updatedFields_contains_every: [String!]
     updatedFields_contains_some: [String!]
-    node: property_sale_atomWhereInput
-    AND: [property_sale_atomSubscriptionWhereInput!]
+    node: PropertyRentAtomWhereInput
+    AND: [PropertyRentAtomSubscriptionWhereInput!]
   }
 
-  input property_sale_atomUpdateInput {
+  input PropertyRentAtomUpdateInput {
     _cls: PropertyClass
-    hash_key: String
-    property_type: PropertyType
-    canonical_station: String
-    building_name: String
+    hashKey: String
+    canonicalStation: String
+    buildingName: String
     address: String
     area: Float
-    currency: String
-    price: Float
+    basicRent: Float
+    rentPlusAlpha: Float
+    maintenanceFee: Float
+    totalRent: Float
+    guaranteeMoneyMultiple: Float
+    keyMoneyMultiple: Float
+    unitRent: Float
     city: String
     country: String
-    year_built: Int
-    floor_plan: String
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    land_area: Float
-    floor_number: Int
-    total_floor: Int
-    agent_comment: String
-    more_detail: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
   }
 
-  input property_sale_atomUpdateManyMutationInput {
+  input PropertyRentAtomUpdateManyMutationInput {
     _cls: PropertyClass
-    hash_key: String
-    property_type: PropertyType
-    canonical_station: String
-    building_name: String
+    hashKey: String
+    canonicalStation: String
+    buildingName: String
     address: String
     area: Float
-    currency: String
-    price: Float
+    basicRent: Float
+    rentPlusAlpha: Float
+    maintenanceFee: Float
+    totalRent: Float
+    guaranteeMoneyMultiple: Float
+    keyMoneyMultiple: Float
+    unitRent: Float
     city: String
     country: String
-    year_built: Int
-    floor_plan: String
-    in_date: DateTime
-    out_date: DateTime
-    nearest_stations: Json
-    land_area: Float
-    floor_number: Int
-    total_floor: Int
-    agent_comment: String
-    more_detail: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
   }
 
-  input property_sale_atomWhereInput {
+  input PropertyRentAtomWhereInput {
     _id: ID
     _id_not: ID
     _id_in: [ID!]
@@ -734,52 +468,48 @@ export const typeDefs = /* GraphQL */ `
     _cls_not: PropertyClass
     _cls_in: [PropertyClass!]
     _cls_not_in: [PropertyClass!]
-    hash_key: String
-    hash_key_not: String
-    hash_key_in: [String!]
-    hash_key_not_in: [String!]
-    hash_key_lt: String
-    hash_key_lte: String
-    hash_key_gt: String
-    hash_key_gte: String
-    hash_key_contains: String
-    hash_key_not_contains: String
-    hash_key_starts_with: String
-    hash_key_not_starts_with: String
-    hash_key_ends_with: String
-    hash_key_not_ends_with: String
-    property_type: PropertyType
-    property_type_not: PropertyType
-    property_type_in: [PropertyType!]
-    property_type_not_in: [PropertyType!]
-    canonical_station: String
-    canonical_station_not: String
-    canonical_station_in: [String!]
-    canonical_station_not_in: [String!]
-    canonical_station_lt: String
-    canonical_station_lte: String
-    canonical_station_gt: String
-    canonical_station_gte: String
-    canonical_station_contains: String
-    canonical_station_not_contains: String
-    canonical_station_starts_with: String
-    canonical_station_not_starts_with: String
-    canonical_station_ends_with: String
-    canonical_station_not_ends_with: String
-    building_name: String
-    building_name_not: String
-    building_name_in: [String!]
-    building_name_not_in: [String!]
-    building_name_lt: String
-    building_name_lte: String
-    building_name_gt: String
-    building_name_gte: String
-    building_name_contains: String
-    building_name_not_contains: String
-    building_name_starts_with: String
-    building_name_not_starts_with: String
-    building_name_ends_with: String
-    building_name_not_ends_with: String
+    hashKey: String
+    hashKey_not: String
+    hashKey_in: [String!]
+    hashKey_not_in: [String!]
+    hashKey_lt: String
+    hashKey_lte: String
+    hashKey_gt: String
+    hashKey_gte: String
+    hashKey_contains: String
+    hashKey_not_contains: String
+    hashKey_starts_with: String
+    hashKey_not_starts_with: String
+    hashKey_ends_with: String
+    hashKey_not_ends_with: String
+    canonicalStation: String
+    canonicalStation_not: String
+    canonicalStation_in: [String!]
+    canonicalStation_not_in: [String!]
+    canonicalStation_lt: String
+    canonicalStation_lte: String
+    canonicalStation_gt: String
+    canonicalStation_gte: String
+    canonicalStation_contains: String
+    canonicalStation_not_contains: String
+    canonicalStation_starts_with: String
+    canonicalStation_not_starts_with: String
+    canonicalStation_ends_with: String
+    canonicalStation_not_ends_with: String
+    buildingName: String
+    buildingName_not: String
+    buildingName_in: [String!]
+    buildingName_not_in: [String!]
+    buildingName_lt: String
+    buildingName_lte: String
+    buildingName_gt: String
+    buildingName_gte: String
+    buildingName_contains: String
+    buildingName_not_contains: String
+    buildingName_starts_with: String
+    buildingName_not_starts_with: String
+    buildingName_ends_with: String
+    buildingName_not_ends_with: String
     address: String
     address_not: String
     address_in: [String!]
@@ -802,28 +532,62 @@ export const typeDefs = /* GraphQL */ `
     area_lte: Float
     area_gt: Float
     area_gte: Float
-    currency: String
-    currency_not: String
-    currency_in: [String!]
-    currency_not_in: [String!]
-    currency_lt: String
-    currency_lte: String
-    currency_gt: String
-    currency_gte: String
-    currency_contains: String
-    currency_not_contains: String
-    currency_starts_with: String
-    currency_not_starts_with: String
-    currency_ends_with: String
-    currency_not_ends_with: String
-    price: Float
-    price_not: Float
-    price_in: [Float!]
-    price_not_in: [Float!]
-    price_lt: Float
-    price_lte: Float
-    price_gt: Float
-    price_gte: Float
+    basicRent: Float
+    basicRent_not: Float
+    basicRent_in: [Float!]
+    basicRent_not_in: [Float!]
+    basicRent_lt: Float
+    basicRent_lte: Float
+    basicRent_gt: Float
+    basicRent_gte: Float
+    rentPlusAlpha: Float
+    rentPlusAlpha_not: Float
+    rentPlusAlpha_in: [Float!]
+    rentPlusAlpha_not_in: [Float!]
+    rentPlusAlpha_lt: Float
+    rentPlusAlpha_lte: Float
+    rentPlusAlpha_gt: Float
+    rentPlusAlpha_gte: Float
+    maintenanceFee: Float
+    maintenanceFee_not: Float
+    maintenanceFee_in: [Float!]
+    maintenanceFee_not_in: [Float!]
+    maintenanceFee_lt: Float
+    maintenanceFee_lte: Float
+    maintenanceFee_gt: Float
+    maintenanceFee_gte: Float
+    totalRent: Float
+    totalRent_not: Float
+    totalRent_in: [Float!]
+    totalRent_not_in: [Float!]
+    totalRent_lt: Float
+    totalRent_lte: Float
+    totalRent_gt: Float
+    totalRent_gte: Float
+    guaranteeMoneyMultiple: Float
+    guaranteeMoneyMultiple_not: Float
+    guaranteeMoneyMultiple_in: [Float!]
+    guaranteeMoneyMultiple_not_in: [Float!]
+    guaranteeMoneyMultiple_lt: Float
+    guaranteeMoneyMultiple_lte: Float
+    guaranteeMoneyMultiple_gt: Float
+    guaranteeMoneyMultiple_gte: Float
+    keyMoneyMultiple: Float
+    keyMoneyMultiple_not: Float
+    keyMoneyMultiple_in: [Float!]
+    keyMoneyMultiple_not_in: [Float!]
+    keyMoneyMultiple_lt: Float
+    keyMoneyMultiple_lte: Float
+    keyMoneyMultiple_gt: Float
+    keyMoneyMultiple_gte: Float
+    unitRent: Float
+    unitRent_not: Float
+    unitRent_in: [Float!]
+    unitRent_not_in: [Float!]
+    unitRent_lt: Float
+    unitRent_lte: Float
+    unitRent_gt: Float
+    unitRent_gte: Float
     city: String
     city_not: String
     city_in: [String!]
@@ -852,107 +616,538 @@ export const typeDefs = /* GraphQL */ `
     country_not_starts_with: String
     country_ends_with: String
     country_not_ends_with: String
-    year_built: Int
-    year_built_not: Int
-    year_built_in: [Int!]
-    year_built_not_in: [Int!]
-    year_built_lt: Int
-    year_built_lte: Int
-    year_built_gt: Int
-    year_built_gte: Int
-    floor_plan: String
-    floor_plan_not: String
-    floor_plan_in: [String!]
-    floor_plan_not_in: [String!]
-    floor_plan_lt: String
-    floor_plan_lte: String
-    floor_plan_gt: String
-    floor_plan_gte: String
-    floor_plan_contains: String
-    floor_plan_not_contains: String
-    floor_plan_starts_with: String
-    floor_plan_not_starts_with: String
-    floor_plan_ends_with: String
-    floor_plan_not_ends_with: String
-    in_date: DateTime
-    in_date_not: DateTime
-    in_date_in: [DateTime!]
-    in_date_not_in: [DateTime!]
-    in_date_lt: DateTime
-    in_date_lte: DateTime
-    in_date_gt: DateTime
-    in_date_gte: DateTime
-    out_date: DateTime
-    out_date_not: DateTime
-    out_date_in: [DateTime!]
-    out_date_not_in: [DateTime!]
-    out_date_lt: DateTime
-    out_date_lte: DateTime
-    out_date_gt: DateTime
-    out_date_gte: DateTime
-    land_area: Float
-    land_area_not: Float
-    land_area_in: [Float!]
-    land_area_not_in: [Float!]
-    land_area_lt: Float
-    land_area_lte: Float
-    land_area_gt: Float
-    land_area_gte: Float
-    floor_number: Int
-    floor_number_not: Int
-    floor_number_in: [Int!]
-    floor_number_not_in: [Int!]
-    floor_number_lt: Int
-    floor_number_lte: Int
-    floor_number_gt: Int
-    floor_number_gte: Int
-    total_floor: Int
-    total_floor_not: Int
-    total_floor_in: [Int!]
-    total_floor_not_in: [Int!]
-    total_floor_lt: Int
-    total_floor_lte: Int
-    total_floor_gt: Int
-    total_floor_gte: Int
-    agent_comment: String
-    agent_comment_not: String
-    agent_comment_in: [String!]
-    agent_comment_not_in: [String!]
-    agent_comment_lt: String
-    agent_comment_lte: String
-    agent_comment_gt: String
-    agent_comment_gte: String
-    agent_comment_contains: String
-    agent_comment_not_contains: String
-    agent_comment_starts_with: String
-    agent_comment_not_starts_with: String
-    agent_comment_ends_with: String
-    agent_comment_not_ends_with: String
-    more_detail: String
-    more_detail_not: String
-    more_detail_in: [String!]
-    more_detail_not_in: [String!]
-    more_detail_lt: String
-    more_detail_lte: String
-    more_detail_gt: String
-    more_detail_gte: String
-    more_detail_contains: String
-    more_detail_not_contains: String
-    more_detail_starts_with: String
-    more_detail_not_starts_with: String
-    more_detail_ends_with: String
-    more_detail_not_ends_with: String
-    AND: [property_sale_atomWhereInput!]
+    currency: String
+    currency_not: String
+    currency_in: [String!]
+    currency_not_in: [String!]
+    currency_lt: String
+    currency_lte: String
+    currency_gt: String
+    currency_gte: String
+    currency_contains: String
+    currency_not_contains: String
+    currency_starts_with: String
+    currency_not_starts_with: String
+    currency_ends_with: String
+    currency_not_ends_with: String
+    yearBuilt: Int
+    yearBuilt_not: Int
+    yearBuilt_in: [Int!]
+    yearBuilt_not_in: [Int!]
+    yearBuilt_lt: Int
+    yearBuilt_lte: Int
+    yearBuilt_gt: Int
+    yearBuilt_gte: Int
+    floorPlan: String
+    floorPlan_not: String
+    floorPlan_in: [String!]
+    floorPlan_not_in: [String!]
+    floorPlan_lt: String
+    floorPlan_lte: String
+    floorPlan_gt: String
+    floorPlan_gte: String
+    floorPlan_contains: String
+    floorPlan_not_contains: String
+    floorPlan_starts_with: String
+    floorPlan_not_starts_with: String
+    floorPlan_ends_with: String
+    floorPlan_not_ends_with: String
+    floorNumber: Int
+    floorNumber_not: Int
+    floorNumber_in: [Int!]
+    floorNumber_not_in: [Int!]
+    floorNumber_lt: Int
+    floorNumber_lte: Int
+    floorNumber_gt: Int
+    floorNumber_gte: Int
+    totalFloor: Int
+    totalFloor_not: Int
+    totalFloor_in: [Int!]
+    totalFloor_not_in: [Int!]
+    totalFloor_lt: Int
+    totalFloor_lte: Int
+    totalFloor_gt: Int
+    totalFloor_gte: Int
+    inDate: DateTime
+    inDate_not: DateTime
+    inDate_in: [DateTime!]
+    inDate_not_in: [DateTime!]
+    inDate_lt: DateTime
+    inDate_lte: DateTime
+    inDate_gt: DateTime
+    inDate_gte: DateTime
+    outDate: DateTime
+    outDate_not: DateTime
+    outDate_in: [DateTime!]
+    outDate_not_in: [DateTime!]
+    outDate_lt: DateTime
+    outDate_lte: DateTime
+    outDate_gt: DateTime
+    outDate_gte: DateTime
+    agentComment: String
+    agentComment_not: String
+    agentComment_in: [String!]
+    agentComment_not_in: [String!]
+    agentComment_lt: String
+    agentComment_lte: String
+    agentComment_gt: String
+    agentComment_gte: String
+    agentComment_contains: String
+    agentComment_not_contains: String
+    agentComment_starts_with: String
+    agentComment_not_starts_with: String
+    agentComment_ends_with: String
+    agentComment_not_ends_with: String
+    moreDetail: String
+    moreDetail_not: String
+    moreDetail_in: [String!]
+    moreDetail_not_in: [String!]
+    moreDetail_lt: String
+    moreDetail_lte: String
+    moreDetail_gt: String
+    moreDetail_gte: String
+    moreDetail_contains: String
+    moreDetail_not_contains: String
+    moreDetail_starts_with: String
+    moreDetail_not_starts_with: String
+    moreDetail_ends_with: String
+    moreDetail_not_ends_with: String
+    AND: [PropertyRentAtomWhereInput!]
   }
 
-  input property_sale_atomWhereUniqueInput {
+  input PropertyRentAtomWhereUniqueInput {
     _id: ID
-    hash_key: String
   }
 
-  enum PropertyClass {
-    PropertyRentAtom
-    PropertySaleAtom
+  type PropertySaleAtom {
+    _id: ID!
+    _cls: PropertyClass!
+    hashKey: String!
+    canonicalStation: String
+    propertyType: PropertyType!
+    buildingName: String
+    address: String
+    area: Float
+    price: Int
+    city: String
+    country: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    landArea: Float
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
+  }
+
+  type PropertySaleAtomConnection {
+    pageInfo: PageInfo!
+    edges: [PropertySaleAtomEdge]!
+    aggregate: AggregatePropertySaleAtom!
+  }
+
+  input PropertySaleAtomCreateInput {
+    _id: ID
+    _cls: PropertyClass
+    hashKey: String!
+    canonicalStation: String
+    propertyType: PropertyType!
+    buildingName: String
+    address: String
+    area: Float
+    price: Int
+    city: String
+    country: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    landArea: Float
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
+  }
+
+  type PropertySaleAtomEdge {
+    node: PropertySaleAtom!
+    cursor: String!
+  }
+
+  enum PropertySaleAtomOrderByInput {
+    _id_ASC
+    _id_DESC
+    _cls_ASC
+    _cls_DESC
+    hashKey_ASC
+    hashKey_DESC
+    canonicalStation_ASC
+    canonicalStation_DESC
+    propertyType_ASC
+    propertyType_DESC
+    buildingName_ASC
+    buildingName_DESC
+    address_ASC
+    address_DESC
+    area_ASC
+    area_DESC
+    price_ASC
+    price_DESC
+    city_ASC
+    city_DESC
+    country_ASC
+    country_DESC
+    currency_ASC
+    currency_DESC
+    yearBuilt_ASC
+    yearBuilt_DESC
+    floorPlan_ASC
+    floorPlan_DESC
+    floorNumber_ASC
+    floorNumber_DESC
+    totalFloor_ASC
+    totalFloor_DESC
+    landArea_ASC
+    landArea_DESC
+    inDate_ASC
+    inDate_DESC
+    outDate_ASC
+    outDate_DESC
+    nearestStations_ASC
+    nearestStations_DESC
+    agentComment_ASC
+    agentComment_DESC
+    moreDetail_ASC
+    moreDetail_DESC
+  }
+
+  type PropertySaleAtomPreviousValues {
+    _id: ID!
+    _cls: PropertyClass!
+    hashKey: String!
+    canonicalStation: String
+    propertyType: PropertyType!
+    buildingName: String
+    address: String
+    area: Float
+    price: Int
+    city: String
+    country: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    landArea: Float
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
+  }
+
+  type PropertySaleAtomSubscriptionPayload {
+    mutation: MutationType!
+    node: PropertySaleAtom
+    updatedFields: [String!]
+    previousValues: PropertySaleAtomPreviousValues
+  }
+
+  input PropertySaleAtomSubscriptionWhereInput {
+    mutation_in: [MutationType!]
+    updatedFields_contains: String
+    updatedFields_contains_every: [String!]
+    updatedFields_contains_some: [String!]
+    node: PropertySaleAtomWhereInput
+    AND: [PropertySaleAtomSubscriptionWhereInput!]
+  }
+
+  input PropertySaleAtomUpdateInput {
+    _cls: PropertyClass
+    hashKey: String
+    canonicalStation: String
+    propertyType: PropertyType
+    buildingName: String
+    address: String
+    area: Float
+    price: Int
+    city: String
+    country: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    landArea: Float
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
+  }
+
+  input PropertySaleAtomUpdateManyMutationInput {
+    _cls: PropertyClass
+    hashKey: String
+    canonicalStation: String
+    propertyType: PropertyType
+    buildingName: String
+    address: String
+    area: Float
+    price: Int
+    city: String
+    country: String
+    currency: String
+    yearBuilt: Int
+    floorPlan: String
+    floorNumber: Int
+    totalFloor: Int
+    landArea: Float
+    inDate: DateTime
+    outDate: DateTime
+    nearestStations: Json
+    agentComment: String
+    moreDetail: String
+  }
+
+  input PropertySaleAtomWhereInput {
+    _id: ID
+    _id_not: ID
+    _id_in: [ID!]
+    _id_not_in: [ID!]
+    _id_lt: ID
+    _id_lte: ID
+    _id_gt: ID
+    _id_gte: ID
+    _id_contains: ID
+    _id_not_contains: ID
+    _id_starts_with: ID
+    _id_not_starts_with: ID
+    _id_ends_with: ID
+    _id_not_ends_with: ID
+    _cls: PropertyClass
+    _cls_not: PropertyClass
+    _cls_in: [PropertyClass!]
+    _cls_not_in: [PropertyClass!]
+    hashKey: String
+    hashKey_not: String
+    hashKey_in: [String!]
+    hashKey_not_in: [String!]
+    hashKey_lt: String
+    hashKey_lte: String
+    hashKey_gt: String
+    hashKey_gte: String
+    hashKey_contains: String
+    hashKey_not_contains: String
+    hashKey_starts_with: String
+    hashKey_not_starts_with: String
+    hashKey_ends_with: String
+    hashKey_not_ends_with: String
+    canonicalStation: String
+    canonicalStation_not: String
+    canonicalStation_in: [String!]
+    canonicalStation_not_in: [String!]
+    canonicalStation_lt: String
+    canonicalStation_lte: String
+    canonicalStation_gt: String
+    canonicalStation_gte: String
+    canonicalStation_contains: String
+    canonicalStation_not_contains: String
+    canonicalStation_starts_with: String
+    canonicalStation_not_starts_with: String
+    canonicalStation_ends_with: String
+    canonicalStation_not_ends_with: String
+    propertyType: PropertyType
+    propertyType_not: PropertyType
+    propertyType_in: [PropertyType!]
+    propertyType_not_in: [PropertyType!]
+    buildingName: String
+    buildingName_not: String
+    buildingName_in: [String!]
+    buildingName_not_in: [String!]
+    buildingName_lt: String
+    buildingName_lte: String
+    buildingName_gt: String
+    buildingName_gte: String
+    buildingName_contains: String
+    buildingName_not_contains: String
+    buildingName_starts_with: String
+    buildingName_not_starts_with: String
+    buildingName_ends_with: String
+    buildingName_not_ends_with: String
+    address: String
+    address_not: String
+    address_in: [String!]
+    address_not_in: [String!]
+    address_lt: String
+    address_lte: String
+    address_gt: String
+    address_gte: String
+    address_contains: String
+    address_not_contains: String
+    address_starts_with: String
+    address_not_starts_with: String
+    address_ends_with: String
+    address_not_ends_with: String
+    area: Float
+    area_not: Float
+    area_in: [Float!]
+    area_not_in: [Float!]
+    area_lt: Float
+    area_lte: Float
+    area_gt: Float
+    area_gte: Float
+    price: Int
+    price_not: Int
+    price_in: [Int!]
+    price_not_in: [Int!]
+    price_lt: Int
+    price_lte: Int
+    price_gt: Int
+    price_gte: Int
+    city: String
+    city_not: String
+    city_in: [String!]
+    city_not_in: [String!]
+    city_lt: String
+    city_lte: String
+    city_gt: String
+    city_gte: String
+    city_contains: String
+    city_not_contains: String
+    city_starts_with: String
+    city_not_starts_with: String
+    city_ends_with: String
+    city_not_ends_with: String
+    country: String
+    country_not: String
+    country_in: [String!]
+    country_not_in: [String!]
+    country_lt: String
+    country_lte: String
+    country_gt: String
+    country_gte: String
+    country_contains: String
+    country_not_contains: String
+    country_starts_with: String
+    country_not_starts_with: String
+    country_ends_with: String
+    country_not_ends_with: String
+    currency: String
+    currency_not: String
+    currency_in: [String!]
+    currency_not_in: [String!]
+    currency_lt: String
+    currency_lte: String
+    currency_gt: String
+    currency_gte: String
+    currency_contains: String
+    currency_not_contains: String
+    currency_starts_with: String
+    currency_not_starts_with: String
+    currency_ends_with: String
+    currency_not_ends_with: String
+    yearBuilt: Int
+    yearBuilt_not: Int
+    yearBuilt_in: [Int!]
+    yearBuilt_not_in: [Int!]
+    yearBuilt_lt: Int
+    yearBuilt_lte: Int
+    yearBuilt_gt: Int
+    yearBuilt_gte: Int
+    floorPlan: String
+    floorPlan_not: String
+    floorPlan_in: [String!]
+    floorPlan_not_in: [String!]
+    floorPlan_lt: String
+    floorPlan_lte: String
+    floorPlan_gt: String
+    floorPlan_gte: String
+    floorPlan_contains: String
+    floorPlan_not_contains: String
+    floorPlan_starts_with: String
+    floorPlan_not_starts_with: String
+    floorPlan_ends_with: String
+    floorPlan_not_ends_with: String
+    floorNumber: Int
+    floorNumber_not: Int
+    floorNumber_in: [Int!]
+    floorNumber_not_in: [Int!]
+    floorNumber_lt: Int
+    floorNumber_lte: Int
+    floorNumber_gt: Int
+    floorNumber_gte: Int
+    totalFloor: Int
+    totalFloor_not: Int
+    totalFloor_in: [Int!]
+    totalFloor_not_in: [Int!]
+    totalFloor_lt: Int
+    totalFloor_lte: Int
+    totalFloor_gt: Int
+    totalFloor_gte: Int
+    landArea: Float
+    landArea_not: Float
+    landArea_in: [Float!]
+    landArea_not_in: [Float!]
+    landArea_lt: Float
+    landArea_lte: Float
+    landArea_gt: Float
+    landArea_gte: Float
+    inDate: DateTime
+    inDate_not: DateTime
+    inDate_in: [DateTime!]
+    inDate_not_in: [DateTime!]
+    inDate_lt: DateTime
+    inDate_lte: DateTime
+    inDate_gt: DateTime
+    inDate_gte: DateTime
+    outDate: DateTime
+    outDate_not: DateTime
+    outDate_in: [DateTime!]
+    outDate_not_in: [DateTime!]
+    outDate_lt: DateTime
+    outDate_lte: DateTime
+    outDate_gt: DateTime
+    outDate_gte: DateTime
+    agentComment: String
+    agentComment_not: String
+    agentComment_in: [String!]
+    agentComment_not_in: [String!]
+    agentComment_lt: String
+    agentComment_lte: String
+    agentComment_gt: String
+    agentComment_gte: String
+    agentComment_contains: String
+    agentComment_not_contains: String
+    agentComment_starts_with: String
+    agentComment_not_starts_with: String
+    agentComment_ends_with: String
+    agentComment_not_ends_with: String
+    moreDetail: String
+    moreDetail_not: String
+    moreDetail_in: [String!]
+    moreDetail_not_in: [String!]
+    moreDetail_lt: String
+    moreDetail_lte: String
+    moreDetail_gt: String
+    moreDetail_gte: String
+    moreDetail_contains: String
+    moreDetail_not_contains: String
+    moreDetail_starts_with: String
+    moreDetail_not_starts_with: String
+    moreDetail_ends_with: String
+    moreDetail_not_ends_with: String
+    AND: [PropertySaleAtomWhereInput!]
+  }
+
+  input PropertySaleAtomWhereUniqueInput {
+    _id: ID
   }
 
   enum PropertyType {
@@ -962,57 +1157,77 @@ export const typeDefs = /* GraphQL */ `
   }
 
   type Query {
-    propertyRentAtom(
-      where: property_rent_atomWhereUniqueInput!
-    ): property_rent_atom
+    propertyDBLoadHistory(
+      where: PropertyDBLoadHistoryWhereUniqueInput!
+    ): PropertyDBLoadHistory
+    propertyDBLoadHistories(
+      where: PropertyDBLoadHistoryWhereInput
+      orderBy: PropertyDBLoadHistoryOrderByInput
+      skip: Int
+      after: String
+      before: String
+      first: Int
+      last: Int
+    ): [PropertyDBLoadHistory]!
+    propertyDBLoadHistoriesConnection(
+      where: PropertyDBLoadHistoryWhereInput
+      orderBy: PropertyDBLoadHistoryOrderByInput
+      skip: Int
+      after: String
+      before: String
+      first: Int
+      last: Int
+    ): PropertyDBLoadHistoryConnection!
+    propertyRentAtom(where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom
     propertyRentAtoms(
-      where: property_rent_atomWhereInput
-      orderBy: property_rent_atomOrderByInput
+      where: PropertyRentAtomWhereInput
+      orderBy: PropertyRentAtomOrderByInput
       skip: Int
       after: String
       before: String
       first: Int
       last: Int
-    ): [property_rent_atom]!
+    ): [PropertyRentAtom]!
     propertyRentAtomsConnection(
-      where: property_rent_atomWhereInput
-      orderBy: property_rent_atomOrderByInput
+      where: PropertyRentAtomWhereInput
+      orderBy: PropertyRentAtomOrderByInput
       skip: Int
       after: String
       before: String
       first: Int
       last: Int
-    ): property_rent_atomConnection!
-    propertySaleAtom(
-      where: property_sale_atomWhereUniqueInput!
-    ): property_sale_atom
+    ): PropertyRentAtomConnection!
+    propertySaleAtom(where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom
     propertySaleAtoms(
-      where: property_sale_atomWhereInput
-      orderBy: property_sale_atomOrderByInput
+      where: PropertySaleAtomWhereInput
+      orderBy: PropertySaleAtomOrderByInput
       skip: Int
       after: String
       before: String
       first: Int
       last: Int
-    ): [property_sale_atom]!
+    ): [PropertySaleAtom]!
     propertySaleAtomsConnection(
-      where: property_sale_atomWhereInput
-      orderBy: property_sale_atomOrderByInput
+      where: PropertySaleAtomWhereInput
+      orderBy: PropertySaleAtomOrderByInput
       skip: Int
       after: String
       before: String
       first: Int
       last: Int
-    ): property_sale_atomConnection!
+    ): PropertySaleAtomConnection!
     node(id: ID!): Node
   }
 
   type Subscription {
+    propertyDBLoadHistory(
+      where: PropertyDBLoadHistorySubscriptionWhereInput
+    ): PropertyDBLoadHistorySubscriptionPayload
     propertyRentAtom(
-      where: property_rent_atomSubscriptionWhereInput
-    ): property_rent_atomSubscriptionPayload
+      where: PropertyRentAtomSubscriptionWhereInput
+    ): PropertyRentAtomSubscriptionPayload
     propertySaleAtom(
-      where: property_sale_atomSubscriptionWhereInput
-    ): property_sale_atomSubscriptionPayload
+      where: PropertySaleAtomSubscriptionWhereInput
+    ): PropertySaleAtomSubscriptionPayload
   }
 `
