@@ -1,16 +1,68 @@
-type User {
-  id: ID! @unique
-  email: String! @unique
-  name: String
-  posts: [Post!]!
+enum PropertyClass {
+  PropertyRentAtom
+  PropertySaleAtom
 }
 
-type Post {
-  id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  published: Boolean! @default(value: "false")
-  title: String!
-  content: String
-  author: User!
+enum PropertyType {
+  HOUSE
+  MANSION
+  APT
+}
+
+type property_rent_atom {
+  _id: ID! @id
+  _cls: PropertyClass! @default(value: PropertyRentAtom)
+  hash_key: String! @unique
+  canonical_station: String
+  building_name: String
+  address: String
+  area: Float
+
+  basic_rent: Float
+  rent_plus_alpha: Float
+  maintenance_fee: Float
+  total_rent: Float
+  guarantee_money_multiple: Float @default(value: 0)
+  key_money_multiple: Float @default(value: 0)
+  unit_rent: Float
+
+  year_built: Int
+  floor_plan: String
+  floor_number: Int
+  total_floor: Int
+  in_date: DateTime
+  out_date: DateTime
+  nearest_stations: Json
+
+  agent_comment: String
+  more_detail: String
+}
+
+type property_sale_atom {
+  _id: ID! @id
+  _cls: PropertyClass! @default(value: PropertySaleAtom)
+  hash_key: String! @unique
+  property_type: PropertyType!
+  canonical_station: String
+  building_name: String
+  address: String
+  area: Float
+
+  currency: String @default(value: "JPY")
+  price: Float
+
+  city: String
+  country: String
+  year_built: Int
+  floor_plan: String
+  in_date: DateTime
+  out_date: DateTime
+  nearest_stations: Json
+
+  land_area: Float
+  floor_number: Int
+  total_floor: Int
+
+  agent_comment: String
+  more_detail: String
 }
