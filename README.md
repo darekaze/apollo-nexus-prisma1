@@ -6,18 +6,20 @@
 apollo-server-micro + typescript + prisma-nexus => ⚡️
 ```
 
-Simple template using `apollo-server-micro` with Typescript feat. `nexus` & `prisma`.
+Some random awesome project made with `apollo-server-micro` with Typescript feat. `nexus` & `prisma`.
 
 ## Development
 
 ### With `docker-compose`
 
-> tbd
+Install [DockStation](https://dockstation.io/) for running docker compose. Trust me, it's easier to manage the whole thing.
+
+Alternatively, you can still use cli to run `docker-compose` (Instruction to be added)..
 
 ### With `micro-dev` (temp)
 
-You can run this locally with `yarn dev`.
+You can run this locally with `yarn dev`, but still need to run Docker locally to host prisma.
 
 ## Deployment
 
-> To be added since prisma is a bit hard to deploy..
+> To be finalized since prisma is a bit tricky to deploy..
