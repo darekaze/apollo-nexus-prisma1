@@ -19,12 +19,12 @@ services:
     restart: always
     ports:
     - "4000:4000"
-    build:
-      dockerfile: environments/${ENV-production}/Dockerfile
-      context: .
+    build: .
     volumes:
       - .:/opt/pcengine
       - /opt/pcengine/node_modules
+    env_file:
+      - .env.${ENV-production}
     environment:
       - NODE_ENV=${ENV-production}
     depends_on:

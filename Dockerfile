@@ -7,7 +7,6 @@ RUN yarn
 COPY . .
 RUN yarn build
 
-# Prod Stage
 FROM node:10.16-alpine
 
 ARG NODE_ENV
@@ -19,7 +18,7 @@ RUN yarn install --frozen-lockfile --production && \
     yarn cache clean
 
 COPY --from=builder /opt/pcengine/dist ./dist
-COPY environments/production/.env .
+COPY .env.production .
 
 EXPOSE 4000
 CMD ["yarn", "start"]
