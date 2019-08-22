@@ -25,4 +25,6 @@ yarn-error.log*
 
 # Environment Variables
 .env
+.env.development
+.env.production
 .env.build

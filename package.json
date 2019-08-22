@@ -11,7 +11,7 @@
     "build": "tsc",
     "test": "jest",
     "start": "micro dist/index.js -l tcp://0.0.0.0:4000",
-    "dev": "micro-dev tsnode.js -p 4000 --silent",
+    "dev": "micro-dev tsnode.js -p 4011 --silent",
     "format": "npm-run-all format:*",
     "format:ts": "prettier --write {.,**}/*.ts",
     "format:json": "prettier --write {.,**}/*.json",
