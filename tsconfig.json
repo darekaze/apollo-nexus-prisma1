@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": "."
