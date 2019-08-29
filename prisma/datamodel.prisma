@@ -35,7 +35,7 @@ type PropertyRentAtom @db(name: "property_rent_atom") {
   totalFloor: Int @db(name: "total_floor")
   inDate: DateTime @db(name: "in_date")
   outDate: DateTime @db(name: "out_date")
-  nearestStations: Json @db(name: "nearest_stations")
+  nearbyStations: [StationWalkingDuration!]!
 
   agentComment: String @db(name: "agent_comment")
   moreDetail: String @db(name: "more_detail")
@@ -62,7 +62,7 @@ type PropertySaleAtom @db(name: "property_sale_atom") {
   landArea: Float @db(name: "land_area")
   inDate: DateTime @db(name: "in_date")
   outDate: DateTime @db(name: "out_date")
-  nearestStations: Json @db(name: "nearest_stations")
+  nearbyStations: [StationWalkingDuration!]!
 
   agentComment: String @db(name: "agent_comment")
   moreDetail: String @db(name: "more_detail")

@@ -1,35 +1,45 @@
+import path from 'path'
 import microCors from 'micro-cors'
-import { ApolloServer, gql } from 'apollo-server-micro'
+import { ApolloServer } from 'apollo-server-micro'
+import { prismaObjectType, makePrismaSchema } from 'nexus-prisma'
+import { prisma } from './generated/prisma-client'
+import datamodelInfo from './generated/nexus-prisma'
 import { IS_DEV } from './configs/env'
 
 // Setup cors methods and origin so in production mode
-// others can't access this API
+// others can't access this API, default set to all(*)
 const cors = microCors({
   allowMethods: ['GET', 'POST'],
   origin: process.env.ORIGIN || '*',
 })
 
-const typeDefs = gql`
-  type Query {
-    hello: String
-    environment: String
-  }
-`
+const Query = prismaObjectType({
+  name: 'Query',
+  definition: t => t.prismaFields(['*']),
+})
 
-const resolvers = {
-  Query: {
-    hello: (): string => {
-      return 'Hello world! gg'
-    },
-    environment: (): string => {
-      return process.env.NODE_ENV
-    },
+const Mutation = prismaObjectType({
+  name: 'Mutation',
+  definition: t => t.prismaFields(['*']),
+})
+
+const schema = makePrismaSchema({
+  types: [Query, Mutation],
+
+  prisma: {
+    datamodelInfo,
+    client: prisma,
   },
-}
+
+  outputs: {
+    schema: path.join(__dirname, './generated/schema.graphql'),
+    typegen: path.join(__dirname, './generated/nexus.ts'),
+  },
+})
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
+  context: { prisma },
   playground: IS_DEV, // keep it or else hot reload won't work
 })
 
