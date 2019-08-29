@@ -14,5 +14,6 @@
       "autoFix": true,
       "language": "typescript"
     }
-  ]
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
