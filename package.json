@@ -12,6 +12,7 @@
     "test": "jest",
     "start": "micro dist/index.js -l tcp://0.0.0.0:4000",
     "dev": "micro-dev tsnode.js -p 4011 --silent",
+    "lint": "eslint . --ext .js,.ts",
     "format": "npm-run-all format:*",
     "format:ts": "prettier --write {.,**}/*.ts",
     "format:json": "prettier --write {.,**}/*.json",
@@ -31,6 +32,15 @@
     "@types/jest": "^24.0.17",
     "@types/micro": "^7.3.3",
     "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "lint-staged": "^9.2.3",
@@ -59,6 +69,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
+      "eslint --fix",
       "prettier --write",
       "git add"
     ]

@@ -1,5 +1,5 @@
-import handler from '../src'
 import micro from 'micro'
+import handler from '../src'
 
 describe('Serverless implemenation', () => {
   it('exists', async () => {

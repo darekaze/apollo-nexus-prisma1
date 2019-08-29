@@ -18,10 +18,10 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => {
+    hello: (): string => {
       return 'Hello world! gg'
     },
-    environment: () => {
+    environment: (): string => {
       return process.env.NODE_ENV
     },
   },
