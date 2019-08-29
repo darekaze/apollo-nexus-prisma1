@@ -20,8 +20,6 @@ type BatchPayload {
 
 scalar DateTime
 
-scalar Json
-
 scalar Long
 
 type Mutation {
@@ -163,7 +161,7 @@ type PropertyRentAtom {
   keyMoneyMultiple: Float
   maintenanceFee: Float
   moreDetail: String
-  nearestStations: Json
+  nearbyStations: [StationWalkingDuration!]
   outDate: DateTime
   rentPlusAlpha: Float
   totalFloor: Int
@@ -198,7 +196,7 @@ input PropertyRentAtomCreateInput {
   keyMoneyMultiple: Float
   maintenanceFee: Float
   moreDetail: String
-  nearestStations: Json
+  nearbyStations: StationWalkingDurationCreateManyInput
   outDate: DateTime
   rentPlusAlpha: Float
   totalFloor: Int
@@ -251,8 +249,6 @@ enum PropertyRentAtomOrderByInput {
   maintenanceFee_DESC
   moreDetail_ASC
   moreDetail_DESC
-  nearestStations_ASC
-  nearestStations_DESC
   outDate_ASC
   outDate_DESC
   rentPlusAlpha_ASC
@@ -286,7 +282,7 @@ input PropertyRentAtomUpdateInput {
   keyMoneyMultiple: Float
   maintenanceFee: Float
   moreDetail: String
-  nearestStations: Json
+  nearbyStations: StationWalkingDurationUpdateManyInput
   outDate: DateTime
   rentPlusAlpha: Float
   totalFloor: Int
@@ -314,7 +310,6 @@ input PropertyRentAtomUpdateManyMutationInput {
   keyMoneyMultiple: Float
   maintenanceFee: Float
   moreDetail: String
-  nearestStations: Json
   outDate: DateTime
   rentPlusAlpha: Float
   totalFloor: Int
@@ -539,6 +534,9 @@ input PropertyRentAtomWhereInput {
   moreDetail_not_in: [String!]
   moreDetail_not_starts_with: String
   moreDetail_starts_with: String
+  nearbyStations_every: StationWalkingDurationRestrictedWhereInput
+  nearbyStations_none: StationWalkingDurationRestrictedWhereInput
+  nearbyStations_some: StationWalkingDurationWhereInput
   outDate: DateTime
   outDate_gt: DateTime
   outDate_gte: DateTime
@@ -610,7 +608,7 @@ type PropertySaleAtom {
   inDate: DateTime
   landArea: Float
   moreDetail: String
-  nearestStations: Json
+  nearbyStations: [StationWalkingDuration!]
   outDate: DateTime
   price: Int
   propertyType: PropertyType!
@@ -641,7 +639,7 @@ input PropertySaleAtomCreateInput {
   inDate: DateTime
   landArea: Float
   moreDetail: String
-  nearestStations: Json
+  nearbyStations: StationWalkingDurationCreateManyInput
   outDate: DateTime
   price: Int
   propertyType: PropertyType!
@@ -687,8 +685,6 @@ enum PropertySaleAtomOrderByInput {
   landArea_DESC
   moreDetail_ASC
   moreDetail_DESC
-  nearestStations_ASC
-  nearestStations_DESC
   outDate_ASC
   outDate_DESC
   price_ASC
@@ -717,7 +713,7 @@ input PropertySaleAtomUpdateInput {
   inDate: DateTime
   landArea: Float
   moreDetail: String
-  nearestStations: Json
+  nearbyStations: StationWalkingDurationUpdateManyInput
   outDate: DateTime
   price: Int
   propertyType: PropertyType
@@ -741,7 +737,6 @@ input PropertySaleAtomUpdateManyMutationInput {
   inDate: DateTime
   landArea: Float
   moreDetail: String
-  nearestStations: Json
   outDate: DateTime
   price: Int
   propertyType: PropertyType
@@ -941,6 +936,9 @@ input PropertySaleAtomWhereInput {
   moreDetail_not_in: [String!]
   moreDetail_not_starts_with: String
   moreDetail_starts_with: String
+  nearbyStations_every: StationWalkingDurationRestrictedWhereInput
+  nearbyStations_none: StationWalkingDurationRestrictedWhereInput
+  nearbyStations_some: StationWalkingDurationWhereInput
   outDate: DateTime
   outDate_gt: DateTime
   outDate_gte: DateTime
@@ -999,4 +997,114 @@ type Query {
   propertySaleAtom(where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom
   propertySaleAtoms(after: String, before: String, first: Int, last: Int, orderBy: PropertySaleAtomOrderByInput, skip: Int, where: PropertySaleAtomWhereInput): [PropertySaleAtom!]!
   propertySaleAtomsConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertySaleAtomOrderByInput, skip: Int, where: PropertySaleAtomWhereInput): PropertySaleAtomConnection!
+}
+
+type StationWalkingDuration {
+  duration: Int!
+  name: String!
+}
+
+input StationWalkingDurationCreateInput {
+  duration: Int!
+  name: String!
+}
+
+input StationWalkingDurationCreateManyInput {
+  create: [StationWalkingDurationCreateInput!]
+}
+
+input StationWalkingDurationRestrictedWhereInput {
+  AND: [StationWalkingDurationRestrictedWhereInput!]
+  duration: Int
+  duration_gt: Int
+  duration_gte: Int
+  duration_in: [Int!]
+  duration_lt: Int
+  duration_lte: Int
+  duration_not: Int
+  duration_not_in: [Int!]
+  name: String
+  name_contains: String
+  name_ends_with: String
+  name_gt: String
+  name_gte: String
+  name_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_not: String
+  name_not_contains: String
+  name_not_ends_with: String
+  name_not_in: [String!]
+  name_not_starts_with: String
+  name_starts_with: String
+}
+
+input StationWalkingDurationScalarWhereInput {
+  AND: [StationWalkingDurationScalarWhereInput!]
+  duration: Int
+  duration_gt: Int
+  duration_gte: Int
+  duration_in: [Int!]
+  duration_lt: Int
+  duration_lte: Int
+  duration_not: Int
+  duration_not_in: [Int!]
+  name: String
+  name_contains: String
+  name_ends_with: String
+  name_gt: String
+  name_gte: String
+  name_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_not: String
+  name_not_contains: String
+  name_not_ends_with: String
+  name_not_in: [String!]
+  name_not_starts_with: String
+  name_starts_with: String
+  NOT: [StationWalkingDurationScalarWhereInput!]
+  OR: [StationWalkingDurationScalarWhereInput!]
+}
+
+input StationWalkingDurationUpdateManyDataInput {
+  duration: Int
+  name: String
+}
+
+input StationWalkingDurationUpdateManyInput {
+  create: [StationWalkingDurationCreateInput!]
+  deleteMany: [StationWalkingDurationScalarWhereInput!]
+  updateMany: [StationWalkingDurationUpdateManyWithWhereNestedInput!]
+}
+
+input StationWalkingDurationUpdateManyWithWhereNestedInput {
+  data: StationWalkingDurationUpdateManyDataInput!
+  where: StationWalkingDurationScalarWhereInput!
+}
+
+input StationWalkingDurationWhereInput {
+  AND: [StationWalkingDurationWhereInput!]
+  duration: Int
+  duration_gt: Int
+  duration_gte: Int
+  duration_in: [Int!]
+  duration_lt: Int
+  duration_lte: Int
+  duration_not: Int
+  duration_not_in: [Int!]
+  name: String
+  name_contains: String
+  name_ends_with: String
+  name_gt: String
+  name_gte: String
+  name_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_not: String
+  name_not_contains: String
+  name_not_ends_with: String
+  name_not_in: [String!]
+  name_not_starts_with: String
+  name_starts_with: String
 }

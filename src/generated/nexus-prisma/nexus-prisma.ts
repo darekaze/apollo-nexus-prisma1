@@ -16,6 +16,7 @@ export interface NexusPrismaTypes {
     fields: {
       Query: QueryObject
       PropertyRentAtom: PropertyRentAtomObject
+      StationWalkingDuration: StationWalkingDurationObject
       PropertyRentAtomConnection: PropertyRentAtomConnectionObject
       PageInfo: PageInfoObject
       PropertyRentAtomEdge: PropertyRentAtomEdgeObject
@@ -41,6 +42,7 @@ export interface NexusPrismaTypes {
     fieldsDetails: {
       Query: QueryFieldDetails
       PropertyRentAtom: PropertyRentAtomFieldDetails
+      StationWalkingDuration: StationWalkingDurationFieldDetails
       PropertyRentAtomConnection: PropertyRentAtomConnectionFieldDetails
       PageInfo: PageInfoFieldDetails
       PropertyRentAtomEdge: PropertyRentAtomEdgeFieldDetails
@@ -68,12 +70,20 @@ export interface NexusPrismaTypes {
     fields: {
       PropertyRentAtomWhereUniqueInput: PropertyRentAtomWhereUniqueInputInputObject
       PropertyRentAtomWhereInput: PropertyRentAtomWhereInputInputObject
+      StationWalkingDurationWhereInput: StationWalkingDurationWhereInputInputObject
+      StationWalkingDurationRestrictedWhereInput: StationWalkingDurationRestrictedWhereInputInputObject
       PropertySaleAtomWhereUniqueInput: PropertySaleAtomWhereUniqueInputInputObject
       PropertySaleAtomWhereInput: PropertySaleAtomWhereInputInputObject
       PropertyDBLoadHistoryWhereUniqueInput: PropertyDBLoadHistoryWhereUniqueInputInputObject
       PropertyDBLoadHistoryWhereInput: PropertyDBLoadHistoryWhereInputInputObject
       PropertyRentAtomCreateInput: PropertyRentAtomCreateInputInputObject
+      StationWalkingDurationCreateManyInput: StationWalkingDurationCreateManyInputInputObject
+      StationWalkingDurationCreateInput: StationWalkingDurationCreateInputInputObject
       PropertyRentAtomUpdateInput: PropertyRentAtomUpdateInputInputObject
+      StationWalkingDurationUpdateManyInput: StationWalkingDurationUpdateManyInputInputObject
+      StationWalkingDurationScalarWhereInput: StationWalkingDurationScalarWhereInputInputObject
+      StationWalkingDurationUpdateManyWithWhereNestedInput: StationWalkingDurationUpdateManyWithWhereNestedInputInputObject
+      StationWalkingDurationUpdateManyDataInput: StationWalkingDurationUpdateManyDataInputInputObject
       PropertyRentAtomUpdateManyMutationInput: PropertyRentAtomUpdateManyMutationInputInputObject
       PropertySaleAtomCreateInput: PropertySaleAtomCreateInputInputObject
       PropertySaleAtomUpdateInput: PropertySaleAtomUpdateInputInputObject
@@ -326,7 +336,7 @@ type PropertyRentAtomObject =
   | { name: 'totalFloor', args?: [] | false, alias?: string  } 
   | { name: 'inDate', args?: [] | false, alias?: string  } 
   | { name: 'outDate', args?: [] | false, alias?: string  } 
-  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
+  | { name: 'nearbyStations', args?: [] | false, alias?: string  } 
   | { name: 'agentComment', args?: [] | false, alias?: string  } 
   | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
@@ -354,7 +364,7 @@ type PropertyRentAtomFields =
   | 'totalFloor'
   | 'inDate'
   | 'outDate'
-  | 'nearestStations'
+  | 'nearbyStations'
   | 'agentComment'
   | 'moreDetail'
 
@@ -552,13 +562,18 @@ export interface PropertyRentAtomFieldDetails {
     nullable: true
     resolve: undefined
   }
-  nearestStations: {
-    type: 'Json'
+  nearbyStations: {
+    type: 'StationWalkingDuration'
     args: {}
     description: string
-    list: undefined
-    nullable: true
-    resolve: undefined
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"PropertyRentAtom">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.StationWalkingDuration[]> | prisma.StationWalkingDuration[]
   }
   agentComment: {
     type: 'String'
@@ -574,6 +589,41 @@ export interface PropertyRentAtomFieldDetails {
     description: string
     list: undefined
     nullable: true
+    resolve: undefined
+  }
+}
+  
+
+// Types for StationWalkingDuration
+
+type StationWalkingDurationObject =
+  | StationWalkingDurationFields
+  | { name: 'name', args?: [] | false, alias?: string  } 
+  | { name: 'duration', args?: [] | false, alias?: string  } 
+
+type StationWalkingDurationFields =
+  | 'name'
+  | 'duration'
+
+
+
+  
+
+export interface StationWalkingDurationFieldDetails {
+  name: {
+    type: 'String'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  duration: {
+    type: 'Int'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
     resolve: undefined
   }
 }
@@ -782,7 +832,7 @@ type PropertySaleAtomObject =
   | { name: 'landArea', args?: [] | false, alias?: string  } 
   | { name: 'inDate', args?: [] | false, alias?: string  } 
   | { name: 'outDate', args?: [] | false, alias?: string  } 
-  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
+  | { name: 'nearbyStations', args?: [] | false, alias?: string  } 
   | { name: 'agentComment', args?: [] | false, alias?: string  } 
   | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
@@ -806,7 +856,7 @@ type PropertySaleAtomFields =
   | 'landArea'
   | 'inDate'
   | 'outDate'
-  | 'nearestStations'
+  | 'nearbyStations'
   | 'agentComment'
   | 'moreDetail'
 
@@ -977,13 +1027,18 @@ export interface PropertySaleAtomFieldDetails {
     nullable: true
     resolve: undefined
   }
-  nearestStations: {
-    type: 'Json'
+  nearbyStations: {
+    type: 'StationWalkingDuration'
     args: {}
     description: string
-    list: undefined
-    nullable: true
-    resolve: undefined
+    list: true
+    nullable: false
+    resolve: (
+      root: core.RootValue<"PropertySaleAtom">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.StationWalkingDuration[]> | prisma.StationWalkingDuration[]
   }
   agentComment: {
     type: 'String'
@@ -1818,7 +1873,6 @@ type PropertyRentAtomPreviousValuesObject =
   | { name: 'totalFloor', args?: [] | false, alias?: string  } 
   | { name: 'inDate', args?: [] | false, alias?: string  } 
   | { name: 'outDate', args?: [] | false, alias?: string  } 
-  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
   | { name: 'agentComment', args?: [] | false, alias?: string  } 
   | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
@@ -1846,7 +1900,6 @@ type PropertyRentAtomPreviousValuesFields =
   | 'totalFloor'
   | 'inDate'
   | 'outDate'
-  | 'nearestStations'
   | 'agentComment'
   | 'moreDetail'
 
@@ -2044,14 +2097,6 @@ export interface PropertyRentAtomPreviousValuesFieldDetails {
     nullable: true
     resolve: undefined
   }
-  nearestStations: {
-    type: 'Json'
-    args: {}
-    description: string
-    list: undefined
-    nullable: true
-    resolve: undefined
-  }
   agentComment: {
     type: 'String'
     args: {}
@@ -2164,7 +2209,6 @@ type PropertySaleAtomPreviousValuesObject =
   | { name: 'landArea', args?: [] | false, alias?: string  } 
   | { name: 'inDate', args?: [] | false, alias?: string  } 
   | { name: 'outDate', args?: [] | false, alias?: string  } 
-  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
   | { name: 'agentComment', args?: [] | false, alias?: string  } 
   | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
@@ -2188,7 +2232,6 @@ type PropertySaleAtomPreviousValuesFields =
   | 'landArea'
   | 'inDate'
   | 'outDate'
-  | 'nearestStations'
   | 'agentComment'
   | 'moreDetail'
 
@@ -2353,14 +2396,6 @@ export interface PropertySaleAtomPreviousValuesFieldDetails {
   }
   outDate: {
     type: 'DateTime'
-    args: {}
-    description: string
-    list: undefined
-    nullable: true
-    resolve: undefined
-  }
-  nearestStations: {
-    type: 'Json'
     args: {}
     description: string
     list: undefined
@@ -2744,6 +2779,9 @@ export interface PropertyRentAtomWhereInput {
   outDate_lte?: string | null
   outDate_gt?: string | null
   outDate_gte?: string | null
+  nearbyStations_some?: StationWalkingDurationWhereInput | null
+  nearbyStations_every?: StationWalkingDurationRestrictedWhereInput | null
+  nearbyStations_none?: StationWalkingDurationRestrictedWhereInput | null
   agentComment?: string | null
   agentComment_not?: string | null
   agentComment_in?: string[]
@@ -3010,6 +3048,9 @@ export type PropertyRentAtomWhereInputInputObject =
   | { name: 'outDate_lte', alias?: string  } 
   | { name: 'outDate_gt', alias?: string  } 
   | { name: 'outDate_gte', alias?: string  } 
+  | { name: 'nearbyStations_some', alias?: string  } 
+  | { name: 'nearbyStations_every', alias?: string  } 
+  | { name: 'nearbyStations_none', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'agentComment_not', alias?: string  } 
   | { name: 'agentComment_in', alias?: string  } 
@@ -3038,6 +3079,108 @@ export type PropertyRentAtomWhereInputInputObject =
   | { name: 'moreDetail_not_starts_with', alias?: string  } 
   | { name: 'moreDetail_ends_with', alias?: string  } 
   | { name: 'moreDetail_not_ends_with', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
+export interface StationWalkingDurationWhereInput {
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  duration?: number | null
+  duration_not?: number | null
+  duration_in?: number[]
+  duration_not_in?: number[]
+  duration_lt?: number | null
+  duration_lte?: number | null
+  duration_gt?: number | null
+  duration_gte?: number | null
+  AND?: StationWalkingDurationWhereInput[]
+}
+export type StationWalkingDurationWhereInputInputObject =
+  | Extract<keyof StationWalkingDurationWhereInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'duration', alias?: string  } 
+  | { name: 'duration_not', alias?: string  } 
+  | { name: 'duration_in', alias?: string  } 
+  | { name: 'duration_not_in', alias?: string  } 
+  | { name: 'duration_lt', alias?: string  } 
+  | { name: 'duration_lte', alias?: string  } 
+  | { name: 'duration_gt', alias?: string  } 
+  | { name: 'duration_gte', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
+export interface StationWalkingDurationRestrictedWhereInput {
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  duration?: number | null
+  duration_not?: number | null
+  duration_in?: number[]
+  duration_not_in?: number[]
+  duration_lt?: number | null
+  duration_lte?: number | null
+  duration_gt?: number | null
+  duration_gte?: number | null
+  AND?: StationWalkingDurationRestrictedWhereInput[]
+}
+export type StationWalkingDurationRestrictedWhereInputInputObject =
+  | Extract<keyof StationWalkingDurationRestrictedWhereInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'duration', alias?: string  } 
+  | { name: 'duration_not', alias?: string  } 
+  | { name: 'duration_in', alias?: string  } 
+  | { name: 'duration_not_in', alias?: string  } 
+  | { name: 'duration_lt', alias?: string  } 
+  | { name: 'duration_lte', alias?: string  } 
+  | { name: 'duration_gt', alias?: string  } 
+  | { name: 'duration_gte', alias?: string  } 
   | { name: 'AND', alias?: string  } 
   
 export interface PropertySaleAtomWhereUniqueInput {
@@ -3246,6 +3389,9 @@ export interface PropertySaleAtomWhereInput {
   outDate_lte?: string | null
   outDate_gt?: string | null
   outDate_gte?: string | null
+  nearbyStations_some?: StationWalkingDurationWhereInput | null
+  nearbyStations_every?: StationWalkingDurationRestrictedWhereInput | null
+  nearbyStations_none?: StationWalkingDurationRestrictedWhereInput | null
   agentComment?: string | null
   agentComment_not?: string | null
   agentComment_in?: string[]
@@ -3476,6 +3622,9 @@ export type PropertySaleAtomWhereInputInputObject =
   | { name: 'outDate_lte', alias?: string  } 
   | { name: 'outDate_gt', alias?: string  } 
   | { name: 'outDate_gte', alias?: string  } 
+  | { name: 'nearbyStations_some', alias?: string  } 
+  | { name: 'nearbyStations_every', alias?: string  } 
+  | { name: 'nearbyStations_none', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'agentComment_not', alias?: string  } 
   | { name: 'agentComment_in', alias?: string  } 
@@ -3616,7 +3765,7 @@ export interface PropertyRentAtomCreateInput {
   totalFloor?: number | null
   inDate?: string | null
   outDate?: string | null
-  nearestStations?: undefined | null
+  nearbyStations?: StationWalkingDurationCreateManyInput | null
   agentComment?: string | null
   moreDetail?: string | null
 }
@@ -3645,9 +3794,25 @@ export type PropertyRentAtomCreateInputInputObject =
   | { name: 'totalFloor', alias?: string  } 
   | { name: 'inDate', alias?: string  } 
   | { name: 'outDate', alias?: string  } 
-  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'nearbyStations', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'moreDetail', alias?: string  } 
+  
+export interface StationWalkingDurationCreateManyInput {
+  create?: StationWalkingDurationCreateInput[]
+}
+export type StationWalkingDurationCreateManyInputInputObject =
+  | Extract<keyof StationWalkingDurationCreateManyInput, string>
+  | { name: 'create', alias?: string  } 
+  
+export interface StationWalkingDurationCreateInput {
+  name?: string
+  duration?: number
+}
+export type StationWalkingDurationCreateInputInputObject =
+  | Extract<keyof StationWalkingDurationCreateInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'duration', alias?: string  } 
   
 export interface PropertyRentAtomUpdateInput {
   _cls?: prisma.PropertyClass | null
@@ -3672,7 +3837,7 @@ export interface PropertyRentAtomUpdateInput {
   totalFloor?: number | null
   inDate?: string | null
   outDate?: string | null
-  nearestStations?: undefined | null
+  nearbyStations?: StationWalkingDurationUpdateManyInput | null
   agentComment?: string | null
   moreDetail?: string | null
 }
@@ -3700,9 +3865,93 @@ export type PropertyRentAtomUpdateInputInputObject =
   | { name: 'totalFloor', alias?: string  } 
   | { name: 'inDate', alias?: string  } 
   | { name: 'outDate', alias?: string  } 
-  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'nearbyStations', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'moreDetail', alias?: string  } 
+  
+export interface StationWalkingDurationUpdateManyInput {
+  create?: StationWalkingDurationCreateInput[]
+  deleteMany?: StationWalkingDurationScalarWhereInput[]
+  updateMany?: StationWalkingDurationUpdateManyWithWhereNestedInput[]
+}
+export type StationWalkingDurationUpdateManyInputInputObject =
+  | Extract<keyof StationWalkingDurationUpdateManyInput, string>
+  | { name: 'create', alias?: string  } 
+  | { name: 'deleteMany', alias?: string  } 
+  | { name: 'updateMany', alias?: string  } 
+  
+export interface StationWalkingDurationScalarWhereInput {
+  name?: string | null
+  name_not?: string | null
+  name_in?: string[]
+  name_not_in?: string[]
+  name_lt?: string | null
+  name_lte?: string | null
+  name_gt?: string | null
+  name_gte?: string | null
+  name_contains?: string | null
+  name_not_contains?: string | null
+  name_starts_with?: string | null
+  name_not_starts_with?: string | null
+  name_ends_with?: string | null
+  name_not_ends_with?: string | null
+  duration?: number | null
+  duration_not?: number | null
+  duration_in?: number[]
+  duration_not_in?: number[]
+  duration_lt?: number | null
+  duration_lte?: number | null
+  duration_gt?: number | null
+  duration_gte?: number | null
+  AND?: StationWalkingDurationScalarWhereInput[]
+  OR?: StationWalkingDurationScalarWhereInput[]
+  NOT?: StationWalkingDurationScalarWhereInput[]
+}
+export type StationWalkingDurationScalarWhereInputInputObject =
+  | Extract<keyof StationWalkingDurationScalarWhereInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'name_not', alias?: string  } 
+  | { name: 'name_in', alias?: string  } 
+  | { name: 'name_not_in', alias?: string  } 
+  | { name: 'name_lt', alias?: string  } 
+  | { name: 'name_lte', alias?: string  } 
+  | { name: 'name_gt', alias?: string  } 
+  | { name: 'name_gte', alias?: string  } 
+  | { name: 'name_contains', alias?: string  } 
+  | { name: 'name_not_contains', alias?: string  } 
+  | { name: 'name_starts_with', alias?: string  } 
+  | { name: 'name_not_starts_with', alias?: string  } 
+  | { name: 'name_ends_with', alias?: string  } 
+  | { name: 'name_not_ends_with', alias?: string  } 
+  | { name: 'duration', alias?: string  } 
+  | { name: 'duration_not', alias?: string  } 
+  | { name: 'duration_in', alias?: string  } 
+  | { name: 'duration_not_in', alias?: string  } 
+  | { name: 'duration_lt', alias?: string  } 
+  | { name: 'duration_lte', alias?: string  } 
+  | { name: 'duration_gt', alias?: string  } 
+  | { name: 'duration_gte', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  | { name: 'OR', alias?: string  } 
+  | { name: 'NOT', alias?: string  } 
+  
+export interface StationWalkingDurationUpdateManyWithWhereNestedInput {
+  where?: StationWalkingDurationScalarWhereInput
+  data?: StationWalkingDurationUpdateManyDataInput
+}
+export type StationWalkingDurationUpdateManyWithWhereNestedInputInputObject =
+  | Extract<keyof StationWalkingDurationUpdateManyWithWhereNestedInput, string>
+  | { name: 'where', alias?: string  } 
+  | { name: 'data', alias?: string  } 
+  
+export interface StationWalkingDurationUpdateManyDataInput {
+  name?: string | null
+  duration?: number | null
+}
+export type StationWalkingDurationUpdateManyDataInputInputObject =
+  | Extract<keyof StationWalkingDurationUpdateManyDataInput, string>
+  | { name: 'name', alias?: string  } 
+  | { name: 'duration', alias?: string  } 
   
 export interface PropertyRentAtomUpdateManyMutationInput {
   _cls?: prisma.PropertyClass | null
@@ -3727,7 +3976,6 @@ export interface PropertyRentAtomUpdateManyMutationInput {
   totalFloor?: number | null
   inDate?: string | null
   outDate?: string | null
-  nearestStations?: undefined | null
   agentComment?: string | null
   moreDetail?: string | null
 }
@@ -3755,7 +4003,6 @@ export type PropertyRentAtomUpdateManyMutationInputInputObject =
   | { name: 'totalFloor', alias?: string  } 
   | { name: 'inDate', alias?: string  } 
   | { name: 'outDate', alias?: string  } 
-  | { name: 'nearestStations', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'moreDetail', alias?: string  } 
   
@@ -3779,7 +4026,7 @@ export interface PropertySaleAtomCreateInput {
   landArea?: number | null
   inDate?: string | null
   outDate?: string | null
-  nearestStations?: undefined | null
+  nearbyStations?: StationWalkingDurationCreateManyInput | null
   agentComment?: string | null
   moreDetail?: string | null
 }
@@ -3804,7 +4051,7 @@ export type PropertySaleAtomCreateInputInputObject =
   | { name: 'landArea', alias?: string  } 
   | { name: 'inDate', alias?: string  } 
   | { name: 'outDate', alias?: string  } 
-  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'nearbyStations', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'moreDetail', alias?: string  } 
   
@@ -3827,7 +4074,7 @@ export interface PropertySaleAtomUpdateInput {
   landArea?: number | null
   inDate?: string | null
   outDate?: string | null
-  nearestStations?: undefined | null
+  nearbyStations?: StationWalkingDurationUpdateManyInput | null
   agentComment?: string | null
   moreDetail?: string | null
 }
@@ -3851,7 +4098,7 @@ export type PropertySaleAtomUpdateInputInputObject =
   | { name: 'landArea', alias?: string  } 
   | { name: 'inDate', alias?: string  } 
   | { name: 'outDate', alias?: string  } 
-  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'nearbyStations', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'moreDetail', alias?: string  } 
   
@@ -3874,7 +4121,6 @@ export interface PropertySaleAtomUpdateManyMutationInput {
   landArea?: number | null
   inDate?: string | null
   outDate?: string | null
-  nearestStations?: undefined | null
   agentComment?: string | null
   moreDetail?: string | null
 }
@@ -3898,7 +4144,6 @@ export type PropertySaleAtomUpdateManyMutationInputInputObject =
   | { name: 'landArea', alias?: string  } 
   | { name: 'inDate', alias?: string  } 
   | { name: 'outDate', alias?: string  } 
-  | { name: 'nearestStations', alias?: string  } 
   | { name: 'agentComment', alias?: string  } 
   | { name: 'moreDetail', alias?: string  } 
   
@@ -4034,8 +4279,6 @@ export type PropertyRentAtomOrderByInputValues =
   | 'inDate_DESC'
   | 'outDate_ASC'
   | 'outDate_DESC'
-  | 'nearestStations_ASC'
-  | 'nearestStations_DESC'
   | 'agentComment_ASC'
   | 'agentComment_DESC'
   | 'moreDetail_ASC'
@@ -4085,8 +4328,6 @@ export type PropertySaleAtomOrderByInputValues =
   | 'inDate_DESC'
   | 'outDate_ASC'
   | 'outDate_DESC'
-  | 'nearestStations_ASC'
-  | 'nearestStations_DESC'
   | 'agentComment_ASC'
   | 'agentComment_DESC'
   | 'moreDetail_ASC'

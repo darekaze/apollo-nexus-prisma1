@@ -86,7 +86,7 @@ export interface NexusGenInputs {
     keyMoneyMultiple?: number | null; // Float
     maintenanceFee?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
+    nearbyStations?: NexusGenInputs['StationWalkingDurationCreateManyInput'] | null; // StationWalkingDurationCreateManyInput
     outDate?: any | null; // DateTime
     rentPlusAlpha?: number | null; // Float
     totalFloor?: number | null; // Int
@@ -113,7 +113,7 @@ export interface NexusGenInputs {
     keyMoneyMultiple?: number | null; // Float
     maintenanceFee?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
+    nearbyStations?: NexusGenInputs['StationWalkingDurationUpdateManyInput'] | null; // StationWalkingDurationUpdateManyInput
     outDate?: any | null; // DateTime
     rentPlusAlpha?: number | null; // Float
     totalFloor?: number | null; // Int
@@ -140,7 +140,6 @@ export interface NexusGenInputs {
     keyMoneyMultiple?: number | null; // Float
     maintenanceFee?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
     outDate?: any | null; // DateTime
     rentPlusAlpha?: number | null; // Float
     totalFloor?: number | null; // Int
@@ -364,6 +363,9 @@ export interface NexusGenInputs {
     moreDetail_not_in?: string[] | null; // [String!]
     moreDetail_not_starts_with?: string | null; // String
     moreDetail_starts_with?: string | null; // String
+    nearbyStations_every?: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'] | null; // StationWalkingDurationRestrictedWhereInput
+    nearbyStations_none?: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'] | null; // StationWalkingDurationRestrictedWhereInput
+    nearbyStations_some?: NexusGenInputs['StationWalkingDurationWhereInput'] | null; // StationWalkingDurationWhereInput
     outDate?: any | null; // DateTime
     outDate_gt?: any | null; // DateTime
     outDate_gte?: any | null; // DateTime
@@ -433,7 +435,7 @@ export interface NexusGenInputs {
     inDate?: any | null; // DateTime
     landArea?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
+    nearbyStations?: NexusGenInputs['StationWalkingDurationCreateManyInput'] | null; // StationWalkingDurationCreateManyInput
     outDate?: any | null; // DateTime
     price?: number | null; // Int
     propertyType: NexusGenEnums['PropertyType']; // PropertyType!
@@ -456,7 +458,7 @@ export interface NexusGenInputs {
     inDate?: any | null; // DateTime
     landArea?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
+    nearbyStations?: NexusGenInputs['StationWalkingDurationUpdateManyInput'] | null; // StationWalkingDurationUpdateManyInput
     outDate?: any | null; // DateTime
     price?: number | null; // Int
     propertyType?: NexusGenEnums['PropertyType'] | null; // PropertyType
@@ -479,7 +481,6 @@ export interface NexusGenInputs {
     inDate?: any | null; // DateTime
     landArea?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
     outDate?: any | null; // DateTime
     price?: number | null; // Int
     propertyType?: NexusGenEnums['PropertyType'] | null; // PropertyType
@@ -678,6 +679,9 @@ export interface NexusGenInputs {
     moreDetail_not_in?: string[] | null; // [String!]
     moreDetail_not_starts_with?: string | null; // String
     moreDetail_starts_with?: string | null; // String
+    nearbyStations_every?: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'] | null; // StationWalkingDurationRestrictedWhereInput
+    nearbyStations_none?: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'] | null; // StationWalkingDurationRestrictedWhereInput
+    nearbyStations_some?: NexusGenInputs['StationWalkingDurationWhereInput'] | null; // StationWalkingDurationWhereInput
     outDate?: any | null; // DateTime
     outDate_gt?: any | null; // DateTime
     outDate_gte?: any | null; // DateTime
@@ -718,13 +722,110 @@ export interface NexusGenInputs {
   PropertySaleAtomWhereUniqueInput: { // input type
     _id?: string | null; // ID
   }
+  StationWalkingDurationCreateInput: { // input type
+    duration: number; // Int!
+    name: string; // String!
+  }
+  StationWalkingDurationCreateManyInput: { // input type
+    create?: NexusGenInputs['StationWalkingDurationCreateInput'][] | null; // [StationWalkingDurationCreateInput!]
+  }
+  StationWalkingDurationRestrictedWhereInput: { // input type
+    AND?: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'][] | null; // [StationWalkingDurationRestrictedWhereInput!]
+    duration?: number | null; // Int
+    duration_gt?: number | null; // Int
+    duration_gte?: number | null; // Int
+    duration_in?: number[] | null; // [Int!]
+    duration_lt?: number | null; // Int
+    duration_lte?: number | null; // Int
+    duration_not?: number | null; // Int
+    duration_not_in?: number[] | null; // [Int!]
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+  }
+  StationWalkingDurationScalarWhereInput: { // input type
+    AND?: NexusGenInputs['StationWalkingDurationScalarWhereInput'][] | null; // [StationWalkingDurationScalarWhereInput!]
+    duration?: number | null; // Int
+    duration_gt?: number | null; // Int
+    duration_gte?: number | null; // Int
+    duration_in?: number[] | null; // [Int!]
+    duration_lt?: number | null; // Int
+    duration_lte?: number | null; // Int
+    duration_not?: number | null; // Int
+    duration_not_in?: number[] | null; // [Int!]
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+    NOT?: NexusGenInputs['StationWalkingDurationScalarWhereInput'][] | null; // [StationWalkingDurationScalarWhereInput!]
+    OR?: NexusGenInputs['StationWalkingDurationScalarWhereInput'][] | null; // [StationWalkingDurationScalarWhereInput!]
+  }
+  StationWalkingDurationUpdateManyDataInput: { // input type
+    duration?: number | null; // Int
+    name?: string | null; // String
+  }
+  StationWalkingDurationUpdateManyInput: { // input type
+    create?: NexusGenInputs['StationWalkingDurationCreateInput'][] | null; // [StationWalkingDurationCreateInput!]
+    deleteMany?: NexusGenInputs['StationWalkingDurationScalarWhereInput'][] | null; // [StationWalkingDurationScalarWhereInput!]
+    updateMany?: NexusGenInputs['StationWalkingDurationUpdateManyWithWhereNestedInput'][] | null; // [StationWalkingDurationUpdateManyWithWhereNestedInput!]
+  }
+  StationWalkingDurationUpdateManyWithWhereNestedInput: { // input type
+    data: NexusGenInputs['StationWalkingDurationUpdateManyDataInput']; // StationWalkingDurationUpdateManyDataInput!
+    where: NexusGenInputs['StationWalkingDurationScalarWhereInput']; // StationWalkingDurationScalarWhereInput!
+  }
+  StationWalkingDurationWhereInput: { // input type
+    AND?: NexusGenInputs['StationWalkingDurationWhereInput'][] | null; // [StationWalkingDurationWhereInput!]
+    duration?: number | null; // Int
+    duration_gt?: number | null; // Int
+    duration_gte?: number | null; // Int
+    duration_in?: number[] | null; // [Int!]
+    duration_lt?: number | null; // Int
+    duration_lte?: number | null; // Int
+    duration_not?: number | null; // Int
+    duration_not_in?: number[] | null; // [Int!]
+    name?: string | null; // String
+    name_contains?: string | null; // String
+    name_ends_with?: string | null; // String
+    name_gt?: string | null; // String
+    name_gte?: string | null; // String
+    name_in?: string[] | null; // [String!]
+    name_lt?: string | null; // String
+    name_lte?: string | null; // String
+    name_not?: string | null; // String
+    name_not_contains?: string | null; // String
+    name_not_ends_with?: string | null; // String
+    name_not_in?: string[] | null; // [String!]
+    name_not_starts_with?: string | null; // String
+    name_starts_with?: string | null; // String
+  }
 }
 
 export interface NexusGenEnums {
   PropertyClass: "PropertyRentAtom" | "PropertySaleAtom"
   PropertyDBLoadHistoryOrderByInput: "_id_ASC" | "_id_DESC" | "filename_ASC" | "filename_DESC" | "inDate_ASC" | "inDate_DESC"
-  PropertyRentAtomOrderByInput: "_cls_ASC" | "_cls_DESC" | "_id_ASC" | "_id_DESC" | "address_ASC" | "address_DESC" | "agentComment_ASC" | "agentComment_DESC" | "area_ASC" | "area_DESC" | "basicRent_ASC" | "basicRent_DESC" | "buildingName_ASC" | "buildingName_DESC" | "canonicalStation_ASC" | "canonicalStation_DESC" | "city_ASC" | "city_DESC" | "country_ASC" | "country_DESC" | "currency_ASC" | "currency_DESC" | "floorNumber_ASC" | "floorNumber_DESC" | "floorPlan_ASC" | "floorPlan_DESC" | "guaranteeMoneyMultiple_ASC" | "guaranteeMoneyMultiple_DESC" | "hashKey_ASC" | "hashKey_DESC" | "inDate_ASC" | "inDate_DESC" | "keyMoneyMultiple_ASC" | "keyMoneyMultiple_DESC" | "maintenanceFee_ASC" | "maintenanceFee_DESC" | "moreDetail_ASC" | "moreDetail_DESC" | "nearestStations_ASC" | "nearestStations_DESC" | "outDate_ASC" | "outDate_DESC" | "rentPlusAlpha_ASC" | "rentPlusAlpha_DESC" | "totalFloor_ASC" | "totalFloor_DESC" | "totalRent_ASC" | "totalRent_DESC" | "unitRent_ASC" | "unitRent_DESC" | "yearBuilt_ASC" | "yearBuilt_DESC"
-  PropertySaleAtomOrderByInput: "_cls_ASC" | "_cls_DESC" | "_id_ASC" | "_id_DESC" | "address_ASC" | "address_DESC" | "agentComment_ASC" | "agentComment_DESC" | "area_ASC" | "area_DESC" | "buildingName_ASC" | "buildingName_DESC" | "canonicalStation_ASC" | "canonicalStation_DESC" | "city_ASC" | "city_DESC" | "country_ASC" | "country_DESC" | "currency_ASC" | "currency_DESC" | "floorNumber_ASC" | "floorNumber_DESC" | "floorPlan_ASC" | "floorPlan_DESC" | "hashKey_ASC" | "hashKey_DESC" | "inDate_ASC" | "inDate_DESC" | "landArea_ASC" | "landArea_DESC" | "moreDetail_ASC" | "moreDetail_DESC" | "nearestStations_ASC" | "nearestStations_DESC" | "outDate_ASC" | "outDate_DESC" | "price_ASC" | "price_DESC" | "propertyType_ASC" | "propertyType_DESC" | "totalFloor_ASC" | "totalFloor_DESC" | "yearBuilt_ASC" | "yearBuilt_DESC"
+  PropertyRentAtomOrderByInput: "_cls_ASC" | "_cls_DESC" | "_id_ASC" | "_id_DESC" | "address_ASC" | "address_DESC" | "agentComment_ASC" | "agentComment_DESC" | "area_ASC" | "area_DESC" | "basicRent_ASC" | "basicRent_DESC" | "buildingName_ASC" | "buildingName_DESC" | "canonicalStation_ASC" | "canonicalStation_DESC" | "city_ASC" | "city_DESC" | "country_ASC" | "country_DESC" | "currency_ASC" | "currency_DESC" | "floorNumber_ASC" | "floorNumber_DESC" | "floorPlan_ASC" | "floorPlan_DESC" | "guaranteeMoneyMultiple_ASC" | "guaranteeMoneyMultiple_DESC" | "hashKey_ASC" | "hashKey_DESC" | "inDate_ASC" | "inDate_DESC" | "keyMoneyMultiple_ASC" | "keyMoneyMultiple_DESC" | "maintenanceFee_ASC" | "maintenanceFee_DESC" | "moreDetail_ASC" | "moreDetail_DESC" | "outDate_ASC" | "outDate_DESC" | "rentPlusAlpha_ASC" | "rentPlusAlpha_DESC" | "totalFloor_ASC" | "totalFloor_DESC" | "totalRent_ASC" | "totalRent_DESC" | "unitRent_ASC" | "unitRent_DESC" | "yearBuilt_ASC" | "yearBuilt_DESC"
+  PropertySaleAtomOrderByInput: "_cls_ASC" | "_cls_DESC" | "_id_ASC" | "_id_DESC" | "address_ASC" | "address_DESC" | "agentComment_ASC" | "agentComment_DESC" | "area_ASC" | "area_DESC" | "buildingName_ASC" | "buildingName_DESC" | "canonicalStation_ASC" | "canonicalStation_DESC" | "city_ASC" | "city_DESC" | "country_ASC" | "country_DESC" | "currency_ASC" | "currency_DESC" | "floorNumber_ASC" | "floorNumber_DESC" | "floorPlan_ASC" | "floorPlan_DESC" | "hashKey_ASC" | "hashKey_DESC" | "inDate_ASC" | "inDate_DESC" | "landArea_ASC" | "landArea_DESC" | "moreDetail_ASC" | "moreDetail_DESC" | "outDate_ASC" | "outDate_DESC" | "price_ASC" | "price_DESC" | "propertyType_ASC" | "propertyType_DESC" | "totalFloor_ASC" | "totalFloor_DESC" | "yearBuilt_ASC" | "yearBuilt_DESC"
   PropertyType: "APT" | "HOUSE" | "MANSION"
 }
 
@@ -781,7 +882,6 @@ export interface NexusGenRootTypes {
     keyMoneyMultiple?: number | null; // Float
     maintenanceFee?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
     outDate?: any | null; // DateTime
     rentPlusAlpha?: number | null; // Float
     totalFloor?: number | null; // Int
@@ -814,7 +914,6 @@ export interface NexusGenRootTypes {
     inDate?: any | null; // DateTime
     landArea?: number | null; // Float
     moreDetail?: string | null; // String
-    nearestStations?: any | null; // Json
     outDate?: any | null; // DateTime
     price?: number | null; // Int
     propertyType: NexusGenEnums['PropertyType']; // PropertyType!
@@ -830,13 +929,16 @@ export interface NexusGenRootTypes {
     node: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
   Query: {};
+  StationWalkingDuration: { // root type
+    duration: number; // Int!
+    name: string; // String!
+  }
   String: string;
   Int: number;
   Float: number;
   Boolean: boolean;
   ID: string;
   DateTime: any;
-  Json: any;
   Long: any;
 }
 
@@ -856,6 +958,14 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   PropertySaleAtomUpdateManyMutationInput: NexusGenInputs['PropertySaleAtomUpdateManyMutationInput'];
   PropertySaleAtomWhereInput: NexusGenInputs['PropertySaleAtomWhereInput'];
   PropertySaleAtomWhereUniqueInput: NexusGenInputs['PropertySaleAtomWhereUniqueInput'];
+  StationWalkingDurationCreateInput: NexusGenInputs['StationWalkingDurationCreateInput'];
+  StationWalkingDurationCreateManyInput: NexusGenInputs['StationWalkingDurationCreateManyInput'];
+  StationWalkingDurationRestrictedWhereInput: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'];
+  StationWalkingDurationScalarWhereInput: NexusGenInputs['StationWalkingDurationScalarWhereInput'];
+  StationWalkingDurationUpdateManyDataInput: NexusGenInputs['StationWalkingDurationUpdateManyDataInput'];
+  StationWalkingDurationUpdateManyInput: NexusGenInputs['StationWalkingDurationUpdateManyInput'];
+  StationWalkingDurationUpdateManyWithWhereNestedInput: NexusGenInputs['StationWalkingDurationUpdateManyWithWhereNestedInput'];
+  StationWalkingDurationWhereInput: NexusGenInputs['StationWalkingDurationWhereInput'];
   PropertyClass: NexusGenEnums['PropertyClass'];
   PropertyDBLoadHistoryOrderByInput: NexusGenEnums['PropertyDBLoadHistoryOrderByInput'];
   PropertyRentAtomOrderByInput: NexusGenEnums['PropertyRentAtomOrderByInput'];
@@ -936,7 +1046,7 @@ export interface NexusGenFieldTypes {
     keyMoneyMultiple: number | null; // Float
     maintenanceFee: number | null; // Float
     moreDetail: string | null; // String
-    nearestStations: any | null; // Json
+    nearbyStations: NexusGenRootTypes['StationWalkingDuration'][] | null; // [StationWalkingDuration!]
     outDate: any | null; // DateTime
     rentPlusAlpha: number | null; // Float
     totalFloor: number | null; // Int
@@ -970,7 +1080,7 @@ export interface NexusGenFieldTypes {
     inDate: any | null; // DateTime
     landArea: number | null; // Float
     moreDetail: string | null; // String
-    nearestStations: any | null; // Json
+    nearbyStations: NexusGenRootTypes['StationWalkingDuration'][] | null; // [StationWalkingDuration!]
     outDate: any | null; // DateTime
     price: number | null; // Int
     propertyType: NexusGenEnums['PropertyType']; // PropertyType!
@@ -996,6 +1106,10 @@ export interface NexusGenFieldTypes {
     propertySaleAtom: NexusGenRootTypes['PropertySaleAtom'] | null; // PropertySaleAtom
     propertySaleAtoms: NexusGenRootTypes['PropertySaleAtom'][]; // [PropertySaleAtom!]!
     propertySaleAtomsConnection: NexusGenRootTypes['PropertySaleAtomConnection']; // PropertySaleAtomConnection!
+  }
+  StationWalkingDuration: { // field return type
+    duration: number; // Int!
+    name: string; // String!
   }
 }
 
@@ -1140,15 +1254,15 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "AggregatePropertyDBLoadHistory" | "AggregatePropertyRentAtom" | "AggregatePropertySaleAtom" | "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyDBLoadHistoryConnection" | "PropertyDBLoadHistoryEdge" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query";
+export type NexusGenObjectNames = "AggregatePropertyDBLoadHistory" | "AggregatePropertyRentAtom" | "AggregatePropertySaleAtom" | "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyDBLoadHistoryConnection" | "PropertyDBLoadHistoryEdge" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "StationWalkingDuration";
 
-export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyDBLoadHistoryUpdateInput" | "PropertyDBLoadHistoryUpdateManyMutationInput" | "PropertyDBLoadHistoryWhereInput" | "PropertyDBLoadHistoryWhereUniqueInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput";
+export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyDBLoadHistoryUpdateInput" | "PropertyDBLoadHistoryUpdateManyMutationInput" | "PropertyDBLoadHistoryWhereInput" | "PropertyDBLoadHistoryWhereUniqueInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput" | "StationWalkingDurationCreateInput" | "StationWalkingDurationCreateManyInput" | "StationWalkingDurationRestrictedWhereInput" | "StationWalkingDurationScalarWhereInput" | "StationWalkingDurationUpdateManyDataInput" | "StationWalkingDurationUpdateManyInput" | "StationWalkingDurationUpdateManyWithWhereNestedInput" | "StationWalkingDurationWhereInput";
 
 export type NexusGenEnumNames = "PropertyClass" | "PropertyDBLoadHistoryOrderByInput" | "PropertyRentAtomOrderByInput" | "PropertySaleAtomOrderByInput" | "PropertyType";
 
 export type NexusGenInterfaceNames = never;
 
-export type NexusGenScalarNames = "Boolean" | "DateTime" | "Float" | "ID" | "Int" | "Json" | "Long" | "String";
+export type NexusGenScalarNames = "Boolean" | "DateTime" | "Float" | "ID" | "Int" | "Long" | "String";
 
 export type NexusGenUnionNames = never;
 
