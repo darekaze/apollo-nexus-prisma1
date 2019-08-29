@@ -10,13288 +10,13272 @@ export default {
     PropertyRentAtom: ['_id'],
     PropertySaleAtom: ['_id'],
     PropertyDBLoadHistory: ['_id'],
-    StationWalkingDuration: [],
+    StationWalkingDuration: []
   },
   embeddedTypes: ['StationWalkingDuration'],
   clientPath: 'src\\generated\\prisma-client',
   schema: {
-    __schema: {
-      queryType: {
-        name: 'Query',
-      },
-      mutationType: {
-        name: 'Mutation',
-      },
-      subscriptionType: {
-        name: 'Subscription',
-      },
-      types: [
-        {
-          kind: 'OBJECT',
-          name: 'Query',
-          description: null,
-          fields: [
-            {
-              name: 'propertyRentAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyRentAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyRentAtoms',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'orderBy',
-                  description: null,
-                  type: {
-                    kind: 'ENUM',
-                    name: 'PropertyRentAtomOrderByInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'skip',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'after',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'before',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'first',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'last',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: 'PropertyRentAtom',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyRentAtomsConnection',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'orderBy',
-                  description: null,
-                  type: {
-                    kind: 'ENUM',
-                    name: 'PropertyRentAtomOrderByInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'skip',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'after',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'before',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'first',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'last',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyRentAtomConnection',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertySaleAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertySaleAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertySaleAtoms',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'orderBy',
-                  description: null,
-                  type: {
-                    kind: 'ENUM',
-                    name: 'PropertySaleAtomOrderByInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'skip',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'after',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'before',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'first',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'last',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: 'PropertySaleAtom',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertySaleAtomsConnection',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'orderBy',
-                  description: null,
-                  type: {
-                    kind: 'ENUM',
-                    name: 'PropertySaleAtomOrderByInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'skip',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'after',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'before',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'first',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'last',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertySaleAtomConnection',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyDBLoadHistory',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyDBLoadHistory',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyDBLoadHistories',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistoryWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'orderBy',
-                  description: null,
-                  type: {
-                    kind: 'ENUM',
-                    name: 'PropertyDBLoadHistoryOrderByInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'skip',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'after',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'before',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'first',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'last',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: 'PropertyDBLoadHistory',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyDBLoadHistoriesConnection',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistoryWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'orderBy',
-                  description: null,
-                  type: {
-                    kind: 'ENUM',
-                    name: 'PropertyDBLoadHistoryOrderByInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'skip',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'after',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'before',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'first',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'last',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyDBLoadHistoryConnection',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              args: [
-                {
-                  name: 'id',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'SCALAR',
-                      name: 'ID',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'INTERFACE',
-                name: 'Node',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyRentAtomWhereUniqueInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'ID',
-          description:
-            'The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyRentAtom',
-          description: null,
-          fields: [
-            {
-              name: '_id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyClass',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'basicRent',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'rentPlusAlpha',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'maintenanceFee',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalRent',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'keyMoneyMultiple',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'unitRent',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: 'PropertyClass',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: 'PropertyRentAtom',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'PropertySaleAtom',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'String',
-          description:
-            'The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'Float',
-          description:
-            'The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point). ',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'Int',
-          description:
-            'The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. ',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'DateTime',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'Json',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyRentAtomWhereInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'ID',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'ID',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls_not',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'PropertyClass',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'PropertyClass',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'AND',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomWhereInput',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: 'PropertyRentAtomOrderByInput',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: '_id_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_id_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'basicRent_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'basicRent_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'rentPlusAlpha_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'rentPlusAlpha_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'maintenanceFee_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'maintenanceFee_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalRent_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalRent_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'keyMoneyMultiple_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'keyMoneyMultiple_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'unitRent_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'unitRent_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyRentAtomConnection',
-          description: null,
-          fields: [
-            {
-              name: 'pageInfo',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PageInfo',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'edges',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: 'PropertyRentAtomEdge',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'aggregate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'AggregatePropertyRentAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PageInfo',
-          description: null,
-          fields: [
-            {
-              name: 'hasNextPage',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Boolean',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hasPreviousPage',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Boolean',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'startCursor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'endCursor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'Boolean',
-          description:
-            'The `Boolean` scalar type represents `true` or `false`.',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyRentAtomEdge',
-          description: null,
-          fields: [
-            {
-              name: 'node',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyRentAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'cursor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'AggregatePropertyRentAtom',
-          description: null,
-          fields: [
-            {
-              name: 'count',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Int',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertySaleAtomWhereUniqueInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertySaleAtom',
-          description: null,
-          fields: [
-            {
-              name: '_id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyClass',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyType',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyType',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'price',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'landArea',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: 'PropertyType',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: 'HOUSE',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'MANSION',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'APT',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertySaleAtomWhereInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'ID',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'ID',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls_not',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'PropertyClass',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'PropertyClass',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyType',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType_not',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyType',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'PropertyType',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'PropertyType',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Int',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'Float',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'AND',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomWhereInput',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: 'PropertySaleAtomOrderByInput',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: '_id_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_id_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyType_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyType_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'price_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'price_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'landArea_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'landArea_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertySaleAtomConnection',
-          description: null,
-          fields: [
-            {
-              name: 'pageInfo',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PageInfo',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'edges',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: 'PropertySaleAtomEdge',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'aggregate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'AggregatePropertySaleAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertySaleAtomEdge',
-          description: null,
-          fields: [
-            {
-              name: 'node',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertySaleAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'cursor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'AggregatePropertySaleAtom',
-          description: null,
-          fields: [
-            {
-              name: 'count',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Int',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyDBLoadHistoryWhereUniqueInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyDBLoadHistory',
-          description: null,
-          fields: [
-            {
-              name: '_id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'filename',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyDBLoadHistoryWhereInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'ID',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'ID',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_id_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_not_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_not_starts_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename_not_ends_with',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_not',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_not_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'DateTime',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_lt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_lte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_gt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate_gte',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'AND',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistoryWhereInput',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: 'PropertyDBLoadHistoryOrderByInput',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: '_id_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_id_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'filename_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'filename_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate_ASC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate_DESC',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyDBLoadHistoryConnection',
-          description: null,
-          fields: [
-            {
-              name: 'pageInfo',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PageInfo',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'edges',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: 'PropertyDBLoadHistoryEdge',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'aggregate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'AggregatePropertyDBLoadHistory',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyDBLoadHistoryEdge',
-          description: null,
-          fields: [
-            {
-              name: 'node',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyDBLoadHistory',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'cursor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'AggregatePropertyDBLoadHistory',
-          description: null,
-          fields: [
-            {
-              name: 'count',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Int',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INTERFACE',
-          name: 'Node',
-          description: null,
-          fields: [
-            {
-              name: 'id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: [],
-        },
-        {
-          kind: 'OBJECT',
-          name: 'Mutation',
-          description: null,
-          fields: [
-            {
-              name: 'createPropertyRentAtom',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomCreateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyRentAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updatePropertyRentAtom',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomUpdateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyRentAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updateManyPropertyRentAtoms',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomUpdateManyMutationInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'BatchPayload',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'upsertPropertyRentAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'create',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomCreateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'update',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomUpdateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyRentAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deletePropertyRentAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyRentAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyRentAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deleteManyPropertyRentAtoms',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'BatchPayload',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'createPropertySaleAtom',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomCreateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertySaleAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updatePropertySaleAtom',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomUpdateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertySaleAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updateManyPropertySaleAtoms',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomUpdateManyMutationInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'BatchPayload',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'upsertPropertySaleAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'create',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomCreateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'update',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomUpdateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertySaleAtom',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deletePropertySaleAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertySaleAtomWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertySaleAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deleteManyPropertySaleAtoms',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'BatchPayload',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'createPropertyDBLoadHistory',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryCreateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyDBLoadHistory',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updatePropertyDBLoadHistory',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryUpdateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyDBLoadHistory',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updateManyPropertyDBLoadHistories',
-              description: null,
-              args: [
-                {
-                  name: 'data',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryUpdateManyMutationInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistoryWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'BatchPayload',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'upsertPropertyDBLoadHistory',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'create',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryCreateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-                {
-                  name: 'update',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryUpdateInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'PropertyDBLoadHistory',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deletePropertyDBLoadHistory',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'INPUT_OBJECT',
-                      name: 'PropertyDBLoadHistoryWhereUniqueInput',
-                      ofType: null,
-                    },
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyDBLoadHistory',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deleteManyPropertyDBLoadHistories',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistoryWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: 'BatchPayload',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyRentAtomCreateInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyRentAtomUpdateInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyRentAtomUpdateManyMutationInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'basicRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'rentPlusAlpha',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'maintenanceFee',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'keyMoneyMultiple',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'unitRent',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'BatchPayload',
-          description: null,
-          fields: [
-            {
-              name: 'count',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Long',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'SCALAR',
-          name: 'Long',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertySaleAtomCreateInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType',
-              description: null,
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyType',
-                  ofType: null,
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertySaleAtomUpdateInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyType',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertySaleAtomUpdateManyMutationInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_cls',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyClass',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'propertyType',
-              description: null,
-              type: {
-                kind: 'ENUM',
-                name: 'PropertyType',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'price',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'landArea',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyDBLoadHistoryCreateInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: '_id',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'ID',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'filename',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyDBLoadHistoryUpdateInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: 'filename',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyDBLoadHistoryUpdateManyMutationInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: 'filename',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'Subscription',
-          description: null,
-          fields: [
-            {
-              name: 'propertyRentAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomSubscriptionWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyRentAtomSubscriptionPayload',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertySaleAtom',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomSubscriptionWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertySaleAtomSubscriptionPayload',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyDBLoadHistory',
-              description: null,
-              args: [
-                {
-                  name: 'where',
-                  description: null,
-                  type: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistorySubscriptionWhereInput',
-                    ofType: null,
-                  },
-                  defaultValue: null,
-                },
-              ],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyDBLoadHistorySubscriptionPayload',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyRentAtomSubscriptionWhereInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: 'mutation_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'MutationType',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains_every',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains_some',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              type: {
-                kind: 'INPUT_OBJECT',
-                name: 'PropertyRentAtomWhereInput',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'AND',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyRentAtomSubscriptionWhereInput',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: 'MutationType',
-          description: null,
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: 'CREATED',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'UPDATED',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'DELETED',
-              description: null,
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyRentAtomSubscriptionPayload',
-          description: null,
-          fields: [
-            {
-              name: 'mutation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'MutationType',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyRentAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updatedFields',
-              description: null,
-              args: [],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'previousValues',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyRentAtomPreviousValues',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyRentAtomPreviousValues',
-          description: null,
-          fields: [
-            {
-              name: '_id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyClass',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'basicRent',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'rentPlusAlpha',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'maintenanceFee',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalRent',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'guaranteeMoneyMultiple',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'keyMoneyMultiple',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'unitRent',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertySaleAtomSubscriptionWhereInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: 'mutation_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'MutationType',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains_every',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains_some',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              type: {
-                kind: 'INPUT_OBJECT',
-                name: 'PropertySaleAtomWhereInput',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'AND',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertySaleAtomSubscriptionWhereInput',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertySaleAtomSubscriptionPayload',
-          description: null,
-          fields: [
-            {
-              name: 'mutation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'MutationType',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertySaleAtom',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updatedFields',
-              description: null,
-              args: [],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'previousValues',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertySaleAtomPreviousValues',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertySaleAtomPreviousValues',
-          description: null,
-          fields: [
-            {
-              name: '_id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: '_cls',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyClass',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'hashKey',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'canonicalStation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'propertyType',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'PropertyType',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'buildingName',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'address',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'area',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'price',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'city',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'country',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'currency',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'yearBuilt',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorPlan',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'floorNumber',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'totalFloor',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Int',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'landArea',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Float',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'outDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'nearestStations',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'Json',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'agentComment',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'moreDetail',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'INPUT_OBJECT',
-          name: 'PropertyDBLoadHistorySubscriptionWhereInput',
-          description: null,
-          fields: null,
-          inputFields: [
-            {
-              name: 'mutation_in',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'ENUM',
-                    name: 'MutationType',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains',
-              description: null,
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains_every',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'updatedFields_contains_some',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              type: {
-                kind: 'INPUT_OBJECT',
-                name: 'PropertyDBLoadHistoryWhereInput',
-                ofType: null,
-              },
-              defaultValue: null,
-            },
-            {
-              name: 'AND',
-              description: null,
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'INPUT_OBJECT',
-                    name: 'PropertyDBLoadHistorySubscriptionWhereInput',
-                    ofType: null,
-                  },
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-          interfaces: null,
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyDBLoadHistorySubscriptionPayload',
-          description: null,
-          fields: [
-            {
-              name: 'mutation',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: 'MutationType',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'node',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyDBLoadHistory',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'updatedFields',
-              description: null,
-              args: [],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'SCALAR',
-                    name: 'String',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'previousValues',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: 'PropertyDBLoadHistoryPreviousValues',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: 'PropertyDBLoadHistoryPreviousValues',
-          description: null,
-          fields: [
-            {
-              name: '_id',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'ID',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'filename',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inDate',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'DateTime',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: '__Schema',
-          description:
-            'A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.',
-          fields: [
-            {
-              name: 'types',
-              description: 'A list of all types supported by this server.',
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'OBJECT',
-                      name: '__Type',
-                      ofType: null,
-                    },
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'queryType',
-              description: 'The type that query operations will be rooted at.',
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: '__Type',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'mutationType',
-              description:
-                'If this server supports mutation, the type that mutation operations will be rooted at.',
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: '__Type',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'subscriptionType',
-              description:
-                'If this server support subscription, the type that subscription operations will be rooted at.',
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: '__Type',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'directives',
-              description: 'A list of all directives supported by this server.',
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'OBJECT',
-                      name: '__Directive',
-                      ofType: null,
-                    },
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: '__Type',
-          description:
-            'The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.',
-          fields: [
-            {
-              name: 'kind',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'ENUM',
-                  name: '__TypeKind',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'name',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'description',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'fields',
-              description: null,
-              args: [
-                {
-                  name: 'includeDeprecated',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Boolean',
-                    ofType: null,
-                  },
-                  defaultValue: 'false',
-                },
-              ],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: '__Field',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'interfaces',
-              description: null,
-              args: [],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: '__Type',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'possibleTypes',
-              description: null,
-              args: [],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: '__Type',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'enumValues',
-              description: null,
-              args: [
-                {
-                  name: 'includeDeprecated',
-                  description: null,
-                  type: {
-                    kind: 'SCALAR',
-                    name: 'Boolean',
-                    ofType: null,
-                  },
-                  defaultValue: 'false',
-                },
-              ],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: '__EnumValue',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'inputFields',
-              description: null,
-              args: [],
-              type: {
-                kind: 'LIST',
-                name: null,
-                ofType: {
-                  kind: 'NON_NULL',
-                  name: null,
-                  ofType: {
-                    kind: 'OBJECT',
-                    name: '__InputValue',
-                    ofType: null,
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'ofType',
-              description: null,
-              args: [],
-              type: {
-                kind: 'OBJECT',
-                name: '__Type',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: '__TypeKind',
-          description:
-            'An enum describing what kind of type a given `__Type` is.',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: 'SCALAR',
-              description: 'Indicates this type is a scalar.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'OBJECT',
-              description:
-                'Indicates this type is an object. `fields` and `interfaces` are valid fields.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'INTERFACE',
-              description:
-                'Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'UNION',
-              description:
-                'Indicates this type is a union. `possibleTypes` is a valid field.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'ENUM',
-              description:
-                'Indicates this type is an enum. `enumValues` is a valid field.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'INPUT_OBJECT',
-              description:
-                'Indicates this type is an input object. `inputFields` is a valid field.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'LIST',
-              description:
-                'Indicates this type is a list. `ofType` is a valid field.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'NON_NULL',
-              description:
-                'Indicates this type is a non-null. `ofType` is a valid field.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: '__Field',
-          description:
-            'Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.',
-          fields: [
-            {
-              name: 'name',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'description',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'args',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'OBJECT',
-                      name: '__InputValue',
-                      ofType: null,
-                    },
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'type',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: '__Type',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'isDeprecated',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Boolean',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deprecationReason',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: '__InputValue',
-          description:
-            'Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.',
-          fields: [
-            {
-              name: 'name',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'description',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'type',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'OBJECT',
-                  name: '__Type',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'defaultValue',
-              description:
-                'A GraphQL-formatted string representing the default value for this input value.',
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: '__EnumValue',
-          description:
-            'One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.',
-          fields: [
-            {
-              name: 'name',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'description',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'isDeprecated',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Boolean',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'deprecationReason',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'OBJECT',
-          name: '__Directive',
-          description:
-            "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
-          fields: [
-            {
-              name: 'name',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'String',
-                  ofType: null,
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'description',
-              description: null,
-              args: [],
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'locations',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'ENUM',
-                      name: '__DirectiveLocation',
-                      ofType: null,
-                    },
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'args',
-              description: null,
-              args: [],
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'LIST',
-                  name: null,
-                  ofType: {
-                    kind: 'NON_NULL',
-                    name: null,
-                    ofType: {
-                      kind: 'OBJECT',
-                      name: '__InputValue',
-                      ofType: null,
-                    },
-                  },
-                },
-              },
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          inputFields: null,
-          interfaces: [],
-          enumValues: null,
-          possibleTypes: null,
-        },
-        {
-          kind: 'ENUM',
-          name: '__DirectiveLocation',
-          description:
-            'A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.',
-          fields: null,
-          inputFields: null,
-          interfaces: null,
-          enumValues: [
-            {
-              name: 'QUERY',
-              description: 'Location adjacent to a query operation.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'MUTATION',
-              description: 'Location adjacent to a mutation operation.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'SUBSCRIPTION',
-              description: 'Location adjacent to a subscription operation.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'FIELD',
-              description: 'Location adjacent to a field.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'FRAGMENT_DEFINITION',
-              description: 'Location adjacent to a fragment definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'FRAGMENT_SPREAD',
-              description: 'Location adjacent to a fragment spread.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'INLINE_FRAGMENT',
-              description: 'Location adjacent to an inline fragment.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'VARIABLE_DEFINITION',
-              description: 'Location adjacent to a variable definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'SCHEMA',
-              description: 'Location adjacent to a schema definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'SCALAR',
-              description: 'Location adjacent to a scalar definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'OBJECT',
-              description: 'Location adjacent to an object type definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'FIELD_DEFINITION',
-              description: 'Location adjacent to a field definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'ARGUMENT_DEFINITION',
-              description: 'Location adjacent to an argument definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'INTERFACE',
-              description: 'Location adjacent to an interface definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'UNION',
-              description: 'Location adjacent to a union definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'ENUM',
-              description: 'Location adjacent to an enum definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'ENUM_VALUE',
-              description: 'Location adjacent to an enum value definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'INPUT_OBJECT',
-              description:
-                'Location adjacent to an input object type definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-            {
-              name: 'INPUT_FIELD_DEFINITION',
-              description:
-                'Location adjacent to an input object field definition.',
-              isDeprecated: false,
-              deprecationReason: null,
-            },
-          ],
-          possibleTypes: null,
-        },
-      ],
-      directives: [
-        {
-          name: 'include',
-          description:
-            'Directs the executor to include this field or fragment only when the `if` argument is true.',
-          locations: ['FIELD', 'FRAGMENT_SPREAD', 'INLINE_FRAGMENT'],
-          args: [
-            {
-              name: 'if',
-              description: 'Included when true.',
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Boolean',
-                  ofType: null,
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-        },
-        {
-          name: 'skip',
-          description:
-            'Directs the executor to skip this field or fragment when the `if` argument is true.',
-          locations: ['FIELD', 'FRAGMENT_SPREAD', 'INLINE_FRAGMENT'],
-          args: [
-            {
-              name: 'if',
-              description: 'Skipped when true.',
-              type: {
-                kind: 'NON_NULL',
-                name: null,
-                ofType: {
-                  kind: 'SCALAR',
-                  name: 'Boolean',
-                  ofType: null,
-                },
-              },
-              defaultValue: null,
-            },
-          ],
-        },
-        {
-          name: 'deprecated',
-          description:
-            'Marks an element of a GraphQL schema as no longer supported.',
-          locations: ['FIELD_DEFINITION', 'ENUM_VALUE'],
-          args: [
-            {
-              name: 'reason',
-              description:
-                'Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).',
-              type: {
-                kind: 'SCALAR',
-                name: 'String',
-                ofType: null,
-              },
-              defaultValue: '"No longer supported"',
-            },
-          ],
-        },
-      ],
+  "__schema": {
+    "queryType": {
+      "name": "Query"
     },
-  },
+    "mutationType": {
+      "name": "Mutation"
+    },
+    "subscriptionType": {
+      "name": "Subscription"
+    },
+    "types": [
+      {
+        "kind": "OBJECT",
+        "name": "Query",
+        "description": null,
+        "fields": [
+          {
+            "name": "propertyRentAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyRentAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyRentAtoms",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "orderBy",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "PropertyRentAtomOrderByInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "skip",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "after",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "before",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "first",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "last",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PropertyRentAtom",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyRentAtomsConnection",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "orderBy",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "PropertyRentAtomOrderByInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "skip",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "after",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "before",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "first",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "last",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyRentAtomConnection",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertySaleAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertySaleAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertySaleAtoms",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "orderBy",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "PropertySaleAtomOrderByInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "skip",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "after",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "before",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "first",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "last",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PropertySaleAtom",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertySaleAtomsConnection",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "orderBy",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "PropertySaleAtomOrderByInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "skip",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "after",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "before",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "first",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "last",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertySaleAtomConnection",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyDBLoadHistory",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDBLoadHistory",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyDBLoadHistories",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistoryWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "orderBy",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "PropertyDBLoadHistoryOrderByInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "skip",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "after",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "before",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "first",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "last",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PropertyDBLoadHistory",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyDBLoadHistoriesConnection",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistoryWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "orderBy",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "PropertyDBLoadHistoryOrderByInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "skip",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "after",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "before",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "first",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "last",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyDBLoadHistoryConnection",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "args": [
+              {
+                "name": "id",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "INTERFACE",
+              "name": "Node",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyRentAtomWhereUniqueInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "ID",
+        "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyRentAtom",
+        "description": null,
+        "fields": [
+          {
+            "name": "_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyClass",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "basicRent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rentPlusAlpha",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "maintenanceFee",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalRent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "keyMoneyMultiple",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "unitRent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PropertyClass",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "PropertyRentAtom",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PropertySaleAtom",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "String",
+        "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Float",
+        "description": "The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point). ",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Int",
+        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. ",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "DateTime",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Json",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyRentAtomWhereInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls_not",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "PropertyClass",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "PropertyClass",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomWhereInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PropertyRentAtomOrderByInput",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "_id_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_id_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "basicRent_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "basicRent_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rentPlusAlpha_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rentPlusAlpha_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "maintenanceFee_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "maintenanceFee_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalRent_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalRent_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "keyMoneyMultiple_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "keyMoneyMultiple_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "unitRent_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "unitRent_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyRentAtomConnection",
+        "description": null,
+        "fields": [
+          {
+            "name": "pageInfo",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PageInfo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "edges",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PropertyRentAtomEdge",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "aggregate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AggregatePropertyRentAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PageInfo",
+        "description": null,
+        "fields": [
+          {
+            "name": "hasNextPage",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hasPreviousPage",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "startCursor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "endCursor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Boolean",
+        "description": "The `Boolean` scalar type represents `true` or `false`.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyRentAtomEdge",
+        "description": null,
+        "fields": [
+          {
+            "name": "node",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyRentAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "cursor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AggregatePropertyRentAtom",
+        "description": null,
+        "fields": [
+          {
+            "name": "count",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertySaleAtomWhereUniqueInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertySaleAtom",
+        "description": null,
+        "fields": [
+          {
+            "name": "_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyClass",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyType",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "price",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "landArea",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PropertyType",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "HOUSE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "MANSION",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "APT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertySaleAtomWhereInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls_not",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "PropertyClass",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "PropertyClass",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType_not",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "PropertyType",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "PropertyType",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Float",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomWhereInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PropertySaleAtomOrderByInput",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "_id_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_id_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyType_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyType_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "price_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "price_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "landArea_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "landArea_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertySaleAtomConnection",
+        "description": null,
+        "fields": [
+          {
+            "name": "pageInfo",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PageInfo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "edges",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PropertySaleAtomEdge",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "aggregate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AggregatePropertySaleAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertySaleAtomEdge",
+        "description": null,
+        "fields": [
+          {
+            "name": "node",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertySaleAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "cursor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AggregatePropertySaleAtom",
+        "description": null,
+        "fields": [
+          {
+            "name": "count",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDBLoadHistoryWhereUniqueInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyDBLoadHistory",
+        "description": null,
+        "fields": [
+          {
+            "name": "_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "filename",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDBLoadHistoryWhereInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_id_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_not_starts_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename_not_ends_with",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistoryWhereInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PropertyDBLoadHistoryOrderByInput",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "_id_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_id_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "filename_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "filename_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyDBLoadHistoryConnection",
+        "description": null,
+        "fields": [
+          {
+            "name": "pageInfo",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PageInfo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "edges",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PropertyDBLoadHistoryEdge",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "aggregate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AggregatePropertyDBLoadHistory",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyDBLoadHistoryEdge",
+        "description": null,
+        "fields": [
+          {
+            "name": "node",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyDBLoadHistory",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "cursor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AggregatePropertyDBLoadHistory",
+        "description": null,
+        "fields": [
+          {
+            "name": "count",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Node",
+        "description": null,
+        "fields": [
+          {
+            "name": "id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Mutation",
+        "description": null,
+        "fields": [
+          {
+            "name": "createPropertyRentAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomCreateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyRentAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatePropertyRentAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyRentAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updateManyPropertyRentAtoms",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomUpdateManyMutationInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BatchPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "upsertPropertyRentAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "create",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomCreateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "update",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyRentAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deletePropertyRentAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyRentAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyRentAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deleteManyPropertyRentAtoms",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BatchPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createPropertySaleAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomCreateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertySaleAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatePropertySaleAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertySaleAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updateManyPropertySaleAtoms",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomUpdateManyMutationInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BatchPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "upsertPropertySaleAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "create",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomCreateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "update",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertySaleAtom",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deletePropertySaleAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertySaleAtomWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertySaleAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deleteManyPropertySaleAtoms",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BatchPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createPropertyDBLoadHistory",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryCreateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyDBLoadHistory",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatePropertyDBLoadHistory",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDBLoadHistory",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updateManyPropertyDBLoadHistories",
+            "description": null,
+            "args": [
+              {
+                "name": "data",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryUpdateManyMutationInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistoryWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BatchPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "upsertPropertyDBLoadHistory",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "create",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryCreateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "update",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PropertyDBLoadHistory",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deletePropertyDBLoadHistory",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyDBLoadHistoryWhereUniqueInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDBLoadHistory",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deleteManyPropertyDBLoadHistories",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistoryWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BatchPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyRentAtomCreateInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyRentAtomUpdateInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyRentAtomUpdateManyMutationInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "basicRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rentPlusAlpha",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maintenanceFee",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "keyMoneyMultiple",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "unitRent",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BatchPayload",
+        "description": null,
+        "fields": [
+          {
+            "name": "count",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Long",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Long",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertySaleAtomCreateInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyType",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertySaleAtomUpdateInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertySaleAtomUpdateManyMutationInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_cls",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyClass",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "propertyType",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "PropertyType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "landArea",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDBLoadHistoryCreateInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_id",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "filename",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDBLoadHistoryUpdateInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "filename",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDBLoadHistoryUpdateManyMutationInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "filename",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Subscription",
+        "description": null,
+        "fields": [
+          {
+            "name": "propertyRentAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomSubscriptionWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyRentAtomSubscriptionPayload",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertySaleAtom",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomSubscriptionWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertySaleAtomSubscriptionPayload",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyDBLoadHistory",
+            "description": null,
+            "args": [
+              {
+                "name": "where",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistorySubscriptionWhereInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDBLoadHistorySubscriptionPayload",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyRentAtomSubscriptionWhereInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "mutation_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "MutationType",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains_every",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains_some",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyRentAtomWhereInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyRentAtomSubscriptionWhereInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "MutationType",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "CREATED",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UPDATED",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "DELETED",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyRentAtomSubscriptionPayload",
+        "description": null,
+        "fields": [
+          {
+            "name": "mutation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "MutationType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyRentAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatedFields",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "previousValues",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyRentAtomPreviousValues",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyRentAtomPreviousValues",
+        "description": null,
+        "fields": [
+          {
+            "name": "_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyClass",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "basicRent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rentPlusAlpha",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "maintenanceFee",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalRent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "guaranteeMoneyMultiple",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "keyMoneyMultiple",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "unitRent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertySaleAtomSubscriptionWhereInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "mutation_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "MutationType",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains_every",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains_some",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertySaleAtomWhereInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertySaleAtomSubscriptionWhereInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertySaleAtomSubscriptionPayload",
+        "description": null,
+        "fields": [
+          {
+            "name": "mutation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "MutationType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertySaleAtom",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatedFields",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "previousValues",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertySaleAtomPreviousValues",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertySaleAtomPreviousValues",
+        "description": null,
+        "fields": [
+          {
+            "name": "_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_cls",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyClass",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hashKey",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "canonicalStation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "propertyType",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PropertyType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buildingName",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "area",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "price",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "currency",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "yearBuilt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorPlan",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "floorNumber",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalFloor",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "landArea",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "outDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nearestStations",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "agentComment",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "moreDetail",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDBLoadHistorySubscriptionWhereInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "mutation_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "MutationType",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains_every",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedFields_contains_some",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyDBLoadHistoryWhereInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDBLoadHistorySubscriptionWhereInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyDBLoadHistorySubscriptionPayload",
+        "description": null,
+        "fields": [
+          {
+            "name": "mutation",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "MutationType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "node",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDBLoadHistory",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatedFields",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "previousValues",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDBLoadHistoryPreviousValues",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyDBLoadHistoryPreviousValues",
+        "description": null,
+        "fields": [
+          {
+            "name": "_id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "filename",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inDate",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Schema",
+        "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
+        "fields": [
+          {
+            "name": "types",
+            "description": "A list of all types supported by this server.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Type",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "queryType",
+            "description": "The type that query operations will be rooted at.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mutationType",
+            "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subscriptionType",
+            "description": "If this server support subscription, the type that subscription operations will be rooted at.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "directives",
+            "description": "A list of all directives supported by this server.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Directive",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Type",
+        "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+        "fields": [
+          {
+            "name": "kind",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "__TypeKind",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fields",
+            "description": null,
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": "false"
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Field",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "interfaces",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "possibleTypes",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "enumValues",
+            "description": null,
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": "false"
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__EnumValue",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inputFields",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__InputValue",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ofType",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "__TypeKind",
+        "description": "An enum describing what kind of type a given `__Type` is.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "SCALAR",
+            "description": "Indicates this type is a scalar.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OBJECT",
+            "description": "Indicates this type is an object. `fields` and `interfaces` are valid fields.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INTERFACE",
+            "description": "Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNION",
+            "description": "Indicates this type is a union. `possibleTypes` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ENUM",
+            "description": "Indicates this type is an enum. `enumValues` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INPUT_OBJECT",
+            "description": "Indicates this type is an input object. `inputFields` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "LIST",
+            "description": "Indicates this type is a list. `ofType` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "NON_NULL",
+            "description": "Indicates this type is a non-null. `ofType` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Field",
+        "description": "Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "args",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__InputValue",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isDeprecated",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deprecationReason",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__InputValue",
+        "description": "Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "defaultValue",
+            "description": "A GraphQL-formatted string representing the default value for this input value.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__EnumValue",
+        "description": "One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isDeprecated",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deprecationReason",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Directive",
+        "description": "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "locations",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "__DirectiveLocation",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "args",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__InputValue",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "__DirectiveLocation",
+        "description": "A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "QUERY",
+            "description": "Location adjacent to a query operation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "MUTATION",
+            "description": "Location adjacent to a mutation operation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SUBSCRIPTION",
+            "description": "Location adjacent to a subscription operation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FIELD",
+            "description": "Location adjacent to a field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FRAGMENT_DEFINITION",
+            "description": "Location adjacent to a fragment definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FRAGMENT_SPREAD",
+            "description": "Location adjacent to a fragment spread.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INLINE_FRAGMENT",
+            "description": "Location adjacent to an inline fragment.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "VARIABLE_DEFINITION",
+            "description": "Location adjacent to a variable definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SCHEMA",
+            "description": "Location adjacent to a schema definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SCALAR",
+            "description": "Location adjacent to a scalar definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OBJECT",
+            "description": "Location adjacent to an object type definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FIELD_DEFINITION",
+            "description": "Location adjacent to a field definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ARGUMENT_DEFINITION",
+            "description": "Location adjacent to an argument definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INTERFACE",
+            "description": "Location adjacent to an interface definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNION",
+            "description": "Location adjacent to a union definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ENUM",
+            "description": "Location adjacent to an enum definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ENUM_VALUE",
+            "description": "Location adjacent to an enum value definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INPUT_OBJECT",
+            "description": "Location adjacent to an input object type definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INPUT_FIELD_DEFINITION",
+            "description": "Location adjacent to an input object field definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      }
+    ],
+    "directives": [
+      {
+        "name": "include",
+        "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [
+          {
+            "name": "if",
+            "description": "Included when true.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ]
+      },
+      {
+        "name": "skip",
+        "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [
+          {
+            "name": "if",
+            "description": "Skipped when true.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ]
+      },
+      {
+        "name": "deprecated",
+        "description": "Marks an element of a GraphQL schema as no longer supported.",
+        "locations": [
+          "FIELD_DEFINITION",
+          "ENUM_VALUE"
+        ],
+        "args": [
+          {
+            "name": "reason",
+            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": "\"No longer supported\""
+          }
+        ]
+      }
+    ]
+  }
 }
+}
+  
+  

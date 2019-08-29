@@ -87,12 +87,12 @@ export interface NexusPrismaTypes {
     }
   }
   enumTypes: {
-    PropertyClass: PropertyClassValues
-    PropertyRentAtomOrderByInput: PropertyRentAtomOrderByInputValues
-    PropertyType: PropertyTypeValues
-    PropertySaleAtomOrderByInput: PropertySaleAtomOrderByInputValues
-    PropertyDBLoadHistoryOrderByInput: PropertyDBLoadHistoryOrderByInputValues
-    MutationType: MutationTypeValues
+    PropertyClass: PropertyClassValues,
+    PropertyRentAtomOrderByInput: PropertyRentAtomOrderByInputValues,
+    PropertyType: PropertyTypeValues,
+    PropertySaleAtomOrderByInput: PropertySaleAtomOrderByInputValues,
+    PropertyDBLoadHistoryOrderByInput: PropertyDBLoadHistoryOrderByInputValues,
+    MutationType: MutationTypeValues,
   }
 }
 
@@ -100,51 +100,15 @@ export interface NexusPrismaTypes {
 
 type QueryObject =
   | QueryFields
-  | {
-      name: 'propertyRentAtom'
-      args?: QueryPropertyRentAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertyRentAtoms'
-      args?: QueryPropertyRentAtomsArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertyRentAtomsConnection'
-      args?: QueryPropertyRentAtomsConnectionArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertySaleAtom'
-      args?: QueryPropertySaleAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertySaleAtoms'
-      args?: QueryPropertySaleAtomsArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertySaleAtomsConnection'
-      args?: QueryPropertySaleAtomsConnectionArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertyDBLoadHistory'
-      args?: QueryPropertyDBLoadHistoryArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertyDBLoadHistories'
-      args?: QueryPropertyDBLoadHistoriesArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertyDBLoadHistoriesConnection'
-      args?: QueryPropertyDBLoadHistoriesConnectionArgs[] | false
-      alias?: string
-    }
+  | { name: 'propertyRentAtom', args?: QueryPropertyRentAtomArgs[] | false, alias?: string  } 
+  | { name: 'propertyRentAtoms', args?: QueryPropertyRentAtomsArgs[] | false, alias?: string  } 
+  | { name: 'propertyRentAtomsConnection', args?: QueryPropertyRentAtomsConnectionArgs[] | false, alias?: string  } 
+  | { name: 'propertySaleAtom', args?: QueryPropertySaleAtomArgs[] | false, alias?: string  } 
+  | { name: 'propertySaleAtoms', args?: QueryPropertySaleAtomsArgs[] | false, alias?: string  } 
+  | { name: 'propertySaleAtomsConnection', args?: QueryPropertySaleAtomsConnectionArgs[] | false, alias?: string  } 
+  | { name: 'propertyDBLoadHistory', args?: QueryPropertyDBLoadHistoryArgs[] | false, alias?: string  } 
+  | { name: 'propertyDBLoadHistories', args?: QueryPropertyDBLoadHistoriesArgs[] | false, alias?: string  } 
+  | { name: 'propertyDBLoadHistoriesConnection', args?: QueryPropertyDBLoadHistoriesConnectionArgs[] | false, alias?: string  } 
 
 type QueryFields =
   | 'propertyRentAtom'
@@ -157,7 +121,9 @@ type QueryFields =
   | 'propertyDBLoadHistories'
   | 'propertyDBLoadHistoriesConnection'
 
-type QueryPropertyRentAtomArgs = 'where'
+
+type QueryPropertyRentAtomArgs =
+  | 'where'
 type QueryPropertyRentAtomsArgs =
   | 'where'
   | 'orderBy'
@@ -174,7 +140,8 @@ type QueryPropertyRentAtomsConnectionArgs =
   | 'before'
   | 'first'
   | 'last'
-type QueryPropertySaleAtomArgs = 'where'
+type QueryPropertySaleAtomArgs =
+  | 'where'
 type QueryPropertySaleAtomsArgs =
   | 'where'
   | 'orderBy'
@@ -191,7 +158,8 @@ type QueryPropertySaleAtomsConnectionArgs =
   | 'before'
   | 'first'
   | 'last'
-type QueryPropertyDBLoadHistoryArgs = 'where'
+type QueryPropertyDBLoadHistoryArgs =
+  | 'where'
 type QueryPropertyDBLoadHistoriesArgs =
   | 'where'
   | 'orderBy'
@@ -208,6 +176,7 @@ type QueryPropertyDBLoadHistoriesConnectionArgs =
   | 'before'
   | 'first'
   | 'last'
+  
 
 export interface QueryFieldDetails {
   propertyRentAtom: {
@@ -217,14 +186,11 @@ export interface QueryFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: { where: PropertyRentAtomWhereUniqueInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where: PropertyRentAtomWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtom | null>
-      | prisma.PropertyRentAtom
-      | null
+    ) => Promise<prisma.PropertyRentAtom | null> | prisma.PropertyRentAtom | null
   }
   propertyRentAtoms: {
     type: 'PropertyRentAtom'
@@ -233,17 +199,9 @@ export interface QueryFieldDetails {
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: {
-        where?: PropertyRentAtomWhereInput | null
-        orderBy?: prisma.PropertyRentAtomOrderByInput | null
-        skip?: number | null
-        after?: string | null
-        before?: string | null
-        first?: number | null
-        last?: number | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where?: PropertyRentAtomWhereInput | null, orderBy?: prisma.PropertyRentAtomOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyRentAtom[]> | prisma.PropertyRentAtom[]
   }
@@ -254,21 +212,11 @@ export interface QueryFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: {
-        where?: PropertyRentAtomWhereInput | null
-        orderBy?: prisma.PropertyRentAtomOrderByInput | null
-        skip?: number | null
-        after?: string | null
-        before?: string | null
-        first?: number | null
-        last?: number | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where?: PropertyRentAtomWhereInput | null, orderBy?: prisma.PropertyRentAtomOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtomConnection>
-      | prisma.PropertyRentAtomConnection
+    ) => Promise<prisma.PropertyRentAtomConnection> | prisma.PropertyRentAtomConnection
   }
   propertySaleAtom: {
     type: 'PropertySaleAtom'
@@ -277,14 +225,11 @@ export interface QueryFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: { where: PropertySaleAtomWhereUniqueInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where: PropertySaleAtomWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtom | null>
-      | prisma.PropertySaleAtom
-      | null
+    ) => Promise<prisma.PropertySaleAtom | null> | prisma.PropertySaleAtom | null
   }
   propertySaleAtoms: {
     type: 'PropertySaleAtom'
@@ -293,17 +238,9 @@ export interface QueryFieldDetails {
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: {
-        where?: PropertySaleAtomWhereInput | null
-        orderBy?: prisma.PropertySaleAtomOrderByInput | null
-        skip?: number | null
-        after?: string | null
-        before?: string | null
-        first?: number | null
-        last?: number | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where?: PropertySaleAtomWhereInput | null, orderBy?: prisma.PropertySaleAtomOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertySaleAtom[]> | prisma.PropertySaleAtom[]
   }
@@ -314,21 +251,11 @@ export interface QueryFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: {
-        where?: PropertySaleAtomWhereInput | null
-        orderBy?: prisma.PropertySaleAtomOrderByInput | null
-        skip?: number | null
-        after?: string | null
-        before?: string | null
-        first?: number | null
-        last?: number | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where?: PropertySaleAtomWhereInput | null, orderBy?: prisma.PropertySaleAtomOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtomConnection>
-      | prisma.PropertySaleAtomConnection
+    ) => Promise<prisma.PropertySaleAtomConnection> | prisma.PropertySaleAtomConnection
   }
   propertyDBLoadHistory: {
     type: 'PropertyDBLoadHistory'
@@ -337,14 +264,11 @@ export interface QueryFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: { where: PropertyDBLoadHistoryWhereUniqueInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where: PropertyDBLoadHistoryWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistory | null>
-      | prisma.PropertyDBLoadHistory
-      | null
+    ) => Promise<prisma.PropertyDBLoadHistory | null> | prisma.PropertyDBLoadHistory | null
   }
   propertyDBLoadHistories: {
     type: 'PropertyDBLoadHistory'
@@ -353,80 +277,58 @@ export interface QueryFieldDetails {
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: {
-        where?: PropertyDBLoadHistoryWhereInput | null
-        orderBy?: prisma.PropertyDBLoadHistoryOrderByInput | null
-        skip?: number | null
-        after?: string | null
-        before?: string | null
-        first?: number | null
-        last?: number | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where?: PropertyDBLoadHistoryWhereInput | null, orderBy?: prisma.PropertyDBLoadHistoryOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistory[]>
-      | prisma.PropertyDBLoadHistory[]
+    ) => Promise<prisma.PropertyDBLoadHistory[]> | prisma.PropertyDBLoadHistory[]
   }
   propertyDBLoadHistoriesConnection: {
     type: 'PropertyDBLoadHistoryConnection'
-    args: Record<
-      QueryPropertyDBLoadHistoriesConnectionArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<QueryPropertyDBLoadHistoriesConnectionArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Query'>,
-      args: {
-        where?: PropertyDBLoadHistoryWhereInput | null
-        orderBy?: prisma.PropertyDBLoadHistoryOrderByInput | null
-        skip?: number | null
-        after?: string | null
-        before?: string | null
-        first?: number | null
-        last?: number | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Query">,
+      args: { where?: PropertyDBLoadHistoryWhereInput | null, orderBy?: prisma.PropertyDBLoadHistoryOrderByInput | null, skip?: number | null, after?: string | null, before?: string | null, first?: number | null, last?: number | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistoryConnection>
-      | prisma.PropertyDBLoadHistoryConnection
+    ) => Promise<prisma.PropertyDBLoadHistoryConnection> | prisma.PropertyDBLoadHistoryConnection
   }
 }
+  
 
 // Types for PropertyRentAtom
 
 type PropertyRentAtomObject =
   | PropertyRentAtomFields
-  | { name: '_id'; args?: [] | false; alias?: string }
-  | { name: '_cls'; args?: [] | false; alias?: string }
-  | { name: 'hashKey'; args?: [] | false; alias?: string }
-  | { name: 'canonicalStation'; args?: [] | false; alias?: string }
-  | { name: 'buildingName'; args?: [] | false; alias?: string }
-  | { name: 'address'; args?: [] | false; alias?: string }
-  | { name: 'area'; args?: [] | false; alias?: string }
-  | { name: 'basicRent'; args?: [] | false; alias?: string }
-  | { name: 'rentPlusAlpha'; args?: [] | false; alias?: string }
-  | { name: 'maintenanceFee'; args?: [] | false; alias?: string }
-  | { name: 'totalRent'; args?: [] | false; alias?: string }
-  | { name: 'guaranteeMoneyMultiple'; args?: [] | false; alias?: string }
-  | { name: 'keyMoneyMultiple'; args?: [] | false; alias?: string }
-  | { name: 'unitRent'; args?: [] | false; alias?: string }
-  | { name: 'city'; args?: [] | false; alias?: string }
-  | { name: 'country'; args?: [] | false; alias?: string }
-  | { name: 'currency'; args?: [] | false; alias?: string }
-  | { name: 'yearBuilt'; args?: [] | false; alias?: string }
-  | { name: 'floorPlan'; args?: [] | false; alias?: string }
-  | { name: 'floorNumber'; args?: [] | false; alias?: string }
-  | { name: 'totalFloor'; args?: [] | false; alias?: string }
-  | { name: 'inDate'; args?: [] | false; alias?: string }
-  | { name: 'outDate'; args?: [] | false; alias?: string }
-  | { name: 'nearestStations'; args?: [] | false; alias?: string }
-  | { name: 'agentComment'; args?: [] | false; alias?: string }
-  | { name: 'moreDetail'; args?: [] | false; alias?: string }
+  | { name: '_id', args?: [] | false, alias?: string  } 
+  | { name: '_cls', args?: [] | false, alias?: string  } 
+  | { name: 'hashKey', args?: [] | false, alias?: string  } 
+  | { name: 'canonicalStation', args?: [] | false, alias?: string  } 
+  | { name: 'buildingName', args?: [] | false, alias?: string  } 
+  | { name: 'address', args?: [] | false, alias?: string  } 
+  | { name: 'area', args?: [] | false, alias?: string  } 
+  | { name: 'basicRent', args?: [] | false, alias?: string  } 
+  | { name: 'rentPlusAlpha', args?: [] | false, alias?: string  } 
+  | { name: 'maintenanceFee', args?: [] | false, alias?: string  } 
+  | { name: 'totalRent', args?: [] | false, alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple', args?: [] | false, alias?: string  } 
+  | { name: 'keyMoneyMultiple', args?: [] | false, alias?: string  } 
+  | { name: 'unitRent', args?: [] | false, alias?: string  } 
+  | { name: 'city', args?: [] | false, alias?: string  } 
+  | { name: 'country', args?: [] | false, alias?: string  } 
+  | { name: 'currency', args?: [] | false, alias?: string  } 
+  | { name: 'yearBuilt', args?: [] | false, alias?: string  } 
+  | { name: 'floorPlan', args?: [] | false, alias?: string  } 
+  | { name: 'floorNumber', args?: [] | false, alias?: string  } 
+  | { name: 'totalFloor', args?: [] | false, alias?: string  } 
+  | { name: 'inDate', args?: [] | false, alias?: string  } 
+  | { name: 'outDate', args?: [] | false, alias?: string  } 
+  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
+  | { name: 'agentComment', args?: [] | false, alias?: string  } 
+  | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
 type PropertyRentAtomFields =
   | '_id'
@@ -456,6 +358,10 @@ type PropertyRentAtomFields =
   | 'agentComment'
   | 'moreDetail'
 
+
+
+  
+
 export interface PropertyRentAtomFieldDetails {
   _id: {
     type: 'ID'
@@ -472,9 +378,9 @@ export interface PropertyRentAtomFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtom'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtom">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyClass> | prisma.PropertyClass
   }
@@ -671,16 +577,24 @@ export interface PropertyRentAtomFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertyRentAtomConnection
 
 type PropertyRentAtomConnectionObject =
   | PropertyRentAtomConnectionFields
-  | { name: 'pageInfo'; args?: [] | false; alias?: string }
-  | { name: 'edges'; args?: [] | false; alias?: string }
-  | { name: 'aggregate'; args?: [] | false; alias?: string }
+  | { name: 'pageInfo', args?: [] | false, alias?: string  } 
+  | { name: 'edges', args?: [] | false, alias?: string  } 
+  | { name: 'aggregate', args?: [] | false, alias?: string  } 
 
-type PropertyRentAtomConnectionFields = 'pageInfo' | 'edges' | 'aggregate'
+type PropertyRentAtomConnectionFields =
+  | 'pageInfo'
+  | 'edges'
+  | 'aggregate'
+
+
+
+  
 
 export interface PropertyRentAtomConnectionFieldDetails {
   pageInfo: {
@@ -690,9 +604,9 @@ export interface PropertyRentAtomConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtomConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PageInfo> | prisma.PageInfo
   }
@@ -703,9 +617,9 @@ export interface PropertyRentAtomConnectionFieldDetails {
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtomConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyRentAtomEdge[]> | prisma.PropertyRentAtomEdge[]
   }
@@ -716,30 +630,33 @@ export interface PropertyRentAtomConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtomConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.AggregatePropertyRentAtom>
-      | prisma.AggregatePropertyRentAtom
+    ) => Promise<prisma.AggregatePropertyRentAtom> | prisma.AggregatePropertyRentAtom
   }
 }
+  
 
 // Types for PageInfo
 
 type PageInfoObject =
   | PageInfoFields
-  | { name: 'hasNextPage'; args?: [] | false; alias?: string }
-  | { name: 'hasPreviousPage'; args?: [] | false; alias?: string }
-  | { name: 'startCursor'; args?: [] | false; alias?: string }
-  | { name: 'endCursor'; args?: [] | false; alias?: string }
+  | { name: 'hasNextPage', args?: [] | false, alias?: string  } 
+  | { name: 'hasPreviousPage', args?: [] | false, alias?: string  } 
+  | { name: 'startCursor', args?: [] | false, alias?: string  } 
+  | { name: 'endCursor', args?: [] | false, alias?: string  } 
 
 type PageInfoFields =
   | 'hasNextPage'
   | 'hasPreviousPage'
   | 'startCursor'
   | 'endCursor'
+
+
+
+  
 
 export interface PageInfoFieldDetails {
   hasNextPage: {
@@ -775,15 +692,22 @@ export interface PageInfoFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertyRentAtomEdge
 
 type PropertyRentAtomEdgeObject =
   | PropertyRentAtomEdgeFields
-  | { name: 'node'; args?: [] | false; alias?: string }
-  | { name: 'cursor'; args?: [] | false; alias?: string }
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'cursor', args?: [] | false, alias?: string  } 
 
-type PropertyRentAtomEdgeFields = 'node' | 'cursor'
+type PropertyRentAtomEdgeFields =
+  | 'node'
+  | 'cursor'
+
+
+
+  
 
 export interface PropertyRentAtomEdgeFieldDetails {
   node: {
@@ -793,9 +717,9 @@ export interface PropertyRentAtomEdgeFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtomEdge'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomEdge">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyRentAtom> | prisma.PropertyRentAtom
   }
@@ -808,14 +732,20 @@ export interface PropertyRentAtomEdgeFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for AggregatePropertyRentAtom
 
 type AggregatePropertyRentAtomObject =
   | AggregatePropertyRentAtomFields
-  | { name: 'count'; args?: [] | false; alias?: string }
+  | { name: 'count', args?: [] | false, alias?: string  } 
 
-type AggregatePropertyRentAtomFields = 'count'
+type AggregatePropertyRentAtomFields =
+  | 'count'
+
+
+
+  
 
 export interface AggregatePropertyRentAtomFieldDetails {
   count: {
@@ -827,33 +757,34 @@ export interface AggregatePropertyRentAtomFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertySaleAtom
 
 type PropertySaleAtomObject =
   | PropertySaleAtomFields
-  | { name: '_id'; args?: [] | false; alias?: string }
-  | { name: '_cls'; args?: [] | false; alias?: string }
-  | { name: 'hashKey'; args?: [] | false; alias?: string }
-  | { name: 'canonicalStation'; args?: [] | false; alias?: string }
-  | { name: 'propertyType'; args?: [] | false; alias?: string }
-  | { name: 'buildingName'; args?: [] | false; alias?: string }
-  | { name: 'address'; args?: [] | false; alias?: string }
-  | { name: 'area'; args?: [] | false; alias?: string }
-  | { name: 'price'; args?: [] | false; alias?: string }
-  | { name: 'city'; args?: [] | false; alias?: string }
-  | { name: 'country'; args?: [] | false; alias?: string }
-  | { name: 'currency'; args?: [] | false; alias?: string }
-  | { name: 'yearBuilt'; args?: [] | false; alias?: string }
-  | { name: 'floorPlan'; args?: [] | false; alias?: string }
-  | { name: 'floorNumber'; args?: [] | false; alias?: string }
-  | { name: 'totalFloor'; args?: [] | false; alias?: string }
-  | { name: 'landArea'; args?: [] | false; alias?: string }
-  | { name: 'inDate'; args?: [] | false; alias?: string }
-  | { name: 'outDate'; args?: [] | false; alias?: string }
-  | { name: 'nearestStations'; args?: [] | false; alias?: string }
-  | { name: 'agentComment'; args?: [] | false; alias?: string }
-  | { name: 'moreDetail'; args?: [] | false; alias?: string }
+  | { name: '_id', args?: [] | false, alias?: string  } 
+  | { name: '_cls', args?: [] | false, alias?: string  } 
+  | { name: 'hashKey', args?: [] | false, alias?: string  } 
+  | { name: 'canonicalStation', args?: [] | false, alias?: string  } 
+  | { name: 'propertyType', args?: [] | false, alias?: string  } 
+  | { name: 'buildingName', args?: [] | false, alias?: string  } 
+  | { name: 'address', args?: [] | false, alias?: string  } 
+  | { name: 'area', args?: [] | false, alias?: string  } 
+  | { name: 'price', args?: [] | false, alias?: string  } 
+  | { name: 'city', args?: [] | false, alias?: string  } 
+  | { name: 'country', args?: [] | false, alias?: string  } 
+  | { name: 'currency', args?: [] | false, alias?: string  } 
+  | { name: 'yearBuilt', args?: [] | false, alias?: string  } 
+  | { name: 'floorPlan', args?: [] | false, alias?: string  } 
+  | { name: 'floorNumber', args?: [] | false, alias?: string  } 
+  | { name: 'totalFloor', args?: [] | false, alias?: string  } 
+  | { name: 'landArea', args?: [] | false, alias?: string  } 
+  | { name: 'inDate', args?: [] | false, alias?: string  } 
+  | { name: 'outDate', args?: [] | false, alias?: string  } 
+  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
+  | { name: 'agentComment', args?: [] | false, alias?: string  } 
+  | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
 type PropertySaleAtomFields =
   | '_id'
@@ -879,6 +810,10 @@ type PropertySaleAtomFields =
   | 'agentComment'
   | 'moreDetail'
 
+
+
+  
+
 export interface PropertySaleAtomFieldDetails {
   _id: {
     type: 'ID'
@@ -895,9 +830,9 @@ export interface PropertySaleAtomFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtom'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtom">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyClass> | prisma.PropertyClass
   }
@@ -924,9 +859,9 @@ export interface PropertySaleAtomFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtom'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtom">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyType> | prisma.PropertyType
   }
@@ -1067,16 +1002,24 @@ export interface PropertySaleAtomFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertySaleAtomConnection
 
 type PropertySaleAtomConnectionObject =
   | PropertySaleAtomConnectionFields
-  | { name: 'pageInfo'; args?: [] | false; alias?: string }
-  | { name: 'edges'; args?: [] | false; alias?: string }
-  | { name: 'aggregate'; args?: [] | false; alias?: string }
+  | { name: 'pageInfo', args?: [] | false, alias?: string  } 
+  | { name: 'edges', args?: [] | false, alias?: string  } 
+  | { name: 'aggregate', args?: [] | false, alias?: string  } 
 
-type PropertySaleAtomConnectionFields = 'pageInfo' | 'edges' | 'aggregate'
+type PropertySaleAtomConnectionFields =
+  | 'pageInfo'
+  | 'edges'
+  | 'aggregate'
+
+
+
+  
 
 export interface PropertySaleAtomConnectionFieldDetails {
   pageInfo: {
@@ -1086,9 +1029,9 @@ export interface PropertySaleAtomConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PageInfo> | prisma.PageInfo
   }
@@ -1099,9 +1042,9 @@ export interface PropertySaleAtomConnectionFieldDetails {
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertySaleAtomEdge[]> | prisma.PropertySaleAtomEdge[]
   }
@@ -1112,24 +1055,29 @@ export interface PropertySaleAtomConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.AggregatePropertySaleAtom>
-      | prisma.AggregatePropertySaleAtom
+    ) => Promise<prisma.AggregatePropertySaleAtom> | prisma.AggregatePropertySaleAtom
   }
 }
+  
 
 // Types for PropertySaleAtomEdge
 
 type PropertySaleAtomEdgeObject =
   | PropertySaleAtomEdgeFields
-  | { name: 'node'; args?: [] | false; alias?: string }
-  | { name: 'cursor'; args?: [] | false; alias?: string }
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'cursor', args?: [] | false, alias?: string  } 
 
-type PropertySaleAtomEdgeFields = 'node' | 'cursor'
+type PropertySaleAtomEdgeFields =
+  | 'node'
+  | 'cursor'
+
+
+
+  
 
 export interface PropertySaleAtomEdgeFieldDetails {
   node: {
@@ -1139,9 +1087,9 @@ export interface PropertySaleAtomEdgeFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomEdge'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomEdge">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertySaleAtom> | prisma.PropertySaleAtom
   }
@@ -1154,14 +1102,20 @@ export interface PropertySaleAtomEdgeFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for AggregatePropertySaleAtom
 
 type AggregatePropertySaleAtomObject =
   | AggregatePropertySaleAtomFields
-  | { name: 'count'; args?: [] | false; alias?: string }
+  | { name: 'count', args?: [] | false, alias?: string  } 
 
-type AggregatePropertySaleAtomFields = 'count'
+type AggregatePropertySaleAtomFields =
+  | 'count'
+
+
+
+  
 
 export interface AggregatePropertySaleAtomFieldDetails {
   count: {
@@ -1173,16 +1127,24 @@ export interface AggregatePropertySaleAtomFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertyDBLoadHistory
 
 type PropertyDBLoadHistoryObject =
   | PropertyDBLoadHistoryFields
-  | { name: '_id'; args?: [] | false; alias?: string }
-  | { name: 'filename'; args?: [] | false; alias?: string }
-  | { name: 'inDate'; args?: [] | false; alias?: string }
+  | { name: '_id', args?: [] | false, alias?: string  } 
+  | { name: 'filename', args?: [] | false, alias?: string  } 
+  | { name: 'inDate', args?: [] | false, alias?: string  } 
 
-type PropertyDBLoadHistoryFields = '_id' | 'filename' | 'inDate'
+type PropertyDBLoadHistoryFields =
+  | '_id'
+  | 'filename'
+  | 'inDate'
+
+
+
+  
 
 export interface PropertyDBLoadHistoryFieldDetails {
   _id: {
@@ -1210,16 +1172,24 @@ export interface PropertyDBLoadHistoryFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertyDBLoadHistoryConnection
 
 type PropertyDBLoadHistoryConnectionObject =
   | PropertyDBLoadHistoryConnectionFields
-  | { name: 'pageInfo'; args?: [] | false; alias?: string }
-  | { name: 'edges'; args?: [] | false; alias?: string }
-  | { name: 'aggregate'; args?: [] | false; alias?: string }
+  | { name: 'pageInfo', args?: [] | false, alias?: string  } 
+  | { name: 'edges', args?: [] | false, alias?: string  } 
+  | { name: 'aggregate', args?: [] | false, alias?: string  } 
 
-type PropertyDBLoadHistoryConnectionFields = 'pageInfo' | 'edges' | 'aggregate'
+type PropertyDBLoadHistoryConnectionFields =
+  | 'pageInfo'
+  | 'edges'
+  | 'aggregate'
+
+
+
+  
 
 export interface PropertyDBLoadHistoryConnectionFieldDetails {
   pageInfo: {
@@ -1229,9 +1199,9 @@ export interface PropertyDBLoadHistoryConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistoryConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistoryConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PageInfo> | prisma.PageInfo
   }
@@ -1242,13 +1212,11 @@ export interface PropertyDBLoadHistoryConnectionFieldDetails {
     list: true
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistoryConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistoryConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistoryEdge[]>
-      | prisma.PropertyDBLoadHistoryEdge[]
+    ) => Promise<prisma.PropertyDBLoadHistoryEdge[]> | prisma.PropertyDBLoadHistoryEdge[]
   }
   aggregate: {
     type: 'AggregatePropertyDBLoadHistory'
@@ -1257,24 +1225,29 @@ export interface PropertyDBLoadHistoryConnectionFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistoryConnection'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistoryConnection">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.AggregatePropertyDBLoadHistory>
-      | prisma.AggregatePropertyDBLoadHistory
+    ) => Promise<prisma.AggregatePropertyDBLoadHistory> | prisma.AggregatePropertyDBLoadHistory
   }
 }
+  
 
 // Types for PropertyDBLoadHistoryEdge
 
 type PropertyDBLoadHistoryEdgeObject =
   | PropertyDBLoadHistoryEdgeFields
-  | { name: 'node'; args?: [] | false; alias?: string }
-  | { name: 'cursor'; args?: [] | false; alias?: string }
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'cursor', args?: [] | false, alias?: string  } 
 
-type PropertyDBLoadHistoryEdgeFields = 'node' | 'cursor'
+type PropertyDBLoadHistoryEdgeFields =
+  | 'node'
+  | 'cursor'
+
+
+
+  
 
 export interface PropertyDBLoadHistoryEdgeFieldDetails {
   node: {
@@ -1284,9 +1257,9 @@ export interface PropertyDBLoadHistoryEdgeFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistoryEdge'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistoryEdge">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyDBLoadHistory> | prisma.PropertyDBLoadHistory
   }
@@ -1299,14 +1272,20 @@ export interface PropertyDBLoadHistoryEdgeFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for AggregatePropertyDBLoadHistory
 
 type AggregatePropertyDBLoadHistoryObject =
   | AggregatePropertyDBLoadHistoryFields
-  | { name: 'count'; args?: [] | false; alias?: string }
+  | { name: 'count', args?: [] | false, alias?: string  } 
 
-type AggregatePropertyDBLoadHistoryFields = 'count'
+type AggregatePropertyDBLoadHistoryFields =
+  | 'count'
+
+
+
+  
 
 export interface AggregatePropertyDBLoadHistoryFieldDetails {
   count: {
@@ -1318,101 +1297,30 @@ export interface AggregatePropertyDBLoadHistoryFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for Mutation
 
 type MutationObject =
   | MutationFields
-  | {
-      name: 'createPropertyRentAtom'
-      args?: MutationCreatePropertyRentAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'updatePropertyRentAtom'
-      args?: MutationUpdatePropertyRentAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'updateManyPropertyRentAtoms'
-      args?: MutationUpdateManyPropertyRentAtomsArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'upsertPropertyRentAtom'
-      args?: MutationUpsertPropertyRentAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'deletePropertyRentAtom'
-      args?: MutationDeletePropertyRentAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'deleteManyPropertyRentAtoms'
-      args?: MutationDeleteManyPropertyRentAtomsArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'createPropertySaleAtom'
-      args?: MutationCreatePropertySaleAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'updatePropertySaleAtom'
-      args?: MutationUpdatePropertySaleAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'updateManyPropertySaleAtoms'
-      args?: MutationUpdateManyPropertySaleAtomsArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'upsertPropertySaleAtom'
-      args?: MutationUpsertPropertySaleAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'deletePropertySaleAtom'
-      args?: MutationDeletePropertySaleAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'deleteManyPropertySaleAtoms'
-      args?: MutationDeleteManyPropertySaleAtomsArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'createPropertyDBLoadHistory'
-      args?: MutationCreatePropertyDBLoadHistoryArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'updatePropertyDBLoadHistory'
-      args?: MutationUpdatePropertyDBLoadHistoryArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'updateManyPropertyDBLoadHistories'
-      args?: MutationUpdateManyPropertyDBLoadHistoriesArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'upsertPropertyDBLoadHistory'
-      args?: MutationUpsertPropertyDBLoadHistoryArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'deletePropertyDBLoadHistory'
-      args?: MutationDeletePropertyDBLoadHistoryArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'deleteManyPropertyDBLoadHistories'
-      args?: MutationDeleteManyPropertyDBLoadHistoriesArgs[] | false
-      alias?: string
-    }
+  | { name: 'createPropertyRentAtom', args?: MutationCreatePropertyRentAtomArgs[] | false, alias?: string  } 
+  | { name: 'updatePropertyRentAtom', args?: MutationUpdatePropertyRentAtomArgs[] | false, alias?: string  } 
+  | { name: 'updateManyPropertyRentAtoms', args?: MutationUpdateManyPropertyRentAtomsArgs[] | false, alias?: string  } 
+  | { name: 'upsertPropertyRentAtom', args?: MutationUpsertPropertyRentAtomArgs[] | false, alias?: string  } 
+  | { name: 'deletePropertyRentAtom', args?: MutationDeletePropertyRentAtomArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyPropertyRentAtoms', args?: MutationDeleteManyPropertyRentAtomsArgs[] | false, alias?: string  } 
+  | { name: 'createPropertySaleAtom', args?: MutationCreatePropertySaleAtomArgs[] | false, alias?: string  } 
+  | { name: 'updatePropertySaleAtom', args?: MutationUpdatePropertySaleAtomArgs[] | false, alias?: string  } 
+  | { name: 'updateManyPropertySaleAtoms', args?: MutationUpdateManyPropertySaleAtomsArgs[] | false, alias?: string  } 
+  | { name: 'upsertPropertySaleAtom', args?: MutationUpsertPropertySaleAtomArgs[] | false, alias?: string  } 
+  | { name: 'deletePropertySaleAtom', args?: MutationDeletePropertySaleAtomArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyPropertySaleAtoms', args?: MutationDeleteManyPropertySaleAtomsArgs[] | false, alias?: string  } 
+  | { name: 'createPropertyDBLoadHistory', args?: MutationCreatePropertyDBLoadHistoryArgs[] | false, alias?: string  } 
+  | { name: 'updatePropertyDBLoadHistory', args?: MutationUpdatePropertyDBLoadHistoryArgs[] | false, alias?: string  } 
+  | { name: 'updateManyPropertyDBLoadHistories', args?: MutationUpdateManyPropertyDBLoadHistoriesArgs[] | false, alias?: string  } 
+  | { name: 'upsertPropertyDBLoadHistory', args?: MutationUpsertPropertyDBLoadHistoryArgs[] | false, alias?: string  } 
+  | { name: 'deletePropertyDBLoadHistory', args?: MutationDeletePropertyDBLoadHistoryArgs[] | false, alias?: string  } 
+  | { name: 'deleteManyPropertyDBLoadHistories', args?: MutationDeleteManyPropertyDBLoadHistoriesArgs[] | false, alias?: string  } 
 
 type MutationFields =
   | 'createPropertyRentAtom'
@@ -1434,24 +1342,56 @@ type MutationFields =
   | 'deletePropertyDBLoadHistory'
   | 'deleteManyPropertyDBLoadHistories'
 
-type MutationCreatePropertyRentAtomArgs = 'data'
-type MutationUpdatePropertyRentAtomArgs = 'data' | 'where'
-type MutationUpdateManyPropertyRentAtomsArgs = 'data' | 'where'
-type MutationUpsertPropertyRentAtomArgs = 'where' | 'create' | 'update'
-type MutationDeletePropertyRentAtomArgs = 'where'
-type MutationDeleteManyPropertyRentAtomsArgs = 'where'
-type MutationCreatePropertySaleAtomArgs = 'data'
-type MutationUpdatePropertySaleAtomArgs = 'data' | 'where'
-type MutationUpdateManyPropertySaleAtomsArgs = 'data' | 'where'
-type MutationUpsertPropertySaleAtomArgs = 'where' | 'create' | 'update'
-type MutationDeletePropertySaleAtomArgs = 'where'
-type MutationDeleteManyPropertySaleAtomsArgs = 'where'
-type MutationCreatePropertyDBLoadHistoryArgs = 'data'
-type MutationUpdatePropertyDBLoadHistoryArgs = 'data' | 'where'
-type MutationUpdateManyPropertyDBLoadHistoriesArgs = 'data' | 'where'
-type MutationUpsertPropertyDBLoadHistoryArgs = 'where' | 'create' | 'update'
-type MutationDeletePropertyDBLoadHistoryArgs = 'where'
-type MutationDeleteManyPropertyDBLoadHistoriesArgs = 'where'
+
+type MutationCreatePropertyRentAtomArgs =
+  | 'data'
+type MutationUpdatePropertyRentAtomArgs =
+  | 'data'
+  | 'where'
+type MutationUpdateManyPropertyRentAtomsArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertPropertyRentAtomArgs =
+  | 'where'
+  | 'create'
+  | 'update'
+type MutationDeletePropertyRentAtomArgs =
+  | 'where'
+type MutationDeleteManyPropertyRentAtomsArgs =
+  | 'where'
+type MutationCreatePropertySaleAtomArgs =
+  | 'data'
+type MutationUpdatePropertySaleAtomArgs =
+  | 'data'
+  | 'where'
+type MutationUpdateManyPropertySaleAtomsArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertPropertySaleAtomArgs =
+  | 'where'
+  | 'create'
+  | 'update'
+type MutationDeletePropertySaleAtomArgs =
+  | 'where'
+type MutationDeleteManyPropertySaleAtomsArgs =
+  | 'where'
+type MutationCreatePropertyDBLoadHistoryArgs =
+  | 'data'
+type MutationUpdatePropertyDBLoadHistoryArgs =
+  | 'data'
+  | 'where'
+type MutationUpdateManyPropertyDBLoadHistoriesArgs =
+  | 'data'
+  | 'where'
+type MutationUpsertPropertyDBLoadHistoryArgs =
+  | 'where'
+  | 'create'
+  | 'update'
+type MutationDeletePropertyDBLoadHistoryArgs =
+  | 'where'
+type MutationDeleteManyPropertyDBLoadHistoriesArgs =
+  | 'where'
+  
 
 export interface MutationFieldDetails {
   createPropertyRentAtom: {
@@ -1461,9 +1401,9 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { data: PropertyRentAtomCreateInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertyRentAtomCreateInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyRentAtom> | prisma.PropertyRentAtom
   }
@@ -1474,34 +1414,22 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        data: PropertyRentAtomUpdateInput
-        where: PropertyRentAtomWhereUniqueInput
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertyRentAtomUpdateInput, where: PropertyRentAtomWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtom | null>
-      | prisma.PropertyRentAtom
-      | null
+    ) => Promise<prisma.PropertyRentAtom | null> | prisma.PropertyRentAtom | null
   }
   updateManyPropertyRentAtoms: {
     type: 'BatchPayload'
-    args: Record<
-      MutationUpdateManyPropertyRentAtomsArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationUpdateManyPropertyRentAtomsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        data: PropertyRentAtomUpdateManyMutationInput
-        where?: PropertyRentAtomWhereInput | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertyRentAtomUpdateManyMutationInput, where?: PropertyRentAtomWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
@@ -1512,13 +1440,9 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        where: PropertyRentAtomWhereUniqueInput
-        create: PropertyRentAtomCreateInput
-        update: PropertyRentAtomUpdateInput
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where: PropertyRentAtomWhereUniqueInput, create: PropertyRentAtomCreateInput, update: PropertyRentAtomUpdateInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyRentAtom> | prisma.PropertyRentAtom
   }
@@ -1529,28 +1453,22 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { where: PropertyRentAtomWhereUniqueInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where: PropertyRentAtomWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtom | null>
-      | prisma.PropertyRentAtom
-      | null
+    ) => Promise<prisma.PropertyRentAtom | null> | prisma.PropertyRentAtom | null
   }
   deleteManyPropertyRentAtoms: {
     type: 'BatchPayload'
-    args: Record<
-      MutationDeleteManyPropertyRentAtomsArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationDeleteManyPropertyRentAtomsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { where?: PropertyRentAtomWhereInput | null },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where?: PropertyRentAtomWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
@@ -1561,9 +1479,9 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { data: PropertySaleAtomCreateInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertySaleAtomCreateInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertySaleAtom> | prisma.PropertySaleAtom
   }
@@ -1574,34 +1492,22 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        data: PropertySaleAtomUpdateInput
-        where: PropertySaleAtomWhereUniqueInput
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertySaleAtomUpdateInput, where: PropertySaleAtomWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtom | null>
-      | prisma.PropertySaleAtom
-      | null
+    ) => Promise<prisma.PropertySaleAtom | null> | prisma.PropertySaleAtom | null
   }
   updateManyPropertySaleAtoms: {
     type: 'BatchPayload'
-    args: Record<
-      MutationUpdateManyPropertySaleAtomsArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationUpdateManyPropertySaleAtomsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        data: PropertySaleAtomUpdateManyMutationInput
-        where?: PropertySaleAtomWhereInput | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertySaleAtomUpdateManyMutationInput, where?: PropertySaleAtomWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
@@ -1612,13 +1518,9 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        where: PropertySaleAtomWhereUniqueInput
-        create: PropertySaleAtomCreateInput
-        update: PropertySaleAtomUpdateInput
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where: PropertySaleAtomWhereUniqueInput, create: PropertySaleAtomCreateInput, update: PropertySaleAtomUpdateInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertySaleAtom> | prisma.PropertySaleAtom
   }
@@ -1629,152 +1531,118 @@ export interface MutationFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { where: PropertySaleAtomWhereUniqueInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where: PropertySaleAtomWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtom | null>
-      | prisma.PropertySaleAtom
-      | null
+    ) => Promise<prisma.PropertySaleAtom | null> | prisma.PropertySaleAtom | null
   }
   deleteManyPropertySaleAtoms: {
     type: 'BatchPayload'
-    args: Record<
-      MutationDeleteManyPropertySaleAtomsArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationDeleteManyPropertySaleAtomsArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { where?: PropertySaleAtomWhereInput | null },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where?: PropertySaleAtomWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
   createPropertyDBLoadHistory: {
     type: 'PropertyDBLoadHistory'
-    args: Record<
-      MutationCreatePropertyDBLoadHistoryArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationCreatePropertyDBLoadHistoryArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { data: PropertyDBLoadHistoryCreateInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertyDBLoadHistoryCreateInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyDBLoadHistory> | prisma.PropertyDBLoadHistory
   }
   updatePropertyDBLoadHistory: {
     type: 'PropertyDBLoadHistory'
-    args: Record<
-      MutationUpdatePropertyDBLoadHistoryArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationUpdatePropertyDBLoadHistoryArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        data: PropertyDBLoadHistoryUpdateInput
-        where: PropertyDBLoadHistoryWhereUniqueInput
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertyDBLoadHistoryUpdateInput, where: PropertyDBLoadHistoryWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistory | null>
-      | prisma.PropertyDBLoadHistory
-      | null
+    ) => Promise<prisma.PropertyDBLoadHistory | null> | prisma.PropertyDBLoadHistory | null
   }
   updateManyPropertyDBLoadHistories: {
     type: 'BatchPayload'
-    args: Record<
-      MutationUpdateManyPropertyDBLoadHistoriesArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationUpdateManyPropertyDBLoadHistoriesArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        data: PropertyDBLoadHistoryUpdateManyMutationInput
-        where?: PropertyDBLoadHistoryWhereInput | null
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { data: PropertyDBLoadHistoryUpdateManyMutationInput, where?: PropertyDBLoadHistoryWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
   upsertPropertyDBLoadHistory: {
     type: 'PropertyDBLoadHistory'
-    args: Record<
-      MutationUpsertPropertyDBLoadHistoryArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationUpsertPropertyDBLoadHistoryArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: {
-        where: PropertyDBLoadHistoryWhereUniqueInput
-        create: PropertyDBLoadHistoryCreateInput
-        update: PropertyDBLoadHistoryUpdateInput
-      },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where: PropertyDBLoadHistoryWhereUniqueInput, create: PropertyDBLoadHistoryCreateInput, update: PropertyDBLoadHistoryUpdateInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyDBLoadHistory> | prisma.PropertyDBLoadHistory
   }
   deletePropertyDBLoadHistory: {
     type: 'PropertyDBLoadHistory'
-    args: Record<
-      MutationDeletePropertyDBLoadHistoryArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationDeletePropertyDBLoadHistoryArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { where: PropertyDBLoadHistoryWhereUniqueInput },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where: PropertyDBLoadHistoryWhereUniqueInput }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistory | null>
-      | prisma.PropertyDBLoadHistory
-      | null
+    ) => Promise<prisma.PropertyDBLoadHistory | null> | prisma.PropertyDBLoadHistory | null
   }
   deleteManyPropertyDBLoadHistories: {
     type: 'BatchPayload'
-    args: Record<
-      MutationDeleteManyPropertyDBLoadHistoriesArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<MutationDeleteManyPropertyDBLoadHistoriesArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'Mutation'>,
-      args: { where?: PropertyDBLoadHistoryWhereInput | null },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Mutation">,
+      args: { where?: PropertyDBLoadHistoryWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.BatchPayload> | prisma.BatchPayload
   }
 }
+  
 
 // Types for BatchPayload
 
 type BatchPayloadObject =
   | BatchPayloadFields
-  | { name: 'count'; args?: [] | false; alias?: string }
+  | { name: 'count', args?: [] | false, alias?: string  } 
 
-type BatchPayloadFields = 'count'
+type BatchPayloadFields =
+  | 'count'
+
+
+
+  
 
 export interface BatchPayloadFieldDetails {
   count: {
@@ -1786,35 +1654,29 @@ export interface BatchPayloadFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for Subscription
 
 type SubscriptionObject =
   | SubscriptionFields
-  | {
-      name: 'propertyRentAtom'
-      args?: SubscriptionPropertyRentAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertySaleAtom'
-      args?: SubscriptionPropertySaleAtomArgs[] | false
-      alias?: string
-    }
-  | {
-      name: 'propertyDBLoadHistory'
-      args?: SubscriptionPropertyDBLoadHistoryArgs[] | false
-      alias?: string
-    }
+  | { name: 'propertyRentAtom', args?: SubscriptionPropertyRentAtomArgs[] | false, alias?: string  } 
+  | { name: 'propertySaleAtom', args?: SubscriptionPropertySaleAtomArgs[] | false, alias?: string  } 
+  | { name: 'propertyDBLoadHistory', args?: SubscriptionPropertyDBLoadHistoryArgs[] | false, alias?: string  } 
 
 type SubscriptionFields =
   | 'propertyRentAtom'
   | 'propertySaleAtom'
   | 'propertyDBLoadHistory'
 
-type SubscriptionPropertyRentAtomArgs = 'where'
-type SubscriptionPropertySaleAtomArgs = 'where'
-type SubscriptionPropertyDBLoadHistoryArgs = 'where'
+
+type SubscriptionPropertyRentAtomArgs =
+  | 'where'
+type SubscriptionPropertySaleAtomArgs =
+  | 'where'
+type SubscriptionPropertyDBLoadHistoryArgs =
+  | 'where'
+  
 
 export interface SubscriptionFieldDetails {
   propertyRentAtom: {
@@ -1824,14 +1686,11 @@ export interface SubscriptionFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Subscription'>,
-      args: { where?: PropertyRentAtomSubscriptionWhereInput | null },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Subscription">,
+      args: { where?: PropertyRentAtomSubscriptionWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtomSubscriptionPayload | null>
-      | prisma.PropertyRentAtomSubscriptionPayload
-      | null
+    ) => Promise<prisma.PropertyRentAtomSubscriptionPayload | null> | prisma.PropertyRentAtomSubscriptionPayload | null
   }
   propertySaleAtom: {
     type: 'PropertySaleAtomSubscriptionPayload'
@@ -1840,50 +1699,46 @@ export interface SubscriptionFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Subscription'>,
-      args: { where?: PropertySaleAtomSubscriptionWhereInput | null },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Subscription">,
+      args: { where?: PropertySaleAtomSubscriptionWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtomSubscriptionPayload | null>
-      | prisma.PropertySaleAtomSubscriptionPayload
-      | null
+    ) => Promise<prisma.PropertySaleAtomSubscriptionPayload | null> | prisma.PropertySaleAtomSubscriptionPayload | null
   }
   propertyDBLoadHistory: {
     type: 'PropertyDBLoadHistorySubscriptionPayload'
-    args: Record<
-      SubscriptionPropertyDBLoadHistoryArgs,
-      core.NexusArgDef<string>
-    >
+    args: Record<SubscriptionPropertyDBLoadHistoryArgs, core.NexusArgDef<string>>
     description: string
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'Subscription'>,
-      args: { where?: PropertyDBLoadHistorySubscriptionWhereInput | null },
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"Subscription">,
+      args: { where?: PropertyDBLoadHistorySubscriptionWhereInput | null }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistorySubscriptionPayload | null>
-      | prisma.PropertyDBLoadHistorySubscriptionPayload
-      | null
+    ) => Promise<prisma.PropertyDBLoadHistorySubscriptionPayload | null> | prisma.PropertyDBLoadHistorySubscriptionPayload | null
   }
 }
+  
 
 // Types for PropertyRentAtomSubscriptionPayload
 
 type PropertyRentAtomSubscriptionPayloadObject =
   | PropertyRentAtomSubscriptionPayloadFields
-  | { name: 'mutation'; args?: [] | false; alias?: string }
-  | { name: 'node'; args?: [] | false; alias?: string }
-  | { name: 'updatedFields'; args?: [] | false; alias?: string }
-  | { name: 'previousValues'; args?: [] | false; alias?: string }
+  | { name: 'mutation', args?: [] | false, alias?: string  } 
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'updatedFields', args?: [] | false, alias?: string  } 
+  | { name: 'previousValues', args?: [] | false, alias?: string  } 
 
 type PropertyRentAtomSubscriptionPayloadFields =
   | 'mutation'
   | 'node'
   | 'updatedFields'
   | 'previousValues'
+
+
+
+  
 
 export interface PropertyRentAtomSubscriptionPayloadFieldDetails {
   mutation: {
@@ -1893,9 +1748,9 @@ export interface PropertyRentAtomSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtomSubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.MutationType> | prisma.MutationType
   }
@@ -1906,14 +1761,11 @@ export interface PropertyRentAtomSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'PropertyRentAtomSubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtom | null>
-      | prisma.PropertyRentAtom
-      | null
+    ) => Promise<prisma.PropertyRentAtom | null> | prisma.PropertyRentAtom | null
   }
   updatedFields: {
     type: 'String'
@@ -1930,47 +1782,45 @@ export interface PropertyRentAtomSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'PropertyRentAtomSubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyRentAtomPreviousValues | null>
-      | prisma.PropertyRentAtomPreviousValues
-      | null
+    ) => Promise<prisma.PropertyRentAtomPreviousValues | null> | prisma.PropertyRentAtomPreviousValues | null
   }
 }
+  
 
 // Types for PropertyRentAtomPreviousValues
 
 type PropertyRentAtomPreviousValuesObject =
   | PropertyRentAtomPreviousValuesFields
-  | { name: '_id'; args?: [] | false; alias?: string }
-  | { name: '_cls'; args?: [] | false; alias?: string }
-  | { name: 'hashKey'; args?: [] | false; alias?: string }
-  | { name: 'canonicalStation'; args?: [] | false; alias?: string }
-  | { name: 'buildingName'; args?: [] | false; alias?: string }
-  | { name: 'address'; args?: [] | false; alias?: string }
-  | { name: 'area'; args?: [] | false; alias?: string }
-  | { name: 'basicRent'; args?: [] | false; alias?: string }
-  | { name: 'rentPlusAlpha'; args?: [] | false; alias?: string }
-  | { name: 'maintenanceFee'; args?: [] | false; alias?: string }
-  | { name: 'totalRent'; args?: [] | false; alias?: string }
-  | { name: 'guaranteeMoneyMultiple'; args?: [] | false; alias?: string }
-  | { name: 'keyMoneyMultiple'; args?: [] | false; alias?: string }
-  | { name: 'unitRent'; args?: [] | false; alias?: string }
-  | { name: 'city'; args?: [] | false; alias?: string }
-  | { name: 'country'; args?: [] | false; alias?: string }
-  | { name: 'currency'; args?: [] | false; alias?: string }
-  | { name: 'yearBuilt'; args?: [] | false; alias?: string }
-  | { name: 'floorPlan'; args?: [] | false; alias?: string }
-  | { name: 'floorNumber'; args?: [] | false; alias?: string }
-  | { name: 'totalFloor'; args?: [] | false; alias?: string }
-  | { name: 'inDate'; args?: [] | false; alias?: string }
-  | { name: 'outDate'; args?: [] | false; alias?: string }
-  | { name: 'nearestStations'; args?: [] | false; alias?: string }
-  | { name: 'agentComment'; args?: [] | false; alias?: string }
-  | { name: 'moreDetail'; args?: [] | false; alias?: string }
+  | { name: '_id', args?: [] | false, alias?: string  } 
+  | { name: '_cls', args?: [] | false, alias?: string  } 
+  | { name: 'hashKey', args?: [] | false, alias?: string  } 
+  | { name: 'canonicalStation', args?: [] | false, alias?: string  } 
+  | { name: 'buildingName', args?: [] | false, alias?: string  } 
+  | { name: 'address', args?: [] | false, alias?: string  } 
+  | { name: 'area', args?: [] | false, alias?: string  } 
+  | { name: 'basicRent', args?: [] | false, alias?: string  } 
+  | { name: 'rentPlusAlpha', args?: [] | false, alias?: string  } 
+  | { name: 'maintenanceFee', args?: [] | false, alias?: string  } 
+  | { name: 'totalRent', args?: [] | false, alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple', args?: [] | false, alias?: string  } 
+  | { name: 'keyMoneyMultiple', args?: [] | false, alias?: string  } 
+  | { name: 'unitRent', args?: [] | false, alias?: string  } 
+  | { name: 'city', args?: [] | false, alias?: string  } 
+  | { name: 'country', args?: [] | false, alias?: string  } 
+  | { name: 'currency', args?: [] | false, alias?: string  } 
+  | { name: 'yearBuilt', args?: [] | false, alias?: string  } 
+  | { name: 'floorPlan', args?: [] | false, alias?: string  } 
+  | { name: 'floorNumber', args?: [] | false, alias?: string  } 
+  | { name: 'totalFloor', args?: [] | false, alias?: string  } 
+  | { name: 'inDate', args?: [] | false, alias?: string  } 
+  | { name: 'outDate', args?: [] | false, alias?: string  } 
+  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
+  | { name: 'agentComment', args?: [] | false, alias?: string  } 
+  | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
 type PropertyRentAtomPreviousValuesFields =
   | '_id'
@@ -2000,6 +1850,10 @@ type PropertyRentAtomPreviousValuesFields =
   | 'agentComment'
   | 'moreDetail'
 
+
+
+  
+
 export interface PropertyRentAtomPreviousValuesFieldDetails {
   _id: {
     type: 'ID'
@@ -2016,9 +1870,9 @@ export interface PropertyRentAtomPreviousValuesFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyRentAtomPreviousValues'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyRentAtomPreviousValues">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyClass> | prisma.PropertyClass
   }
@@ -2215,21 +2069,26 @@ export interface PropertyRentAtomPreviousValuesFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertySaleAtomSubscriptionPayload
 
 type PropertySaleAtomSubscriptionPayloadObject =
   | PropertySaleAtomSubscriptionPayloadFields
-  | { name: 'mutation'; args?: [] | false; alias?: string }
-  | { name: 'node'; args?: [] | false; alias?: string }
-  | { name: 'updatedFields'; args?: [] | false; alias?: string }
-  | { name: 'previousValues'; args?: [] | false; alias?: string }
+  | { name: 'mutation', args?: [] | false, alias?: string  } 
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'updatedFields', args?: [] | false, alias?: string  } 
+  | { name: 'previousValues', args?: [] | false, alias?: string  } 
 
 type PropertySaleAtomSubscriptionPayloadFields =
   | 'mutation'
   | 'node'
   | 'updatedFields'
   | 'previousValues'
+
+
+
+  
 
 export interface PropertySaleAtomSubscriptionPayloadFieldDetails {
   mutation: {
@@ -2239,9 +2098,9 @@ export interface PropertySaleAtomSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomSubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.MutationType> | prisma.MutationType
   }
@@ -2252,14 +2111,11 @@ export interface PropertySaleAtomSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'PropertySaleAtomSubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtom | null>
-      | prisma.PropertySaleAtom
-      | null
+    ) => Promise<prisma.PropertySaleAtom | null> | prisma.PropertySaleAtom | null
   }
   updatedFields: {
     type: 'String'
@@ -2276,43 +2132,41 @@ export interface PropertySaleAtomSubscriptionPayloadFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'PropertySaleAtomSubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomSubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertySaleAtomPreviousValues | null>
-      | prisma.PropertySaleAtomPreviousValues
-      | null
+    ) => Promise<prisma.PropertySaleAtomPreviousValues | null> | prisma.PropertySaleAtomPreviousValues | null
   }
 }
+  
 
 // Types for PropertySaleAtomPreviousValues
 
 type PropertySaleAtomPreviousValuesObject =
   | PropertySaleAtomPreviousValuesFields
-  | { name: '_id'; args?: [] | false; alias?: string }
-  | { name: '_cls'; args?: [] | false; alias?: string }
-  | { name: 'hashKey'; args?: [] | false; alias?: string }
-  | { name: 'canonicalStation'; args?: [] | false; alias?: string }
-  | { name: 'propertyType'; args?: [] | false; alias?: string }
-  | { name: 'buildingName'; args?: [] | false; alias?: string }
-  | { name: 'address'; args?: [] | false; alias?: string }
-  | { name: 'area'; args?: [] | false; alias?: string }
-  | { name: 'price'; args?: [] | false; alias?: string }
-  | { name: 'city'; args?: [] | false; alias?: string }
-  | { name: 'country'; args?: [] | false; alias?: string }
-  | { name: 'currency'; args?: [] | false; alias?: string }
-  | { name: 'yearBuilt'; args?: [] | false; alias?: string }
-  | { name: 'floorPlan'; args?: [] | false; alias?: string }
-  | { name: 'floorNumber'; args?: [] | false; alias?: string }
-  | { name: 'totalFloor'; args?: [] | false; alias?: string }
-  | { name: 'landArea'; args?: [] | false; alias?: string }
-  | { name: 'inDate'; args?: [] | false; alias?: string }
-  | { name: 'outDate'; args?: [] | false; alias?: string }
-  | { name: 'nearestStations'; args?: [] | false; alias?: string }
-  | { name: 'agentComment'; args?: [] | false; alias?: string }
-  | { name: 'moreDetail'; args?: [] | false; alias?: string }
+  | { name: '_id', args?: [] | false, alias?: string  } 
+  | { name: '_cls', args?: [] | false, alias?: string  } 
+  | { name: 'hashKey', args?: [] | false, alias?: string  } 
+  | { name: 'canonicalStation', args?: [] | false, alias?: string  } 
+  | { name: 'propertyType', args?: [] | false, alias?: string  } 
+  | { name: 'buildingName', args?: [] | false, alias?: string  } 
+  | { name: 'address', args?: [] | false, alias?: string  } 
+  | { name: 'area', args?: [] | false, alias?: string  } 
+  | { name: 'price', args?: [] | false, alias?: string  } 
+  | { name: 'city', args?: [] | false, alias?: string  } 
+  | { name: 'country', args?: [] | false, alias?: string  } 
+  | { name: 'currency', args?: [] | false, alias?: string  } 
+  | { name: 'yearBuilt', args?: [] | false, alias?: string  } 
+  | { name: 'floorPlan', args?: [] | false, alias?: string  } 
+  | { name: 'floorNumber', args?: [] | false, alias?: string  } 
+  | { name: 'totalFloor', args?: [] | false, alias?: string  } 
+  | { name: 'landArea', args?: [] | false, alias?: string  } 
+  | { name: 'inDate', args?: [] | false, alias?: string  } 
+  | { name: 'outDate', args?: [] | false, alias?: string  } 
+  | { name: 'nearestStations', args?: [] | false, alias?: string  } 
+  | { name: 'agentComment', args?: [] | false, alias?: string  } 
+  | { name: 'moreDetail', args?: [] | false, alias?: string  } 
 
 type PropertySaleAtomPreviousValuesFields =
   | '_id'
@@ -2338,6 +2192,10 @@ type PropertySaleAtomPreviousValuesFields =
   | 'agentComment'
   | 'moreDetail'
 
+
+
+  
+
 export interface PropertySaleAtomPreviousValuesFieldDetails {
   _id: {
     type: 'ID'
@@ -2354,9 +2212,9 @@ export interface PropertySaleAtomPreviousValuesFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomPreviousValues'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomPreviousValues">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyClass> | prisma.PropertyClass
   }
@@ -2383,9 +2241,9 @@ export interface PropertySaleAtomPreviousValuesFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertySaleAtomPreviousValues'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertySaleAtomPreviousValues">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.PropertyType> | prisma.PropertyType
   }
@@ -2526,21 +2384,26 @@ export interface PropertySaleAtomPreviousValuesFieldDetails {
     resolve: undefined
   }
 }
+  
 
 // Types for PropertyDBLoadHistorySubscriptionPayload
 
 type PropertyDBLoadHistorySubscriptionPayloadObject =
   | PropertyDBLoadHistorySubscriptionPayloadFields
-  | { name: 'mutation'; args?: [] | false; alias?: string }
-  | { name: 'node'; args?: [] | false; alias?: string }
-  | { name: 'updatedFields'; args?: [] | false; alias?: string }
-  | { name: 'previousValues'; args?: [] | false; alias?: string }
+  | { name: 'mutation', args?: [] | false, alias?: string  } 
+  | { name: 'node', args?: [] | false, alias?: string  } 
+  | { name: 'updatedFields', args?: [] | false, alias?: string  } 
+  | { name: 'previousValues', args?: [] | false, alias?: string  } 
 
 type PropertyDBLoadHistorySubscriptionPayloadFields =
   | 'mutation'
   | 'node'
   | 'updatedFields'
   | 'previousValues'
+
+
+
+  
 
 export interface PropertyDBLoadHistorySubscriptionPayloadFieldDetails {
   mutation: {
@@ -2550,9 +2413,9 @@ export interface PropertyDBLoadHistorySubscriptionPayloadFieldDetails {
     list: undefined
     nullable: false
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistorySubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistorySubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
     ) => Promise<prisma.MutationType> | prisma.MutationType
   }
@@ -2563,14 +2426,11 @@ export interface PropertyDBLoadHistorySubscriptionPayloadFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistorySubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistorySubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistory | null>
-      | prisma.PropertyDBLoadHistory
-      | null
+    ) => Promise<prisma.PropertyDBLoadHistory | null> | prisma.PropertyDBLoadHistory | null
   }
   updatedFields: {
     type: 'String'
@@ -2587,26 +2447,31 @@ export interface PropertyDBLoadHistorySubscriptionPayloadFieldDetails {
     list: undefined
     nullable: true
     resolve: (
-      root: core.RootValue<'PropertyDBLoadHistorySubscriptionPayload'>,
-      args: {},
-      context: core.GetGen<'context'>,
+      root: core.RootValue<"PropertyDBLoadHistorySubscriptionPayload">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
       info?: GraphQLResolveInfo
-    ) =>
-      | Promise<prisma.PropertyDBLoadHistoryPreviousValues | null>
-      | prisma.PropertyDBLoadHistoryPreviousValues
-      | null
+    ) => Promise<prisma.PropertyDBLoadHistoryPreviousValues | null> | prisma.PropertyDBLoadHistoryPreviousValues | null
   }
 }
+  
 
 // Types for PropertyDBLoadHistoryPreviousValues
 
 type PropertyDBLoadHistoryPreviousValuesObject =
   | PropertyDBLoadHistoryPreviousValuesFields
-  | { name: '_id'; args?: [] | false; alias?: string }
-  | { name: 'filename'; args?: [] | false; alias?: string }
-  | { name: 'inDate'; args?: [] | false; alias?: string }
+  | { name: '_id', args?: [] | false, alias?: string  } 
+  | { name: 'filename', args?: [] | false, alias?: string  } 
+  | { name: 'inDate', args?: [] | false, alias?: string  } 
 
-type PropertyDBLoadHistoryPreviousValuesFields = '_id' | 'filename' | 'inDate'
+type PropertyDBLoadHistoryPreviousValuesFields =
+  | '_id'
+  | 'filename'
+  | 'inDate'
+
+
+
+  
 
 export interface PropertyDBLoadHistoryPreviousValuesFieldDetails {
   _id: {
@@ -2634,14 +2499,16 @@ export interface PropertyDBLoadHistoryPreviousValuesFieldDetails {
     resolve: undefined
   }
 }
+  
+
 
 export interface PropertyRentAtomWhereUniqueInput {
   _id?: string | null
 }
 export type PropertyRentAtomWhereUniqueInputInputObject =
   | Extract<keyof PropertyRentAtomWhereUniqueInput, string>
-  | { name: '_id'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  
 export interface PropertyRentAtomWhereInput {
   _id?: string | null
   _id_not?: string | null
@@ -2909,277 +2776,277 @@ export interface PropertyRentAtomWhereInput {
 }
 export type PropertyRentAtomWhereInputInputObject =
   | Extract<keyof PropertyRentAtomWhereInput, string>
-  | { name: '_id'; alias?: string }
-  | { name: '_id_not'; alias?: string }
-  | { name: '_id_in'; alias?: string }
-  | { name: '_id_not_in'; alias?: string }
-  | { name: '_id_lt'; alias?: string }
-  | { name: '_id_lte'; alias?: string }
-  | { name: '_id_gt'; alias?: string }
-  | { name: '_id_gte'; alias?: string }
-  | { name: '_id_contains'; alias?: string }
-  | { name: '_id_not_contains'; alias?: string }
-  | { name: '_id_starts_with'; alias?: string }
-  | { name: '_id_not_starts_with'; alias?: string }
-  | { name: '_id_ends_with'; alias?: string }
-  | { name: '_id_not_ends_with'; alias?: string }
-  | { name: '_cls'; alias?: string }
-  | { name: '_cls_not'; alias?: string }
-  | { name: '_cls_in'; alias?: string }
-  | { name: '_cls_not_in'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'hashKey_not'; alias?: string }
-  | { name: 'hashKey_in'; alias?: string }
-  | { name: 'hashKey_not_in'; alias?: string }
-  | { name: 'hashKey_lt'; alias?: string }
-  | { name: 'hashKey_lte'; alias?: string }
-  | { name: 'hashKey_gt'; alias?: string }
-  | { name: 'hashKey_gte'; alias?: string }
-  | { name: 'hashKey_contains'; alias?: string }
-  | { name: 'hashKey_not_contains'; alias?: string }
-  | { name: 'hashKey_starts_with'; alias?: string }
-  | { name: 'hashKey_not_starts_with'; alias?: string }
-  | { name: 'hashKey_ends_with'; alias?: string }
-  | { name: 'hashKey_not_ends_with'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'canonicalStation_not'; alias?: string }
-  | { name: 'canonicalStation_in'; alias?: string }
-  | { name: 'canonicalStation_not_in'; alias?: string }
-  | { name: 'canonicalStation_lt'; alias?: string }
-  | { name: 'canonicalStation_lte'; alias?: string }
-  | { name: 'canonicalStation_gt'; alias?: string }
-  | { name: 'canonicalStation_gte'; alias?: string }
-  | { name: 'canonicalStation_contains'; alias?: string }
-  | { name: 'canonicalStation_not_contains'; alias?: string }
-  | { name: 'canonicalStation_starts_with'; alias?: string }
-  | { name: 'canonicalStation_not_starts_with'; alias?: string }
-  | { name: 'canonicalStation_ends_with'; alias?: string }
-  | { name: 'canonicalStation_not_ends_with'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'buildingName_not'; alias?: string }
-  | { name: 'buildingName_in'; alias?: string }
-  | { name: 'buildingName_not_in'; alias?: string }
-  | { name: 'buildingName_lt'; alias?: string }
-  | { name: 'buildingName_lte'; alias?: string }
-  | { name: 'buildingName_gt'; alias?: string }
-  | { name: 'buildingName_gte'; alias?: string }
-  | { name: 'buildingName_contains'; alias?: string }
-  | { name: 'buildingName_not_contains'; alias?: string }
-  | { name: 'buildingName_starts_with'; alias?: string }
-  | { name: 'buildingName_not_starts_with'; alias?: string }
-  | { name: 'buildingName_ends_with'; alias?: string }
-  | { name: 'buildingName_not_ends_with'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'address_not'; alias?: string }
-  | { name: 'address_in'; alias?: string }
-  | { name: 'address_not_in'; alias?: string }
-  | { name: 'address_lt'; alias?: string }
-  | { name: 'address_lte'; alias?: string }
-  | { name: 'address_gt'; alias?: string }
-  | { name: 'address_gte'; alias?: string }
-  | { name: 'address_contains'; alias?: string }
-  | { name: 'address_not_contains'; alias?: string }
-  | { name: 'address_starts_with'; alias?: string }
-  | { name: 'address_not_starts_with'; alias?: string }
-  | { name: 'address_ends_with'; alias?: string }
-  | { name: 'address_not_ends_with'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'area_not'; alias?: string }
-  | { name: 'area_in'; alias?: string }
-  | { name: 'area_not_in'; alias?: string }
-  | { name: 'area_lt'; alias?: string }
-  | { name: 'area_lte'; alias?: string }
-  | { name: 'area_gt'; alias?: string }
-  | { name: 'area_gte'; alias?: string }
-  | { name: 'basicRent'; alias?: string }
-  | { name: 'basicRent_not'; alias?: string }
-  | { name: 'basicRent_in'; alias?: string }
-  | { name: 'basicRent_not_in'; alias?: string }
-  | { name: 'basicRent_lt'; alias?: string }
-  | { name: 'basicRent_lte'; alias?: string }
-  | { name: 'basicRent_gt'; alias?: string }
-  | { name: 'basicRent_gte'; alias?: string }
-  | { name: 'rentPlusAlpha'; alias?: string }
-  | { name: 'rentPlusAlpha_not'; alias?: string }
-  | { name: 'rentPlusAlpha_in'; alias?: string }
-  | { name: 'rentPlusAlpha_not_in'; alias?: string }
-  | { name: 'rentPlusAlpha_lt'; alias?: string }
-  | { name: 'rentPlusAlpha_lte'; alias?: string }
-  | { name: 'rentPlusAlpha_gt'; alias?: string }
-  | { name: 'rentPlusAlpha_gte'; alias?: string }
-  | { name: 'maintenanceFee'; alias?: string }
-  | { name: 'maintenanceFee_not'; alias?: string }
-  | { name: 'maintenanceFee_in'; alias?: string }
-  | { name: 'maintenanceFee_not_in'; alias?: string }
-  | { name: 'maintenanceFee_lt'; alias?: string }
-  | { name: 'maintenanceFee_lte'; alias?: string }
-  | { name: 'maintenanceFee_gt'; alias?: string }
-  | { name: 'maintenanceFee_gte'; alias?: string }
-  | { name: 'totalRent'; alias?: string }
-  | { name: 'totalRent_not'; alias?: string }
-  | { name: 'totalRent_in'; alias?: string }
-  | { name: 'totalRent_not_in'; alias?: string }
-  | { name: 'totalRent_lt'; alias?: string }
-  | { name: 'totalRent_lte'; alias?: string }
-  | { name: 'totalRent_gt'; alias?: string }
-  | { name: 'totalRent_gte'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_not'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_in'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_not_in'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_lt'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_lte'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_gt'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple_gte'; alias?: string }
-  | { name: 'keyMoneyMultiple'; alias?: string }
-  | { name: 'keyMoneyMultiple_not'; alias?: string }
-  | { name: 'keyMoneyMultiple_in'; alias?: string }
-  | { name: 'keyMoneyMultiple_not_in'; alias?: string }
-  | { name: 'keyMoneyMultiple_lt'; alias?: string }
-  | { name: 'keyMoneyMultiple_lte'; alias?: string }
-  | { name: 'keyMoneyMultiple_gt'; alias?: string }
-  | { name: 'keyMoneyMultiple_gte'; alias?: string }
-  | { name: 'unitRent'; alias?: string }
-  | { name: 'unitRent_not'; alias?: string }
-  | { name: 'unitRent_in'; alias?: string }
-  | { name: 'unitRent_not_in'; alias?: string }
-  | { name: 'unitRent_lt'; alias?: string }
-  | { name: 'unitRent_lte'; alias?: string }
-  | { name: 'unitRent_gt'; alias?: string }
-  | { name: 'unitRent_gte'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'city_not'; alias?: string }
-  | { name: 'city_in'; alias?: string }
-  | { name: 'city_not_in'; alias?: string }
-  | { name: 'city_lt'; alias?: string }
-  | { name: 'city_lte'; alias?: string }
-  | { name: 'city_gt'; alias?: string }
-  | { name: 'city_gte'; alias?: string }
-  | { name: 'city_contains'; alias?: string }
-  | { name: 'city_not_contains'; alias?: string }
-  | { name: 'city_starts_with'; alias?: string }
-  | { name: 'city_not_starts_with'; alias?: string }
-  | { name: 'city_ends_with'; alias?: string }
-  | { name: 'city_not_ends_with'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'country_not'; alias?: string }
-  | { name: 'country_in'; alias?: string }
-  | { name: 'country_not_in'; alias?: string }
-  | { name: 'country_lt'; alias?: string }
-  | { name: 'country_lte'; alias?: string }
-  | { name: 'country_gt'; alias?: string }
-  | { name: 'country_gte'; alias?: string }
-  | { name: 'country_contains'; alias?: string }
-  | { name: 'country_not_contains'; alias?: string }
-  | { name: 'country_starts_with'; alias?: string }
-  | { name: 'country_not_starts_with'; alias?: string }
-  | { name: 'country_ends_with'; alias?: string }
-  | { name: 'country_not_ends_with'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'currency_not'; alias?: string }
-  | { name: 'currency_in'; alias?: string }
-  | { name: 'currency_not_in'; alias?: string }
-  | { name: 'currency_lt'; alias?: string }
-  | { name: 'currency_lte'; alias?: string }
-  | { name: 'currency_gt'; alias?: string }
-  | { name: 'currency_gte'; alias?: string }
-  | { name: 'currency_contains'; alias?: string }
-  | { name: 'currency_not_contains'; alias?: string }
-  | { name: 'currency_starts_with'; alias?: string }
-  | { name: 'currency_not_starts_with'; alias?: string }
-  | { name: 'currency_ends_with'; alias?: string }
-  | { name: 'currency_not_ends_with'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'yearBuilt_not'; alias?: string }
-  | { name: 'yearBuilt_in'; alias?: string }
-  | { name: 'yearBuilt_not_in'; alias?: string }
-  | { name: 'yearBuilt_lt'; alias?: string }
-  | { name: 'yearBuilt_lte'; alias?: string }
-  | { name: 'yearBuilt_gt'; alias?: string }
-  | { name: 'yearBuilt_gte'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorPlan_not'; alias?: string }
-  | { name: 'floorPlan_in'; alias?: string }
-  | { name: 'floorPlan_not_in'; alias?: string }
-  | { name: 'floorPlan_lt'; alias?: string }
-  | { name: 'floorPlan_lte'; alias?: string }
-  | { name: 'floorPlan_gt'; alias?: string }
-  | { name: 'floorPlan_gte'; alias?: string }
-  | { name: 'floorPlan_contains'; alias?: string }
-  | { name: 'floorPlan_not_contains'; alias?: string }
-  | { name: 'floorPlan_starts_with'; alias?: string }
-  | { name: 'floorPlan_not_starts_with'; alias?: string }
-  | { name: 'floorPlan_ends_with'; alias?: string }
-  | { name: 'floorPlan_not_ends_with'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'floorNumber_not'; alias?: string }
-  | { name: 'floorNumber_in'; alias?: string }
-  | { name: 'floorNumber_not_in'; alias?: string }
-  | { name: 'floorNumber_lt'; alias?: string }
-  | { name: 'floorNumber_lte'; alias?: string }
-  | { name: 'floorNumber_gt'; alias?: string }
-  | { name: 'floorNumber_gte'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'totalFloor_not'; alias?: string }
-  | { name: 'totalFloor_in'; alias?: string }
-  | { name: 'totalFloor_not_in'; alias?: string }
-  | { name: 'totalFloor_lt'; alias?: string }
-  | { name: 'totalFloor_lte'; alias?: string }
-  | { name: 'totalFloor_gt'; alias?: string }
-  | { name: 'totalFloor_gte'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'inDate_not'; alias?: string }
-  | { name: 'inDate_in'; alias?: string }
-  | { name: 'inDate_not_in'; alias?: string }
-  | { name: 'inDate_lt'; alias?: string }
-  | { name: 'inDate_lte'; alias?: string }
-  | { name: 'inDate_gt'; alias?: string }
-  | { name: 'inDate_gte'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'outDate_not'; alias?: string }
-  | { name: 'outDate_in'; alias?: string }
-  | { name: 'outDate_not_in'; alias?: string }
-  | { name: 'outDate_lt'; alias?: string }
-  | { name: 'outDate_lte'; alias?: string }
-  | { name: 'outDate_gt'; alias?: string }
-  | { name: 'outDate_gte'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'agentComment_not'; alias?: string }
-  | { name: 'agentComment_in'; alias?: string }
-  | { name: 'agentComment_not_in'; alias?: string }
-  | { name: 'agentComment_lt'; alias?: string }
-  | { name: 'agentComment_lte'; alias?: string }
-  | { name: 'agentComment_gt'; alias?: string }
-  | { name: 'agentComment_gte'; alias?: string }
-  | { name: 'agentComment_contains'; alias?: string }
-  | { name: 'agentComment_not_contains'; alias?: string }
-  | { name: 'agentComment_starts_with'; alias?: string }
-  | { name: 'agentComment_not_starts_with'; alias?: string }
-  | { name: 'agentComment_ends_with'; alias?: string }
-  | { name: 'agentComment_not_ends_with'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-  | { name: 'moreDetail_not'; alias?: string }
-  | { name: 'moreDetail_in'; alias?: string }
-  | { name: 'moreDetail_not_in'; alias?: string }
-  | { name: 'moreDetail_lt'; alias?: string }
-  | { name: 'moreDetail_lte'; alias?: string }
-  | { name: 'moreDetail_gt'; alias?: string }
-  | { name: 'moreDetail_gte'; alias?: string }
-  | { name: 'moreDetail_contains'; alias?: string }
-  | { name: 'moreDetail_not_contains'; alias?: string }
-  | { name: 'moreDetail_starts_with'; alias?: string }
-  | { name: 'moreDetail_not_starts_with'; alias?: string }
-  | { name: 'moreDetail_ends_with'; alias?: string }
-  | { name: 'moreDetail_not_ends_with'; alias?: string }
-  | { name: 'AND'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  | { name: '_id_not', alias?: string  } 
+  | { name: '_id_in', alias?: string  } 
+  | { name: '_id_not_in', alias?: string  } 
+  | { name: '_id_lt', alias?: string  } 
+  | { name: '_id_lte', alias?: string  } 
+  | { name: '_id_gt', alias?: string  } 
+  | { name: '_id_gte', alias?: string  } 
+  | { name: '_id_contains', alias?: string  } 
+  | { name: '_id_not_contains', alias?: string  } 
+  | { name: '_id_starts_with', alias?: string  } 
+  | { name: '_id_not_starts_with', alias?: string  } 
+  | { name: '_id_ends_with', alias?: string  } 
+  | { name: '_id_not_ends_with', alias?: string  } 
+  | { name: '_cls', alias?: string  } 
+  | { name: '_cls_not', alias?: string  } 
+  | { name: '_cls_in', alias?: string  } 
+  | { name: '_cls_not_in', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'hashKey_not', alias?: string  } 
+  | { name: 'hashKey_in', alias?: string  } 
+  | { name: 'hashKey_not_in', alias?: string  } 
+  | { name: 'hashKey_lt', alias?: string  } 
+  | { name: 'hashKey_lte', alias?: string  } 
+  | { name: 'hashKey_gt', alias?: string  } 
+  | { name: 'hashKey_gte', alias?: string  } 
+  | { name: 'hashKey_contains', alias?: string  } 
+  | { name: 'hashKey_not_contains', alias?: string  } 
+  | { name: 'hashKey_starts_with', alias?: string  } 
+  | { name: 'hashKey_not_starts_with', alias?: string  } 
+  | { name: 'hashKey_ends_with', alias?: string  } 
+  | { name: 'hashKey_not_ends_with', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'canonicalStation_not', alias?: string  } 
+  | { name: 'canonicalStation_in', alias?: string  } 
+  | { name: 'canonicalStation_not_in', alias?: string  } 
+  | { name: 'canonicalStation_lt', alias?: string  } 
+  | { name: 'canonicalStation_lte', alias?: string  } 
+  | { name: 'canonicalStation_gt', alias?: string  } 
+  | { name: 'canonicalStation_gte', alias?: string  } 
+  | { name: 'canonicalStation_contains', alias?: string  } 
+  | { name: 'canonicalStation_not_contains', alias?: string  } 
+  | { name: 'canonicalStation_starts_with', alias?: string  } 
+  | { name: 'canonicalStation_not_starts_with', alias?: string  } 
+  | { name: 'canonicalStation_ends_with', alias?: string  } 
+  | { name: 'canonicalStation_not_ends_with', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'buildingName_not', alias?: string  } 
+  | { name: 'buildingName_in', alias?: string  } 
+  | { name: 'buildingName_not_in', alias?: string  } 
+  | { name: 'buildingName_lt', alias?: string  } 
+  | { name: 'buildingName_lte', alias?: string  } 
+  | { name: 'buildingName_gt', alias?: string  } 
+  | { name: 'buildingName_gte', alias?: string  } 
+  | { name: 'buildingName_contains', alias?: string  } 
+  | { name: 'buildingName_not_contains', alias?: string  } 
+  | { name: 'buildingName_starts_with', alias?: string  } 
+  | { name: 'buildingName_not_starts_with', alias?: string  } 
+  | { name: 'buildingName_ends_with', alias?: string  } 
+  | { name: 'buildingName_not_ends_with', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'address_not', alias?: string  } 
+  | { name: 'address_in', alias?: string  } 
+  | { name: 'address_not_in', alias?: string  } 
+  | { name: 'address_lt', alias?: string  } 
+  | { name: 'address_lte', alias?: string  } 
+  | { name: 'address_gt', alias?: string  } 
+  | { name: 'address_gte', alias?: string  } 
+  | { name: 'address_contains', alias?: string  } 
+  | { name: 'address_not_contains', alias?: string  } 
+  | { name: 'address_starts_with', alias?: string  } 
+  | { name: 'address_not_starts_with', alias?: string  } 
+  | { name: 'address_ends_with', alias?: string  } 
+  | { name: 'address_not_ends_with', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'area_not', alias?: string  } 
+  | { name: 'area_in', alias?: string  } 
+  | { name: 'area_not_in', alias?: string  } 
+  | { name: 'area_lt', alias?: string  } 
+  | { name: 'area_lte', alias?: string  } 
+  | { name: 'area_gt', alias?: string  } 
+  | { name: 'area_gte', alias?: string  } 
+  | { name: 'basicRent', alias?: string  } 
+  | { name: 'basicRent_not', alias?: string  } 
+  | { name: 'basicRent_in', alias?: string  } 
+  | { name: 'basicRent_not_in', alias?: string  } 
+  | { name: 'basicRent_lt', alias?: string  } 
+  | { name: 'basicRent_lte', alias?: string  } 
+  | { name: 'basicRent_gt', alias?: string  } 
+  | { name: 'basicRent_gte', alias?: string  } 
+  | { name: 'rentPlusAlpha', alias?: string  } 
+  | { name: 'rentPlusAlpha_not', alias?: string  } 
+  | { name: 'rentPlusAlpha_in', alias?: string  } 
+  | { name: 'rentPlusAlpha_not_in', alias?: string  } 
+  | { name: 'rentPlusAlpha_lt', alias?: string  } 
+  | { name: 'rentPlusAlpha_lte', alias?: string  } 
+  | { name: 'rentPlusAlpha_gt', alias?: string  } 
+  | { name: 'rentPlusAlpha_gte', alias?: string  } 
+  | { name: 'maintenanceFee', alias?: string  } 
+  | { name: 'maintenanceFee_not', alias?: string  } 
+  | { name: 'maintenanceFee_in', alias?: string  } 
+  | { name: 'maintenanceFee_not_in', alias?: string  } 
+  | { name: 'maintenanceFee_lt', alias?: string  } 
+  | { name: 'maintenanceFee_lte', alias?: string  } 
+  | { name: 'maintenanceFee_gt', alias?: string  } 
+  | { name: 'maintenanceFee_gte', alias?: string  } 
+  | { name: 'totalRent', alias?: string  } 
+  | { name: 'totalRent_not', alias?: string  } 
+  | { name: 'totalRent_in', alias?: string  } 
+  | { name: 'totalRent_not_in', alias?: string  } 
+  | { name: 'totalRent_lt', alias?: string  } 
+  | { name: 'totalRent_lte', alias?: string  } 
+  | { name: 'totalRent_gt', alias?: string  } 
+  | { name: 'totalRent_gte', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_not', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_in', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_not_in', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_lt', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_lte', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_gt', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple_gte', alias?: string  } 
+  | { name: 'keyMoneyMultiple', alias?: string  } 
+  | { name: 'keyMoneyMultiple_not', alias?: string  } 
+  | { name: 'keyMoneyMultiple_in', alias?: string  } 
+  | { name: 'keyMoneyMultiple_not_in', alias?: string  } 
+  | { name: 'keyMoneyMultiple_lt', alias?: string  } 
+  | { name: 'keyMoneyMultiple_lte', alias?: string  } 
+  | { name: 'keyMoneyMultiple_gt', alias?: string  } 
+  | { name: 'keyMoneyMultiple_gte', alias?: string  } 
+  | { name: 'unitRent', alias?: string  } 
+  | { name: 'unitRent_not', alias?: string  } 
+  | { name: 'unitRent_in', alias?: string  } 
+  | { name: 'unitRent_not_in', alias?: string  } 
+  | { name: 'unitRent_lt', alias?: string  } 
+  | { name: 'unitRent_lte', alias?: string  } 
+  | { name: 'unitRent_gt', alias?: string  } 
+  | { name: 'unitRent_gte', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'city_not', alias?: string  } 
+  | { name: 'city_in', alias?: string  } 
+  | { name: 'city_not_in', alias?: string  } 
+  | { name: 'city_lt', alias?: string  } 
+  | { name: 'city_lte', alias?: string  } 
+  | { name: 'city_gt', alias?: string  } 
+  | { name: 'city_gte', alias?: string  } 
+  | { name: 'city_contains', alias?: string  } 
+  | { name: 'city_not_contains', alias?: string  } 
+  | { name: 'city_starts_with', alias?: string  } 
+  | { name: 'city_not_starts_with', alias?: string  } 
+  | { name: 'city_ends_with', alias?: string  } 
+  | { name: 'city_not_ends_with', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'country_not', alias?: string  } 
+  | { name: 'country_in', alias?: string  } 
+  | { name: 'country_not_in', alias?: string  } 
+  | { name: 'country_lt', alias?: string  } 
+  | { name: 'country_lte', alias?: string  } 
+  | { name: 'country_gt', alias?: string  } 
+  | { name: 'country_gte', alias?: string  } 
+  | { name: 'country_contains', alias?: string  } 
+  | { name: 'country_not_contains', alias?: string  } 
+  | { name: 'country_starts_with', alias?: string  } 
+  | { name: 'country_not_starts_with', alias?: string  } 
+  | { name: 'country_ends_with', alias?: string  } 
+  | { name: 'country_not_ends_with', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'currency_not', alias?: string  } 
+  | { name: 'currency_in', alias?: string  } 
+  | { name: 'currency_not_in', alias?: string  } 
+  | { name: 'currency_lt', alias?: string  } 
+  | { name: 'currency_lte', alias?: string  } 
+  | { name: 'currency_gt', alias?: string  } 
+  | { name: 'currency_gte', alias?: string  } 
+  | { name: 'currency_contains', alias?: string  } 
+  | { name: 'currency_not_contains', alias?: string  } 
+  | { name: 'currency_starts_with', alias?: string  } 
+  | { name: 'currency_not_starts_with', alias?: string  } 
+  | { name: 'currency_ends_with', alias?: string  } 
+  | { name: 'currency_not_ends_with', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'yearBuilt_not', alias?: string  } 
+  | { name: 'yearBuilt_in', alias?: string  } 
+  | { name: 'yearBuilt_not_in', alias?: string  } 
+  | { name: 'yearBuilt_lt', alias?: string  } 
+  | { name: 'yearBuilt_lte', alias?: string  } 
+  | { name: 'yearBuilt_gt', alias?: string  } 
+  | { name: 'yearBuilt_gte', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorPlan_not', alias?: string  } 
+  | { name: 'floorPlan_in', alias?: string  } 
+  | { name: 'floorPlan_not_in', alias?: string  } 
+  | { name: 'floorPlan_lt', alias?: string  } 
+  | { name: 'floorPlan_lte', alias?: string  } 
+  | { name: 'floorPlan_gt', alias?: string  } 
+  | { name: 'floorPlan_gte', alias?: string  } 
+  | { name: 'floorPlan_contains', alias?: string  } 
+  | { name: 'floorPlan_not_contains', alias?: string  } 
+  | { name: 'floorPlan_starts_with', alias?: string  } 
+  | { name: 'floorPlan_not_starts_with', alias?: string  } 
+  | { name: 'floorPlan_ends_with', alias?: string  } 
+  | { name: 'floorPlan_not_ends_with', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'floorNumber_not', alias?: string  } 
+  | { name: 'floorNumber_in', alias?: string  } 
+  | { name: 'floorNumber_not_in', alias?: string  } 
+  | { name: 'floorNumber_lt', alias?: string  } 
+  | { name: 'floorNumber_lte', alias?: string  } 
+  | { name: 'floorNumber_gt', alias?: string  } 
+  | { name: 'floorNumber_gte', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'totalFloor_not', alias?: string  } 
+  | { name: 'totalFloor_in', alias?: string  } 
+  | { name: 'totalFloor_not_in', alias?: string  } 
+  | { name: 'totalFloor_lt', alias?: string  } 
+  | { name: 'totalFloor_lte', alias?: string  } 
+  | { name: 'totalFloor_gt', alias?: string  } 
+  | { name: 'totalFloor_gte', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'inDate_not', alias?: string  } 
+  | { name: 'inDate_in', alias?: string  } 
+  | { name: 'inDate_not_in', alias?: string  } 
+  | { name: 'inDate_lt', alias?: string  } 
+  | { name: 'inDate_lte', alias?: string  } 
+  | { name: 'inDate_gt', alias?: string  } 
+  | { name: 'inDate_gte', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'outDate_not', alias?: string  } 
+  | { name: 'outDate_in', alias?: string  } 
+  | { name: 'outDate_not_in', alias?: string  } 
+  | { name: 'outDate_lt', alias?: string  } 
+  | { name: 'outDate_lte', alias?: string  } 
+  | { name: 'outDate_gt', alias?: string  } 
+  | { name: 'outDate_gte', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'agentComment_not', alias?: string  } 
+  | { name: 'agentComment_in', alias?: string  } 
+  | { name: 'agentComment_not_in', alias?: string  } 
+  | { name: 'agentComment_lt', alias?: string  } 
+  | { name: 'agentComment_lte', alias?: string  } 
+  | { name: 'agentComment_gt', alias?: string  } 
+  | { name: 'agentComment_gte', alias?: string  } 
+  | { name: 'agentComment_contains', alias?: string  } 
+  | { name: 'agentComment_not_contains', alias?: string  } 
+  | { name: 'agentComment_starts_with', alias?: string  } 
+  | { name: 'agentComment_not_starts_with', alias?: string  } 
+  | { name: 'agentComment_ends_with', alias?: string  } 
+  | { name: 'agentComment_not_ends_with', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  | { name: 'moreDetail_not', alias?: string  } 
+  | { name: 'moreDetail_in', alias?: string  } 
+  | { name: 'moreDetail_not_in', alias?: string  } 
+  | { name: 'moreDetail_lt', alias?: string  } 
+  | { name: 'moreDetail_lte', alias?: string  } 
+  | { name: 'moreDetail_gt', alias?: string  } 
+  | { name: 'moreDetail_gte', alias?: string  } 
+  | { name: 'moreDetail_contains', alias?: string  } 
+  | { name: 'moreDetail_not_contains', alias?: string  } 
+  | { name: 'moreDetail_starts_with', alias?: string  } 
+  | { name: 'moreDetail_not_starts_with', alias?: string  } 
+  | { name: 'moreDetail_ends_with', alias?: string  } 
+  | { name: 'moreDetail_not_ends_with', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
 export interface PropertySaleAtomWhereUniqueInput {
   _id?: string | null
 }
 export type PropertySaleAtomWhereUniqueInputInputObject =
   | Extract<keyof PropertySaleAtomWhereUniqueInput, string>
-  | { name: '_id'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  
 export interface PropertySaleAtomWhereInput {
   _id?: string | null
   _id_not?: string | null
@@ -3411,241 +3278,241 @@ export interface PropertySaleAtomWhereInput {
 }
 export type PropertySaleAtomWhereInputInputObject =
   | Extract<keyof PropertySaleAtomWhereInput, string>
-  | { name: '_id'; alias?: string }
-  | { name: '_id_not'; alias?: string }
-  | { name: '_id_in'; alias?: string }
-  | { name: '_id_not_in'; alias?: string }
-  | { name: '_id_lt'; alias?: string }
-  | { name: '_id_lte'; alias?: string }
-  | { name: '_id_gt'; alias?: string }
-  | { name: '_id_gte'; alias?: string }
-  | { name: '_id_contains'; alias?: string }
-  | { name: '_id_not_contains'; alias?: string }
-  | { name: '_id_starts_with'; alias?: string }
-  | { name: '_id_not_starts_with'; alias?: string }
-  | { name: '_id_ends_with'; alias?: string }
-  | { name: '_id_not_ends_with'; alias?: string }
-  | { name: '_cls'; alias?: string }
-  | { name: '_cls_not'; alias?: string }
-  | { name: '_cls_in'; alias?: string }
-  | { name: '_cls_not_in'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'hashKey_not'; alias?: string }
-  | { name: 'hashKey_in'; alias?: string }
-  | { name: 'hashKey_not_in'; alias?: string }
-  | { name: 'hashKey_lt'; alias?: string }
-  | { name: 'hashKey_lte'; alias?: string }
-  | { name: 'hashKey_gt'; alias?: string }
-  | { name: 'hashKey_gte'; alias?: string }
-  | { name: 'hashKey_contains'; alias?: string }
-  | { name: 'hashKey_not_contains'; alias?: string }
-  | { name: 'hashKey_starts_with'; alias?: string }
-  | { name: 'hashKey_not_starts_with'; alias?: string }
-  | { name: 'hashKey_ends_with'; alias?: string }
-  | { name: 'hashKey_not_ends_with'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'canonicalStation_not'; alias?: string }
-  | { name: 'canonicalStation_in'; alias?: string }
-  | { name: 'canonicalStation_not_in'; alias?: string }
-  | { name: 'canonicalStation_lt'; alias?: string }
-  | { name: 'canonicalStation_lte'; alias?: string }
-  | { name: 'canonicalStation_gt'; alias?: string }
-  | { name: 'canonicalStation_gte'; alias?: string }
-  | { name: 'canonicalStation_contains'; alias?: string }
-  | { name: 'canonicalStation_not_contains'; alias?: string }
-  | { name: 'canonicalStation_starts_with'; alias?: string }
-  | { name: 'canonicalStation_not_starts_with'; alias?: string }
-  | { name: 'canonicalStation_ends_with'; alias?: string }
-  | { name: 'canonicalStation_not_ends_with'; alias?: string }
-  | { name: 'propertyType'; alias?: string }
-  | { name: 'propertyType_not'; alias?: string }
-  | { name: 'propertyType_in'; alias?: string }
-  | { name: 'propertyType_not_in'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'buildingName_not'; alias?: string }
-  | { name: 'buildingName_in'; alias?: string }
-  | { name: 'buildingName_not_in'; alias?: string }
-  | { name: 'buildingName_lt'; alias?: string }
-  | { name: 'buildingName_lte'; alias?: string }
-  | { name: 'buildingName_gt'; alias?: string }
-  | { name: 'buildingName_gte'; alias?: string }
-  | { name: 'buildingName_contains'; alias?: string }
-  | { name: 'buildingName_not_contains'; alias?: string }
-  | { name: 'buildingName_starts_with'; alias?: string }
-  | { name: 'buildingName_not_starts_with'; alias?: string }
-  | { name: 'buildingName_ends_with'; alias?: string }
-  | { name: 'buildingName_not_ends_with'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'address_not'; alias?: string }
-  | { name: 'address_in'; alias?: string }
-  | { name: 'address_not_in'; alias?: string }
-  | { name: 'address_lt'; alias?: string }
-  | { name: 'address_lte'; alias?: string }
-  | { name: 'address_gt'; alias?: string }
-  | { name: 'address_gte'; alias?: string }
-  | { name: 'address_contains'; alias?: string }
-  | { name: 'address_not_contains'; alias?: string }
-  | { name: 'address_starts_with'; alias?: string }
-  | { name: 'address_not_starts_with'; alias?: string }
-  | { name: 'address_ends_with'; alias?: string }
-  | { name: 'address_not_ends_with'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'area_not'; alias?: string }
-  | { name: 'area_in'; alias?: string }
-  | { name: 'area_not_in'; alias?: string }
-  | { name: 'area_lt'; alias?: string }
-  | { name: 'area_lte'; alias?: string }
-  | { name: 'area_gt'; alias?: string }
-  | { name: 'area_gte'; alias?: string }
-  | { name: 'price'; alias?: string }
-  | { name: 'price_not'; alias?: string }
-  | { name: 'price_in'; alias?: string }
-  | { name: 'price_not_in'; alias?: string }
-  | { name: 'price_lt'; alias?: string }
-  | { name: 'price_lte'; alias?: string }
-  | { name: 'price_gt'; alias?: string }
-  | { name: 'price_gte'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'city_not'; alias?: string }
-  | { name: 'city_in'; alias?: string }
-  | { name: 'city_not_in'; alias?: string }
-  | { name: 'city_lt'; alias?: string }
-  | { name: 'city_lte'; alias?: string }
-  | { name: 'city_gt'; alias?: string }
-  | { name: 'city_gte'; alias?: string }
-  | { name: 'city_contains'; alias?: string }
-  | { name: 'city_not_contains'; alias?: string }
-  | { name: 'city_starts_with'; alias?: string }
-  | { name: 'city_not_starts_with'; alias?: string }
-  | { name: 'city_ends_with'; alias?: string }
-  | { name: 'city_not_ends_with'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'country_not'; alias?: string }
-  | { name: 'country_in'; alias?: string }
-  | { name: 'country_not_in'; alias?: string }
-  | { name: 'country_lt'; alias?: string }
-  | { name: 'country_lte'; alias?: string }
-  | { name: 'country_gt'; alias?: string }
-  | { name: 'country_gte'; alias?: string }
-  | { name: 'country_contains'; alias?: string }
-  | { name: 'country_not_contains'; alias?: string }
-  | { name: 'country_starts_with'; alias?: string }
-  | { name: 'country_not_starts_with'; alias?: string }
-  | { name: 'country_ends_with'; alias?: string }
-  | { name: 'country_not_ends_with'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'currency_not'; alias?: string }
-  | { name: 'currency_in'; alias?: string }
-  | { name: 'currency_not_in'; alias?: string }
-  | { name: 'currency_lt'; alias?: string }
-  | { name: 'currency_lte'; alias?: string }
-  | { name: 'currency_gt'; alias?: string }
-  | { name: 'currency_gte'; alias?: string }
-  | { name: 'currency_contains'; alias?: string }
-  | { name: 'currency_not_contains'; alias?: string }
-  | { name: 'currency_starts_with'; alias?: string }
-  | { name: 'currency_not_starts_with'; alias?: string }
-  | { name: 'currency_ends_with'; alias?: string }
-  | { name: 'currency_not_ends_with'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'yearBuilt_not'; alias?: string }
-  | { name: 'yearBuilt_in'; alias?: string }
-  | { name: 'yearBuilt_not_in'; alias?: string }
-  | { name: 'yearBuilt_lt'; alias?: string }
-  | { name: 'yearBuilt_lte'; alias?: string }
-  | { name: 'yearBuilt_gt'; alias?: string }
-  | { name: 'yearBuilt_gte'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorPlan_not'; alias?: string }
-  | { name: 'floorPlan_in'; alias?: string }
-  | { name: 'floorPlan_not_in'; alias?: string }
-  | { name: 'floorPlan_lt'; alias?: string }
-  | { name: 'floorPlan_lte'; alias?: string }
-  | { name: 'floorPlan_gt'; alias?: string }
-  | { name: 'floorPlan_gte'; alias?: string }
-  | { name: 'floorPlan_contains'; alias?: string }
-  | { name: 'floorPlan_not_contains'; alias?: string }
-  | { name: 'floorPlan_starts_with'; alias?: string }
-  | { name: 'floorPlan_not_starts_with'; alias?: string }
-  | { name: 'floorPlan_ends_with'; alias?: string }
-  | { name: 'floorPlan_not_ends_with'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'floorNumber_not'; alias?: string }
-  | { name: 'floorNumber_in'; alias?: string }
-  | { name: 'floorNumber_not_in'; alias?: string }
-  | { name: 'floorNumber_lt'; alias?: string }
-  | { name: 'floorNumber_lte'; alias?: string }
-  | { name: 'floorNumber_gt'; alias?: string }
-  | { name: 'floorNumber_gte'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'totalFloor_not'; alias?: string }
-  | { name: 'totalFloor_in'; alias?: string }
-  | { name: 'totalFloor_not_in'; alias?: string }
-  | { name: 'totalFloor_lt'; alias?: string }
-  | { name: 'totalFloor_lte'; alias?: string }
-  | { name: 'totalFloor_gt'; alias?: string }
-  | { name: 'totalFloor_gte'; alias?: string }
-  | { name: 'landArea'; alias?: string }
-  | { name: 'landArea_not'; alias?: string }
-  | { name: 'landArea_in'; alias?: string }
-  | { name: 'landArea_not_in'; alias?: string }
-  | { name: 'landArea_lt'; alias?: string }
-  | { name: 'landArea_lte'; alias?: string }
-  | { name: 'landArea_gt'; alias?: string }
-  | { name: 'landArea_gte'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'inDate_not'; alias?: string }
-  | { name: 'inDate_in'; alias?: string }
-  | { name: 'inDate_not_in'; alias?: string }
-  | { name: 'inDate_lt'; alias?: string }
-  | { name: 'inDate_lte'; alias?: string }
-  | { name: 'inDate_gt'; alias?: string }
-  | { name: 'inDate_gte'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'outDate_not'; alias?: string }
-  | { name: 'outDate_in'; alias?: string }
-  | { name: 'outDate_not_in'; alias?: string }
-  | { name: 'outDate_lt'; alias?: string }
-  | { name: 'outDate_lte'; alias?: string }
-  | { name: 'outDate_gt'; alias?: string }
-  | { name: 'outDate_gte'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'agentComment_not'; alias?: string }
-  | { name: 'agentComment_in'; alias?: string }
-  | { name: 'agentComment_not_in'; alias?: string }
-  | { name: 'agentComment_lt'; alias?: string }
-  | { name: 'agentComment_lte'; alias?: string }
-  | { name: 'agentComment_gt'; alias?: string }
-  | { name: 'agentComment_gte'; alias?: string }
-  | { name: 'agentComment_contains'; alias?: string }
-  | { name: 'agentComment_not_contains'; alias?: string }
-  | { name: 'agentComment_starts_with'; alias?: string }
-  | { name: 'agentComment_not_starts_with'; alias?: string }
-  | { name: 'agentComment_ends_with'; alias?: string }
-  | { name: 'agentComment_not_ends_with'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-  | { name: 'moreDetail_not'; alias?: string }
-  | { name: 'moreDetail_in'; alias?: string }
-  | { name: 'moreDetail_not_in'; alias?: string }
-  | { name: 'moreDetail_lt'; alias?: string }
-  | { name: 'moreDetail_lte'; alias?: string }
-  | { name: 'moreDetail_gt'; alias?: string }
-  | { name: 'moreDetail_gte'; alias?: string }
-  | { name: 'moreDetail_contains'; alias?: string }
-  | { name: 'moreDetail_not_contains'; alias?: string }
-  | { name: 'moreDetail_starts_with'; alias?: string }
-  | { name: 'moreDetail_not_starts_with'; alias?: string }
-  | { name: 'moreDetail_ends_with'; alias?: string }
-  | { name: 'moreDetail_not_ends_with'; alias?: string }
-  | { name: 'AND'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  | { name: '_id_not', alias?: string  } 
+  | { name: '_id_in', alias?: string  } 
+  | { name: '_id_not_in', alias?: string  } 
+  | { name: '_id_lt', alias?: string  } 
+  | { name: '_id_lte', alias?: string  } 
+  | { name: '_id_gt', alias?: string  } 
+  | { name: '_id_gte', alias?: string  } 
+  | { name: '_id_contains', alias?: string  } 
+  | { name: '_id_not_contains', alias?: string  } 
+  | { name: '_id_starts_with', alias?: string  } 
+  | { name: '_id_not_starts_with', alias?: string  } 
+  | { name: '_id_ends_with', alias?: string  } 
+  | { name: '_id_not_ends_with', alias?: string  } 
+  | { name: '_cls', alias?: string  } 
+  | { name: '_cls_not', alias?: string  } 
+  | { name: '_cls_in', alias?: string  } 
+  | { name: '_cls_not_in', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'hashKey_not', alias?: string  } 
+  | { name: 'hashKey_in', alias?: string  } 
+  | { name: 'hashKey_not_in', alias?: string  } 
+  | { name: 'hashKey_lt', alias?: string  } 
+  | { name: 'hashKey_lte', alias?: string  } 
+  | { name: 'hashKey_gt', alias?: string  } 
+  | { name: 'hashKey_gte', alias?: string  } 
+  | { name: 'hashKey_contains', alias?: string  } 
+  | { name: 'hashKey_not_contains', alias?: string  } 
+  | { name: 'hashKey_starts_with', alias?: string  } 
+  | { name: 'hashKey_not_starts_with', alias?: string  } 
+  | { name: 'hashKey_ends_with', alias?: string  } 
+  | { name: 'hashKey_not_ends_with', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'canonicalStation_not', alias?: string  } 
+  | { name: 'canonicalStation_in', alias?: string  } 
+  | { name: 'canonicalStation_not_in', alias?: string  } 
+  | { name: 'canonicalStation_lt', alias?: string  } 
+  | { name: 'canonicalStation_lte', alias?: string  } 
+  | { name: 'canonicalStation_gt', alias?: string  } 
+  | { name: 'canonicalStation_gte', alias?: string  } 
+  | { name: 'canonicalStation_contains', alias?: string  } 
+  | { name: 'canonicalStation_not_contains', alias?: string  } 
+  | { name: 'canonicalStation_starts_with', alias?: string  } 
+  | { name: 'canonicalStation_not_starts_with', alias?: string  } 
+  | { name: 'canonicalStation_ends_with', alias?: string  } 
+  | { name: 'canonicalStation_not_ends_with', alias?: string  } 
+  | { name: 'propertyType', alias?: string  } 
+  | { name: 'propertyType_not', alias?: string  } 
+  | { name: 'propertyType_in', alias?: string  } 
+  | { name: 'propertyType_not_in', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'buildingName_not', alias?: string  } 
+  | { name: 'buildingName_in', alias?: string  } 
+  | { name: 'buildingName_not_in', alias?: string  } 
+  | { name: 'buildingName_lt', alias?: string  } 
+  | { name: 'buildingName_lte', alias?: string  } 
+  | { name: 'buildingName_gt', alias?: string  } 
+  | { name: 'buildingName_gte', alias?: string  } 
+  | { name: 'buildingName_contains', alias?: string  } 
+  | { name: 'buildingName_not_contains', alias?: string  } 
+  | { name: 'buildingName_starts_with', alias?: string  } 
+  | { name: 'buildingName_not_starts_with', alias?: string  } 
+  | { name: 'buildingName_ends_with', alias?: string  } 
+  | { name: 'buildingName_not_ends_with', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'address_not', alias?: string  } 
+  | { name: 'address_in', alias?: string  } 
+  | { name: 'address_not_in', alias?: string  } 
+  | { name: 'address_lt', alias?: string  } 
+  | { name: 'address_lte', alias?: string  } 
+  | { name: 'address_gt', alias?: string  } 
+  | { name: 'address_gte', alias?: string  } 
+  | { name: 'address_contains', alias?: string  } 
+  | { name: 'address_not_contains', alias?: string  } 
+  | { name: 'address_starts_with', alias?: string  } 
+  | { name: 'address_not_starts_with', alias?: string  } 
+  | { name: 'address_ends_with', alias?: string  } 
+  | { name: 'address_not_ends_with', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'area_not', alias?: string  } 
+  | { name: 'area_in', alias?: string  } 
+  | { name: 'area_not_in', alias?: string  } 
+  | { name: 'area_lt', alias?: string  } 
+  | { name: 'area_lte', alias?: string  } 
+  | { name: 'area_gt', alias?: string  } 
+  | { name: 'area_gte', alias?: string  } 
+  | { name: 'price', alias?: string  } 
+  | { name: 'price_not', alias?: string  } 
+  | { name: 'price_in', alias?: string  } 
+  | { name: 'price_not_in', alias?: string  } 
+  | { name: 'price_lt', alias?: string  } 
+  | { name: 'price_lte', alias?: string  } 
+  | { name: 'price_gt', alias?: string  } 
+  | { name: 'price_gte', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'city_not', alias?: string  } 
+  | { name: 'city_in', alias?: string  } 
+  | { name: 'city_not_in', alias?: string  } 
+  | { name: 'city_lt', alias?: string  } 
+  | { name: 'city_lte', alias?: string  } 
+  | { name: 'city_gt', alias?: string  } 
+  | { name: 'city_gte', alias?: string  } 
+  | { name: 'city_contains', alias?: string  } 
+  | { name: 'city_not_contains', alias?: string  } 
+  | { name: 'city_starts_with', alias?: string  } 
+  | { name: 'city_not_starts_with', alias?: string  } 
+  | { name: 'city_ends_with', alias?: string  } 
+  | { name: 'city_not_ends_with', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'country_not', alias?: string  } 
+  | { name: 'country_in', alias?: string  } 
+  | { name: 'country_not_in', alias?: string  } 
+  | { name: 'country_lt', alias?: string  } 
+  | { name: 'country_lte', alias?: string  } 
+  | { name: 'country_gt', alias?: string  } 
+  | { name: 'country_gte', alias?: string  } 
+  | { name: 'country_contains', alias?: string  } 
+  | { name: 'country_not_contains', alias?: string  } 
+  | { name: 'country_starts_with', alias?: string  } 
+  | { name: 'country_not_starts_with', alias?: string  } 
+  | { name: 'country_ends_with', alias?: string  } 
+  | { name: 'country_not_ends_with', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'currency_not', alias?: string  } 
+  | { name: 'currency_in', alias?: string  } 
+  | { name: 'currency_not_in', alias?: string  } 
+  | { name: 'currency_lt', alias?: string  } 
+  | { name: 'currency_lte', alias?: string  } 
+  | { name: 'currency_gt', alias?: string  } 
+  | { name: 'currency_gte', alias?: string  } 
+  | { name: 'currency_contains', alias?: string  } 
+  | { name: 'currency_not_contains', alias?: string  } 
+  | { name: 'currency_starts_with', alias?: string  } 
+  | { name: 'currency_not_starts_with', alias?: string  } 
+  | { name: 'currency_ends_with', alias?: string  } 
+  | { name: 'currency_not_ends_with', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'yearBuilt_not', alias?: string  } 
+  | { name: 'yearBuilt_in', alias?: string  } 
+  | { name: 'yearBuilt_not_in', alias?: string  } 
+  | { name: 'yearBuilt_lt', alias?: string  } 
+  | { name: 'yearBuilt_lte', alias?: string  } 
+  | { name: 'yearBuilt_gt', alias?: string  } 
+  | { name: 'yearBuilt_gte', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorPlan_not', alias?: string  } 
+  | { name: 'floorPlan_in', alias?: string  } 
+  | { name: 'floorPlan_not_in', alias?: string  } 
+  | { name: 'floorPlan_lt', alias?: string  } 
+  | { name: 'floorPlan_lte', alias?: string  } 
+  | { name: 'floorPlan_gt', alias?: string  } 
+  | { name: 'floorPlan_gte', alias?: string  } 
+  | { name: 'floorPlan_contains', alias?: string  } 
+  | { name: 'floorPlan_not_contains', alias?: string  } 
+  | { name: 'floorPlan_starts_with', alias?: string  } 
+  | { name: 'floorPlan_not_starts_with', alias?: string  } 
+  | { name: 'floorPlan_ends_with', alias?: string  } 
+  | { name: 'floorPlan_not_ends_with', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'floorNumber_not', alias?: string  } 
+  | { name: 'floorNumber_in', alias?: string  } 
+  | { name: 'floorNumber_not_in', alias?: string  } 
+  | { name: 'floorNumber_lt', alias?: string  } 
+  | { name: 'floorNumber_lte', alias?: string  } 
+  | { name: 'floorNumber_gt', alias?: string  } 
+  | { name: 'floorNumber_gte', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'totalFloor_not', alias?: string  } 
+  | { name: 'totalFloor_in', alias?: string  } 
+  | { name: 'totalFloor_not_in', alias?: string  } 
+  | { name: 'totalFloor_lt', alias?: string  } 
+  | { name: 'totalFloor_lte', alias?: string  } 
+  | { name: 'totalFloor_gt', alias?: string  } 
+  | { name: 'totalFloor_gte', alias?: string  } 
+  | { name: 'landArea', alias?: string  } 
+  | { name: 'landArea_not', alias?: string  } 
+  | { name: 'landArea_in', alias?: string  } 
+  | { name: 'landArea_not_in', alias?: string  } 
+  | { name: 'landArea_lt', alias?: string  } 
+  | { name: 'landArea_lte', alias?: string  } 
+  | { name: 'landArea_gt', alias?: string  } 
+  | { name: 'landArea_gte', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'inDate_not', alias?: string  } 
+  | { name: 'inDate_in', alias?: string  } 
+  | { name: 'inDate_not_in', alias?: string  } 
+  | { name: 'inDate_lt', alias?: string  } 
+  | { name: 'inDate_lte', alias?: string  } 
+  | { name: 'inDate_gt', alias?: string  } 
+  | { name: 'inDate_gte', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'outDate_not', alias?: string  } 
+  | { name: 'outDate_in', alias?: string  } 
+  | { name: 'outDate_not_in', alias?: string  } 
+  | { name: 'outDate_lt', alias?: string  } 
+  | { name: 'outDate_lte', alias?: string  } 
+  | { name: 'outDate_gt', alias?: string  } 
+  | { name: 'outDate_gte', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'agentComment_not', alias?: string  } 
+  | { name: 'agentComment_in', alias?: string  } 
+  | { name: 'agentComment_not_in', alias?: string  } 
+  | { name: 'agentComment_lt', alias?: string  } 
+  | { name: 'agentComment_lte', alias?: string  } 
+  | { name: 'agentComment_gt', alias?: string  } 
+  | { name: 'agentComment_gte', alias?: string  } 
+  | { name: 'agentComment_contains', alias?: string  } 
+  | { name: 'agentComment_not_contains', alias?: string  } 
+  | { name: 'agentComment_starts_with', alias?: string  } 
+  | { name: 'agentComment_not_starts_with', alias?: string  } 
+  | { name: 'agentComment_ends_with', alias?: string  } 
+  | { name: 'agentComment_not_ends_with', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  | { name: 'moreDetail_not', alias?: string  } 
+  | { name: 'moreDetail_in', alias?: string  } 
+  | { name: 'moreDetail_not_in', alias?: string  } 
+  | { name: 'moreDetail_lt', alias?: string  } 
+  | { name: 'moreDetail_lte', alias?: string  } 
+  | { name: 'moreDetail_gt', alias?: string  } 
+  | { name: 'moreDetail_gte', alias?: string  } 
+  | { name: 'moreDetail_contains', alias?: string  } 
+  | { name: 'moreDetail_not_contains', alias?: string  } 
+  | { name: 'moreDetail_starts_with', alias?: string  } 
+  | { name: 'moreDetail_not_starts_with', alias?: string  } 
+  | { name: 'moreDetail_ends_with', alias?: string  } 
+  | { name: 'moreDetail_not_ends_with', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
 export interface PropertyDBLoadHistoryWhereUniqueInput {
   _id?: string | null
 }
 export type PropertyDBLoadHistoryWhereUniqueInputInputObject =
   | Extract<keyof PropertyDBLoadHistoryWhereUniqueInput, string>
-  | { name: '_id'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  
 export interface PropertyDBLoadHistoryWhereInput {
   _id?: string | null
   _id_not?: string | null
@@ -3687,44 +3554,44 @@ export interface PropertyDBLoadHistoryWhereInput {
 }
 export type PropertyDBLoadHistoryWhereInputInputObject =
   | Extract<keyof PropertyDBLoadHistoryWhereInput, string>
-  | { name: '_id'; alias?: string }
-  | { name: '_id_not'; alias?: string }
-  | { name: '_id_in'; alias?: string }
-  | { name: '_id_not_in'; alias?: string }
-  | { name: '_id_lt'; alias?: string }
-  | { name: '_id_lte'; alias?: string }
-  | { name: '_id_gt'; alias?: string }
-  | { name: '_id_gte'; alias?: string }
-  | { name: '_id_contains'; alias?: string }
-  | { name: '_id_not_contains'; alias?: string }
-  | { name: '_id_starts_with'; alias?: string }
-  | { name: '_id_not_starts_with'; alias?: string }
-  | { name: '_id_ends_with'; alias?: string }
-  | { name: '_id_not_ends_with'; alias?: string }
-  | { name: 'filename'; alias?: string }
-  | { name: 'filename_not'; alias?: string }
-  | { name: 'filename_in'; alias?: string }
-  | { name: 'filename_not_in'; alias?: string }
-  | { name: 'filename_lt'; alias?: string }
-  | { name: 'filename_lte'; alias?: string }
-  | { name: 'filename_gt'; alias?: string }
-  | { name: 'filename_gte'; alias?: string }
-  | { name: 'filename_contains'; alias?: string }
-  | { name: 'filename_not_contains'; alias?: string }
-  | { name: 'filename_starts_with'; alias?: string }
-  | { name: 'filename_not_starts_with'; alias?: string }
-  | { name: 'filename_ends_with'; alias?: string }
-  | { name: 'filename_not_ends_with'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'inDate_not'; alias?: string }
-  | { name: 'inDate_in'; alias?: string }
-  | { name: 'inDate_not_in'; alias?: string }
-  | { name: 'inDate_lt'; alias?: string }
-  | { name: 'inDate_lte'; alias?: string }
-  | { name: 'inDate_gt'; alias?: string }
-  | { name: 'inDate_gte'; alias?: string }
-  | { name: 'AND'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  | { name: '_id_not', alias?: string  } 
+  | { name: '_id_in', alias?: string  } 
+  | { name: '_id_not_in', alias?: string  } 
+  | { name: '_id_lt', alias?: string  } 
+  | { name: '_id_lte', alias?: string  } 
+  | { name: '_id_gt', alias?: string  } 
+  | { name: '_id_gte', alias?: string  } 
+  | { name: '_id_contains', alias?: string  } 
+  | { name: '_id_not_contains', alias?: string  } 
+  | { name: '_id_starts_with', alias?: string  } 
+  | { name: '_id_not_starts_with', alias?: string  } 
+  | { name: '_id_ends_with', alias?: string  } 
+  | { name: '_id_not_ends_with', alias?: string  } 
+  | { name: 'filename', alias?: string  } 
+  | { name: 'filename_not', alias?: string  } 
+  | { name: 'filename_in', alias?: string  } 
+  | { name: 'filename_not_in', alias?: string  } 
+  | { name: 'filename_lt', alias?: string  } 
+  | { name: 'filename_lte', alias?: string  } 
+  | { name: 'filename_gt', alias?: string  } 
+  | { name: 'filename_gte', alias?: string  } 
+  | { name: 'filename_contains', alias?: string  } 
+  | { name: 'filename_not_contains', alias?: string  } 
+  | { name: 'filename_starts_with', alias?: string  } 
+  | { name: 'filename_not_starts_with', alias?: string  } 
+  | { name: 'filename_ends_with', alias?: string  } 
+  | { name: 'filename_not_ends_with', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'inDate_not', alias?: string  } 
+  | { name: 'inDate_in', alias?: string  } 
+  | { name: 'inDate_not_in', alias?: string  } 
+  | { name: 'inDate_lt', alias?: string  } 
+  | { name: 'inDate_lte', alias?: string  } 
+  | { name: 'inDate_gt', alias?: string  } 
+  | { name: 'inDate_gte', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
 export interface PropertyRentAtomCreateInput {
   _id?: string | null
   _cls?: prisma.PropertyClass | null
@@ -3755,33 +3622,33 @@ export interface PropertyRentAtomCreateInput {
 }
 export type PropertyRentAtomCreateInputInputObject =
   | Extract<keyof PropertyRentAtomCreateInput, string>
-  | { name: '_id'; alias?: string }
-  | { name: '_cls'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'basicRent'; alias?: string }
-  | { name: 'rentPlusAlpha'; alias?: string }
-  | { name: 'maintenanceFee'; alias?: string }
-  | { name: 'totalRent'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple'; alias?: string }
-  | { name: 'keyMoneyMultiple'; alias?: string }
-  | { name: 'unitRent'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'nearestStations'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  | { name: '_cls', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'basicRent', alias?: string  } 
+  | { name: 'rentPlusAlpha', alias?: string  } 
+  | { name: 'maintenanceFee', alias?: string  } 
+  | { name: 'totalRent', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple', alias?: string  } 
+  | { name: 'keyMoneyMultiple', alias?: string  } 
+  | { name: 'unitRent', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  
 export interface PropertyRentAtomUpdateInput {
   _cls?: prisma.PropertyClass | null
   hashKey?: string | null
@@ -3811,32 +3678,32 @@ export interface PropertyRentAtomUpdateInput {
 }
 export type PropertyRentAtomUpdateInputInputObject =
   | Extract<keyof PropertyRentAtomUpdateInput, string>
-  | { name: '_cls'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'basicRent'; alias?: string }
-  | { name: 'rentPlusAlpha'; alias?: string }
-  | { name: 'maintenanceFee'; alias?: string }
-  | { name: 'totalRent'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple'; alias?: string }
-  | { name: 'keyMoneyMultiple'; alias?: string }
-  | { name: 'unitRent'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'nearestStations'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-
+  | { name: '_cls', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'basicRent', alias?: string  } 
+  | { name: 'rentPlusAlpha', alias?: string  } 
+  | { name: 'maintenanceFee', alias?: string  } 
+  | { name: 'totalRent', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple', alias?: string  } 
+  | { name: 'keyMoneyMultiple', alias?: string  } 
+  | { name: 'unitRent', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  
 export interface PropertyRentAtomUpdateManyMutationInput {
   _cls?: prisma.PropertyClass | null
   hashKey?: string | null
@@ -3866,32 +3733,32 @@ export interface PropertyRentAtomUpdateManyMutationInput {
 }
 export type PropertyRentAtomUpdateManyMutationInputInputObject =
   | Extract<keyof PropertyRentAtomUpdateManyMutationInput, string>
-  | { name: '_cls'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'basicRent'; alias?: string }
-  | { name: 'rentPlusAlpha'; alias?: string }
-  | { name: 'maintenanceFee'; alias?: string }
-  | { name: 'totalRent'; alias?: string }
-  | { name: 'guaranteeMoneyMultiple'; alias?: string }
-  | { name: 'keyMoneyMultiple'; alias?: string }
-  | { name: 'unitRent'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'nearestStations'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-
+  | { name: '_cls', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'basicRent', alias?: string  } 
+  | { name: 'rentPlusAlpha', alias?: string  } 
+  | { name: 'maintenanceFee', alias?: string  } 
+  | { name: 'totalRent', alias?: string  } 
+  | { name: 'guaranteeMoneyMultiple', alias?: string  } 
+  | { name: 'keyMoneyMultiple', alias?: string  } 
+  | { name: 'unitRent', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  
 export interface PropertySaleAtomCreateInput {
   _id?: string | null
   _cls?: prisma.PropertyClass | null
@@ -3918,29 +3785,29 @@ export interface PropertySaleAtomCreateInput {
 }
 export type PropertySaleAtomCreateInputInputObject =
   | Extract<keyof PropertySaleAtomCreateInput, string>
-  | { name: '_id'; alias?: string }
-  | { name: '_cls'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'propertyType'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'price'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'landArea'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'nearestStations'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  | { name: '_cls', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'propertyType', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'price', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'landArea', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  
 export interface PropertySaleAtomUpdateInput {
   _cls?: prisma.PropertyClass | null
   hashKey?: string | null
@@ -3966,28 +3833,28 @@ export interface PropertySaleAtomUpdateInput {
 }
 export type PropertySaleAtomUpdateInputInputObject =
   | Extract<keyof PropertySaleAtomUpdateInput, string>
-  | { name: '_cls'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'propertyType'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'price'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'landArea'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'nearestStations'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-
+  | { name: '_cls', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'propertyType', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'price', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'landArea', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  
 export interface PropertySaleAtomUpdateManyMutationInput {
   _cls?: prisma.PropertyClass | null
   hashKey?: string | null
@@ -4013,28 +3880,28 @@ export interface PropertySaleAtomUpdateManyMutationInput {
 }
 export type PropertySaleAtomUpdateManyMutationInputInputObject =
   | Extract<keyof PropertySaleAtomUpdateManyMutationInput, string>
-  | { name: '_cls'; alias?: string }
-  | { name: 'hashKey'; alias?: string }
-  | { name: 'canonicalStation'; alias?: string }
-  | { name: 'propertyType'; alias?: string }
-  | { name: 'buildingName'; alias?: string }
-  | { name: 'address'; alias?: string }
-  | { name: 'area'; alias?: string }
-  | { name: 'price'; alias?: string }
-  | { name: 'city'; alias?: string }
-  | { name: 'country'; alias?: string }
-  | { name: 'currency'; alias?: string }
-  | { name: 'yearBuilt'; alias?: string }
-  | { name: 'floorPlan'; alias?: string }
-  | { name: 'floorNumber'; alias?: string }
-  | { name: 'totalFloor'; alias?: string }
-  | { name: 'landArea'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-  | { name: 'outDate'; alias?: string }
-  | { name: 'nearestStations'; alias?: string }
-  | { name: 'agentComment'; alias?: string }
-  | { name: 'moreDetail'; alias?: string }
-
+  | { name: '_cls', alias?: string  } 
+  | { name: 'hashKey', alias?: string  } 
+  | { name: 'canonicalStation', alias?: string  } 
+  | { name: 'propertyType', alias?: string  } 
+  | { name: 'buildingName', alias?: string  } 
+  | { name: 'address', alias?: string  } 
+  | { name: 'area', alias?: string  } 
+  | { name: 'price', alias?: string  } 
+  | { name: 'city', alias?: string  } 
+  | { name: 'country', alias?: string  } 
+  | { name: 'currency', alias?: string  } 
+  | { name: 'yearBuilt', alias?: string  } 
+  | { name: 'floorPlan', alias?: string  } 
+  | { name: 'floorNumber', alias?: string  } 
+  | { name: 'totalFloor', alias?: string  } 
+  | { name: 'landArea', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  | { name: 'outDate', alias?: string  } 
+  | { name: 'nearestStations', alias?: string  } 
+  | { name: 'agentComment', alias?: string  } 
+  | { name: 'moreDetail', alias?: string  } 
+  
 export interface PropertyDBLoadHistoryCreateInput {
   _id?: string | null
   filename?: string | null
@@ -4042,28 +3909,28 @@ export interface PropertyDBLoadHistoryCreateInput {
 }
 export type PropertyDBLoadHistoryCreateInputInputObject =
   | Extract<keyof PropertyDBLoadHistoryCreateInput, string>
-  | { name: '_id'; alias?: string }
-  | { name: 'filename'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-
+  | { name: '_id', alias?: string  } 
+  | { name: 'filename', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  
 export interface PropertyDBLoadHistoryUpdateInput {
   filename?: string | null
   inDate?: string | null
 }
 export type PropertyDBLoadHistoryUpdateInputInputObject =
   | Extract<keyof PropertyDBLoadHistoryUpdateInput, string>
-  | { name: 'filename'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-
+  | { name: 'filename', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  
 export interface PropertyDBLoadHistoryUpdateManyMutationInput {
   filename?: string | null
   inDate?: string | null
 }
 export type PropertyDBLoadHistoryUpdateManyMutationInputInputObject =
   | Extract<keyof PropertyDBLoadHistoryUpdateManyMutationInput, string>
-  | { name: 'filename'; alias?: string }
-  | { name: 'inDate'; alias?: string }
-
+  | { name: 'filename', alias?: string  } 
+  | { name: 'inDate', alias?: string  } 
+  
 export interface PropertyRentAtomSubscriptionWhereInput {
   mutation_in?: prisma.MutationType[]
   updatedFields_contains?: string | null
@@ -4074,13 +3941,13 @@ export interface PropertyRentAtomSubscriptionWhereInput {
 }
 export type PropertyRentAtomSubscriptionWhereInputInputObject =
   | Extract<keyof PropertyRentAtomSubscriptionWhereInput, string>
-  | { name: 'mutation_in'; alias?: string }
-  | { name: 'updatedFields_contains'; alias?: string }
-  | { name: 'updatedFields_contains_every'; alias?: string }
-  | { name: 'updatedFields_contains_some'; alias?: string }
-  | { name: 'node'; alias?: string }
-  | { name: 'AND'; alias?: string }
-
+  | { name: 'mutation_in', alias?: string  } 
+  | { name: 'updatedFields_contains', alias?: string  } 
+  | { name: 'updatedFields_contains_every', alias?: string  } 
+  | { name: 'updatedFields_contains_some', alias?: string  } 
+  | { name: 'node', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
 export interface PropertySaleAtomSubscriptionWhereInput {
   mutation_in?: prisma.MutationType[]
   updatedFields_contains?: string | null
@@ -4091,13 +3958,13 @@ export interface PropertySaleAtomSubscriptionWhereInput {
 }
 export type PropertySaleAtomSubscriptionWhereInputInputObject =
   | Extract<keyof PropertySaleAtomSubscriptionWhereInput, string>
-  | { name: 'mutation_in'; alias?: string }
-  | { name: 'updatedFields_contains'; alias?: string }
-  | { name: 'updatedFields_contains_every'; alias?: string }
-  | { name: 'updatedFields_contains_some'; alias?: string }
-  | { name: 'node'; alias?: string }
-  | { name: 'AND'; alias?: string }
-
+  | { name: 'mutation_in', alias?: string  } 
+  | { name: 'updatedFields_contains', alias?: string  } 
+  | { name: 'updatedFields_contains_every', alias?: string  } 
+  | { name: 'updatedFields_contains_some', alias?: string  } 
+  | { name: 'node', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
 export interface PropertyDBLoadHistorySubscriptionWhereInput {
   mutation_in?: prisma.MutationType[]
   updatedFields_contains?: string | null
@@ -4108,15 +3975,18 @@ export interface PropertyDBLoadHistorySubscriptionWhereInput {
 }
 export type PropertyDBLoadHistorySubscriptionWhereInputInputObject =
   | Extract<keyof PropertyDBLoadHistorySubscriptionWhereInput, string>
-  | { name: 'mutation_in'; alias?: string }
-  | { name: 'updatedFields_contains'; alias?: string }
-  | { name: 'updatedFields_contains_every'; alias?: string }
-  | { name: 'updatedFields_contains_some'; alias?: string }
-  | { name: 'node'; alias?: string }
-  | { name: 'AND'; alias?: string }
+  | { name: 'mutation_in', alias?: string  } 
+  | { name: 'updatedFields_contains', alias?: string  } 
+  | { name: 'updatedFields_contains_every', alias?: string  } 
+  | { name: 'updatedFields_contains_some', alias?: string  } 
+  | { name: 'node', alias?: string  } 
+  | { name: 'AND', alias?: string  } 
+  
 
-export type PropertyClassValues = 'PropertyRentAtom' | 'PropertySaleAtom'
-
+export type PropertyClassValues =
+  | 'PropertyRentAtom'
+  | 'PropertySaleAtom'
+  
 export type PropertyRentAtomOrderByInputValues =
   | '_id_ASC'
   | '_id_DESC'
@@ -4170,9 +4040,12 @@ export type PropertyRentAtomOrderByInputValues =
   | 'agentComment_DESC'
   | 'moreDetail_ASC'
   | 'moreDetail_DESC'
-
-export type PropertyTypeValues = 'HOUSE' | 'MANSION' | 'APT'
-
+  
+export type PropertyTypeValues =
+  | 'HOUSE'
+  | 'MANSION'
+  | 'APT'
+  
 export type PropertySaleAtomOrderByInputValues =
   | '_id_ASC'
   | '_id_DESC'
@@ -4218,7 +4091,7 @@ export type PropertySaleAtomOrderByInputValues =
   | 'agentComment_DESC'
   | 'moreDetail_ASC'
   | 'moreDetail_DESC'
-
+  
 export type PropertyDBLoadHistoryOrderByInputValues =
   | '_id_ASC'
   | '_id_DESC'
@@ -4226,5 +4099,10 @@ export type PropertyDBLoadHistoryOrderByInputValues =
   | 'filename_DESC'
   | 'inDate_ASC'
   | 'inDate_DESC'
-
-export type MutationTypeValues = 'CREATED' | 'UPDATED' | 'DELETED'
+  
+export type MutationTypeValues =
+  | 'CREATED'
+  | 'UPDATED'
+  | 'DELETED'
+  
+  
