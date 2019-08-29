@@ -19,11 +19,11 @@
     "prettier/prettier": "error",
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/test.ts"] }
-    ],
-    "@typescript-eslint/indent": ["error", 2]
+      { "devDependencies": ["**/test.ts", "tsnode.js"] }
+    ]
   },
   "env": {
+    "node": true,
     "jest/globals": true
   }
 }
