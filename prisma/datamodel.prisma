@@ -9,7 +9,7 @@ enum PropertyType {
   APT
 }
 
-type PropertyRentAtom @db(name: "property_rent_atom") {
+type PropertyRentAtom {
   _id: ID! @id
   _cls: PropertyClass! @default(value: PropertyRentAtom)
   hashKey: String! @db(name: "hash_key")
@@ -41,7 +41,7 @@ type PropertyRentAtom @db(name: "property_rent_atom") {
   moreDetail: String @db(name: "more_detail")
 }
 
-type PropertySaleAtom @db(name: "property_sale_atom") {
+type PropertySaleAtom {
   _id: ID! @id
   _cls: PropertyClass! @default(value: PropertySaleAtom)
   hashKey: String! @db(name: "hash_key")
@@ -68,7 +68,7 @@ type PropertySaleAtom @db(name: "property_sale_atom") {
   moreDetail: String @db(name: "more_detail")
 }
 
-type PropertyDBLoadHistory @db(name: "property_d_b_load_history") {
+type PropertyDBLoadHistory {
   _id: ID! @id
   filename: String
   inDate: DateTime @db(name: "in_date")
