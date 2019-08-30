@@ -20,9 +20,6 @@ services:
     ports:
     - "4000:4000"
     build: .
-    volumes:
-      - .:/opt/pcengine
-      - /opt/pcengine/node_modules
     env_file:
       - .env.${ENV-production}
     environment:
