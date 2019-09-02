@@ -2048,6 +2048,7 @@ export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   models,
   endpoint: `http://${process.env["PRISMA_ENDPOINT"]}:4466/${
     process.env["DB_NAME"]
-  }/${process.env["DB_STAGE"]}`
+  }/${process.env["DB_STAGE"]}`,
+  secret: `${process.env["PRISMA_SERVICE_API_SECRET"]}`
 });
 export const prisma = new Prisma();
