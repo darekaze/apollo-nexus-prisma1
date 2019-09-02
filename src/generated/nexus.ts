@@ -16,56 +16,6 @@ export interface NexusGenInputs {
     filename?: string | null; // String
     inDate?: any | null; // DateTime
   }
-  PropertyDBLoadHistoryUpdateInput: { // input type
-    filename?: string | null; // String
-    inDate?: any | null; // DateTime
-  }
-  PropertyDBLoadHistoryUpdateManyMutationInput: { // input type
-    filename?: string | null; // String
-    inDate?: any | null; // DateTime
-  }
-  PropertyDBLoadHistoryWhereInput: { // input type
-    _id?: string | null; // ID
-    _id_contains?: string | null; // ID
-    _id_ends_with?: string | null; // ID
-    _id_gt?: string | null; // ID
-    _id_gte?: string | null; // ID
-    _id_in?: string[] | null; // [ID!]
-    _id_lt?: string | null; // ID
-    _id_lte?: string | null; // ID
-    _id_not?: string | null; // ID
-    _id_not_contains?: string | null; // ID
-    _id_not_ends_with?: string | null; // ID
-    _id_not_in?: string[] | null; // [ID!]
-    _id_not_starts_with?: string | null; // ID
-    _id_starts_with?: string | null; // ID
-    AND?: NexusGenInputs['PropertyDBLoadHistoryWhereInput'][] | null; // [PropertyDBLoadHistoryWhereInput!]
-    filename?: string | null; // String
-    filename_contains?: string | null; // String
-    filename_ends_with?: string | null; // String
-    filename_gt?: string | null; // String
-    filename_gte?: string | null; // String
-    filename_in?: string[] | null; // [String!]
-    filename_lt?: string | null; // String
-    filename_lte?: string | null; // String
-    filename_not?: string | null; // String
-    filename_not_contains?: string | null; // String
-    filename_not_ends_with?: string | null; // String
-    filename_not_in?: string[] | null; // [String!]
-    filename_not_starts_with?: string | null; // String
-    filename_starts_with?: string | null; // String
-    inDate?: any | null; // DateTime
-    inDate_gt?: any | null; // DateTime
-    inDate_gte?: any | null; // DateTime
-    inDate_in?: any[] | null; // [DateTime!]
-    inDate_lt?: any | null; // DateTime
-    inDate_lte?: any | null; // DateTime
-    inDate_not?: any | null; // DateTime
-    inDate_not_in?: any[] | null; // [DateTime!]
-  }
-  PropertyDBLoadHistoryWhereUniqueInput: { // input type
-    _id?: string | null; // ID
-  }
   PropertyRentAtomCreateInput: { // input type
     _cls?: NexusGenEnums['PropertyClass'] | null; // PropertyClass
     _id?: string | null; // ID
@@ -823,16 +773,12 @@ export interface NexusGenInputs {
 
 export interface NexusGenEnums {
   PropertyClass: "PropertyRentAtom" | "PropertySaleAtom"
-  PropertyDBLoadHistoryOrderByInput: "_id_ASC" | "_id_DESC" | "filename_ASC" | "filename_DESC" | "inDate_ASC" | "inDate_DESC"
   PropertyRentAtomOrderByInput: "_cls_ASC" | "_cls_DESC" | "_id_ASC" | "_id_DESC" | "address_ASC" | "address_DESC" | "agentComment_ASC" | "agentComment_DESC" | "area_ASC" | "area_DESC" | "basicRent_ASC" | "basicRent_DESC" | "buildingName_ASC" | "buildingName_DESC" | "canonicalStation_ASC" | "canonicalStation_DESC" | "city_ASC" | "city_DESC" | "country_ASC" | "country_DESC" | "currency_ASC" | "currency_DESC" | "floorNumber_ASC" | "floorNumber_DESC" | "floorPlan_ASC" | "floorPlan_DESC" | "guaranteeMoneyMultiple_ASC" | "guaranteeMoneyMultiple_DESC" | "hashKey_ASC" | "hashKey_DESC" | "inDate_ASC" | "inDate_DESC" | "keyMoneyMultiple_ASC" | "keyMoneyMultiple_DESC" | "maintenanceFee_ASC" | "maintenanceFee_DESC" | "moreDetail_ASC" | "moreDetail_DESC" | "outDate_ASC" | "outDate_DESC" | "rentPlusAlpha_ASC" | "rentPlusAlpha_DESC" | "totalFloor_ASC" | "totalFloor_DESC" | "totalRent_ASC" | "totalRent_DESC" | "unitRent_ASC" | "unitRent_DESC" | "yearBuilt_ASC" | "yearBuilt_DESC"
   PropertySaleAtomOrderByInput: "_cls_ASC" | "_cls_DESC" | "_id_ASC" | "_id_DESC" | "address_ASC" | "address_DESC" | "agentComment_ASC" | "agentComment_DESC" | "area_ASC" | "area_DESC" | "buildingName_ASC" | "buildingName_DESC" | "canonicalStation_ASC" | "canonicalStation_DESC" | "city_ASC" | "city_DESC" | "country_ASC" | "country_DESC" | "currency_ASC" | "currency_DESC" | "floorNumber_ASC" | "floorNumber_DESC" | "floorPlan_ASC" | "floorPlan_DESC" | "hashKey_ASC" | "hashKey_DESC" | "inDate_ASC" | "inDate_DESC" | "landArea_ASC" | "landArea_DESC" | "moreDetail_ASC" | "moreDetail_DESC" | "outDate_ASC" | "outDate_DESC" | "price_ASC" | "price_DESC" | "propertyType_ASC" | "propertyType_DESC" | "totalFloor_ASC" | "totalFloor_DESC" | "yearBuilt_ASC" | "yearBuilt_DESC"
   PropertyType: "APT" | "HOUSE" | "MANSION"
 }
 
 export interface NexusGenRootTypes {
-  AggregatePropertyDBLoadHistory: { // root type
-    count: number; // Int!
-  }
   AggregatePropertyRentAtom: { // root type
     count: number; // Int!
   }
@@ -853,14 +799,6 @@ export interface NexusGenRootTypes {
     _id: string; // ID!
     filename?: string | null; // String
     inDate?: any | null; // DateTime
-  }
-  PropertyDBLoadHistoryConnection: { // root type
-    edges: NexusGenRootTypes['PropertyDBLoadHistoryEdge'][]; // [PropertyDBLoadHistoryEdge!]!
-    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
-  }
-  PropertyDBLoadHistoryEdge: { // root type
-    cursor: string; // String!
-    node: NexusGenRootTypes['PropertyDBLoadHistory']; // PropertyDBLoadHistory!
   }
   PropertyRentAtom: { // root type
     _cls: NexusGenEnums['PropertyClass']; // PropertyClass!
@@ -944,10 +882,6 @@ export interface NexusGenRootTypes {
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
   PropertyDBLoadHistoryCreateInput: NexusGenInputs['PropertyDBLoadHistoryCreateInput'];
-  PropertyDBLoadHistoryUpdateInput: NexusGenInputs['PropertyDBLoadHistoryUpdateInput'];
-  PropertyDBLoadHistoryUpdateManyMutationInput: NexusGenInputs['PropertyDBLoadHistoryUpdateManyMutationInput'];
-  PropertyDBLoadHistoryWhereInput: NexusGenInputs['PropertyDBLoadHistoryWhereInput'];
-  PropertyDBLoadHistoryWhereUniqueInput: NexusGenInputs['PropertyDBLoadHistoryWhereUniqueInput'];
   PropertyRentAtomCreateInput: NexusGenInputs['PropertyRentAtomCreateInput'];
   PropertyRentAtomUpdateInput: NexusGenInputs['PropertyRentAtomUpdateInput'];
   PropertyRentAtomUpdateManyMutationInput: NexusGenInputs['PropertyRentAtomUpdateManyMutationInput'];
@@ -967,16 +901,12 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   StationWalkingDurationUpdateManyWithWhereNestedInput: NexusGenInputs['StationWalkingDurationUpdateManyWithWhereNestedInput'];
   StationWalkingDurationWhereInput: NexusGenInputs['StationWalkingDurationWhereInput'];
   PropertyClass: NexusGenEnums['PropertyClass'];
-  PropertyDBLoadHistoryOrderByInput: NexusGenEnums['PropertyDBLoadHistoryOrderByInput'];
   PropertyRentAtomOrderByInput: NexusGenEnums['PropertyRentAtomOrderByInput'];
   PropertySaleAtomOrderByInput: NexusGenEnums['PropertySaleAtomOrderByInput'];
   PropertyType: NexusGenEnums['PropertyType'];
 }
 
 export interface NexusGenFieldTypes {
-  AggregatePropertyDBLoadHistory: { // field return type
-    count: number; // Int!
-  }
   AggregatePropertyRentAtom: { // field return type
     count: number; // Int!
   }
@@ -990,19 +920,10 @@ export interface NexusGenFieldTypes {
     createPropertyDBLoadHistory: NexusGenRootTypes['PropertyDBLoadHistory']; // PropertyDBLoadHistory!
     createPropertyRentAtom: NexusGenRootTypes['PropertyRentAtom']; // PropertyRentAtom!
     createPropertySaleAtom: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
-    deleteManyPropertyDBLoadHistories: NexusGenRootTypes['BatchPayload']; // BatchPayload!
-    deleteManyPropertyRentAtoms: NexusGenRootTypes['BatchPayload']; // BatchPayload!
-    deleteManyPropertySaleAtoms: NexusGenRootTypes['BatchPayload']; // BatchPayload!
-    deletePropertyDBLoadHistory: NexusGenRootTypes['PropertyDBLoadHistory'] | null; // PropertyDBLoadHistory
-    deletePropertyRentAtom: NexusGenRootTypes['PropertyRentAtom'] | null; // PropertyRentAtom
-    deletePropertySaleAtom: NexusGenRootTypes['PropertySaleAtom'] | null; // PropertySaleAtom
-    updateManyPropertyDBLoadHistories: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyPropertyRentAtoms: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyPropertySaleAtoms: NexusGenRootTypes['BatchPayload']; // BatchPayload!
-    updatePropertyDBLoadHistory: NexusGenRootTypes['PropertyDBLoadHistory'] | null; // PropertyDBLoadHistory
     updatePropertyRentAtom: NexusGenRootTypes['PropertyRentAtom'] | null; // PropertyRentAtom
     updatePropertySaleAtom: NexusGenRootTypes['PropertySaleAtom'] | null; // PropertySaleAtom
-    upsertPropertyDBLoadHistory: NexusGenRootTypes['PropertyDBLoadHistory']; // PropertyDBLoadHistory!
     upsertPropertyRentAtom: NexusGenRootTypes['PropertyRentAtom']; // PropertyRentAtom!
     upsertPropertySaleAtom: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
@@ -1016,15 +937,6 @@ export interface NexusGenFieldTypes {
     _id: string; // ID!
     filename: string | null; // String
     inDate: any | null; // DateTime
-  }
-  PropertyDBLoadHistoryConnection: { // field return type
-    aggregate: NexusGenRootTypes['AggregatePropertyDBLoadHistory']; // AggregatePropertyDBLoadHistory!
-    edges: NexusGenRootTypes['PropertyDBLoadHistoryEdge'][]; // [PropertyDBLoadHistoryEdge!]!
-    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
-  }
-  PropertyDBLoadHistoryEdge: { // field return type
-    cursor: string; // String!
-    node: NexusGenRootTypes['PropertyDBLoadHistory']; // PropertyDBLoadHistory!
   }
   PropertyRentAtom: { // field return type
     _cls: NexusGenEnums['PropertyClass']; // PropertyClass!
@@ -1097,9 +1009,6 @@ export interface NexusGenFieldTypes {
     node: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
   Query: { // field return type
-    propertyDBLoadHistories: NexusGenRootTypes['PropertyDBLoadHistory'][]; // [PropertyDBLoadHistory!]!
-    propertyDBLoadHistoriesConnection: NexusGenRootTypes['PropertyDBLoadHistoryConnection']; // PropertyDBLoadHistoryConnection!
-    propertyDBLoadHistory: NexusGenRootTypes['PropertyDBLoadHistory'] | null; // PropertyDBLoadHistory
     propertyRentAtom: NexusGenRootTypes['PropertyRentAtom'] | null; // PropertyRentAtom
     propertyRentAtoms: NexusGenRootTypes['PropertyRentAtom'][]; // [PropertyRentAtom!]!
     propertyRentAtomsConnection: NexusGenRootTypes['PropertyRentAtomConnection']; // PropertyRentAtomConnection!
@@ -1124,28 +1033,6 @@ export interface NexusGenArgTypes {
     createPropertySaleAtom: { // args
       data: NexusGenInputs['PropertySaleAtomCreateInput']; // PropertySaleAtomCreateInput!
     }
-    deleteManyPropertyDBLoadHistories: { // args
-      where?: NexusGenInputs['PropertyDBLoadHistoryWhereInput'] | null; // PropertyDBLoadHistoryWhereInput
-    }
-    deleteManyPropertyRentAtoms: { // args
-      where?: NexusGenInputs['PropertyRentAtomWhereInput'] | null; // PropertyRentAtomWhereInput
-    }
-    deleteManyPropertySaleAtoms: { // args
-      where?: NexusGenInputs['PropertySaleAtomWhereInput'] | null; // PropertySaleAtomWhereInput
-    }
-    deletePropertyDBLoadHistory: { // args
-      where: NexusGenInputs['PropertyDBLoadHistoryWhereUniqueInput']; // PropertyDBLoadHistoryWhereUniqueInput!
-    }
-    deletePropertyRentAtom: { // args
-      where: NexusGenInputs['PropertyRentAtomWhereUniqueInput']; // PropertyRentAtomWhereUniqueInput!
-    }
-    deletePropertySaleAtom: { // args
-      where: NexusGenInputs['PropertySaleAtomWhereUniqueInput']; // PropertySaleAtomWhereUniqueInput!
-    }
-    updateManyPropertyDBLoadHistories: { // args
-      data: NexusGenInputs['PropertyDBLoadHistoryUpdateManyMutationInput']; // PropertyDBLoadHistoryUpdateManyMutationInput!
-      where?: NexusGenInputs['PropertyDBLoadHistoryWhereInput'] | null; // PropertyDBLoadHistoryWhereInput
-    }
     updateManyPropertyRentAtoms: { // args
       data: NexusGenInputs['PropertyRentAtomUpdateManyMutationInput']; // PropertyRentAtomUpdateManyMutationInput!
       where?: NexusGenInputs['PropertyRentAtomWhereInput'] | null; // PropertyRentAtomWhereInput
@@ -1154,10 +1041,6 @@ export interface NexusGenArgTypes {
       data: NexusGenInputs['PropertySaleAtomUpdateManyMutationInput']; // PropertySaleAtomUpdateManyMutationInput!
       where?: NexusGenInputs['PropertySaleAtomWhereInput'] | null; // PropertySaleAtomWhereInput
     }
-    updatePropertyDBLoadHistory: { // args
-      data: NexusGenInputs['PropertyDBLoadHistoryUpdateInput']; // PropertyDBLoadHistoryUpdateInput!
-      where: NexusGenInputs['PropertyDBLoadHistoryWhereUniqueInput']; // PropertyDBLoadHistoryWhereUniqueInput!
-    }
     updatePropertyRentAtom: { // args
       data: NexusGenInputs['PropertyRentAtomUpdateInput']; // PropertyRentAtomUpdateInput!
       where: NexusGenInputs['PropertyRentAtomWhereUniqueInput']; // PropertyRentAtomWhereUniqueInput!
@@ -1165,11 +1048,6 @@ export interface NexusGenArgTypes {
     updatePropertySaleAtom: { // args
       data: NexusGenInputs['PropertySaleAtomUpdateInput']; // PropertySaleAtomUpdateInput!
       where: NexusGenInputs['PropertySaleAtomWhereUniqueInput']; // PropertySaleAtomWhereUniqueInput!
-    }
-    upsertPropertyDBLoadHistory: { // args
-      create: NexusGenInputs['PropertyDBLoadHistoryCreateInput']; // PropertyDBLoadHistoryCreateInput!
-      update: NexusGenInputs['PropertyDBLoadHistoryUpdateInput']; // PropertyDBLoadHistoryUpdateInput!
-      where: NexusGenInputs['PropertyDBLoadHistoryWhereUniqueInput']; // PropertyDBLoadHistoryWhereUniqueInput!
     }
     upsertPropertyRentAtom: { // args
       create: NexusGenInputs['PropertyRentAtomCreateInput']; // PropertyRentAtomCreateInput!
@@ -1183,27 +1061,6 @@ export interface NexusGenArgTypes {
     }
   }
   Query: {
-    propertyDBLoadHistories: { // args
-      after?: string | null; // String
-      before?: string | null; // String
-      first?: number | null; // Int
-      last?: number | null; // Int
-      orderBy?: NexusGenEnums['PropertyDBLoadHistoryOrderByInput'] | null; // PropertyDBLoadHistoryOrderByInput
-      skip?: number | null; // Int
-      where?: NexusGenInputs['PropertyDBLoadHistoryWhereInput'] | null; // PropertyDBLoadHistoryWhereInput
-    }
-    propertyDBLoadHistoriesConnection: { // args
-      after?: string | null; // String
-      before?: string | null; // String
-      first?: number | null; // Int
-      last?: number | null; // Int
-      orderBy?: NexusGenEnums['PropertyDBLoadHistoryOrderByInput'] | null; // PropertyDBLoadHistoryOrderByInput
-      skip?: number | null; // Int
-      where?: NexusGenInputs['PropertyDBLoadHistoryWhereInput'] | null; // PropertyDBLoadHistoryWhereInput
-    }
-    propertyDBLoadHistory: { // args
-      where: NexusGenInputs['PropertyDBLoadHistoryWhereUniqueInput']; // PropertyDBLoadHistoryWhereUniqueInput!
-    }
     propertyRentAtom: { // args
       where: NexusGenInputs['PropertyRentAtomWhereUniqueInput']; // PropertyRentAtomWhereUniqueInput!
     }
@@ -1254,11 +1111,11 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "AggregatePropertyDBLoadHistory" | "AggregatePropertyRentAtom" | "AggregatePropertySaleAtom" | "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyDBLoadHistoryConnection" | "PropertyDBLoadHistoryEdge" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "StationWalkingDuration";
+export type NexusGenObjectNames = "AggregatePropertyRentAtom" | "AggregatePropertySaleAtom" | "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "StationWalkingDuration";
 
-export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyDBLoadHistoryUpdateInput" | "PropertyDBLoadHistoryUpdateManyMutationInput" | "PropertyDBLoadHistoryWhereInput" | "PropertyDBLoadHistoryWhereUniqueInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput" | "StationWalkingDurationCreateInput" | "StationWalkingDurationCreateManyInput" | "StationWalkingDurationRestrictedWhereInput" | "StationWalkingDurationScalarWhereInput" | "StationWalkingDurationUpdateManyDataInput" | "StationWalkingDurationUpdateManyInput" | "StationWalkingDurationUpdateManyWithWhereNestedInput" | "StationWalkingDurationWhereInput";
+export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput" | "StationWalkingDurationCreateInput" | "StationWalkingDurationCreateManyInput" | "StationWalkingDurationRestrictedWhereInput" | "StationWalkingDurationScalarWhereInput" | "StationWalkingDurationUpdateManyDataInput" | "StationWalkingDurationUpdateManyInput" | "StationWalkingDurationUpdateManyWithWhereNestedInput" | "StationWalkingDurationWhereInput";
 
-export type NexusGenEnumNames = "PropertyClass" | "PropertyDBLoadHistoryOrderByInput" | "PropertyRentAtomOrderByInput" | "PropertySaleAtomOrderByInput" | "PropertyType";
+export type NexusGenEnumNames = "PropertyClass" | "PropertyRentAtomOrderByInput" | "PropertySaleAtomOrderByInput" | "PropertyType";
 
 export type NexusGenInterfaceNames = never;
 

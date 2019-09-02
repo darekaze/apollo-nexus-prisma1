@@ -2,10 +2,6 @@
 ### Do not make changes to this file directly
 
 
-type AggregatePropertyDBLoadHistory {
-  count: Int!
-}
-
 type AggregatePropertyRentAtom {
   count: Int!
 }
@@ -26,19 +22,10 @@ type Mutation {
   createPropertyDBLoadHistory(data: PropertyDBLoadHistoryCreateInput!): PropertyDBLoadHistory!
   createPropertyRentAtom(data: PropertyRentAtomCreateInput!): PropertyRentAtom!
   createPropertySaleAtom(data: PropertySaleAtomCreateInput!): PropertySaleAtom!
-  deleteManyPropertyDBLoadHistories(where: PropertyDBLoadHistoryWhereInput): BatchPayload!
-  deleteManyPropertyRentAtoms(where: PropertyRentAtomWhereInput): BatchPayload!
-  deleteManyPropertySaleAtoms(where: PropertySaleAtomWhereInput): BatchPayload!
-  deletePropertyDBLoadHistory(where: PropertyDBLoadHistoryWhereUniqueInput!): PropertyDBLoadHistory
-  deletePropertyRentAtom(where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom
-  deletePropertySaleAtom(where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom
-  updateManyPropertyDBLoadHistories(data: PropertyDBLoadHistoryUpdateManyMutationInput!, where: PropertyDBLoadHistoryWhereInput): BatchPayload!
   updateManyPropertyRentAtoms(data: PropertyRentAtomUpdateManyMutationInput!, where: PropertyRentAtomWhereInput): BatchPayload!
   updateManyPropertySaleAtoms(data: PropertySaleAtomUpdateManyMutationInput!, where: PropertySaleAtomWhereInput): BatchPayload!
-  updatePropertyDBLoadHistory(data: PropertyDBLoadHistoryUpdateInput!, where: PropertyDBLoadHistoryWhereUniqueInput!): PropertyDBLoadHistory
   updatePropertyRentAtom(data: PropertyRentAtomUpdateInput!, where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom
   updatePropertySaleAtom(data: PropertySaleAtomUpdateInput!, where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom
-  upsertPropertyDBLoadHistory(create: PropertyDBLoadHistoryCreateInput!, update: PropertyDBLoadHistoryUpdateInput!, where: PropertyDBLoadHistoryWhereUniqueInput!): PropertyDBLoadHistory!
   upsertPropertyRentAtom(create: PropertyRentAtomCreateInput!, update: PropertyRentAtomUpdateInput!, where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom!
   upsertPropertySaleAtom(create: PropertySaleAtomCreateInput!, update: PropertySaleAtomUpdateInput!, where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom!
 }
@@ -61,84 +48,10 @@ type PropertyDBLoadHistory {
   inDate: DateTime
 }
 
-type PropertyDBLoadHistoryConnection {
-  aggregate: AggregatePropertyDBLoadHistory!
-  edges: [PropertyDBLoadHistoryEdge!]!
-  pageInfo: PageInfo!
-}
-
 input PropertyDBLoadHistoryCreateInput {
   _id: ID
   filename: String
   inDate: DateTime
-}
-
-type PropertyDBLoadHistoryEdge {
-  cursor: String!
-  node: PropertyDBLoadHistory!
-}
-
-enum PropertyDBLoadHistoryOrderByInput {
-  _id_ASC
-  _id_DESC
-  filename_ASC
-  filename_DESC
-  inDate_ASC
-  inDate_DESC
-}
-
-input PropertyDBLoadHistoryUpdateInput {
-  filename: String
-  inDate: DateTime
-}
-
-input PropertyDBLoadHistoryUpdateManyMutationInput {
-  filename: String
-  inDate: DateTime
-}
-
-input PropertyDBLoadHistoryWhereInput {
-  _id: ID
-  _id_contains: ID
-  _id_ends_with: ID
-  _id_gt: ID
-  _id_gte: ID
-  _id_in: [ID!]
-  _id_lt: ID
-  _id_lte: ID
-  _id_not: ID
-  _id_not_contains: ID
-  _id_not_ends_with: ID
-  _id_not_in: [ID!]
-  _id_not_starts_with: ID
-  _id_starts_with: ID
-  AND: [PropertyDBLoadHistoryWhereInput!]
-  filename: String
-  filename_contains: String
-  filename_ends_with: String
-  filename_gt: String
-  filename_gte: String
-  filename_in: [String!]
-  filename_lt: String
-  filename_lte: String
-  filename_not: String
-  filename_not_contains: String
-  filename_not_ends_with: String
-  filename_not_in: [String!]
-  filename_not_starts_with: String
-  filename_starts_with: String
-  inDate: DateTime
-  inDate_gt: DateTime
-  inDate_gte: DateTime
-  inDate_in: [DateTime!]
-  inDate_lt: DateTime
-  inDate_lte: DateTime
-  inDate_not: DateTime
-  inDate_not_in: [DateTime!]
-}
-
-input PropertyDBLoadHistoryWhereUniqueInput {
-  _id: ID
 }
 
 type PropertyRentAtom {
@@ -988,9 +901,6 @@ enum PropertyType {
 }
 
 type Query {
-  propertyDBLoadHistories(after: String, before: String, first: Int, last: Int, orderBy: PropertyDBLoadHistoryOrderByInput, skip: Int, where: PropertyDBLoadHistoryWhereInput): [PropertyDBLoadHistory!]!
-  propertyDBLoadHistoriesConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertyDBLoadHistoryOrderByInput, skip: Int, where: PropertyDBLoadHistoryWhereInput): PropertyDBLoadHistoryConnection!
-  propertyDBLoadHistory(where: PropertyDBLoadHistoryWhereUniqueInput!): PropertyDBLoadHistory
   propertyRentAtom(where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom
   propertyRentAtoms(after: String, before: String, first: Int, last: Int, orderBy: PropertyRentAtomOrderByInput, skip: Int, where: PropertyRentAtomWhereInput): [PropertyRentAtom!]!
   propertyRentAtomsConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertyRentAtomOrderByInput, skip: Int, where: PropertyRentAtomWhereInput): PropertyRentAtomConnection!

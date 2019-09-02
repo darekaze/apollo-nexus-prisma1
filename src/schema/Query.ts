@@ -1,0 +1,16 @@
+import { prismaObjectType } from 'nexus-prisma'
+
+export default prismaObjectType({
+  name: 'Query',
+  definition(t) {
+    t.prismaFields([
+      'propertyRentAtom',
+      'propertyRentAtoms',
+      'propertyRentAtomsConnection',
+      'propertySaleAtom',
+      'propertySaleAtoms',
+      'propertySaleAtomsConnection',
+    ])
+    //* Define custom query below..
+  },
+})
