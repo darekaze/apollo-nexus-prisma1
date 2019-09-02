@@ -24,5 +24,6 @@ services:
       - .env.${ENV-production}
     environment:
       - NODE_ENV=${ENV-production}
+      - PRISMA_ENDPOINT=prisma
     depends_on:
       - prisma

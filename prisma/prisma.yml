@@ -2,7 +2,7 @@
 datamodel: datamodel.prisma
 
 # Specifies the HTTP endpoint of your Prisma API.
-endpoint: http://${env:PRISMA_API}:4466/${env:DB_NAME}/${env:DB_STAGE}
+endpoint: http://${env:PRISMA_ENDPOINT}:4466/${env:DB_NAME}/${env:DB_STAGE}
 
 #? PRODUCTION: For `Authorization` header token to make request to prisma endpoints.
 # secret: ${env:PRISMA_MANAGEMENT_API_SECRET}
