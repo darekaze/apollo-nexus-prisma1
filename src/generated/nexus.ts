@@ -387,7 +387,7 @@ export interface NexusGenInputs {
     moreDetail?: string | null; // String
     nearbyStations?: NexusGenInputs['StationWalkingDurationCreateManyInput'] | null; // StationWalkingDurationCreateManyInput
     outDate?: any | null; // DateTime
-    price?: number | null; // Int
+    price?: number | null; // Float
     propertyType: NexusGenEnums['PropertyType']; // PropertyType!
     totalFloor?: number | null; // Int
     yearBuilt?: number | null; // Int
@@ -410,7 +410,7 @@ export interface NexusGenInputs {
     moreDetail?: string | null; // String
     nearbyStations?: NexusGenInputs['StationWalkingDurationUpdateManyInput'] | null; // StationWalkingDurationUpdateManyInput
     outDate?: any | null; // DateTime
-    price?: number | null; // Int
+    price?: number | null; // Float
     propertyType?: NexusGenEnums['PropertyType'] | null; // PropertyType
     totalFloor?: number | null; // Int
     yearBuilt?: number | null; // Int
@@ -432,7 +432,7 @@ export interface NexusGenInputs {
     landArea?: number | null; // Float
     moreDetail?: string | null; // String
     outDate?: any | null; // DateTime
-    price?: number | null; // Int
+    price?: number | null; // Float
     propertyType?: NexusGenEnums['PropertyType'] | null; // PropertyType
     totalFloor?: number | null; // Int
     yearBuilt?: number | null; // Int
@@ -640,14 +640,14 @@ export interface NexusGenInputs {
     outDate_lte?: any | null; // DateTime
     outDate_not?: any | null; // DateTime
     outDate_not_in?: any[] | null; // [DateTime!]
-    price?: number | null; // Int
-    price_gt?: number | null; // Int
-    price_gte?: number | null; // Int
-    price_in?: number[] | null; // [Int!]
-    price_lt?: number | null; // Int
-    price_lte?: number | null; // Int
-    price_not?: number | null; // Int
-    price_not_in?: number[] | null; // [Int!]
+    price?: number | null; // Float
+    price_gt?: number | null; // Float
+    price_gte?: number | null; // Float
+    price_in?: number[] | null; // [Float!]
+    price_lt?: number | null; // Float
+    price_lte?: number | null; // Float
+    price_not?: number | null; // Float
+    price_not_in?: number[] | null; // [Float!]
     propertyType?: NexusGenEnums['PropertyType'] | null; // PropertyType
     propertyType_in?: NexusGenEnums['PropertyType'][] | null; // [PropertyType!]
     propertyType_not?: NexusGenEnums['PropertyType'] | null; // PropertyType
@@ -779,12 +779,6 @@ export interface NexusGenEnums {
 }
 
 export interface NexusGenRootTypes {
-  AggregatePropertyRentAtom: { // root type
-    count: number; // Int!
-  }
-  AggregatePropertySaleAtom: { // root type
-    count: number; // Int!
-  }
   BatchPayload: { // root type
     count: any; // Long!
   }
@@ -853,7 +847,7 @@ export interface NexusGenRootTypes {
     landArea?: number | null; // Float
     moreDetail?: string | null; // String
     outDate?: any | null; // DateTime
-    price?: number | null; // Int
+    price?: number | null; // Float
     propertyType: NexusGenEnums['PropertyType']; // PropertyType!
     totalFloor?: number | null; // Int
     yearBuilt?: number | null; // Int
@@ -907,12 +901,6 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
 }
 
 export interface NexusGenFieldTypes {
-  AggregatePropertyRentAtom: { // field return type
-    count: number; // Int!
-  }
-  AggregatePropertySaleAtom: { // field return type
-    count: number; // Int!
-  }
   BatchPayload: { // field return type
     count: any; // Long!
   }
@@ -967,7 +955,6 @@ export interface NexusGenFieldTypes {
     yearBuilt: number | null; // Int
   }
   PropertyRentAtomConnection: { // field return type
-    aggregate: NexusGenRootTypes['AggregatePropertyRentAtom']; // AggregatePropertyRentAtom!
     edges: NexusGenRootTypes['PropertyRentAtomEdge'][]; // [PropertyRentAtomEdge!]!
     pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
   }
@@ -994,13 +981,12 @@ export interface NexusGenFieldTypes {
     moreDetail: string | null; // String
     nearbyStations: NexusGenRootTypes['StationWalkingDuration'][] | null; // [StationWalkingDuration!]
     outDate: any | null; // DateTime
-    price: number | null; // Int
+    price: number | null; // Float
     propertyType: NexusGenEnums['PropertyType']; // PropertyType!
     totalFloor: number | null; // Int
     yearBuilt: number | null; // Int
   }
   PropertySaleAtomConnection: { // field return type
-    aggregate: NexusGenRootTypes['AggregatePropertySaleAtom']; // AggregatePropertySaleAtom!
     edges: NexusGenRootTypes['PropertySaleAtomEdge'][]; // [PropertySaleAtomEdge!]!
     pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
   }
@@ -1009,12 +995,14 @@ export interface NexusGenFieldTypes {
     node: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
   Query: { // field return type
+    dbname: string; // String!
     propertyRentAtom: NexusGenRootTypes['PropertyRentAtom'] | null; // PropertyRentAtom
     propertyRentAtoms: NexusGenRootTypes['PropertyRentAtom'][]; // [PropertyRentAtom!]!
     propertyRentAtomsConnection: NexusGenRootTypes['PropertyRentAtomConnection']; // PropertyRentAtomConnection!
     propertySaleAtom: NexusGenRootTypes['PropertySaleAtom'] | null; // PropertySaleAtom
     propertySaleAtoms: NexusGenRootTypes['PropertySaleAtom'][]; // [PropertySaleAtom!]!
     propertySaleAtomsConnection: NexusGenRootTypes['PropertySaleAtomConnection']; // PropertySaleAtomConnection!
+    testing: string; // String!
   }
   StationWalkingDuration: { // field return type
     duration: number; // Int!
@@ -1111,7 +1099,7 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "AggregatePropertyRentAtom" | "AggregatePropertySaleAtom" | "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "StationWalkingDuration";
+export type NexusGenObjectNames = "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "StationWalkingDuration";
 
 export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput" | "StationWalkingDurationCreateInput" | "StationWalkingDurationCreateManyInput" | "StationWalkingDurationRestrictedWhereInput" | "StationWalkingDurationScalarWhereInput" | "StationWalkingDurationUpdateManyDataInput" | "StationWalkingDurationUpdateManyInput" | "StationWalkingDurationUpdateManyWithWhereNestedInput" | "StationWalkingDurationWhereInput";
 

@@ -14,5 +14,6 @@ export default prismaObjectType({
       'upsertPropertySaleAtom',
       'createPropertyDBLoadHistory',
     ])
+    //* Define custom mutation below, or use extendType somewhere else
   },
 })

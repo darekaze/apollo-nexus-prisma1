@@ -11,6 +11,6 @@ export default prismaObjectType({
       'propertySaleAtoms',
       'propertySaleAtomsConnection',
     ])
-    //* Define custom query below..
+    //* Define custom query below, or use extendType somewhere else
   },
 })

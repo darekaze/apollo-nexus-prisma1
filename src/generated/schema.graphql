@@ -2,14 +2,6 @@
 ### Do not make changes to this file directly
 
 
-type AggregatePropertyRentAtom {
-  count: Int!
-}
-
-type AggregatePropertySaleAtom {
-  count: Int!
-}
-
 type BatchPayload {
   count: Long!
 }
@@ -84,7 +76,6 @@ type PropertyRentAtom {
 }
 
 type PropertyRentAtomConnection {
-  aggregate: AggregatePropertyRentAtom!
   edges: [PropertyRentAtomEdge!]!
   pageInfo: PageInfo!
 }
@@ -523,14 +514,13 @@ type PropertySaleAtom {
   moreDetail: String
   nearbyStations: [StationWalkingDuration!]
   outDate: DateTime
-  price: Int
+  price: Float
   propertyType: PropertyType!
   totalFloor: Int
   yearBuilt: Int
 }
 
 type PropertySaleAtomConnection {
-  aggregate: AggregatePropertySaleAtom!
   edges: [PropertySaleAtomEdge!]!
   pageInfo: PageInfo!
 }
@@ -554,7 +544,7 @@ input PropertySaleAtomCreateInput {
   moreDetail: String
   nearbyStations: StationWalkingDurationCreateManyInput
   outDate: DateTime
-  price: Int
+  price: Float
   propertyType: PropertyType!
   totalFloor: Int
   yearBuilt: Int
@@ -628,7 +618,7 @@ input PropertySaleAtomUpdateInput {
   moreDetail: String
   nearbyStations: StationWalkingDurationUpdateManyInput
   outDate: DateTime
-  price: Int
+  price: Float
   propertyType: PropertyType
   totalFloor: Int
   yearBuilt: Int
@@ -651,7 +641,7 @@ input PropertySaleAtomUpdateManyMutationInput {
   landArea: Float
   moreDetail: String
   outDate: DateTime
-  price: Int
+  price: Float
   propertyType: PropertyType
   totalFloor: Int
   yearBuilt: Int
@@ -860,14 +850,14 @@ input PropertySaleAtomWhereInput {
   outDate_lte: DateTime
   outDate_not: DateTime
   outDate_not_in: [DateTime!]
-  price: Int
-  price_gt: Int
-  price_gte: Int
-  price_in: [Int!]
-  price_lt: Int
-  price_lte: Int
-  price_not: Int
-  price_not_in: [Int!]
+  price: Float
+  price_gt: Float
+  price_gte: Float
+  price_in: [Float!]
+  price_lt: Float
+  price_lte: Float
+  price_not: Float
+  price_not_in: [Float!]
   propertyType: PropertyType
   propertyType_in: [PropertyType!]
   propertyType_not: PropertyType
@@ -901,12 +891,14 @@ enum PropertyType {
 }
 
 type Query {
+  dbname: String!
   propertyRentAtom(where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom
   propertyRentAtoms(after: String, before: String, first: Int, last: Int, orderBy: PropertyRentAtomOrderByInput, skip: Int, where: PropertyRentAtomWhereInput): [PropertyRentAtom!]!
   propertyRentAtomsConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertyRentAtomOrderByInput, skip: Int, where: PropertyRentAtomWhereInput): PropertyRentAtomConnection!
   propertySaleAtom(where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom
   propertySaleAtoms(after: String, before: String, first: Int, last: Int, orderBy: PropertySaleAtomOrderByInput, skip: Int, where: PropertySaleAtomWhereInput): [PropertySaleAtom!]!
   propertySaleAtomsConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertySaleAtomOrderByInput, skip: Int, where: PropertySaleAtomWhereInput): PropertySaleAtomConnection!
+  testing: String!
 }
 
 type StationWalkingDuration {
