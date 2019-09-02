@@ -50,7 +50,7 @@ type PropertySaleAtom {
   buildingName: String @db(name: "building_name")
   address: String
   area: Float
-  price: Int
+  price: Float
 
   city: String
   country: String

@@ -940,7 +940,7 @@ export interface PropertySaleAtomFieldDetails {
     resolve: undefined
   }
   price: {
-    type: 'Int'
+    type: 'Float'
     args: {}
     description: string
     list: undefined
@@ -2315,7 +2315,7 @@ export interface PropertySaleAtomPreviousValuesFieldDetails {
     resolve: undefined
   }
   price: {
-    type: 'Int'
+    type: 'Float'
     args: {}
     description: string
     list: undefined

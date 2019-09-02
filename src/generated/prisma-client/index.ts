@@ -353,7 +353,7 @@ export interface PropertySaleAtomUpdateInput {
   buildingName?: Maybe<String>;
   address?: Maybe<String>;
   area?: Maybe<Float>;
-  price?: Maybe<Int>;
+  price?: Maybe<Float>;
   city?: Maybe<String>;
   country?: Maybe<String>;
   currency?: Maybe<String>;
@@ -447,7 +447,7 @@ export interface PropertySaleAtomUpdateManyMutationInput {
   buildingName?: Maybe<String>;
   address?: Maybe<String>;
   area?: Maybe<Float>;
-  price?: Maybe<Int>;
+  price?: Maybe<Float>;
   city?: Maybe<String>;
   country?: Maybe<String>;
   currency?: Maybe<String>;
@@ -586,7 +586,7 @@ export interface PropertySaleAtomCreateInput {
   buildingName?: Maybe<String>;
   address?: Maybe<String>;
   area?: Maybe<Float>;
-  price?: Maybe<Int>;
+  price?: Maybe<Float>;
   city?: Maybe<String>;
   country?: Maybe<String>;
   currency?: Maybe<String>;
@@ -689,14 +689,14 @@ export interface PropertySaleAtomWhereInput {
   area_lte?: Maybe<Float>;
   area_gt?: Maybe<Float>;
   area_gte?: Maybe<Float>;
-  price?: Maybe<Int>;
-  price_not?: Maybe<Int>;
-  price_in?: Maybe<Int[] | Int>;
-  price_not_in?: Maybe<Int[] | Int>;
-  price_lt?: Maybe<Int>;
-  price_lte?: Maybe<Int>;
-  price_gt?: Maybe<Int>;
-  price_gte?: Maybe<Int>;
+  price?: Maybe<Float>;
+  price_not?: Maybe<Float>;
+  price_in?: Maybe<Float[] | Float>;
+  price_not_in?: Maybe<Float[] | Float>;
+  price_lt?: Maybe<Float>;
+  price_lte?: Maybe<Float>;
+  price_gt?: Maybe<Float>;
+  price_gte?: Maybe<Float>;
   city?: Maybe<String>;
   city_not?: Maybe<String>;
   city_in?: Maybe<String[] | String>;
@@ -1261,7 +1261,7 @@ export interface PropertySaleAtomPreviousValues {
   buildingName?: String;
   address?: String;
   area?: Float;
-  price?: Int;
+  price?: Float;
   city?: String;
   country?: String;
   currency?: String;
@@ -1287,7 +1287,7 @@ export interface PropertySaleAtomPreviousValuesPromise
   buildingName: () => Promise<String>;
   address: () => Promise<String>;
   area: () => Promise<Float>;
-  price: () => Promise<Int>;
+  price: () => Promise<Float>;
   city: () => Promise<String>;
   country: () => Promise<String>;
   currency: () => Promise<String>;
@@ -1313,7 +1313,7 @@ export interface PropertySaleAtomPreviousValuesSubscription
   buildingName: () => Promise<AsyncIterator<String>>;
   address: () => Promise<AsyncIterator<String>>;
   area: () => Promise<AsyncIterator<Float>>;
-  price: () => Promise<AsyncIterator<Int>>;
+  price: () => Promise<AsyncIterator<Float>>;
   city: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
   currency: () => Promise<AsyncIterator<String>>;
@@ -1426,7 +1426,7 @@ export interface PropertySaleAtom {
   buildingName?: String;
   address?: String;
   area?: Float;
-  price?: Int;
+  price?: Float;
   city?: String;
   country?: String;
   currency?: String;
@@ -1453,7 +1453,7 @@ export interface PropertySaleAtomPromise
   buildingName: () => Promise<String>;
   address: () => Promise<String>;
   area: () => Promise<Float>;
-  price: () => Promise<Int>;
+  price: () => Promise<Float>;
   city: () => Promise<String>;
   country: () => Promise<String>;
   currency: () => Promise<String>;
@@ -1480,7 +1480,7 @@ export interface PropertySaleAtomSubscription
   buildingName: () => Promise<AsyncIterator<String>>;
   address: () => Promise<AsyncIterator<String>>;
   area: () => Promise<AsyncIterator<Float>>;
-  price: () => Promise<AsyncIterator<Int>>;
+  price: () => Promise<AsyncIterator<Float>>;
   city: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
   currency: () => Promise<AsyncIterator<String>>;
@@ -1509,7 +1509,7 @@ export interface PropertySaleAtomNullablePromise
   buildingName: () => Promise<String>;
   address: () => Promise<String>;
   area: () => Promise<Float>;
-  price: () => Promise<Int>;
+  price: () => Promise<Float>;
   city: () => Promise<String>;
   country: () => Promise<String>;
   currency: () => Promise<String>;

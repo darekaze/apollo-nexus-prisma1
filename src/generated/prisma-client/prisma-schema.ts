@@ -676,7 +676,7 @@ type PropertySaleAtom {
   buildingName: String
   address: String
   area: Float
-  price: Int
+  price: Float
   city: String
   country: String
   currency: String
@@ -707,7 +707,7 @@ input PropertySaleAtomCreateInput {
   buildingName: String
   address: String
   area: Float
-  price: Int
+  price: Float
   city: String
   country: String
   currency: String
@@ -782,7 +782,7 @@ type PropertySaleAtomPreviousValues {
   buildingName: String
   address: String
   area: Float
-  price: Int
+  price: Float
   city: String
   country: String
   currency: String
@@ -821,7 +821,7 @@ input PropertySaleAtomUpdateInput {
   buildingName: String
   address: String
   area: Float
-  price: Int
+  price: Float
   city: String
   country: String
   currency: String
@@ -845,7 +845,7 @@ input PropertySaleAtomUpdateManyMutationInput {
   buildingName: String
   address: String
   area: Float
-  price: Int
+  price: Float
   city: String
   country: String
   currency: String
@@ -947,14 +947,14 @@ input PropertySaleAtomWhereInput {
   area_lte: Float
   area_gt: Float
   area_gte: Float
-  price: Int
-  price_not: Int
-  price_in: [Int!]
-  price_not_in: [Int!]
-  price_lt: Int
-  price_lte: Int
-  price_gt: Int
-  price_gte: Int
+  price: Float
+  price_not: Float
+  price_in: [Float!]
+  price_not_in: [Float!]
+  price_lt: Float
+  price_lte: Float
+  price_gt: Float
+  price_gte: Float
   city: String
   city_not: String
   city_in: [String!]
