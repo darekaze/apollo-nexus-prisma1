@@ -11,7 +11,7 @@
     "build": "tsc",
     "test": "jest",
     "start": "micro dist/index.js -l tcp://0.0.0.0:4000",
-    "dev": "micro-dev tsnode.js -p 4011 --silent",
+    "dev": "micro-dev tsnode.js -s -p 4011 -d .env.local",
     "lint": "eslint . --ext .js,.ts",
     "format": "npm-run-all format:*",
     "format:ts": "prettier --write {.,**}/*.ts",
