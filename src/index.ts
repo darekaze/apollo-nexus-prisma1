@@ -25,6 +25,7 @@ const schema = makePrismaSchema({
   },
 })
 
+// TODO: setup redis in the final
 const server = new ApolloServer({
   schema,
   context: { prisma },
