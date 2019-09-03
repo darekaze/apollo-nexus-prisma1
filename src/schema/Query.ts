@@ -12,5 +12,6 @@ export default prismaObjectType({
       'propertySaleAtomsConnection',
     ])
     //* Define custom query below, or use extendType somewhere else
+    t.string('env', () => process.env.NODE_ENV)
   },
 })

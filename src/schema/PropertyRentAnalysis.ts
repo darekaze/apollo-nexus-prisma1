@@ -6,6 +6,21 @@ import { validateRange, validateNonNegative } from '../utils/validate'
 import getYearRange from '../utils/year-range'
 import { RentAtomFragment } from '../types'
 
+const rentAtomFragment = `
+  fragment RentAtomFragment on PropertyRentAtom {
+    canonicalStation
+    yearBuilt
+    area
+    unitRent
+    basicRent
+    rentPlusAlpha
+    maintenanceFee
+    totalRent
+    guaranteeMoneyMultiple
+    keyMoneyMultiple
+  }
+`
+
 export const RentAnalysis = objectType({
   name: 'RentAnalysis',
   definition(t) {
@@ -28,21 +43,6 @@ export const RentAnalysisInput = inputObjectType({
     t.int('maxBuildingAge', { required: true })
   },
 })
-
-const rentAtomFragment = `
-  fragment RentAtomFragment on PropertyRentAtom {
-    canonicalStation
-    yearBuilt
-    area
-    unitRent
-    basicRent
-    rentPlusAlpha
-    maintenanceFee
-    totalRent
-    guaranteeMoneyMultiple
-    keyMoneyMultiple
-  }
-`
 
 export const PropertyRentAnalysis = prismaExtendType({
   type: 'Query',
@@ -84,7 +84,7 @@ export const PropertyRentAnalysis = prismaExtendType({
           })
           .$fragment(rentAtomFragment)
 
-        if (!rentData.length) throw new Error('No Results...')
+        if (!rentData.length) throw Error('No Results...')
 
         let minRent = Infinity
         let maxRent = 0
