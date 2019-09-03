@@ -891,14 +891,39 @@ enum PropertyType {
 }
 
 type Query {
-  dbname: String!
+  propertyRentAnalysis(
+    """Input for calculating rent statistics"""
+    input: RentAnalysisInput!
+  ): RentAnalysis!
   propertyRentAtom(where: PropertyRentAtomWhereUniqueInput!): PropertyRentAtom
   propertyRentAtoms(after: String, before: String, first: Int, last: Int, orderBy: PropertyRentAtomOrderByInput, skip: Int, where: PropertyRentAtomWhereInput): [PropertyRentAtom!]!
   propertyRentAtomsConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertyRentAtomOrderByInput, skip: Int, where: PropertyRentAtomWhereInput): PropertyRentAtomConnection!
   propertySaleAtom(where: PropertySaleAtomWhereUniqueInput!): PropertySaleAtom
   propertySaleAtoms(after: String, before: String, first: Int, last: Int, orderBy: PropertySaleAtomOrderByInput, skip: Int, where: PropertySaleAtomWhereInput): [PropertySaleAtom!]!
   propertySaleAtomsConnection(after: String, before: String, first: Int, last: Int, orderBy: PropertySaleAtomOrderByInput, skip: Int, where: PropertySaleAtomWhereInput): PropertySaleAtomConnection!
-  testing: String!
+}
+
+type RentAnalysis {
+  """Average rent per metersquare"""
+  averageRent: Float!
+  count: Int!
+
+  """Maximum rent per metersquare"""
+  maxRent: Float!
+
+  """Median rent per metersquare"""
+  medianRent: Float!
+
+  """Minimum rent per metersquare"""
+  minRent: Float!
+}
+
+input RentAnalysisInput {
+  maxBuildingAge: Int!
+  maxWalkingTime: Int!
+  minBuildingAge: Int = 0
+  minWalkingTime: Int = 0
+  stationName: String!
 }
 
 type StationWalkingDuration {

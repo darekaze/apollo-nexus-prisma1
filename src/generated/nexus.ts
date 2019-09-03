@@ -3,7 +3,7 @@
  * Do not make changes to this file directly
  */
 
-
+import * as t from "../types"
 
 
 declare global {
@@ -672,6 +672,13 @@ export interface NexusGenInputs {
   PropertySaleAtomWhereUniqueInput: { // input type
     _id?: string | null; // ID
   }
+  RentAnalysisInput: { // input type
+    maxBuildingAge: number; // Int!
+    maxWalkingTime: number; // Int!
+    minBuildingAge?: number | null; // Int
+    minWalkingTime?: number | null; // Int
+    stationName: string; // String!
+  }
   StationWalkingDurationCreateInput: { // input type
     duration: number; // Int!
     name: string; // String!
@@ -861,6 +868,13 @@ export interface NexusGenRootTypes {
     node: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
   Query: {};
+  RentAnalysis: { // root type
+    averageRent: number; // Float!
+    count: number; // Int!
+    maxRent: number; // Float!
+    medianRent: number; // Float!
+    minRent: number; // Float!
+  }
   StationWalkingDuration: { // root type
     duration: number; // Int!
     name: string; // String!
@@ -886,6 +900,7 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   PropertySaleAtomUpdateManyMutationInput: NexusGenInputs['PropertySaleAtomUpdateManyMutationInput'];
   PropertySaleAtomWhereInput: NexusGenInputs['PropertySaleAtomWhereInput'];
   PropertySaleAtomWhereUniqueInput: NexusGenInputs['PropertySaleAtomWhereUniqueInput'];
+  RentAnalysisInput: NexusGenInputs['RentAnalysisInput'];
   StationWalkingDurationCreateInput: NexusGenInputs['StationWalkingDurationCreateInput'];
   StationWalkingDurationCreateManyInput: NexusGenInputs['StationWalkingDurationCreateManyInput'];
   StationWalkingDurationRestrictedWhereInput: NexusGenInputs['StationWalkingDurationRestrictedWhereInput'];
@@ -995,14 +1010,20 @@ export interface NexusGenFieldTypes {
     node: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
   Query: { // field return type
-    dbname: string; // String!
+    propertyRentAnalysis: NexusGenRootTypes['RentAnalysis']; // RentAnalysis!
     propertyRentAtom: NexusGenRootTypes['PropertyRentAtom'] | null; // PropertyRentAtom
     propertyRentAtoms: NexusGenRootTypes['PropertyRentAtom'][]; // [PropertyRentAtom!]!
     propertyRentAtomsConnection: NexusGenRootTypes['PropertyRentAtomConnection']; // PropertyRentAtomConnection!
     propertySaleAtom: NexusGenRootTypes['PropertySaleAtom'] | null; // PropertySaleAtom
     propertySaleAtoms: NexusGenRootTypes['PropertySaleAtom'][]; // [PropertySaleAtom!]!
     propertySaleAtomsConnection: NexusGenRootTypes['PropertySaleAtomConnection']; // PropertySaleAtomConnection!
-    testing: string; // String!
+  }
+  RentAnalysis: { // field return type
+    averageRent: number; // Float!
+    count: number; // Int!
+    maxRent: number; // Float!
+    medianRent: number; // Float!
+    minRent: number; // Float!
   }
   StationWalkingDuration: { // field return type
     duration: number; // Int!
@@ -1049,6 +1070,9 @@ export interface NexusGenArgTypes {
     }
   }
   Query: {
+    propertyRentAnalysis: { // args
+      input: NexusGenInputs['RentAnalysisInput']; // RentAnalysisInput!
+    }
     propertyRentAtom: { // args
       where: NexusGenInputs['PropertyRentAtomWhereUniqueInput']; // PropertyRentAtomWhereUniqueInput!
     }
@@ -1099,9 +1123,9 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "StationWalkingDuration";
+export type NexusGenObjectNames = "BatchPayload" | "Mutation" | "PageInfo" | "PropertyDBLoadHistory" | "PropertyRentAtom" | "PropertyRentAtomConnection" | "PropertyRentAtomEdge" | "PropertySaleAtom" | "PropertySaleAtomConnection" | "PropertySaleAtomEdge" | "Query" | "RentAnalysis" | "StationWalkingDuration";
 
-export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput" | "StationWalkingDurationCreateInput" | "StationWalkingDurationCreateManyInput" | "StationWalkingDurationRestrictedWhereInput" | "StationWalkingDurationScalarWhereInput" | "StationWalkingDurationUpdateManyDataInput" | "StationWalkingDurationUpdateManyInput" | "StationWalkingDurationUpdateManyWithWhereNestedInput" | "StationWalkingDurationWhereInput";
+export type NexusGenInputNames = "PropertyDBLoadHistoryCreateInput" | "PropertyRentAtomCreateInput" | "PropertyRentAtomUpdateInput" | "PropertyRentAtomUpdateManyMutationInput" | "PropertyRentAtomWhereInput" | "PropertyRentAtomWhereUniqueInput" | "PropertySaleAtomCreateInput" | "PropertySaleAtomUpdateInput" | "PropertySaleAtomUpdateManyMutationInput" | "PropertySaleAtomWhereInput" | "PropertySaleAtomWhereUniqueInput" | "RentAnalysisInput" | "StationWalkingDurationCreateInput" | "StationWalkingDurationCreateManyInput" | "StationWalkingDurationRestrictedWhereInput" | "StationWalkingDurationScalarWhereInput" | "StationWalkingDurationUpdateManyDataInput" | "StationWalkingDurationUpdateManyInput" | "StationWalkingDurationUpdateManyWithWhereNestedInput" | "StationWalkingDurationWhereInput";
 
 export type NexusGenEnumNames = "PropertyClass" | "PropertyRentAtomOrderByInput" | "PropertySaleAtomOrderByInput" | "PropertyType";
 
@@ -1112,7 +1136,7 @@ export type NexusGenScalarNames = "Boolean" | "DateTime" | "Float" | "ID" | "Int
 export type NexusGenUnionNames = never;
 
 export interface NexusGenTypes {
-  context: any;
+  context: t.Context;
   inputTypes: NexusGenInputs;
   rootTypes: NexusGenRootTypes;
   argTypes: NexusGenArgTypes;
