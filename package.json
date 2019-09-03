@@ -1,7 +1,7 @@
 {
   "name": "minato",
   "version": "0.1.0",
-  "description": "Demo gql using Apollo micro",
+  "description": "Project minato for property pricing",
   "main": "src/index.ts",
   "repository": "darekaze/minato",
   "author": "@DaRekaze",
@@ -29,11 +29,9 @@
     "rambda": "^3.0.1"
   },
   "devDependencies": {
-    "@now/node": "^0.12.6",
     "@types/jest": "^24.0.17",
     "@types/micro": "^7.3.3",
     "@types/node": "^12.7.2",
-    "@types/ramda": "^0.26.21",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.2",

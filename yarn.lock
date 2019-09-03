@@ -320,13 +320,6 @@
     "@nodelib/fs.scandir" "2.1.2"
     fastq "^1.6.0"
 
-"@now/node@^0.12.6":
-  version "0.12.8"
-  resolved "https://registry.yarnpkg.com/@now/node/-/node-0.12.8.tgz#9b8f5c81f80119401cb61fa0f9aa30fda5cf292a"
-  integrity sha512-FgSrSECIA57YbV/m8HdLJBlK1h74rmkuppuTLMe1fHxPWypJbaXWlSrToYv8zP34x2Lv481W2YDYJ3EQFm9Hcg==
-  dependencies:
-    "@types/node" "*"
-
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@protobufjs/aspromise/-/aspromise-1.1.2.tgz#9b8b0cc663d669a7d8f6f5d0893a14d348f30fbf"
@@ -636,13 +629,6 @@
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.18.2.tgz#069e7d132024d436fd1f5771f6932426a695f230"
   integrity sha512-2JBasa5Qaj81Qsp/dxX2Njy+MdKC767WytHUDsRM7TYEfQvKPxsnGpnCBlBS1i2Aiv1YwCpmKSbQ6O6v8TpiKg==
-
-"@types/ramda@^0.26.21":
-  version "0.26.21"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.26.21.tgz#cfd552c679453d153a9e2fd89ffc5dd5aa93d2c9"
-  integrity sha512-zMYtIZMceA6BvH+or6LmewLBgojbXg5+FGCwjO8K+Z+d/ZWxILmhhASXkehW0PqJL+V0QbyDeeAHix0dvEKXfQ==
-  dependencies:
-    ts-toolbelt "^3.8.4"
 
 "@types/range-parser@*":
   version "1.2.3"
@@ -6067,11 +6053,6 @@ ts-node@^8.3.0:
     make-error "^1.1.1"
     source-map-support "^0.5.6"
     yn "^3.0.0"
-
-ts-toolbelt@^3.8.4:
-  version "3.8.63"
-  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-3.8.63.tgz#ee5a94a5d870f437bc6811f7428ea24c78821f6a"
-  integrity sha512-OlsFC8uF1mpN2O7DlvSkgnXzOvubO790eFhTvZBFI+WLge2BYzkQk73Q3yF0R8usxhkqbemLomqRhCGWasoIKw==
 
 tsconfig-paths@^3.6.0:
   version "3.8.0"
