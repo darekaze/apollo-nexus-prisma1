@@ -29,8 +29,8 @@ services:
       - .env.${ENV-production}
     environment:
       - NODE_ENV=${ENV-production}
-      - PRISMA_HOST=${PRISMA_HOST-prisma}
-      - REDIS_HOST=${REDIS_HOST-redis}
+      - PRISMA_HOST=prisma
+      - REDIS_HOST=redis
     depends_on:
       - prisma
       - redis
