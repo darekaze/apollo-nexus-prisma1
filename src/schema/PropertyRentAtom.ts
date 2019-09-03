@@ -1,12 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { prismaExtendType, prismaObjectType } from 'nexus-prisma'
-
-export const PropertyRentAtomFilter = prismaExtendType({
-  type: 'Query',
-  definition(t) {
-    t.string('dbname', () => process.env.DB_NAME)
-  },
-})
+import { prismaObjectType } from 'nexus-prisma'
 
 // Aggregate gots issue so opt it out first
 export const PropertyRentAtomConnection = prismaObjectType({

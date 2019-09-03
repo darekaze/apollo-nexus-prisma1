@@ -4,7 +4,7 @@ import { ApolloServer } from 'apollo-server-micro'
 import { makePrismaSchema } from 'nexus-prisma'
 import { prisma } from './generated/prisma-client'
 import datamodelInfo from './generated/nexus-prisma'
-import * as types from './schema'
+import * as allTypes from './schema'
 
 // Setup cors methods and origin so in production mode
 // others can't access this API, default set to all(*)
@@ -14,7 +14,7 @@ const cors = microCors({
 })
 
 const schema = makePrismaSchema({
-  types,
+  types: allTypes,
   prisma: {
     datamodelInfo,
     client: prisma,
@@ -22,6 +22,15 @@ const schema = makePrismaSchema({
   outputs: {
     schema: path.join(__dirname, './generated/schema.graphql'),
     typegen: path.join(__dirname, './generated/nexus.ts'),
+  },
+  typegenAutoConfig: {
+    sources: [
+      {
+        source: path.join(__dirname, './types.ts'),
+        alias: 't',
+      },
+    ],
+    contextType: 't.Context',
   },
 })
 
