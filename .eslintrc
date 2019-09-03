@@ -21,7 +21,8 @@
       "error",
       { "devDependencies": ["**/test.ts", "tsnode.js"] }
     ],
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/camelcase": "off"
   },
   "env": {
     "node": true,
