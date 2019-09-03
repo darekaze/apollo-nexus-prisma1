@@ -1,12 +1,14 @@
 # Minato
 
-> Note: Still early WiP
+> Note: Beta
 
 ```
 apollo-server-micro + typescript + prisma-nexus => ⚡️
 ```
 
 Some random awesome project made with `apollo-server-micro` with Typescript feat. `nexus` & `prisma`.
+
+To further describe what I've made, this is a property pricing microservice to determine whether the renting or housing price is reasonable.
 
 ## Development
 
