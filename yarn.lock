@@ -977,7 +977,7 @@ apollo-server-errors@^2.3.3:
   resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-2.3.3.tgz#83763b00352c10dc68fbb0d41744ade66de549ff"
   integrity sha512-MO4oJ129vuCcbqwr5ZwgxqGGiLz3hCyowz0bstUF7MR+vNGe4oe3DWajC9lv4CxrhcqUHQOeOPViOdIo1IxE3g==
 
-apollo-server-micro@^2.8.1:
+apollo-server-micro@^2.9.3:
   version "2.9.3"
   resolved "https://registry.yarnpkg.com/apollo-server-micro/-/apollo-server-micro-2.9.3.tgz#98ac13b6af626d3f5bf48c9464d4e854642c4c23"
   integrity sha512-/o82SgDg+O95diomDi8P+8edxpJMeZcGQayEC80OAoOT06RJn4neFhBpdE0NLOxGR5AcZ1JsAvfYuMRirKtQWQ==
@@ -2749,7 +2749,7 @@ graphql-upload@^8.0.2:
     http-errors "^1.7.2"
     object-path "^0.11.4"
 
-graphql@^14.3.0, graphql@^14.4.2, graphql@^14.5.3:
+graphql@^14.3.0, graphql@^14.5.3, graphql@^14.5.4:
   version "14.5.4"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.4.tgz#b33fe957854e90c10d4c07c7d26b6c8e9f159a13"
   integrity sha512-dPLvHoxy5m9FrkqWczPPRnH0X80CyvRE6e7Fa5AWEqEAzg9LpxHvKh24po/482E6VWHigOkAmb4xCp6P9yT9gw==
@@ -4400,7 +4400,7 @@ neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-nexus-prisma@^0.3.7:
+nexus-prisma@0.3.7:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/nexus-prisma/-/nexus-prisma-0.3.7.tgz#d2a556616bb6d100c1a0b9daff89fd4394666a29"
   integrity sha512-jkqO0ApnctX8pIzhspsUqaoBEuviWNkCBuz/S9fakC/MqDNKZkLKog519L6BAALmm5YrHts1x2+6tJvCE8MiGQ==
@@ -5038,7 +5038,7 @@ pretty-format@^24.9.0:
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
-prisma-client-lib@~1.34.6:
+prisma-client-lib@~1.34.8:
   version "1.34.8"
   resolved "https://registry.yarnpkg.com/prisma-client-lib/-/prisma-client-lib-1.34.8.tgz#214c5039c70b21d31a82873488c5a4738c4e94dd"
   integrity sha512-XQoGeORzd+U5TP9T4S2JQ1IS2jL+FqnR698otIsP4vQt+wN3uaQ8sZh5/l+I+EdSTUTtNVCQ/HNmRfxKO9Mnxw==
