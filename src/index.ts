@@ -45,7 +45,7 @@ const server = new ApolloServer({
   context: { prisma },
   cache,
   cacheControl: {
-    defaultMaxAge: 180, // 2 minutes
+    defaultMaxAge: 3600, // 1-hr
   },
   persistedQueries: { cache },
   plugins: [responseCachePlugin()],
