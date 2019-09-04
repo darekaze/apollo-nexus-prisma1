@@ -12,16 +12,16 @@ To further describe what I've made, this is a property pricing microservice to d
 
 ## Development
 
-### With `docker-compose`
+### `docker-compose` for `prisma` and `redis`
 
 Install [DockStation](https://dockstation.io/) for running docker compose. Trust me, it's easier to manage the whole thing.
 
-Alternatively, you can still use cli to run `docker-compose` (Instruction to be added)..
+Alternatively, you can still use cli to run `docker-compose` (instruction to be added)..
 
-### With `micro-dev` (temp)
+### `micro-dev` for local server
 
-You can run this locally with `yarn dev`, but still need to run Docker locally to host prisma.
+Then, run this locally with `yarn dev`. For production testing, use Docker (defined in `docker-compse` and `Dockerfile`).
 
 ## Deployment
 
-> To be finalized since prisma is a bit tricky to deploy..
+Deploy this to a server that can run Docker compose. (instruction to be added)
