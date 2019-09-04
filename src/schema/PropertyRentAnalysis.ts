@@ -4,22 +4,7 @@ import { reduce, min, max } from 'rambda'
 import { mean, median } from '../utils/statistic'
 import { validateRange, validateNonNegative } from '../utils/validate'
 import getYearRange from '../utils/year-range'
-import { RentAtomFragment } from '../types'
-
-const rentAtomFragment = `
-  fragment RentAtomFragment on PropertyRentAtom {
-    canonicalStation
-    yearBuilt
-    area
-    unitRent
-    basicRent
-    rentPlusAlpha
-    maintenanceFee
-    totalRent
-    guaranteeMoneyMultiple
-    keyMoneyMultiple
-  }
-`
+import { PropertyRentAtom } from '../generated/prisma-client'
 
 export const RentAnalysis = objectType({
   name: 'RentAnalysis',
@@ -28,8 +13,8 @@ export const RentAnalysis = objectType({
     t.float('medianRent', { description: 'Median rent per metersquare' })
     t.float('minRent', { description: 'Minimum rent per metersquare' })
     t.float('maxRent', { description: 'Maximum rent per metersquare' })
-    t.int('count')
-    // can return the list here later...
+    t.int('count', { description: 'Count of the properties' })
+    t.list.field('properties', { type: 'PropertyRentAtom' })
   },
 })
 
@@ -70,26 +55,24 @@ export const PropertyRentAnalysis = prismaExtendType({
         validateRange(minWalkingTime, maxWalkingTime)
 
         const [fromYear, toYear] = getYearRange(minBuildingAge, maxBuildingAge)
-        const rentData: RentAtomFragment[] = await ctx.prisma
-          .propertyRentAtoms({
-            where: {
-              yearBuilt_gte: fromYear,
-              yearBuilt_lte: toYear,
-              nearbyStations_some: {
-                name: stationName,
-                duration_gte: minWalkingTime,
-                duration_lte: maxWalkingTime,
-              },
+        const rentData = await ctx.prisma.propertyRentAtoms({
+          where: {
+            yearBuilt_gte: fromYear,
+            yearBuilt_lte: toYear,
+            nearbyStations_some: {
+              name: stationName,
+              duration_gte: minWalkingTime,
+              duration_lte: maxWalkingTime,
             },
-          })
-          .$fragment(rentAtomFragment)
+          },
+        })
 
         if (!rentData.length) throw Error('No Results...')
 
         let minRent = Infinity
         let maxRent = 0
         const unitRentArr = reduce(
-          (acc: number[], { unitRent }: RentAtomFragment) => {
+          (acc: number[], { unitRent }: PropertyRentAtom) => {
             minRent = min(minRent, unitRent)
             maxRent = max(maxRent, unitRent)
             acc.push(unitRent)
@@ -105,6 +88,7 @@ export const PropertyRentAnalysis = prismaExtendType({
           minRent,
           maxRent,
           count: rentData.length,
+          properties: rentData,
         }
       },
     })

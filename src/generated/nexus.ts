@@ -874,6 +874,7 @@ export interface NexusGenRootTypes {
     maxRent: number; // Float!
     medianRent: number; // Float!
     minRent: number; // Float!
+    properties: NexusGenRootTypes['PropertyRentAtom'][]; // [PropertyRentAtom!]!
   }
   StationWalkingDuration: { // root type
     duration: number; // Int!
@@ -1025,6 +1026,7 @@ export interface NexusGenFieldTypes {
     maxRent: number; // Float!
     medianRent: number; // Float!
     minRent: number; // Float!
+    properties: NexusGenRootTypes['PropertyRentAtom'][]; // [PropertyRentAtom!]!
   }
   StationWalkingDuration: { // field return type
     duration: number; // Int!

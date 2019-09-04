@@ -907,6 +907,8 @@ type Query {
 type RentAnalysis {
   """Average rent per metersquare"""
   averageRent: Float!
+
+  """Count of the properties"""
   count: Int!
 
   """Maximum rent per metersquare"""
@@ -917,6 +919,7 @@ type RentAnalysis {
 
   """Minimum rent per metersquare"""
   minRent: Float!
+  properties: [PropertyRentAtom!]!
 }
 
 input RentAnalysisInput {
