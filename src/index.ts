@@ -1,6 +1,8 @@
 import path from 'path'
 import microCors from 'micro-cors'
 import { ApolloServer } from 'apollo-server-micro'
+import { RedisCache } from 'apollo-server-cache-redis'
+import responseCachePlugin from 'apollo-server-plugin-response-cache'
 import { makePrismaSchema } from 'nexus-prisma'
 import { prisma } from './generated/prisma-client'
 import datamodelInfo from './generated/nexus-prisma'
@@ -34,11 +36,20 @@ const schema = makePrismaSchema({
   },
 })
 
-// TODO: setup redis in the final
+const cache = new RedisCache({
+  host: process.env.REDIS_HOST || 'localhost',
+})
+
 const server = new ApolloServer({
   schema,
   context: { prisma },
-  playground: process.env.NODE_ENV === 'development', // keep it or else hot reload won't work
+  cache,
+  cacheControl: {
+    defaultMaxAge: 180, // 2 minutes
+  },
+  persistedQueries: { cache },
+  plugins: [responseCachePlugin()],
+  playground: process.env.NODE_ENV === 'development', // for dev hot reload
 })
 
 export default cors(server.createHandler({ path: '/api' }))

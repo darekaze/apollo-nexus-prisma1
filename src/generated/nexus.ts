@@ -1010,6 +1010,7 @@ export interface NexusGenFieldTypes {
     node: NexusGenRootTypes['PropertySaleAtom']; // PropertySaleAtom!
   }
   Query: { // field return type
+    env: string; // String!
     propertyRentAnalysis: NexusGenRootTypes['RentAnalysis']; // RentAnalysis!
     propertyRentAtom: NexusGenRootTypes['PropertyRentAtom'] | null; // PropertyRentAtom
     propertyRentAtoms: NexusGenRootTypes['PropertyRentAtom'][]; // [PropertyRentAtom!]!

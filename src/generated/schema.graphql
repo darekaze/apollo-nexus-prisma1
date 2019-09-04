@@ -891,6 +891,7 @@ enum PropertyType {
 }
 
 type Query {
+  env: String!
   propertyRentAnalysis(
     """Input for calculating rent statistics"""
     input: RentAnalysisInput!
