@@ -6,7 +6,9 @@ apollo-server-micro + typescript + prisma-nexus => ⚡️
 
 Some random awesome project made with `apollo-server-micro` with Typescript feat. `nexus` & `prisma`.
 
-To further describe what I've made, this is a property pricing microservice to determine whether the renting or housing price is reasonable.
+To further describe what I've made, this is a graphql microservice which is part of a property pricing engine that determines whether the renting or housing price is reasonable.
+
+:laughing: Feel free to take this as a reference and start implementing your own graphql microservice!
 
 ## Development
 
