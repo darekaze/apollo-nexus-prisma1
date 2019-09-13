@@ -1,7 +1,5 @@
 # Minato
 
-> Note: Beta
-
 ```
 apollo-server-micro + typescript + prisma-nexus => ⚡️
 ```
@@ -16,7 +14,7 @@ To further describe what I've made, this is a property pricing microservice to d
 
 Install [DockStation](https://dockstation.io/) for running docker compose. Trust me, it's easier to manage the whole thing.
 
-Alternatively, you can still use cli to run `docker-compose` (instruction to be added)..
+Alternatively, you can still use cli to run `docker-compose`..
 
 ### `micro-dev` for local server
 
@@ -24,4 +22,4 @@ Then, run this locally with `yarn dev`. For production testing, use Docker (defi
 
 ## Deployment
 
-Deploy this to a server that can run Docker compose. (instruction to be added)
+Deploy this to a server that can run Docker compose.
