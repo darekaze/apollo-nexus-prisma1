@@ -2,7 +2,7 @@
 import { prismaObjectType } from 'nexus-prisma'
 
 // Aggregate gots issue so opt it out first
-export const PropertyRentAtomConnection = prismaObjectType({
+export const PropertyRentAtomConnection = prismaObjectType<'PropertyRentAtomConnection'>({
   name: 'PropertyRentAtomConnection',
   definition(t) {
     t.prismaFields(['pageInfo', 'edges'])

@@ -1,6 +1,6 @@
 import { prismaObjectType } from 'nexus-prisma'
 
-export default prismaObjectType({
+export default prismaObjectType<'Mutation'>({
   name: 'Mutation',
   definition(t) {
     t.prismaFields([

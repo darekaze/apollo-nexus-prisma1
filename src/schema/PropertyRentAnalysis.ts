@@ -6,7 +6,7 @@ import { validateRange, validateNonNegative } from '../utils/validate'
 import getYearRange from '../utils/year-range'
 import { PropertyRentAtom } from '../generated/prisma-client'
 
-export const RentAnalysis = objectType({
+export const RentAnalysis = objectType<'RentAnalysis'>({
   name: 'RentAnalysis',
   definition(t) {
     t.float('averageRent', { description: 'Average rent per metersquare' })
@@ -29,7 +29,7 @@ export const RentAnalysisInput = inputObjectType({
   },
 })
 
-export const PropertyRentAnalysis = prismaExtendType({
+export const PropertyRentAnalysis = prismaExtendType<'Query'>({
   type: 'Query',
   definition(t) {
     t.field('propertyRentAnalysis', {
