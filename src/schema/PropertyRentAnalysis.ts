@@ -1,7 +1,6 @@
 import { prismaExtendType } from 'nexus-prisma'
 import { objectType, arg, inputObjectType } from 'nexus/dist'
-import { reduce, min, max } from 'rambda'
-import { mean, median } from '../utils/statistic'
+import { reduce, min, max, mean, median } from 'rambda'
 import { validateRange, validateNonNegative } from '../utils/validate'
 import getYearRange from '../utils/year-range'
 import { PropertyRentAtom } from '../generated/prisma-client'
