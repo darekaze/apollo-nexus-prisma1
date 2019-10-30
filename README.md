@@ -1,4 +1,4 @@
-# Minato template - `ts-graphql-prisma1`
+# Minato template - `apollo-nexus-prisma1`
 
 ```
 apollo-server-micro + typescript + nexus-prisma => ⚡️
