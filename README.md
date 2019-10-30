@@ -1,12 +1,10 @@
-# Minato template - `apollo-nexus-prisma1`
+# `apollo-nexus-prisma1` - Starter Template
 
 ```
 apollo-server-micro + typescript + nexus-prisma => ⚡️
 ```
 
-Some random awesome project made with `apollo-server-micro` with Typescript feat. `nexus` & `prisma1`.
-
-To further describe what I've made, this is a graphql microservice which is part of a property pricing engine that determines whether the renting or housing price is reasonable.
+Some random awesome demo made with `apollo-server-micro` with Typescript feat. `nexus` & `prisma1`.
 
 :laughing: Feel free to take this as a reference and start implementing your own graphql microservice!
 
